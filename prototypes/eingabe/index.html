@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">        
+        
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/p5.min.js"></script>
+        <script src="js/p5.dom.js"></script>
+        <script src="js/p5.sound.min.js"></script>
+        <script src="js/p5.speech.js"></script>
+
+        <!-- As web components are not fully supported -->
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        
+        <!-- myscript-text-web is imported to be used later -->
+        <link rel="import" href="bower_components/myscript-text-web/myscript-text-web.html"/>
+
+    </head>
+    <body>
+        <div class="app">
+            <div id="content">
+            <div class="myText">
+                <h1>Gefühlswelt</h1>
+                <p contenteditable="true" id="output">
+                </p> 
+            </div>
+            <div class="toolbar">
+                <div class="iconBtn" id="listen"><i id="micState" class="material-icons">mic</i></div>
+                <div class="iconBtn" id="write"><i id="micState" class="material-icons">border_color</i></div>
+            </div>
+            </div>
+        </div>
+
+        <div id="handwritter" class="background">
+            <myscript-text-web
+            applicationkey="4285008c-661a-4ba1-964f-170b3808428c"
+            hmackey="061d41b0-2693-40fe-a59e-a5a69db5433b"
+            language="en_US"
+            >
+            </myscript-text-web>
+        </div>
+
+
+        <script src="js/sketch.js"></script>
+    </body>
+</html>
