@@ -1,3 +1,9 @@
+$('body').on('touchmove', function (e) {
+    if (!$('.scrollable').has($(e.target)).length) e.preventDefault();
+});
+
+
+
 var rec = new p5.SpeechRec(); // speech recognition object (will prompt for mic access)
 rec.onResult = showResult; // bind callback function to trigger when speech is recognized
 rec.onError = onError;

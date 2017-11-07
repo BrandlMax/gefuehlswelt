@@ -2,6 +2,20 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    touch-action: none;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -15,6 +29,7 @@ body {
     margin:0px;
     padding:0px;
     width:100%;
+    -webkit-overflow-scrolling: auto;
 }
 
 
@@ -86,3 +101,4 @@ p{
 myscript-text-web {
     height: 100%;
 }
+
