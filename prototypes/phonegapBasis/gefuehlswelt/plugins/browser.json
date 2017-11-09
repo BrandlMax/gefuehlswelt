@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.phonegap.gefuehlswelt"
+        }
+    }
+}
