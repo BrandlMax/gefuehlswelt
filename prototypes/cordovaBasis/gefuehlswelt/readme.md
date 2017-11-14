@@ -7,7 +7,8 @@
 ``` npm install -g cordova ```
 3. Install Phonegap
 ``` npm install -g phonegap ```
-4. Update Dependencies
+
+## Update Dependencies (Intstall + after every pull)
 ``` yarn install ```
 
 

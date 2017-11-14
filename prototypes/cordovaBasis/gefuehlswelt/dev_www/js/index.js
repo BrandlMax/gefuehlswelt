@@ -2,6 +2,7 @@
 import Home from './templates/home.vue';
 import Write from './templates/write.vue';
 import Speech from './templates/speech.vue';
+import Database from './templates/database.vue';
 
 // APPLICATION
 var app = {

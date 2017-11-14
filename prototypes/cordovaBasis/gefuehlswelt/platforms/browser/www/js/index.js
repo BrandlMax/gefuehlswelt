@@ -13,9 +13,14 @@ var _speech = require('./templates/speech.vue');
 
 var _speech2 = _interopRequireDefault(_speech);
 
+var _database = require('./templates/database.vue');
+
+var _database2 = _interopRequireDefault(_database);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // APPLICATION
+// TEMPLATES
 var app = {
     // Application Constructor
     initialize: function initialize() {
@@ -69,12 +74,32 @@ var app = {
             }
         });
     }
-}; // TEMPLATES
-
+};
 
 app.initialize();
 
-},{"./templates/home.vue":2,"./templates/speech.vue":3,"./templates/write.vue":4}],2:[function(require,module,exports){
+},{"./templates/database.vue":2,"./templates/home.vue":3,"./templates/speech.vue":4,"./templates/write.vue":5}],2:[function(require,module,exports){
+;(function(){
+'use strict';
+
+console.log('Hello World!');
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Database")]),_vm._v(" "),_c('p',[_vm._v("Datenbank Test")])])}]
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-127660ce", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-127660ce", __vue__options__)
+  }
+})()}
+},{"vue":8,"vue-hot-reload-api":7}],3:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -84,7 +109,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Home Page")]),_vm._v(" "),_c('p',[_vm._v("Some Content")])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Home Page")]),_vm._v(" "),_c('p',[_vm._v("Startseite")])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -95,7 +120,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-026c5806", __vue__options__)
   }
 })()}
-},{"vue":7,"vue-hot-reload-api":6}],3:[function(require,module,exports){
+},{"vue":8,"vue-hot-reload-api":7}],4:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -116,7 +141,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-bcd97600", __vue__options__)
   }
 })()}
-},{"vue":7,"vue-hot-reload-api":6}],4:[function(require,module,exports){
+},{"vue":8,"vue-hot-reload-api":7}],5:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -125,8 +150,8 @@ console.log('Write Template!');
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Write")]),_vm._v(" "),_c('p',[_vm._v("Demo of Writing")])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Write")]),_vm._v(" "),_c('p',[_vm._v("Demo of Writing")]),_vm._v(" "),_c('div',{staticClass:"background",attrs:{"id":"handwritter"}},[_c('myscript-text-web',{attrs:{"applicationkey":"4285008c-661a-4ba1-964f-170b3808428c","hmackey":"061d41b0-2693-40fe-a59e-a5a69db5433b","language":"en_US"}})],1)])}
+__vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -137,7 +162,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-0afccfb1", __vue__options__)
   }
 })()}
-},{"vue":7,"vue-hot-reload-api":6}],5:[function(require,module,exports){
+},{"vue":8,"vue-hot-reload-api":7}],6:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -323,7 +348,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -550,7 +575,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.3
@@ -8348,4 +8373,4 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":5}]},{},[1]);
+},{"_process":6}]},{},[1]);

@@ -9,8 +9,6 @@ import source from "vinyl-source-stream";
 import sass from "gulp-sass";
 import vueify from "vueify";
 
-
-
 //import browserSync from "browser-sync";
 
 gulp.task("default", () =>{
@@ -54,7 +52,7 @@ gulp.task("css", () =>{
 })
 
 gulp.task("libs", () =>{
-    return gulp.src('dev_www/js/libs/*.js')
+    return gulp.src('dev_www/js/libs/**')
     .pipe(gulp.dest('www/js/libs'));
 })
 
