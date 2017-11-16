@@ -2,6 +2,7 @@
 import Home from './templates/home.vue';
 import Write from './templates/write.vue';
 import Speech from './templates/speech.vue';
+import TextEdit from './templates/text.vue';
 import Database from './templates/database.vue';
 
 // APPLICATION
@@ -39,7 +40,9 @@ var app = {
         const routes = [
             { path: '/home', component: Home},
             { path: '/write', component: Write},
-            { path: '/speech', component: Speech}
+            { path: '/text', component: TextEdit},
+            { path: '/speech', component: Speech},
+            { path: '/database', component: Database}
         ]
 
         // ROUTER INIT

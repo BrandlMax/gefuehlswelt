@@ -23,6 +23,8 @@
                         <router-link to="/home">Home</router-link>
                         <router-link to="/write">Write</router-link>
                         <router-link to="/speech">Speech</router-link>
+                        <router-link to="/text">Text</router-link>
+                        <router-link to="/database">Database</router-link>
                 </div>
           
                 <router-view></router-view>
@@ -36,9 +38,14 @@
         <script type="text/javascript" src="js/libs/vue.js"></script>
         <script type="text/javascript" src="js/libs/vue-router.js"></script>
 
+        <!-- jQuery -->
+        <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+
         <!-- External Libs --> 
-        <link rel="stylesheet" href="js/libs/bower_components/myscript/dist/myscript.min.css"/>
-        <script src="js/libs/bower_components/myscript/dist/myscript.min.js"></script>
+        <!-- As web components are not fully supported -->
+        <script src="js/libs/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+        <!-- myscript-text-web is imported to be used later -->
+        <link rel="import" href="js/libs/bower_components/myscript-text-web/myscript-text-web.html"/>
            
         <!-- Initialize App -->
         <script type="text/javascript" src="js/index.js"></script>

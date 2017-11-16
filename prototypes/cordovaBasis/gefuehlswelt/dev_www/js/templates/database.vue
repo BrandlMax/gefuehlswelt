@@ -6,7 +6,7 @@
 </template>
 
 <script>
-console.log('Hello World!');
+console.log('Database!');
 
 </script>
 

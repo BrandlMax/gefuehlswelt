@@ -2,7 +2,7 @@
   <div>
     <h1>Write</h1>
     <p>Demo of Writing</p>
-    
+  
     <Writer></Writer>
 
   </div>
@@ -22,6 +22,9 @@ export default {
   },
   mounted() {
     console.log("mounted"); 
+    $('body').on('touchmove', function (e) {
+      e.preventDefault();
+    });
   },
   created () {
     console.log("created");
@@ -33,6 +36,7 @@ export default {
 		Writer,
 	}
 }
+
 </script>
 
 <style scoped>

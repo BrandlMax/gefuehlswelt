@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Home Page</h1>
-    <p>Startseite</p>
+    <p>Startseite Hallo!!!!!!!!</p>
   </div>
 </template>
 
@@ -10,6 +10,6 @@ console.log('Home Template!');
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
