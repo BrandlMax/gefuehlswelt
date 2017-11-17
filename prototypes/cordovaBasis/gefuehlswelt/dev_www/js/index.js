@@ -24,6 +24,16 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        window.plugins.speechRecognition.requestPermission(successCallback, errorCallback)
+        
+        function successCallback(a){
+          console.log('success', a);
+        }
+    
+        function errorCallback(error){
+          console.log('error', error);
+        }
+    
     },
 
     // Update DOM on a Received Event

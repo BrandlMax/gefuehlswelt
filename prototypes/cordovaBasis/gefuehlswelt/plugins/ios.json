@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    },
+    "cordova-plugin-speechrecognition": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
     }
   },
   "dependent_plugins": {}

@@ -2,12 +2,37 @@
   <div>
     <h1>Speech</h1>
     <p>Demo of Speech Recognition</p>
+    <Listener></Listener>
   </div>
 </template>
 
 <script>
-console.log('Speech Template!');
+import Listener from './components/listener.vue';
 
+export default {
+  props: [ ],
+  
+  data () {
+    return {
+
+    }
+  },
+  mounted() {
+    console.log("mounted"); 
+    $('body').on('touchmove', function (e) {
+      e.preventDefault();
+    });
+  },
+  created () {
+    console.log("created");
+  },
+  destroyed(){
+    console.log("destroyed");
+  },
+	components: {
+		Listener,
+	}
+}
 </script>
 
 <style>
