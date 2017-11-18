@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		dNcfSETJ7Ah6D/YcHbePHXO6L0M=
+		I9XzMecJ+s1nMofaIpZbJfJnlAY=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		+7PdXbraF1rH5YFkIaBhawduPXk=
+		dm3XoQ0ZlKTX81DgqyhaJSRh/GI=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		rIVeogekKc19ZTlfoAi13hz5s78=
+		SBDrCpycpvS5qpeA9wodjpY5KCY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		tSH8cnOUvuBTPMXIrBFakITA+G4=
+		bjcoUj2836UvT8uredHYE2gv1js=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -180,9 +180,13 @@
 		<data>
 		vO/gVYVVkU1zHBaxd4xJ53/ga5k=
 		</data>
+		<key>beep.caf</key>
+		<data>
+		qciPQ/q/awk70sni7XdXpD8PCkc=
+		</data>
 		<key>config.xml</key>
 		<data>
-		uYuKb+DnGqPGnsBFPeZGnKLPS88=
+		MbqKo/565W8bT9WOdq6Szy7oIMU=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -210,7 +214,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		cgGO60Bn3bPw3iwXDE/6n4K11NQ=
+		wecRrhgZ0d468eEE7laqIkuV6o4=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -218,11 +222,11 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		+N/J/0CX+P0W5P+0p1eqEqMCipU=
+		5SwQwt29kfOYlI6OVQeCFHlrox0=
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		MkflX5JlwZTeynO0j7pRiu4CcTs=
+		emDwo+Ti3Hi/XMy3h/fm8Lt+MTM=
 		</data>
 		<key>www/js/libs/bower_components/font-roboto/CONTRIBUTING.md</key>
 		<data>
@@ -2408,6 +2412,14 @@
 		<data>
 		EFUBjCirQQh++czv5BFgaJPavqI=
 		</data>
+		<key>www/js/libs/p5.min.js</key>
+		<data>
+		SRYxVoKCNxeH7qnwZ1h4YTHLN1I=
+		</data>
+		<key>www/js/libs/p5.speech.js</key>
+		<data>
+		ybLvmwx0cnieDXoM+HIN6Fp0VII=
+		</data>
 		<key>www/js/libs/vue-router.js</key>
 		<data>
 		cvgAVoZ7F+OzKYpFUsn36WL/LRY=
@@ -2415,6 +2427,22 @@
 		<key>www/js/libs/vue.js</key>
 		<data>
 		N1MEEguDTLTu7aeFId6IdSZN5ME=
+		</data>
+		<key>www/plugins/cordova-plugin-apiai/www/ApiAIPlugin.js</key>
+		<data>
+		AsOaAqxJxRDa17Nj0+3DlVDcawI=
+		</data>
+		<key>www/plugins/cordova-plugin-apiai/www/ApiAIPromises.js</key>
+		<data>
+		xMqJOHlBpBEdLjAGrJQ06ppHXU0=
+		</data>
+		<key>www/plugins/cordova-plugin-apiai/www/lib/q.js</key>
+		<data>
+		3tUQEYLmMtAfMHU8830KUXEFIUQ=
+		</data>
+		<key>www/plugins/cordova-plugin-audioinput/www/audioInputCapture.js</key>
+		<data>
+		7DgBbrxnKuSsEiB136H7yV30B6k=
 		</data>
 		<key>www/plugins/cordova-plugin-speechrecognition/www/speechRecognition.js</key>
 		<data>
@@ -2647,22 +2675,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dNcfSETJ7Ah6D/YcHbePHXO6L0M=
+			I9XzMecJ+s1nMofaIpZbJfJnlAY=
 			</data>
 			<key>hash2</key>
 			<data>
-			XQDvDXqRnvfLLRXRQnFod4QUZNeHvjpgcfOO3NutFLA=
+			qFEaWBKylLrc9xpq3UX6qsGHPwcj4Dem2vLKYisF1bM=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+7PdXbraF1rH5YFkIaBhawduPXk=
+			dm3XoQ0ZlKTX81DgqyhaJSRh/GI=
 			</data>
 			<key>hash2</key>
 			<data>
-			jqaFytsQm/lxMHLsgNilT2iB+x/mV7cKHyigIvo1NsE=
+			QTAuyul4u/OTRACJ5+Cjt+gcPL0tt+KKESsbkqdaJvs=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2680,11 +2708,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rIVeogekKc19ZTlfoAi13hz5s78=
+			SBDrCpycpvS5qpeA9wodjpY5KCY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Tnfrzy6fkdu2Bwdtpr6In/64a9J14KOcO19RdNJV0NU=
+			/n1oWkGNngeMgj9G5uikAGfIuqWpb3Ig2hL5CB3Y7fE=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2867,11 +2895,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tSH8cnOUvuBTPMXIrBFakITA+G4=
+			bjcoUj2836UvT8uredHYE2gv1js=
 			</data>
 			<key>hash2</key>
 			<data>
-			jsaN5qgrwKiVjKiNoT7RmY/40NSpVCxuDUfeY2WiC5Y=
+			FXwYJeAhVxXTmy9cttqSoUI5wzoHPzVQ8j3HuZWlYfo=
 			</data>
 		</dict>
 		<key>archived-expanded-entitlements.xcent</key>
@@ -2885,15 +2913,26 @@
 			l3BKiWC0+szu9UOXoI+10KRWJHw2JzWSFaoqJ98iZWw=
 			</data>
 		</dict>
+		<key>beep.caf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qciPQ/q/awk70sni7XdXpD8PCkc=
+			</data>
+			<key>hash2</key>
+			<data>
+			n3I1LlVLXPVFUmesyThOKMNAt5dmj3h5hqhe03g2Emw=
+			</data>
+		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uYuKb+DnGqPGnsBFPeZGnKLPS88=
+			MbqKo/565W8bT9WOdq6Szy7oIMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			VL7gsgAv9JyW96W+2JytyiMl2fFI4xSa0RUkZW0H3mk=
+			sl8P3sf8h+FPzHgDZFv287AZx0IgFRPTjUvZTDkdNJU=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -2966,11 +3005,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cgGO60Bn3bPw3iwXDE/6n4K11NQ=
+			wecRrhgZ0d468eEE7laqIkuV6o4=
 			</data>
 			<key>hash2</key>
 			<data>
-			q0Cze2YBHBBHKM5OJcS2UL8dP9f3JJqUTK4sCbGIAn0=
+			tRbRJ7hsVlolZ7zzo0ANG8mDrghQ/D4h6xxbJpHZUnA=
 			</data>
 		</dict>
 		<key>www/css/index.css</key>
@@ -2988,22 +3027,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+N/J/0CX+P0W5P+0p1eqEqMCipU=
+			5SwQwt29kfOYlI6OVQeCFHlrox0=
 			</data>
 			<key>hash2</key>
 			<data>
-			h9zSuTqI0hLc292VLQGBvsosjs48HYwu6Pq1/vriUb4=
+			G49Kec2Y+gNooTsQmO/oqAK8KQKtg8ZKQo7AiNPDmMI=
 			</data>
 		</dict>
 		<key>www/js/index.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MkflX5JlwZTeynO0j7pRiu4CcTs=
+			emDwo+Ti3Hi/XMy3h/fm8Lt+MTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			A99zlJWLehCVzYIhbcEpd7O+JbzWEbs7UA+yjijDMgU=
+			XONM+0cZlPy/e3QIdAlV95ty7qaZqSEi2cWg3CjjZmY=
 			</data>
 		</dict>
 		<key>www/js/libs/bower_components/font-roboto/CONTRIBUTING.md</key>
@@ -9012,6 +9051,28 @@
 			hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=
 			</data>
 		</dict>
+		<key>www/js/libs/p5.min.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SRYxVoKCNxeH7qnwZ1h4YTHLN1I=
+			</data>
+			<key>hash2</key>
+			<data>
+			bXPU+HvtR3tP1IYHZVEFHzEZ9p5zkY8GLPnOnJXW67k=
+			</data>
+		</dict>
+		<key>www/js/libs/p5.speech.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ybLvmwx0cnieDXoM+HIN6Fp0VII=
+			</data>
+			<key>hash2</key>
+			<data>
+			lbr3H+EX96TSUzFRIHPa3ikL6sR3qtKzYx7nDtsOo8I=
+			</data>
+		</dict>
 		<key>www/js/libs/vue-router.js</key>
 		<dict>
 			<key>hash</key>
@@ -9032,6 +9093,50 @@
 			<key>hash2</key>
 			<data>
 			fBoyvhPgIUhQeOEcPuTqdDiFGKsFi/NhuAgfE+Q10mQ=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-apiai/www/ApiAIPlugin.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AsOaAqxJxRDa17Nj0+3DlVDcawI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Rx03ciUYye0TST/VVN7meLS2OuPcLeDPPWaqwLbdWdo=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-apiai/www/ApiAIPromises.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xMqJOHlBpBEdLjAGrJQ06ppHXU0=
+			</data>
+			<key>hash2</key>
+			<data>
+			naKEgAB2RqsDB7YWIURH8k6+bBX+LlaoPV1wnXbmzVc=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-apiai/www/lib/q.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3tUQEYLmMtAfMHU8830KUXEFIUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			FQ1len0jlq2wly0CskHiBEfmigV/JbLvn2xVVj2ji2I=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-audioinput/www/audioInputCapture.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7DgBbrxnKuSsEiB136H7yV30B6k=
+			</data>
+			<key>hash2</key>
+			<data>
+			J1KEidrxOKKowIPGZmYtwi1SPzh9zwyHxj6O2gNG/9k=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-speechrecognition/www/speechRecognition.js</key>

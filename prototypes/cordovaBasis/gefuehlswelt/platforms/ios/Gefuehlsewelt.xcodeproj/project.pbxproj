@@ -15,6 +15,18 @@
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		516F752465524B0B9C7CD7EE /* SpeechRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4091927C8B534226BAC6BB0A /* SpeechRecognition.m */; };
 		CFD4EC17AD1F407B8332827D /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8DEDB62D8E4A1CA64910D8 /* Speech.framework */; };
+		C1202232B07449E6876FD7EC /* ApiAIPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 828B3CCF1F6544CEBD4BB2D2 /* ApiAIPlugin.m */; settings = {COMPILER_FLAGS = "-std=gnu99 -fmodules"; }; };
+		035C1F7C79FE4D6EB665E605 /* beep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 09891C88EBE9476BB06DB9F3 /* beep.caf */; };
+		E05E1E894B40426EA1456CBA /* ApiAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CB2B64213F4F4A98D851DD /* ApiAI.framework */; };
+		2F9F1D6B0C9D4B998E034CC9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E192AEBB3EC241C4BEE6A79F /* Security.framework */; };
+		689807F716F6478CA1AE921A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7FEFF057E542A8931D5C75 /* Foundation.framework */; };
+		3B8206777CB24CE6A2D56EB7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E449B0B05BD3485BAB2FF8E6 /* CoreAudio.framework */; };
+		0950467A4C864439AE81B136 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF755DDA507E4686AA2567B2 /* AudioToolbox.framework */; };
+		48238638D74C47A89336ED70 /* CDVAudioInputCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600FC21B90445F6A0398211 /* CDVAudioInputCapture.m */; };
+		DEDCA216178347DA8FF2C7E8 /* AudioReceiver.h in Resources */ = {isa = PBXBuildFile; fileRef = 911B84A683FE422C9E84EF92 /* AudioReceiver.h */; };
+		7D92A3D354E9413886ABAAE6 /* AudioReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CEDE40C06A468B9ADAD601 /* AudioReceiver.m */; };
+		59858F7B31B342B6AD7EDDEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5C0573E91D4A18BEF90284 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F7A2A003927544C0AB9C639D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B431E964F3459299685F72 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +77,19 @@
 		4091927C8B534226BAC6BB0A /* SpeechRecognition.m */ = {isa = PBXFileReference; name = "SpeechRecognition.m"; path = "cordova-plugin-speechrecognition/SpeechRecognition.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		45772148516F4793985EA2A5 /* SpeechRecognition.h */ = {isa = PBXFileReference; name = "SpeechRecognition.h"; path = "cordova-plugin-speechrecognition/SpeechRecognition.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		8E8DEDB62D8E4A1CA64910D8 /* Speech.framework */ = {isa = PBXFileReference; name = "Speech.framework"; path = "System/Library/Frameworks/Speech.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		828B3CCF1F6544CEBD4BB2D2 /* ApiAIPlugin.m */ = {isa = PBXFileReference; name = "ApiAIPlugin.m"; path = "cordova-plugin-apiai/ApiAIPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		05670D7666FA47038CA843A2 /* ApiAIPlugin.h */ = {isa = PBXFileReference; name = "ApiAIPlugin.h"; path = "cordova-plugin-apiai/ApiAIPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		09891C88EBE9476BB06DB9F3 /* beep.caf */ = {isa = PBXFileReference; name = "beep.caf"; path = "beep.caf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		27CB2B64213F4F4A98D851DD /* ApiAI.framework */ = {isa = PBXFileReference; name = "ApiAI.framework"; path = "Gefuehlsewelt/Plugins/cordova-plugin-apiai/ApiAI.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E192AEBB3EC241C4BEE6A79F /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		BA7FEFF057E542A8931D5C75 /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E449B0B05BD3485BAB2FF8E6 /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		BF755DDA507E4686AA2567B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7600FC21B90445F6A0398211 /* CDVAudioInputCapture.m */ = {isa = PBXFileReference; name = "CDVAudioInputCapture.m"; path = "cordova-plugin-audioinput/CDVAudioInputCapture.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		911B84A683FE422C9E84EF92 /* AudioReceiver.h */ = {isa = PBXFileReference; name = "AudioReceiver.h"; path = "cordova-plugin-audioinput/AudioReceiver.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		99CEDE40C06A468B9ADAD601 /* AudioReceiver.m */ = {isa = PBXFileReference; name = "AudioReceiver.m"; path = "cordova-plugin-audioinput/AudioReceiver.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4B5C0573E91D4A18BEF90284 /* Accelerate.framework */ = {isa = PBXFileReference; name = "Accelerate.framework"; path = "System/Library/Frameworks/Accelerate.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C6B431E964F3459299685F72 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +99,13 @@
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				CFD4EC17AD1F407B8332827D /* Speech.framework in Frameworks */,
+				E05E1E894B40426EA1456CBA /* ApiAI.framework in Frameworks */,
+				2F9F1D6B0C9D4B998E034CC9 /* Security.framework in Frameworks */,
+				689807F716F6478CA1AE921A /* Foundation.framework in Frameworks */,
+				3B8206777CB24CE6A2D56EB7 /* CoreAudio.framework in Frameworks */,
+				0950467A4C864439AE81B136 /* AudioToolbox.framework in Frameworks */,
+				59858F7B31B342B6AD7EDDEA /* Accelerate.framework in Frameworks */,
+				F7A2A003927544C0AB9C639D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +168,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* Gefuehlsewelt-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				09891C88EBE9476BB06DB9F3 /* beep.caf */,
 			);
 			name = Resources;
 			path = Gefuehlsewelt/Resources;
@@ -145,6 +178,13 @@
 			isa = PBXGroup;
 			children = (
 				8E8DEDB62D8E4A1CA64910D8 /* Speech.framework */,
+				27CB2B64213F4F4A98D851DD /* ApiAI.framework */,
+				E192AEBB3EC241C4BEE6A79F /* Security.framework */,
+				BA7FEFF057E542A8931D5C75 /* Foundation.framework */,
+				E449B0B05BD3485BAB2FF8E6 /* CoreAudio.framework */,
+				BF755DDA507E4686AA2567B2 /* AudioToolbox.framework */,
+				4B5C0573E91D4A18BEF90284 /* Accelerate.framework */,
+				C6B431E964F3459299685F72 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +213,11 @@
 			children = (
 				4091927C8B534226BAC6BB0A /* SpeechRecognition.m */,
 				45772148516F4793985EA2A5 /* SpeechRecognition.h */,
+				828B3CCF1F6544CEBD4BB2D2 /* ApiAIPlugin.m */,
+				05670D7666FA47038CA843A2 /* ApiAIPlugin.h */,
+				7600FC21B90445F6A0398211 /* CDVAudioInputCapture.m */,
+				911B84A683FE422C9E84EF92 /* AudioReceiver.h */,
+				99CEDE40C06A468B9ADAD601 /* AudioReceiver.m */,
 			);
 			name = Plugins;
 			path = Gefuehlsewelt/Plugins;
@@ -269,6 +314,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				035C1F7C79FE4D6EB665E605 /* beep.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +347,10 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				516F752465524B0B9C7CD7EE /* SpeechRecognition.m in Sources */,
+				C1202232B07449E6876FD7EC /* ApiAIPlugin.m in Sources */,
+				48238638D74C47A89336ED70 /* CDVAudioInputCapture.m in Sources */,
+				DEDCA216178347DA8FF2C7E8 /* AudioReceiver.h in Resources */,
+				7D92A3D354E9413886ABAAE6 /* AudioReceiver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +387,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = Gefuehlsewelt;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Gefuehlsewelt/Plugins/cordova-plugin-apiai\"",
+				);
 			};
 			name = Debug;
 		};
@@ -360,6 +414,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = Gefuehlsewelt;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Gefuehlsewelt/Plugins/cordova-plugin-apiai\"",
+				);
 			};
 			name = Release;
 		};

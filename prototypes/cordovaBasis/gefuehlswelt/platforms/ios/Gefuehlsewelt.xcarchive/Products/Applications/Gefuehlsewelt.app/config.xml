@@ -22,6 +22,12 @@
     <feature name="SpeechRecognition">
         <param name="ios-package" value="SpeechRecognition" />
     </feature>
+    <feature name="ApiAIPlugin">
+        <param name="ios-package" value="ApiAIPlugin" />
+    </feature>
+    <feature name="AudioInputCapture">
+        <param name="ios-package" value="CDVAudioInputCapture" />
+    </feature>
     <name>Gefuehlsewelt</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

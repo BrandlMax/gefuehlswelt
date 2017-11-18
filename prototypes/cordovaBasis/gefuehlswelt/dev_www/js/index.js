@@ -27,12 +27,16 @@ var app = {
         window.plugins.speechRecognition.requestPermission(successCallback, errorCallback)
         
         function successCallback(a){
-          console.log('success', a);
+          console.log('iosSpeach: success', a);
         }
     
         function errorCallback(error){
-          console.log('error', error);
+          console.log('iosSpeach: error', error);
         }
+
+        audioinput.start({
+            streamToWebAudio: true
+        });
     
     },
 

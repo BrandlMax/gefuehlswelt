@@ -45,12 +45,16 @@ var app = {
         window.plugins.speechRecognition.requestPermission(successCallback, errorCallback);
 
         function successCallback(a) {
-            console.log('success', a);
+            console.log('iosSpeach: success', a);
         }
 
         function errorCallback(error) {
-            console.log('error', error);
+            console.log('iosSpeach: error', error);
         }
+
+        audioinput.start({
+            streamToWebAudio: true
+        });
     },
 
     // Update DOM on a Received Event
@@ -91,7 +95,7 @@ var app = {
 
 app.initialize();
 
-},{"./templates/database.vue":4,"./templates/home.vue":5,"./templates/speech.vue":6,"./templates/text.vue":7,"./templates/write.vue":8}],2:[function(require,module,exports){
+},{"./templates/database.vue":5,"./templates/home.vue":6,"./templates/speech.vue":7,"./templates/text.vue":8,"./templates/write.vue":9}],2:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -102,14 +106,75 @@ Object.defineProperty(exports, "__esModule", {
 
 console.log('Speech Comp!');
 
+var listenState = false;
+
 exports.default = {
   props: [],
   data: function data() {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
-    console.log('Speech Template!');
+    console.log('Dialogflow mounted!');
+
+    var rec = new p5.SpeechRec();
+    rec.onResult = showResult;
+    rec.onError = showError;
+
+    $("#startMic").click(function () {
+      $("#Message").html('mic started');
+      rec.start();
+    });
+
+    function showResult() {
+      console.log(rec.resultString);
+      $("#result").html(rec.resultString);
+    }
+
+    function showError(err) {
+      console.log(err);
+      $("#result").html("p5 Error: " + err.error + err.message);
+    }
+  },
+  created: function created() {},
+  destroyed: function destroyed() {}
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  !P5 Dialogflow\n  "),_c('div',{attrs:{"id":"Message"}}),_vm._v(" "),_c('div',{attrs:{"id":"EMessage"}}),_vm._v(" "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('div',{attrs:{"id":"startMic"}},[_vm._v("Start Mic")])])}]
+__vue__options__._scopeId = "data-v-c37b34fc"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c37b34fc", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-c37b34fc", __vue__options__)
+  }
+})()}
+},{"vue":12,"vue-hot-reload-api":11}],3:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+console.log('Speech Comp!');
+
+var listenState = false;
+
+exports.default = {
+  props: [],
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {
+    console.log('Speech Template mounted!');
 
     var options = {
       language: "de-DE",
@@ -117,7 +182,27 @@ exports.default = {
       showPartial: false };
 
     window.plugins.speechRecognition.hasPermission(successCallback, errorCallback);
-    window.plugins.speechRecognition.startListening(successCallback, errorCallback, options);
+
+    $("#start").click(function () {
+
+      if (!listenState) {
+        listenState = true;
+        window.plugins.speechRecognition.startListening(successListened, errorCallback, options);
+      }
+    });
+
+    $("#stop").click(function () {
+
+      if (listenState) {
+        listenState = false;
+        window.plugins.speechRecognition.stopListening(successCallback, errorCallback);
+      }
+    });
+
+    function successListened(result) {
+      console.log('Result', result);
+      $("#result").html(result);
+    }
 
     function successCallback(a) {
       console.log('success', a);
@@ -127,19 +212,15 @@ exports.default = {
       console.log('error', error);
     }
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  }
+  created: function created() {},
+  destroyed: function destroyed() {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  !Some Speech!!\n")])}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  !Some Speech!!\n  "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('div',{attrs:{"id":"start"}},[_vm._v("Start")]),_vm._v(" "),_c('div',{attrs:{"id":"stop"}},[_vm._v("Stop")])])}]
 __vue__options__._scopeId = "data-v-35c89324"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -148,10 +229,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-35c89324", __vue__options__)
   } else {
-    hotAPI.reload("data-v-35c89324", __vue__options__)
+    hotAPI.rerender("data-v-35c89324", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],3:[function(require,module,exports){
+},{"vue":12,"vue-hot-reload-api":11}],4:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#handwritter[data-v-683901a6] {\n    position: absolute;\n    height: 100%;\n    top: 0;\n    width: 100%;\n    background: rgb(255, 255, 255);\n}\n\n.background[data-v-683901a6]{\n    z-index: -9999;\n}\n\nmyscript-text-web[data-v-683901a6] {\n  height: 100%;\n}")
 ;(function(){
 'use strict';
@@ -172,18 +253,14 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("MyScript mounted");
     document.querySelector('myscript-text-web').addEventListener('exported', function (event) {
       console.log(event.detail.exports['text/plain']);
       writtenText = event.detail.exports['text/plain'];
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  }
+  created: function created() {},
+  destroyed: function destroyed() {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -200,10 +277,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-683901a6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-683901a6", __vue__options__)
+    hotAPI.rerender("data-v-683901a6", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10,"vueify/lib/insert-css":12}],4:[function(require,module,exports){
+},{"vue":12,"vue-hot-reload-api":11,"vueify/lib/insert-css":13}],5:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -221,10 +298,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-110b1b6a", __vue__options__)
   } else {
-    hotAPI.reload("data-v-110b1b6a", __vue__options__)
+    hotAPI.rerender("data-v-110b1b6a", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],5:[function(require,module,exports){
+},{"vue":12,"vue-hot-reload-api":11}],6:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -243,10 +320,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7768b04e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7768b04e", __vue__options__)
+    hotAPI.rerender("data-v-7768b04e", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],6:[function(require,module,exports){
+},{"vue":12,"vue-hot-reload-api":11}],7:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -258,6 +335,10 @@ var _listener = require('./components/listener.vue');
 
 var _listener2 = _interopRequireDefault(_listener);
 
+var _dialog = require('./components/dialog.vue');
+
+var _dialog2 = _interopRequireDefault(_dialog);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -267,27 +348,24 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("Speech Template mounted");
     $('body').on('touchmove', function (e) {
       e.preventDefault();
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  },
+  created: function created() {},
+  destroyed: function destroyed() {},
 
   components: {
-    Listener: _listener2.default
+    Listener: _listener2.default,
+    P5Dialog: _dialog2.default
   }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Speech")]),_vm._v(" "),_c('p',[_vm._v("Demo of Speech Recognition")]),_vm._v(" "),_c('Listener')],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("Speech")]),_vm._v(" "),_c('p',[_vm._v("Demo of Speech Recognition")]),_vm._v(" "),_c('P5Dialog')],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -296,10 +374,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6dec5111", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6dec5111", __vue__options__)
+    hotAPI.rerender("data-v-6dec5111", __vue__options__)
   }
 })()}
-},{"./components/listener.vue":2,"vue":11,"vue-hot-reload-api":10}],7:[function(require,module,exports){
+},{"./components/dialog.vue":2,"./components/listener.vue":3,"vue":12,"vue-hot-reload-api":11}],8:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -317,10 +395,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5891299c", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5891299c", __vue__options__)
+    hotAPI.rerender("data-v-5891299c", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],8:[function(require,module,exports){
+},{"vue":12,"vue-hot-reload-api":11}],9:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -342,17 +420,13 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("Write Page mounted");
     $('body').on('touchmove', function (e) {
       e.preventDefault();
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  },
+  created: function created() {},
+  destroyed: function destroyed() {},
 
   components: {
     Writer: _writer2.default
@@ -372,10 +446,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-b38d0500", __vue__options__)
   } else {
-    hotAPI.reload("data-v-b38d0500", __vue__options__)
+    hotAPI.rerender("data-v-b38d0500", __vue__options__)
   }
 })()}
-},{"./components/writer.vue":3,"vue":11,"vue-hot-reload-api":10}],9:[function(require,module,exports){
+},{"./components/writer.vue":4,"vue":12,"vue-hot-reload-api":11}],10:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -561,7 +635,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -788,7 +862,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.3
@@ -8586,7 +8660,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":9}],12:[function(require,module,exports){
+},{"_process":10}],13:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
