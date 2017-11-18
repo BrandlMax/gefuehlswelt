@@ -1,12 +1,16 @@
 <template>
   <div>
     !Some Speech!!
+    <div id="result"></div>
+    <div id="start">Start</div>
+    <div id="stop">Stop</div>
   </div>
 </template>
 
 <script>
 console.log('Speech Comp!');
 
+var listenState = false;
 
 export default {
   props: [],
@@ -16,8 +20,8 @@ export default {
     }
   },
   mounted() {
-    console.log("mounted"); 
-    console.log('Speech Template!');
+    // console.log("mounted"); 
+    console.log('Speech Template mounted!');
 
     let options = {
      language: "de-DE",
@@ -26,8 +30,30 @@ export default {
     }
   
     window.plugins.speechRecognition.hasPermission(successCallback, errorCallback);
-    window.plugins.speechRecognition.startListening(successCallback, errorCallback, options);
-    
+
+    $( "#start" ).click(function() {
+      
+      if(!listenState){
+          listenState = true;
+          window.plugins.speechRecognition.startListening(successListened, errorCallback, options);
+      }
+      
+    });
+
+    $( "#stop" ).click(function() {
+      
+      if(listenState){
+        listenState = false;
+        window.plugins.speechRecognition.stopListening(successCallback, errorCallback);
+      }
+      
+    });
+
+    function successListened(result){
+      console.log('Result', result);
+      $( "#result" ).html(result);
+    }
+
     function successCallback(a){
       console.log('success', a);
     }
@@ -36,14 +62,13 @@ export default {
       console.log('error', error);
     }
 
-
   },
   created () {
-    console.log("created");
+    //console.log("created");
     
   },
   destroyed(){
-    console.log("destroyed");
+    //console.log("destroyed");
 
   }
 }

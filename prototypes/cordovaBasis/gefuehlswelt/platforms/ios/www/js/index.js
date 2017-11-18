@@ -102,14 +102,15 @@ Object.defineProperty(exports, "__esModule", {
 
 console.log('Speech Comp!');
 
+var listenState = false;
+
 exports.default = {
   props: [],
   data: function data() {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
-    console.log('Speech Template!');
+    console.log('Speech Template mounted!');
 
     var options = {
       language: "de-DE",
@@ -117,7 +118,27 @@ exports.default = {
       showPartial: false };
 
     window.plugins.speechRecognition.hasPermission(successCallback, errorCallback);
-    window.plugins.speechRecognition.startListening(successCallback, errorCallback, options);
+
+    $("#start").click(function () {
+
+      if (!listenState) {
+        listenState = true;
+        window.plugins.speechRecognition.startListening(successListened, errorCallback, options);
+      }
+    });
+
+    $("#stop").click(function () {
+
+      if (listenState) {
+        listenState = false;
+        window.plugins.speechRecognition.stopListening(successCallback, errorCallback);
+      }
+    });
+
+    function successListened(result) {
+      console.log('Result', result);
+      $("#result").html(result);
+    }
 
     function successCallback(a) {
       console.log('success', a);
@@ -127,19 +148,15 @@ exports.default = {
       console.log('error', error);
     }
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  }
+  created: function created() {},
+  destroyed: function destroyed() {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  !Some Speech!!\n")])}
-__vue__options__.staticRenderFns = []
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._v("\n  !Some Speech!!\n  "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('div',{attrs:{"id":"start"}},[_vm._v("Start")]),_vm._v(" "),_c('div',{attrs:{"id":"stop"}},[_vm._v("Stop")])])}]
 __vue__options__._scopeId = "data-v-35c89324"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -172,18 +189,14 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("MyScript mounted");
     document.querySelector('myscript-text-web').addEventListener('exported', function (event) {
       console.log(event.detail.exports['text/plain']);
       writtenText = event.detail.exports['text/plain'];
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  }
+  created: function created() {},
+  destroyed: function destroyed() {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -267,17 +280,13 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("Speech Template mounted");
     $('body').on('touchmove', function (e) {
       e.preventDefault();
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  },
+  created: function created() {},
+  destroyed: function destroyed() {},
 
   components: {
     Listener: _listener2.default
@@ -342,17 +351,13 @@ exports.default = {
     return {};
   },
   mounted: function mounted() {
-    console.log("mounted");
+    console.log("Write Page mounted");
     $('body').on('touchmove', function (e) {
       e.preventDefault();
     });
   },
-  created: function created() {
-    console.log("created");
-  },
-  destroyed: function destroyed() {
-    console.log("destroyed");
-  },
+  created: function created() {},
+  destroyed: function destroyed() {},
 
   components: {
     Writer: _writer2.default

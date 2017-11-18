@@ -23,17 +23,17 @@ export default {
     }
   },
   mounted() {
-    console.log("mounted"); 
+    console.log("MyScript mounted"); 
     document.querySelector('myscript-text-web').addEventListener('exported', (event) => {
       console.log(event.detail.exports['text/plain']);
       writtenText = event.detail.exports['text/plain'];
     });
   },
   created () {
-    console.log("created");
+    //console.log("created");
   },
   destroyed(){
-    console.log("destroyed");
+    //console.log("destroyed");
 
   }
 }

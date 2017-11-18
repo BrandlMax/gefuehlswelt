@@ -53,8 +53,8 @@
       <true/>
     </dict>
     <key>NSMicrophoneUsageDescription</key>
-    <string>Request to use Microphone</string>
+    <string>"Hey, you will need the Mic for your thoughts"</string>
     <key>NSSpeechRecognitionUsageDescription</key>
-    <string>Request to use Speech Recognition</string>
+    <string>"Your voice is stronger than weapons"</string>
   </dict>
 </plist>

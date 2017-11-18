@@ -21,6 +21,12 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+            <string>"Hey, you will need the Mic for your thoughts"</string>
+        </config-file>
+        <config-file parent="NSSpeechRecognitionUsageDescription" target="*-Info.plist">
+            <string>"Your voice is stronger than weapons"</string>
+        </config-file>
     </platform>
     <engine name="browser" spec="^5.0.1" />
     <engine name="ios" spec="^4.5.3" />

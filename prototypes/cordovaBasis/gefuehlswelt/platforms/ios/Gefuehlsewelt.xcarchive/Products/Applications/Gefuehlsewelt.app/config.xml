@@ -19,6 +19,9 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SpeechRecognition">
+        <param name="ios-package" value="SpeechRecognition" />
+    </feature>
     <name>Gefuehlsewelt</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -36,6 +39,12 @@
     <allow-intent href="geo:*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+        <string>"Hey, you will need the Mic for your thoughts"</string>
+    </config-file>
+    <config-file parent="NSSpeechRecognitionUsageDescription" target="*-Info.plist">
+        <string>"Your voice is stronger than weapons"</string>
+    </config-file>
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />

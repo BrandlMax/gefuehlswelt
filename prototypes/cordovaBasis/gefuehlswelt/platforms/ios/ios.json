@@ -21,12 +21,20 @@
             {
               "xml": "<string>Request to use Microphone</string>",
               "count": 1
+            },
+            {
+              "xml": "<string>\"Hey, you will need the Mic for your thoughts\"</string>",
+              "count": 10
             }
           ],
           "NSSpeechRecognitionUsageDescription": [
             {
               "xml": "<string>Request to use Speech Recognition</string>",
               "count": 1
+            },
+            {
+              "xml": "<string>\"Your voice is stronger than weapons\"</string>",
+              "count": 10
             }
           ]
         }

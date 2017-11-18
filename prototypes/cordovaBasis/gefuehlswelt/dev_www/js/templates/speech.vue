@@ -18,16 +18,16 @@ export default {
     }
   },
   mounted() {
-    console.log("mounted"); 
+    console.log("Speech Template mounted"); 
     $('body').on('touchmove', function (e) {
       e.preventDefault();
     });
   },
   created () {
-    console.log("created");
+    //console.log("created");
   },
   destroyed(){
-    console.log("destroyed");
+    //console.log("destroyed");
   },
 	components: {
 		Listener,
