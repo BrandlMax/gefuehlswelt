@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebSQL Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+  <body>
+    <h1>WebSQL Test</h1>
+
+    <button id="create">Create Database</button>
+    <hr>
+    <input type="text" name="testInput" id="testInput">
+    <button id="send">Senden</button>
+    <hr>
+    <button id="delete">Delete Database</button>
+
+    <script src="./libs/jquery.min.js"></script>
+    <script>
+
+        var err = function(err){
+          console.log(err);
+        }
+
+        let db;
+
+          // 100 MB 
+          db = openDatabase('gefuehlswelt', '0.1', 'Test Datenbank für Gefühlswelt', 49*1024*1024);
+          
+          // Create Test Table
+          db.transaction((tx, err) => {
+            tx.executeSql('CREATE TABLE testtable (id unique, text)');
+          });
+
+
+        // Send Data
+        var pseudoID = 1;
+        $('#send').click(function (e) { 
+
+          e.preventDefault();
+          let val = $('#testInput').val();
+          var e_val = val;
+
+          db.transaction(function (tx) { 
+            // tx.executeSql('INSERT INTO testtable VALUES (4, "hello4")');
+             //tx.executeSql('INSERT INTO testtable (id, text) VALUES (100 , "wtf")');
+             console.log({ e_val, pseudoID});
+             tx.executeSql('INSERT INTO testtable (id, text) VALUES (? , ?)', [pseudoID, e_val]);
+             pseudoID = pseudoID + 1;
+             
+          });
+
+          console.log(val);
+        });
+
+        // Create Database
+        $('#delete').click(function (e) { 
+          
+          e.preventDefault();
+          // 100 MB 
+          db.transaction(function (tx) { 
+            tx.executeSql('DROP TABLE testtable');
+          });
+        
+        });
+        
+    </script>
+  </body>
+</html>

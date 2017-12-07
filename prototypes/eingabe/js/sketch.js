@@ -1,3 +1,5 @@
+// var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition || null;
+
 $('body').on('touchmove', function (e) {
     e.preventDefault();
 });
