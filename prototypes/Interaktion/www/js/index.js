@@ -41,7 +41,7 @@ var vm = new Vue({
 }).$mount('#app');
 
 },{"./werzeuge/beispiel.vue":2,"./werzeuge/home.vue":3}],2:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#sketch[data-v-5d8d0fbe] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#sketch[data-v-693577e2] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n}")
 ;(function(){
 'use strict';
 
@@ -78,16 +78,16 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"sketch"}})}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-5d8d0fbe"
+__vue__options__._scopeId = "data-v-693577e2"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d8d0fbe", __vue__options__)
+    hotAPI.createRecord("data-v-693577e2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5d8d0fbe", __vue__options__)
+    hotAPI.rerender("data-v-693577e2", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":5,"vueify/lib/insert-css":7}],3:[function(require,module,exports){
@@ -116,15 +116,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"navigation"}},[_c('router-link',{attrs:{"to":"/beispielwerkzeug"}},[_vm._v("Beispielwerkzeug")])],1)}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-1aa29b73"
+__vue__options__._scopeId = "data-v-327d8e61"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1aa29b73", __vue__options__)
+    hotAPI.createRecord("data-v-327d8e61", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1aa29b73", __vue__options__)
+    hotAPI.rerender("data-v-327d8e61", __vue__options__)
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":5}],4:[function(require,module,exports){
