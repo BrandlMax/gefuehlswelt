@@ -1,14 +1,12 @@
 // Import Werkzeuge.
-import Home from './werzeuge/home.vue';
-import Beispielwerkzeug from './werzeuge/beispiel.vue';
+import App from './components/app.vue';
 
 // Store
 Vue.use(Vuex)
 
 // Hier den Path eingeben wo ihr in der URL zu eurem Werkzeug kommt.
 const routes = [
-    {path: '/', component: Home },
-    {name: 'beispielwerkzeug', path: '/beispielwerkzeug', component: Beispielwerkzeug}
+    {path: '/', component: App},
 ]
 
 const router = new VueRouter({
@@ -19,10 +17,11 @@ const router = new VueRouter({
 // STORE
 const store = new Vuex.Store({
     state: {
-      someData: ' ',
+      someData: 'Hello World',
+      Gesten: [], 
     },
     mutations: {
-        example: (state, query) => {
+        exampleMutation: (state, query) => {
           console.log('example', state, query);
         }
     }

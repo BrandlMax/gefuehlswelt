@@ -72,6 +72,7 @@ gulp.task("watch", () => {
     gulp.watch('www/js/*.js', ['javascript','browser-reload']);
     gulp.watch('dev_www/js/**/*.vue', ['javascript','browser-reload']);
     gulp.watch('dev_www/css/*.css', ['css','browser-reload']);
-    gulp.watch('dev_www/js/werkzeuge/*.vue', ['javascript','libs','browser-reload']);
+    gulp.watch('dev_www/js/components/*.vue', ['javascript','libs','browser-reload']);
+    gulp.watch('dev_www/js/components/**/*.vue', ['javascript','libs','browser-reload']);
     gulp.watch('dev_www/index.html', ['index','libs', 'src', 'browser-reload']);
 })

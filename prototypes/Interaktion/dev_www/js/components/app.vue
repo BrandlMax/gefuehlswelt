@@ -1,13 +1,17 @@
 <template>
-  <div id="navigation">
-          <router-link to="/beispielwerkzeug">Beispielwerkzeug</router-link>
-  
-  </div>
+<mainCanvas></mainCanvas>
 </template>
 
 <script>
-console.log('home');
-// Erstmal Ignorieren
+
+// Interaktionselemente
+import mainCanvas from './interaktion/mainCanvas.vue';
+
+// Werkzeuge
+import Beispiel from './werzeuge/beispiel.vue';
+
+console.log('App');
+
 export default {
   data(){
       return{
@@ -22,7 +26,8 @@ export default {
   destroyed(){
 
   },components: {
-
+    mainCanvas,
+    Beispiel
   },
   methods:{
 
