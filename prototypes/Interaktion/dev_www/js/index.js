@@ -17,13 +17,20 @@ const router = new VueRouter({
 // STORE
 const store = new Vuex.Store({
     state: {
-      someData: 'Hello World',
-      Gesten: [], 
+      LayerCount: 0,
+      layers: [], 
     },
     mutations: {
-        exampleMutation: (state, query) => {
-          console.log('example', state, query);
-        }
+        addLayer: (state, Layer) => {
+            Layer.id = state.LayerCount;
+            state.LayerCount++;
+            state.layers.push(Layer);
+            console.log('addLayer', Layer)  
+        },
+        removeLayer: (state, Layer) => {
+            state.layers.splice(Layer.index, 1);
+            console.log('removedLayer', Layer.index)  
+        } 
     }
   })
 
