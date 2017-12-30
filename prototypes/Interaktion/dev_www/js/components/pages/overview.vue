@@ -1,10 +1,10 @@
 <template>
 <div id="displayFrame">
   <div id="mainCanvas">
-  Main Canvas
+  journals
   </div>
   <SVGLayer v-bind:SVGdata="{path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}"></SVGLayer>
-  <myScriptLayer v-for="(layer, index) in this.$store.state.layers" :if="layer.show" :key="index" :layerData="{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}"></myScriptLayer>
+  <Journal v-for="(journal, index) in this.$store.state.journals" :if="journal.show" :key="index" :journalData="{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w}"></Journal>
 </div>
 
 </template>
@@ -12,9 +12,8 @@
 <script>
 console.log('MainCanvas');
 
-import SVGLayer from './svg.vue';
-import Layer from './layer.vue';
-import myScriptLayer from './myScriptLayer.vue';
+import SVGLayer from '../interaktion/svg.vue';
+import Journal from '../interaktion/journal.vue';
 
 export default {
   data(){
@@ -36,29 +35,14 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: {
-
-          // kontakt@brandl-maximilian.de
-          // applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
-          // hmacKey: '061d41b0-2693-40fe-a59e-a5a69db5433b'
-
-          // hi@brandl-maximilian.de
-          //applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-          //hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
-
-          // Other
-          applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
-          hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
-          
-          
-        }
+        server: this.$store.state.access
       }
     });
 
     // Wenn Eingabe erkannt wurde
     editorElement.addEventListener('exported', (event) => {
 
-        console.log('Erkannt:',event.detail.exports['text/plain']);
+        console.log('On JournalOverviewErkannt:',event.detail.exports['text/plain']);
         console.log('Export Event:',event);
 
         // Erkenne Fläsche
@@ -80,7 +64,7 @@ export default {
           this.SVGy = posInfo.y;
 
           // Add Layer
-          this.$store.commit('addLayer', {
+          this.$store.commit('addJournal', {
             id: null,
             page: PageID,
             x: posInfo.x,
@@ -114,8 +98,7 @@ export default {
 
   },components: {
     SVGLayer,
-    myScriptLayer,
-    Layer
+    Journal
   },
   methods:{
     // this.$store.state
@@ -127,7 +110,7 @@ export default {
   #mainCanvas{
       height: 100vh;
       width: 100vw;
-      background: #f3f3f3;
+      background: #F5F4F0;
       position: absolute;
       top: 0;
       left: 0;

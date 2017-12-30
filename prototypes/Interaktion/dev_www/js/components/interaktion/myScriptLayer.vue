@@ -23,17 +23,7 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: {
-          /* 
-          // kontakt@brandl-maximilian.de
-          applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
-          hmacKey: '061d41b0-2693-40fe-a59e-a5a69db5433b'
-          */
-
-          // hi@brandl-maximilian.de
-          applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-          hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
-        }
+        server: this.$store.state.access
       }
     });
 
@@ -94,7 +84,7 @@ export default {
     .layer{
         position: absolute;
         z-index: 2000;
-        background: rgb(39, 201, 166);
+        background: rgba(255, 255, 255, 0.5);;
     }
 </style>
 

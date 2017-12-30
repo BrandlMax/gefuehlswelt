@@ -58,7 +58,7 @@ gulp.task("libs", () =>{
 
 
 gulp.task("src", () =>{
-    return gulp.src('dev_www/src/*.js')
+    return gulp.src('dev_www/src/**')
     .pipe(gulp.dest('www/src'));
 })
 
@@ -71,6 +71,7 @@ gulp.task("watch", () => {
     gulp.watch('dev_www/js/*.js', ['javascript','browser-reload']);
     gulp.watch('www/js/*.js', ['javascript','browser-reload']);
     gulp.watch('dev_www/js/**/*.vue', ['javascript','browser-reload']);
+    gulp.watch('dev_www/src/**', ['src','browser-reload']);
     gulp.watch('dev_www/css/*.css', ['css','browser-reload']);
     gulp.watch('dev_www/js/components/*.vue', ['javascript','libs','browser-reload']);
     gulp.watch('dev_www/js/components/**/*.vue', ['javascript','libs','browser-reload']);
