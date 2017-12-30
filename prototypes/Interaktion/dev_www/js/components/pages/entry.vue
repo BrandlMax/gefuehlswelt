@@ -62,7 +62,7 @@ export default {
         console.log('Export Event:',event);
 
         // Erkenne Fläsche
-        if(event.detail.exports['text/plain'] === '0'){
+        if(this.recogForm(event.detail.exports['text/plain'])){
           // Clean
           editorElement.editor.clear();
 
@@ -119,6 +119,21 @@ export default {
   },
   methods:{
     // this.$store.state
+    // Recognition
+    recogForm: function(gestik){
+      switch(gestik){
+        case '0':
+          return true;
+        case 'o':
+          return true;
+        case 'O':
+          return true;
+        case '˚':
+          return true;
+        default:
+          return false;
+      }
+    }
   }
 }
 </script>

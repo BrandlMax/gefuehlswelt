@@ -45,7 +45,20 @@ exports.default = {
   created: function created() {},
   destroyed: function destroyed() {},
   components: {},
-  methods: {}
+  methods: {
+    recogDel: function recogDel(gestik) {
+      switch (gestik) {
+        case 'x':
+          return true;
+        case 'X':
+          return true;
+        case '×':
+          return true;
+        default:
+          return false;
+      }
+    }
+  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -112,62 +125,105 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[d
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 
 console.log('myScriptLayer');
 
 exports.default = {
-  props: ['layerData'],
-  data: function data() {
-    return {};
-  },
-  mounted: function mounted() {
-    var _this = this;
+    props: ['layerData'],
+    data: function data() {
+        return {};
+    },
+    mounted: function mounted() {
+        var _this = this;
 
-    var LayerID = this.layerData.id;
-    var LayerIndex = this.layerData.index;
+        var LayerID = this.layerData.id;
+        var LayerIndex = this.layerData.index;
 
-    var editorElement = document.getElementById('layer_' + LayerID);
+        var editorElement = document.getElementById('layer_' + LayerID);
 
-    MyScript.register(editorElement, {
-      recognitionParams: {
-        type: 'TEXT',
-        server: this.$store.state.access
-      }
-    });
-
-    editorElement.addEventListener('exported', function (event) {
-
-      console.log('Erkannt:', event.detail.exports['text/plain']);
-
-      if (event.detail.exports['text/plain'] === 'x' || event.detail.exports['text/plain'] === 'X') {
-        editorElement.editor.clear();
-        _this.$store.commit('removeLayer', {
-          index: LayerIndex,
-          updatedLayer: newLayer
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                server: this.$store.state.access
+            }
         });
-      } else if (event.detail.exports['text/plain'] === '×') {
-        editorElement.editor.clear();
-        var newLayer = _this.$store.state.layers[LayerIndex];
-        newLayer.show = false;
-        _this.$store.commit('removeLayer', {
-          index: LayerIndex,
-          updatedLayer: newLayer
-        });
-      } else {}
-    });
 
-    editorElement.addEventListener('contextmenu', function (ev) {
-      editorElement.editor.clear();
-      return false;
-    }, false);
-  },
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {},
-  methods: {}
+        editorElement.addEventListener('exported', function (event) {
+
+            console.log('Erkannt:', event.detail.exports['text/plain']);
+
+            if (_this.recogTool(event.detail.exports['text/plain'])) {
+                console.log('Delete layer now?');
+            }
+
+            if (_this.recogDel(event.detail.exports['text/plain'])) {
+                editorElement.editor.clear();
+
+                var newLayer = _this.$store.state.layers[LayerIndex];
+                newLayer.show = false;
+                _this.$store.commit('removeLayer', {
+                    index: LayerIndex,
+                    updatedLayer: newLayer
+                });
+            }
+        });
+
+        editorElement.addEventListener('contextmenu', function (ev) {
+            editorElement.editor.clear();
+            return false;
+        }, false);
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {},
+    methods: {
+        recogDel: function recogDel(gestik) {
+            switch (gestik) {
+                case 'x':
+                    return true;
+                case 'X':
+                    return true;
+                case '×':
+                    return true;
+                default:
+                    return false;
+            }
+        },
+
+        recogTool: function recogTool(gestik) {
+            switch (gestik) {
+                case 'mandala':
+                    this.createTool('mandala');
+                    return true;
+                case 'Mandala':
+                    this.createTool('mandala');
+                    return true;
+                case 'doodle':
+                    this.createTool('doodle');
+                    return true;
+                case 'Doodle':
+                    this.createTool('doodle');
+                    return true;
+                default:
+                    return false;
+            }
+        },
+        createTool: function createTool(gestik) {
+            switch (gestik) {
+                case 'mandala':
+                    console.log('create Mandala');
+                    return true;
+                case 'doodle':
+                    console.log('create Doodle');
+                    return true;
+                default:
+                    return false;
+            }
+        }
+    }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -299,7 +355,7 @@ exports.default = {
       console.log('Erkannt:', event.detail.exports['text/plain']);
       console.log('Export Event:', event);
 
-      if (event.detail.exports['text/plain'] === '0') {
+      if (_this.recogForm(event.detail.exports['text/plain'])) {
         editorElement.editor.clear();
 
         var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
@@ -340,7 +396,22 @@ exports.default = {
     myScriptLayer: _myScriptLayer2.default,
     Layer: _layer2.default
   },
-  methods: {}
+  methods: {
+    recogForm: function recogForm(gestik) {
+      switch (gestik) {
+        case '0':
+          return true;
+        case 'o':
+          return true;
+        case 'O':
+          return true;
+        case '˚':
+          return true;
+        default:
+          return false;
+      }
+    }
+  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -380,7 +451,6 @@ var _journal2 = _interopRequireDefault(_journal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log('MainCanvas');
-
 exports.default = {
   data: function data() {
     return {
@@ -411,7 +481,7 @@ exports.default = {
       console.log('On JournalOverviewErkannt:', event.detail.exports['text/plain']);
       console.log('Export Event:', event);
 
-      if (event.detail.exports['text/plain'] === '0') {
+      if (_this.recogForm(event.detail.exports['text/plain'])) {
         editorElement.editor.clear();
 
         var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
@@ -451,7 +521,22 @@ exports.default = {
     SVGLayer: _svg2.default,
     Journal: _journal2.default
   },
-  methods: {}
+  methods: {
+    recogForm: function recogForm(gestik) {
+      switch (gestik) {
+        case '0':
+          return true;
+        case 'o':
+          return true;
+        case 'O':
+          return true;
+        case '˚':
+          return true;
+        default:
+          return false;
+      }
+    }
+  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default

@@ -53,7 +53,20 @@ export default {
   },components: {
   },
   methods:{
-
+    // Recognition
+    //Delete
+    recogDel: function(gestik){
+      switch(gestik){
+        case 'x':
+          return true;
+        case 'X':
+          return true;
+        case '×':
+          return true;
+        default:
+          return false;
+      }
+    }
   }
 }
 </script>

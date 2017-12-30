@@ -31,30 +31,21 @@ export default {
     editorElement.addEventListener('exported', (event) => {
 
         console.log('Erkannt:',event.detail.exports['text/plain']);
-        // console.log('Export Event:',event);
 
         // Erkenne Fläsche
-        // Delete
-        if(event.detail.exports['text/plain'] === 'x' || event.detail.exports['text/plain'] === 'X'){
-            editorElement.editor.clear(); 
-            this.$store.commit('removeLayer', {
-                index: LayerIndex,
-                updatedLayer: newLayer
-            });
-             
-
+        if(this.recogTool(event.detail.exports['text/plain'])){
+            console.log('Delete layer now?');
         }
-        else if(event.detail.exports['text/plain'] === '×'){
-            editorElement.editor.clear();
+        // Delete
+        if(this.recogDel(event.detail.exports['text/plain'])){
+            editorElement.editor.clear(); 
+
             var newLayer = this.$store.state.layers[LayerIndex];
             newLayer.show = false; 
             this.$store.commit('removeLayer', {
                 index: LayerIndex,
                 updatedLayer: newLayer
-            });  
-        }
-        else{
-
+            }); 
         }
   
     });
@@ -75,7 +66,50 @@ export default {
   },components: {
   },
   methods:{
-
+    //Delete
+    recogDel: function(gestik){
+      switch(gestik){
+        case 'x':
+          return true;
+        case 'X':
+          return true;
+        case '×':
+          return true;
+        default:
+          return false;
+      }
+    },
+    //Werkzeuge
+    recogTool: function(gestik){
+        switch(gestik){
+            case 'mandala':
+                this.createTool('mandala');
+                return true;
+            case 'Mandala':
+                this.createTool('mandala');
+                return true;
+            case 'doodle':
+                this.createTool('doodle');
+                return true;
+            case 'Doodle':
+                this.createTool('doodle');
+                return true;
+            default:
+                return false;
+      }
+    },
+    createTool: function(gestik){
+        switch(gestik){
+            case 'mandala':
+                console.log('create Mandala');
+                return true;
+            case 'doodle':
+                console.log('create Doodle');
+                return true;
+            default:
+                return false;
+      }
+    }
   }
 }
 </script>
