@@ -1,24 +1,23 @@
 <template>
-
     <div class="toolLayer">
 
         <meinWerkzeug 
             v-if="Tool === 'Werkzeug01'"
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
-            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </meinWerkzeug>
 
         <meinAnderesWerkzeug 
             v-if="Tool === 'Werkzeug02'" 
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
-            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </meinAnderesWerkzeug>
 
         <div 
             v-if="Tool === 'NoTool'"
             :id="'layer_'+layerData.id"  
             class="layer" 
-            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :style="{ clipPath: 'url(#path_' + layerData.id +')',top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </div>
 
     </div>

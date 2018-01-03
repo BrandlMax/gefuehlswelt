@@ -79,6 +79,7 @@ export default {
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
+        clip-path: url(#form);
     }
 </style>
 

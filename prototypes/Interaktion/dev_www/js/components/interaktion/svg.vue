@@ -1,22 +1,18 @@
 <template>
-    <svg id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(SVGdata.width, SVGdata.height)" :width="SVGdata.width" :height="SVGdata.height" preserveAspectRatio = "xMinYMin meet">
-        <!--  
-            
-            clip-path: url(#form); 
-            Not Working.
-        -->
+    <div>
+    <svg v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
+
         <defs>
-            <clipPath id="form" clipPathUnits="objectBoundingBox">
-                <circle cx="100%" cy="100%" r="100%" id="circle"/>
+            <clipPath :id="'path_'+layer.id">
+                <path :transform="generateTransform(layer.x, layer.y)" x="0" y="0" :d="layer.svgPath" />
             </clipPath>
         </defs>
 
-        <g :transform="generateTranslate(SVGdata.x, SVGdata.y)">
-            <g transform="matrix(3.77953, 0, 0, 3.77953, -0, -0)">
-                <path x="0" y="0" :d="SVGdata.path" />
-            </g>
-        </g>
+        <!--
+        <path :transform="generateTransform(layer.x, layer.y)" x="0" y="0" :d="SVGdata.path" />
+        -->
     </svg>
+    </div>
 </template>
 
 <script>
@@ -76,7 +72,7 @@ export default {
     svg {
         position: absolute;
         z-index: 1000;
-        background: #cecece;
+        background: rgba(0, 0, 0, 0);
     }
 </style>
 

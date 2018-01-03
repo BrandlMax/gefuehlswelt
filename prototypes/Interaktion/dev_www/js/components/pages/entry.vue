@@ -11,8 +11,7 @@
   </Layer>
 
   <SVGLayer 
-    v-if="showSVGlayer"
-    v-bind:SVGdata="{path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}">
+    v-bind:SVGdata="{id: SVGid, path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy, show: showSVGlayer}">
   </SVGLayer>
 
   <myScriptLayer 
@@ -55,12 +54,26 @@ export default {
     });
 
     editorElement.addEventListener('click', () => {
-      console.log('Editor Element', editorElement.editor);
+
+      // Clean Canvas Before
+      editorElement.editor.clear();
+
+      var paths = document.getElementById('viewTransform').getElementsByTagName( 'path' );
+      var pathsList = Array.prototype.slice.call(paths);
+      var SVGPath;
+
+      // Check if there is a Form
+      pathsList.forEach((element, index) => {
+        // Is there a Fill Path?
+        if(element.id.charAt(0) === "d"){
+          SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[index].attributes.d.nodeValue;
+          
           // Positions Info
           var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-          var SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[0].attributes.d.nodeValue;
+          
           console.log('PosInfo', posInfo);
           console.log('SVG Path', SVGPath);
+          editorElement.editor.clear();
 
           // Update SVG File
           this.SVGpath = SVGPath;
@@ -68,40 +81,12 @@ export default {
           this.SVGwidth = posInfo.width;
           this.SVGx = posInfo.x;
           this.SVGy = posInfo.y;
-
-          editorElement.editor.clear();
-
-	  });
-
-    // Wenn Eingabe erkannt wurde
-    editorElement.addEventListener('exported', (event) => {
-      
-        console.log('Editor', editorElement.editor);
-        console.log('Erkannt:',event.detail.exports['text/plain']);
-        console.log('SVG Export:',event.detail.exports['SVG']);
-        console.log('PNG Export:',event.detail.exports['PNG'])
-
-        // Erkenne Fläsche
-        if(this.recogForm(event.detail.exports['text/plain'])){
-          // Clean
-          editorElement.editor.clear();
-
-          // Positions Info
-          var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-          var SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[0].attributes.d.nodeValue;
-          console.log('PosInfo', posInfo);
-          console.log('SVG Path', SVGPath);
-
-          // Update SVG File
-          this.SVGpath = SVGPath;
-          this.SVGheight = posInfo.height;
-          this.SVGwidth = posInfo.width;
-          this.SVGx = posInfo.x;
-          this.SVGy = posInfo.y;
+          
 
           // Add Layer
           this.$store.commit('addLayer', {
-            id: null,
+            id: this.$store.state.LayerCount,
+            SVGid: this.$store.state.LayerCount,
             page: PageID,
             x: posInfo.x,
             y: posInfo.y,
@@ -111,20 +96,20 @@ export default {
             show: true
           });
 
-        }else if(this.recogCmd(event.detail.exports['text/plain'])){
-          console.log('Kommando Erkannt!');
-          editorElement.editor.clear();
         }else{
           editorElement.editor.clear();
         }
 
-    });
+      });
+
+	  });
 
     // Rechtsklick um Canvas zu leeren
     editorElement.addEventListener('contextmenu', function(ev) {
       // ev.preventDefault();
       editorElement.editor.clear();
       return false;
+
     }, false);
 
   },

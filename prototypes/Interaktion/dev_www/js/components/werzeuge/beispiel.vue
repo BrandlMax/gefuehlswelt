@@ -1,5 +1,5 @@
 <template>
-    <div :style="{ height: toolData.height+'px', width: toolData.width+'px'}" :id="'sketch_'+toolData.id" class="sketch"></div>
+    <div :style="{ clipPath: 'url(#path_' + toolData.id +')', height: toolData.height+'px', width: toolData.width+'px'}" :id="'sketch_'+toolData.id" class="sketch"></div>
 </template>
 
 <script>
@@ -23,6 +23,9 @@ export default {
       // Create Canvas
       var canvas = p5.createCanvas(toolData.width,toolData.height);
       canvas.parent('sketch_'+toolData.id);
+      canvas.style('clip-path', 'url(#path_' + toolData.id +')');
+      // canvas.setAttribute("class", "democlass");
+      console.log('canvas', canvas)
     };
 
     p5.draw = function() {
