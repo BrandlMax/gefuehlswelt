@@ -3,7 +3,7 @@
   <div id="mainCanvas">
   journals
   </div>
-  <SVGLayer v-bind:SVGdata="{path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}"></SVGLayer>
+   <SVGLayer v-if="showSVGlayer" v-bind:SVGdata="{path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}"></SVGLayer>
   <Journal v-for="(journal, index) in this.$store.state.journals" :if="journal.show" :key="index" :journalData="{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w}"></Journal>
 </div>
 
@@ -22,7 +22,8 @@ export default {
         SVGheight: 370.12945556640625,
         SVGwidth: 404.5230712890625,
         SVGx: 514.8853759765625,
-        SVGy: 606.57666015625
+        SVGy: 606.57666015625,
+        showSVGlayer: false
       }
   },
   mounted() {
@@ -40,7 +41,6 @@ export default {
 
     // Wenn Eingabe erkannt wurde
     editorElement.addEventListener('exported', (event) => {
-
         console.log('On JournalOverviewErkannt:',event.detail.exports['text/plain']);
         console.log('Export Event:',event);
 
@@ -52,8 +52,8 @@ export default {
           // Positions Info
           var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
           var SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[0].attributes.d.nodeValue;
-          console.log('PosInfo', posInfo);
-          console.log('SVG Path', SVGPath);
+          // console.log('PosInfo', posInfo);
+          // console.log('SVG Path', SVGPath);
 
           // Update SVG File
           this.SVGpath = SVGPath;
@@ -74,6 +74,9 @@ export default {
             show: true
           });
 
+        }else if(this.recogCmd(event.detail.exports['text/plain'])){
+          console.log('Kommando Erkannt!');
+          editorElement.editor.clear();
         }else{
           editorElement.editor.clear();
         }
@@ -109,6 +112,21 @@ export default {
         case 'O':
           return true;
         case '˚':
+          return true;
+        default:
+          return false;
+      }
+    },
+    recogCmd: function(gestik){
+      switch(gestik){
+        case '<':
+          console.log('UNDO');
+          return true;
+        case '>':
+          console.log('REDO');
+        case 's':
+          this.showSVGlayer = !this.showSVGlayer;
+          console.log('Show SVG', this.showSVGlayer);
           return true;
         default:
           return false;

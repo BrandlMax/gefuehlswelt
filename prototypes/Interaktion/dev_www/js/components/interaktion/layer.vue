@@ -34,6 +34,7 @@ export default {
         position: absolute;
         z-index: 2000;
         background: rgb(39, 201, 166);
+        clip-path: url(#form);
     }
 </style>
 

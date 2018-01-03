@@ -6,14 +6,11 @@
             Not Working.
         -->
         <defs>
-                <clipPath id="form" clipPathUnits="userSpaceOnUse">
-                <g :transform="generateTranslate(SVGdata.x, SVGdata.y)">
-                    <g transform="matrix(3.77953, 0, 0, 3.77953, -0, -0)">
-                            <path x="0" y="0" :d="SVGdata.path" />
-                    </g>
-                </g>
-                </clipPath>
+            <clipPath id="form" clipPathUnits="objectBoundingBox">
+                <circle cx="100%" cy="100%" r="100%" id="circle"/>
+            </clipPath>
         </defs>
+
         <g :transform="generateTranslate(SVGdata.x, SVGdata.y)">
             <g transform="matrix(3.77953, 0, 0, 3.77953, -0, -0)">
                 <path x="0" y="0" :d="SVGdata.path" />
@@ -34,6 +31,10 @@ top:606.57666015625
 width:404.5230712890625
 x:514.8853759765625
 y:606.57666015625
+        SVGheight: 192.49148559570312,
+        SVGwidth: 282.973388671875,
+        SVGx: 736.0255126953125,
+        SVGy: 202.65835571289062,
 */
 console.log('SVG Layer');
 

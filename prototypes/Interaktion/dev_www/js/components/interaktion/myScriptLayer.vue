@@ -1,16 +1,38 @@
 <template>
-    <div :id="'layer_'+layerData.id"  class="layer" :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+
+    <div class="toolLayer">
+
+        <meinWerkzeug 
+            v-if="Tool === 'Werkzeug01'"
+            :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
+            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+        </meinWerkzeug>
+
+        <meinAnderesWerkzeug 
+            v-if="Tool === 'Werkzeug02'" 
+            :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
+            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+        </meinAnderesWerkzeug>
+
+        <div 
+            v-if="Tool === 'NoTool'"
+            :id="'layer_'+layerData.id"  
+            class="layer" 
+            :style="{ top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+        </div>
+
     </div>
 </template>
 
 <script>
-
-console.log('myScriptLayer');
+import meinWerkzeug from '../werzeuge/beispiel.vue';
+import meinAnderesWerkzeug from '../werzeuge/beispiel2.vue';
 
 export default {
   props: ['layerData'],
   data(){
       return{
+        Tool: 'NoTool' // Aktuelles Werkzeug
       }
   },
   mounted() {
@@ -19,7 +41,7 @@ export default {
 
     var editorElement = document.getElementById('layer_'+LayerID);
 
-    // API Register
+    // MyScript API Register
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'TEXT',
@@ -32,10 +54,11 @@ export default {
 
         console.log('Erkannt:',event.detail.exports['text/plain']);
 
-        // Erkenne Fläsche
-        if(this.recogTool(event.detail.exports['text/plain'])){
-            console.log('Delete layer now?');
+        // Erkenne Werkzeug Request
+        if(this.recogTool(event.detail.exports['text/plain'].toLowerCase())){
+
         }
+
         // Delete
         if(this.recogDel(event.detail.exports['text/plain'])){
             editorElement.editor.clear(); 
@@ -50,7 +73,7 @@ export default {
   
     });
 
-    // Rechtsklick um Canvas zu leeren
+    // Debug: Rechtsklick um Canvas zu leeren
     editorElement.addEventListener('contextmenu', function(ev) {
       // ev.preventDefault();
       editorElement.editor.clear();
@@ -64,6 +87,8 @@ export default {
   destroyed(){
 
   },components: {
+      meinWerkzeug,
+      meinAnderesWerkzeug
   },
   methods:{
     //Delete
@@ -85,26 +110,23 @@ export default {
             case 'mandala':
                 this.createTool('mandala');
                 return true;
-            case 'Mandala':
-                this.createTool('mandala');
-                return true;
             case 'doodle':
-                this.createTool('doodle');
-                return true;
-            case 'Doodle':
                 this.createTool('doodle');
                 return true;
             default:
                 return false;
       }
     },
+    // Werkzeug anlegen
     createTool: function(gestik){
         switch(gestik){
             case 'mandala':
                 console.log('create Mandala');
+                this.Tool = 'Werkzeug01';
                 return true;
             case 'doodle':
                 console.log('create Doodle');
+                this.Tool = 'Werkzeug02';
                 return true;
             default:
                 return false;

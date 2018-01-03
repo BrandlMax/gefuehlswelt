@@ -1,11 +1,10 @@
 <template>
-    <div :style="{ height: toolData.height+'px', width: toolData.width+'px'}" :id="'sketch_'+toolData.id" class="sketch"></div>
+    <div 
+    :style="{ height: toolData.height+'px', width: toolData.width+'px'}" :id="'sketch_'+toolData.id" class="sketch">
+    </div>
 </template>
 
 <script>
-// Test ob geladen
-console.log('WerzeugName');
-// Erstmal Ignorieren
 export default {
   props: ['toolData'],
   data(){
@@ -26,9 +25,8 @@ export default {
     };
 
     p5.draw = function() {
-      // p5.background(0);
-      p5.fill(255,100,50);
-      p5.ellipse(p5.mouseX,p5.mouseY,10,10);
+      p5.fill(255);
+      p5.ellipse(p5.mouseX,p5.mouseY,50,50);
     };
 
   });

@@ -32,7 +32,6 @@ export default {
     editorElement.addEventListener('exported', (event) => {
 
         console.log('Erkannt:',event.detail.exports['text/plain']);
-        // console.log('Export Event:',event);
         this.$router.push({name : 'Entry', params: { id: JournalID }});
   
     });
