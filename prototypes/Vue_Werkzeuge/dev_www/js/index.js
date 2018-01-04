@@ -1,6 +1,7 @@
 // Import Werkzeuge.
 import Home from './werzeuge/home.vue';
 import Beispielwerkzeug from './werzeuge/beispiel.vue';
+// import Mandala from './werzeuge/mandala.vue';
 
 // Store
 Vue.use(Vuex)
@@ -8,7 +9,8 @@ Vue.use(Vuex)
 // Hier den Path eingeben wo ihr in der URL zu eurem Werkzeug kommt.
 const routes = [
     {path: '/', component: Home },
-    {name: 'beispielwerkzeug', path: '/beispielwerkzeug', component: Beispielwerkzeug}
+    {name: 'beispielwerkzeug', path: '/beispielwerkzeug', component: Beispielwerkzeug},
+    // {name: 'mandala', path: '/mandala', component: Mandala},
 ]
 
 const router = new VueRouter({

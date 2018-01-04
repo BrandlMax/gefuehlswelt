@@ -1,6 +1,7 @@
 <template>
   <div id="navigation">
           <router-link to="/beispielwerkzeug">Beispielwerkzeug</router-link>
+          <!-- <router-link to="/mandala">Mandala</router-link> -->
   
   </div>
 </template>

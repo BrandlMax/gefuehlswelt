@@ -1,6 +1,19 @@
 <template>
     <div>
-    <svg v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
+    <svg :if=" curName === 'Entry'" v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
+
+        <defs>
+            <clipPath :id="'path_'+layer.id">
+                <path :transform="generateTransform(layer.x, layer.y)" x="0" y="0" :d="layer.svgPath" />
+            </clipPath>
+        </defs>
+
+        <!--
+        <path :transform="generateTransform(layer.x, layer.y)" x="0" y="0" :d="SVGdata.path" />
+        -->
+    </svg>
+
+    <svg :if=" curPath === '/'" v-for="(layer, index) in this.$store.state.journals" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
 
         <defs>
             <clipPath :id="'path_'+layer.id">
@@ -38,10 +51,12 @@ export default {
   props: ['SVGdata'],
   data(){
       return{
+          curName: this.$route.name,
+          curPath: this.$route.path
       }
   },
   mounted() {
-
+      console.log('curPage', this.$route);
   },
   created () {
 
@@ -71,7 +86,7 @@ export default {
 <style scoped>
     svg {
         position: absolute;
-        z-index: 1000;
+        z-index: -1000;
         background: rgba(0, 0, 0, 0);
     }
 </style>

@@ -31,12 +31,12 @@ const store = new Vuex.Store({
         
 
         // hi@brandl-maximilian.de
-        //applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-        //hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
+         applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
+         hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
 
         // Other
-         applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
-         hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
+        // applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
+        // hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
         
       } 
     },

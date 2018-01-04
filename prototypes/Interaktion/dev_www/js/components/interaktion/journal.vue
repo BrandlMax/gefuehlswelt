@@ -1,5 +1,5 @@
 <template>
-    <div :id="'layer_'+journalData.id"  class="journal" :style="{ top:journalData.y+'px', left:journalData.x+'px', height: journalData.height+'px', width: journalData.width+'px'}">
+    <div :id="'layer_'+journalData.id"  class="journal" :style="{ clipPath: 'url(#path_' + journalData.id +')', top:journalData.y+'px', left:journalData.x+'px', height: journalData.height+'px', width: journalData.width+'px', background: journalData.background}">
     journal
     </div>
 </template>
@@ -75,11 +75,6 @@ export default {
         position: absolute;
         z-index: 2000;
         background: rgba(255, 255, 255, 0.5);
-        background-image: url(../src/png/journal01.png);
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        clip-path: url(#form);
     }
 </style>
 

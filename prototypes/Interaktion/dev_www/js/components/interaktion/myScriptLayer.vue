@@ -141,5 +141,11 @@ export default {
         z-index: 2000;
         background: rgba(255, 255, 255, 0.5);;
     }
+
+    .ms-editor canvas.ms-rendering-canvas, .ms-editor svg {
+        z-index: 10;
+        pointer-events: none;
+        background: none;
+    }
 </style>
 

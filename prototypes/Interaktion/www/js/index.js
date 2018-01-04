@@ -1,5 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".journal[data-v-9a2ce25e]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n    background-image: url(../src/png/journal01.png);\n    background-position: center center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    clip-path: url(#form);\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".journal[data-v-9a2ce25e]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n}")
 ;(function(){
 'use strict';
 
@@ -63,7 +63,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"journal",style:({ top:_vm.journalData.y+'px', left:_vm.journalData.x+'px', height: _vm.journalData.height+'px', width: _vm.journalData.width+'px'}),attrs:{"id":'layer_'+_vm.journalData.id}},[_vm._v("\njournal\n")])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"journal",style:({ clipPath: 'url(#path_' + _vm.journalData.id +')', top:_vm.journalData.y+'px', left:_vm.journalData.x+'px', height: _vm.journalData.height+'px', width: _vm.journalData.width+'px', background: _vm.journalData.background}),attrs:{"id":'layer_'+_vm.journalData.id}},[_vm._v("\njournal\n")])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-9a2ce25e"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -119,7 +119,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":12,"vue-hot-reload-api":11,"vueify/lib/insert-css":13}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-16ad4e94]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-16ad4e94]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-16ad4e94], .ms-editor svg[data-v-16ad4e94] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
 ;(function(){
 'use strict';
 
@@ -249,7 +249,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"vue":12,"vue-hot-reload-api":11,"vueify/lib/insert-css":13}],4:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("svg[data-v-3cb9d07e] {\n    position: absolute;\n    z-index: 1000;\n    background: rgba(0, 0, 0, 0);\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("svg[data-v-3cb9d07e] {\n    position: absolute;\n    z-index: -1000;\n    background: rgba(0, 0, 0, 0);\n}")
 ;(function(){
 'use strict';
 
@@ -262,9 +262,14 @@ console.log('SVG Layer');
 exports.default = {
     props: ['SVGdata'],
     data: function data() {
-        return {};
+        return {
+            curName: this.$route.name,
+            curPath: this.$route.path
+        };
     },
-    mounted: function mounted() {},
+    mounted: function mounted() {
+        console.log('curPage', this.$route);
+    },
     created: function created() {},
     destroyed: function destroyed() {},
     components: {},
@@ -287,7 +292,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._l((this.$store.state.layers),function(layer,index){return _c('svg',{key:index,staticClass:"SVGcopy",attrs:{"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])])}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._l((this.$store.state.layers),function(layer,index){return _c('svg',{key:index,staticClass:"SVGcopy",attrs:{"if":_vm.curName === 'Entry',"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])])}),_vm._v(" "),_vm._l((this.$store.state.journals),function(layer,index){return _c('svg',{key:index,staticClass:"SVGcopy",attrs:{"if":_vm.curPath === '/',"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])])})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-3cb9d07e"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -487,47 +492,53 @@ exports.default = {
     var PageID = 0;
 
     var editorElement = document.getElementById('mainCanvas');
-    console.log('store', this.$store.state);
 
     MyScript.register(editorElement, {
       recognitionParams: {
-        type: 'TEXT',
+        type: 'DIAGRAM',
         server: this.$store.state.access
       }
     });
 
-    editorElement.addEventListener('exported', function (event) {
-      console.log('On JournalOverviewErkannt:', event.detail.exports['text/plain']);
-      console.log('Export Event:', event);
+    editorElement.addEventListener('click', function () {
+      editorElement.editor.clear();
 
-      if (_this.recogForm(event.detail.exports['text/plain'])) {
-        editorElement.editor.clear();
+      var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+      var pathsList = Array.prototype.slice.call(paths);
+      var SVGPath;
 
-        var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-        var SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[0].attributes.d.nodeValue;
+      pathsList.forEach(function (element, index) {
+        if (element.id.charAt(0) === "d") {
+          SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
-        _this.SVGpath = SVGPath;
-        _this.SVGheight = posInfo.height;
-        _this.SVGwidth = posInfo.width;
-        _this.SVGx = posInfo.x;
-        _this.SVGy = posInfo.y;
+          var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
 
-        _this.$store.commit('addJournal', {
-          id: null,
-          page: PageID,
-          x: posInfo.x,
-          y: posInfo.y,
-          w: posInfo.width,
-          h: posInfo.height,
-          svgPath: SVGPath,
-          show: true
-        });
-      } else if (_this.recogCmd(event.detail.exports['text/plain'])) {
-        console.log('Kommando Erkannt!');
-        editorElement.editor.clear();
-      } else {
-        editorElement.editor.clear();
-      }
+          console.log('PosInfo', posInfo);
+          console.log('SVG Path', SVGPath);
+          editorElement.editor.clear();
+
+          _this.SVGpath = SVGPath;
+          _this.SVGheight = posInfo.height;
+          _this.SVGwidth = posInfo.width;
+          _this.SVGx = posInfo.x;
+          _this.SVGy = posInfo.y;
+
+          _this.$store.commit('addJournal', {
+            id: _this.$store.state.JournalCount,
+            SVGid: _this.$store.state.JournalCount,
+            page: PageID,
+            x: posInfo.x,
+            y: posInfo.y,
+            w: posInfo.width,
+            h: posInfo.height,
+            svgPath: SVGPath,
+            bg: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            show: true
+          });
+        } else {
+          editorElement.editor.clear();
+        }
+      });
     });
 
     editorElement.addEventListener('contextmenu', function (ev) {
@@ -577,7 +588,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-5fe62ca5"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -733,12 +744,12 @@ var store = new Vuex.Store({
 
 
             // hi@brandl-maximilian.de
-            //applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-            //hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
+            applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
+            hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
 
             // Other
-            applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
-            hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
+            // applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
+            // hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
 
         }
     },

@@ -3,8 +3,19 @@
   <div id="mainCanvas">
   journals
   </div>
-   <SVGLayer v-if="showSVGlayer" v-bind:SVGdata="{path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}"></SVGLayer>
-  <Journal v-for="(journal, index) in this.$store.state.journals" :if="journal.show" :key="index" :journalData="{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w}"></Journal>
+
+  <SVGLayer 
+    v-if="showSVGlayer" 
+    v-bind:SVGdata="{id: SVGid, path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}">
+  </SVGLayer>
+
+  <Journal 
+    v-for="(journal, index) in this.$store.state.journals" 
+    :if="journal.show" 
+    :key="index" 
+    :journalData="{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}">
+  </Journal>
+
 </div>
 
 </template>
@@ -30,30 +41,37 @@ export default {
     var PageID = 0;
 
     var editorElement = document.getElementById('mainCanvas');
-    console.log('store', this.$store.state)
+    
     // API Register
     MyScript.register(editorElement, {
       recognitionParams: {
-        type: 'TEXT',
+        type: 'DIAGRAM',
         server: this.$store.state.access
       }
     });
 
-    // Wenn Eingabe erkannt wurde
-    editorElement.addEventListener('exported', (event) => {
-        console.log('On JournalOverviewErkannt:',event.detail.exports['text/plain']);
-        console.log('Export Event:',event);
+    // Journal Eingabe
+    editorElement.addEventListener('click', () => {
 
-        // Erkenne Fläsche
-        if(this.recogForm(event.detail.exports['text/plain'])){
-          // Clean
-          editorElement.editor.clear();
+      // Clean Canvas Before
+      editorElement.editor.clear();
 
+      var paths = document.getElementById('viewTransform').getElementsByTagName( 'path' );
+      var pathsList = Array.prototype.slice.call(paths);
+      var SVGPath;
+
+      // Check if there is a Form
+      pathsList.forEach((element, index) => {
+        // Is there a Fill Path?
+        if(element.id.charAt(0) === "d"){
+          SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[index].attributes.d.nodeValue;
+          
           // Positions Info
           var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-          var SVGPath = document.getElementById('viewTransform').getElementsByTagName( 'path' )[0].attributes.d.nodeValue;
-          // console.log('PosInfo', posInfo);
-          // console.log('SVG Path', SVGPath);
+          
+          console.log('PosInfo', posInfo);
+          console.log('SVG Path', SVGPath);
+          editorElement.editor.clear();
 
           // Update SVG File
           this.SVGpath = SVGPath;
@@ -64,24 +82,25 @@ export default {
 
           // Add Layer
           this.$store.commit('addJournal', {
-            id: null,
+            id: this.$store.state.JournalCount,
+            SVGid: this.$store.state.JournalCount,
             page: PageID,
             x: posInfo.x,
             y: posInfo.y,
             w: posInfo.width,
             h: posInfo.height,
             svgPath: SVGPath,
+            bg: '#'+Math.floor(Math.random()*16777215).toString(16),
             show: true
           });
 
-        }else if(this.recogCmd(event.detail.exports['text/plain'])){
-          console.log('Kommando Erkannt!');
-          editorElement.editor.clear();
         }else{
           editorElement.editor.clear();
         }
 
-    });
+      });
+
+	  });
 
     // Rechtsklick um Canvas zu leeren
     editorElement.addEventListener('contextmenu', function(ev) {
