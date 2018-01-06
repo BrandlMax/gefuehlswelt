@@ -1,0 +1,28 @@
+{
+  "name": "interdocu",
+  "version": "1.0.0",
+  "description": "Framework for interactive Documentations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maximilian Brandl",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^7.3.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.1.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vue": "^2.5.3",
+    "vueify": "^9.4.1",
+    "sqlite3": "^3.1.13",
+    "express": "^4.16.2"
+  }
+}
