@@ -1,6 +1,6 @@
 <template>
 <div id="displayFrame">
-  <div id="mainCanvas">
+  <div id="mainCanvas" touch-action="none">
   journals
   </div>
 
@@ -160,10 +160,11 @@ export default {
       height: 100vh;
       width: 100vw;
       background: #F5F4F0;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       display: -webkit-box;
+      touch-action: none;
   }
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-    <div :id="'layer_'+journalData.id"  class="journal" :style="{ clipPath: 'url(#path_' + journalData.id +')', top:journalData.y+'px', left:journalData.x+'px', height: journalData.height+'px', width: journalData.width+'px', background: journalData.background}">
+    <div touch-action="none" :id="'layer_'+journalData.id"  class="journal maskedlayer" :style="{ clipPath: 'url(#path_' + journalData.id +')', top:journalData.y+'px', left:journalData.x+'px', height: journalData.height+'px', width: journalData.width+'px', background: journalData.background}">
     journal
     </div>
 </template>
@@ -52,6 +52,9 @@ export default {
   },components: {
   },
   methods:{
+    maskedStyle: function(){
+      return '-webkit-clip-path: url(#path_' + this.journalData.id +')'
+    },
     // Recognition
     //Delete
     recogDel: function(gestik){

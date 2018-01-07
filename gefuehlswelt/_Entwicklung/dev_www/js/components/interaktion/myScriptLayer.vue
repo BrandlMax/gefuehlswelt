@@ -1,22 +1,25 @@
 <template>
     <div class="toolLayer">
 
-        <meinWerkzeug 
+        <meinWerkzeug class="maskedlayer"
+            stouch-action="none"
             v-if="Tool === 'Werkzeug01'"
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
             :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </meinWerkzeug>
 
-        <meinAnderesWerkzeug 
+        <meinAnderesWerkzeug class="maskedlayer"
+            touch-action="none"
             v-if="Tool === 'Werkzeug02'" 
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
             :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
-        </meinAnderesWerkzeug>
+        </meinAnderesWerkzeug> 
 
-        <div 
+        <div
+            touch-action="none" 
             v-if="Tool === 'NoTool'"
             :id="'layer_'+layerData.id"  
-            class="layer" 
+            class="layer maskedlayer" 
             :style="{ clipPath: 'url(#path_' + layerData.id +')',top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </div>
 
@@ -90,6 +93,9 @@ export default {
       meinAnderesWerkzeug
   },
   methods:{
+    maskedStyle: function(){
+      return '-webkit-clip-path: url(#path_' + this.journalData.id +')'
+    },
     //Delete
     recogDel: function(gestik){
       switch(gestik){

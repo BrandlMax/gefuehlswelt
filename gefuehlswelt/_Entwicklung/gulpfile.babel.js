@@ -20,7 +20,7 @@ gulp.task("default", () =>{
 // TASKS
 
 gulp.task("clean", () => {
-    return gulp.src('../CordovaApp/www')
+    return gulp.src('../gefuehlsweltCordova/www')
     .pipe(clean({force: true}));
 })
 
@@ -28,7 +28,7 @@ gulp.task("clean", () => {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "../CordovaApp/www"
+            baseDir: "../gefuehlsweltCordova/www"
         }
     });
 });
@@ -45,36 +45,32 @@ gulp.task("javascript", () =>{
     .transform("babelify")
     .bundle()
     .pipe(source("index.js"))
-    .pipe(gulp.dest("../CordovaApp/www"));
+    .pipe(gulp.dest("../gefuehlsweltCordova/www/js"));
 })
 
 gulp.task("css", () =>{
     return gulp.src('dev_www/css/*.css')
-    .pipe(gulp.dest('../CordovaApp/www/css'));
+    .pipe(gulp.dest('../gefuehlsweltCordova/www/css'));
 })
 
 gulp.task("libs", () =>{
     return gulp.src('dev_www/js/libs/**')
-    .pipe(gulp.dest('../CordovaApp/www/js/libs'));
+    .pipe(gulp.dest('../gefuehlsweltCordova/www/js/libs'));
 })
 
 
 gulp.task("src", () =>{
     return gulp.src('dev_www/src/**')
-    .pipe(gulp.dest('../CordovaApp/www/src'));
+    .pipe(gulp.dest('../gefuehlsweltCordova/www/src'));
 })
 
 gulp.task("index", () =>{
     return gulp.src('dev_www/index.html')
-    .pipe(gulp.dest('../CordovaApp/www/'));
+    .pipe(gulp.dest('../gefuehlsweltCordova/www/'));
 })
 
+
+// Passe auf veränderungen auf.
 gulp.task("watch", () => {
-    gulp.watch('dev_www/js/*.js', ['javascript','browser-reload']);
-    gulp.watch('dev_www/js/**/*.vue', ['javascript','browser-reload']);
-    gulp.watch('dev_www/src/**', ['src','browser-reload']);
-    gulp.watch('dev_www/css/*.css', ['css','browser-reload']);
-    gulp.watch('dev_www/js/components/*.vue', ['javascript','libs','browser-reload']);
-    gulp.watch('dev_www/js/components/**/*.vue', ['javascript','libs','browser-reload']);
-    gulp.watch('dev_www/index.html', ['index','libs', 'src', 'browser-reload']);
+    gulp.watch('dev_www/**', ['javascript', 'libs', 'index', 'css' ,'src','browser-reload']);
 })

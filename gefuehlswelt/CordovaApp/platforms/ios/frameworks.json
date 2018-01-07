@@ -1,9 +1,0 @@
-{
-    "Speech.framework": 1,
-    "Security.framework": 1,
-    "Foundation.framework": 1,
-    "CoreAudio.framework": 2,
-    "AudioToolbox.framework": 2,
-    "Accelerate.framework": 1,
-    "AVFoundation.framework": 1
-}

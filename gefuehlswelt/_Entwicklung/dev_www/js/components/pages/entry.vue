@@ -1,7 +1,7 @@
 <template>
 <div id="displayFrame">
 
-  <div id="mainCanvas">
+  <div id="mainCanvas" touch-action="none">
     Entry {{ $route.params.id }}
   </div>
 
