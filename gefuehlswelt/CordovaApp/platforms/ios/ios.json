@@ -1,0 +1,117 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"SpeechRecognition\"><param name=\"ios-package\" value=\"SpeechRecognition\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ApiAIPlugin\"><param name=\"ios-package\" value=\"ApiAIPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"AudioInputCapture\"><param name=\"ios-package\" value=\"CDVAudioInputCapture\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSMicrophoneUsageDescription": [
+            {
+              "xml": "<string>Request to use Microphone</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string>\"Hey, you will need the Mic for your thoughts\"</string>",
+              "count": 476
+            }
+          ],
+          "NSSpeechRecognitionUsageDescription": [
+            {
+              "xml": "<string>Request to use Speech Recognition</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string>\"Your voice is stronger than weapons\"</string>",
+              "count": 476
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    },
+    "cordova-plugin-speechrecognition": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    },
+    "cordova-plugin-apiai": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    },
+    "cordova-plugin-audioinput": {
+      "PACKAGE_NAME": "io.cordova.gefuehlswelt"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-speechrecognition.SpeechRecognition",
+      "file": "plugins/cordova-plugin-speechrecognition/www/speechRecognition.js",
+      "pluginId": "cordova-plugin-speechrecognition",
+      "merges": [
+        "window.plugins.speechRecognition"
+      ]
+    },
+    {
+      "id": "cordova-plugin-apiai.Q",
+      "file": "plugins/cordova-plugin-apiai/www/lib/q.js",
+      "pluginId": "cordova-plugin-apiai",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-apiai.ApiAIPlugin",
+      "file": "plugins/cordova-plugin-apiai/www/ApiAIPlugin.js",
+      "pluginId": "cordova-plugin-apiai",
+      "clobbers": [
+        "window.ApiAIPlugin"
+      ]
+    },
+    {
+      "id": "cordova-plugin-apiai.ApiAIPromises",
+      "file": "plugins/cordova-plugin-apiai/www/ApiAIPromises.js",
+      "pluginId": "cordova-plugin-apiai",
+      "clobbers": [
+        "window.ApiAIPromises"
+      ]
+    },
+    {
+      "id": "cordova-plugin-audioinput.AudioInput",
+      "file": "plugins/cordova-plugin-audioinput/www/audioInputCapture.js",
+      "pluginId": "cordova-plugin-audioinput",
+      "clobbers": [
+        "audioinput"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.2",
+    "cordova-plugin-speechrecognition": "1.1.2",
+    "cordova-plugin-apiai": "1.7.4",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-audioinput": "0.3.0"
+  }
+}
