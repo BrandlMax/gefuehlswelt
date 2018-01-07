@@ -15,6 +15,8 @@
         </router-view>
     </div>
 
+    <!-- Electron Fix  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script src="./src/libs/vue.js"></script>
     <script src="./src/libs/vue-router.js"></script>
     <script src="./src/libs/vuex.js"></script>
@@ -29,7 +31,13 @@
     
     <script src="./src/libs/showdown.min.js"></script>
     <script src="./src/libs/highlight.pack.js"></script>
+    <script src="./src/libs/jquery-3.2.1.min.js"></script>
+    <script src="./src/libs/jquery.jqTOC.js"></script>
 
     <script src="./js/index.js"></script>
+
+    <!-- Electron Fix End -->
+    <script>if (window.module) module = window.module;</script>
+
 </body>
 </html>

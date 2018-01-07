@@ -10,7 +10,12 @@
 // Import Abbildungen
 import abb from './abbildungen/abb.vue';
 import abb2 from './abbildungen/abb2.vue';
-var converter
+import footnotes from '../../../node_modules/showdown-footnotes';
+
+// Create Converter
+// https://github.com/showdownjs/showdown 
+var converter = new showdown.Converter({extensions: [footnotes]});
+
 export default {
   props: ['chapterContent'],
   data(){
@@ -20,9 +25,6 @@ export default {
   },
   mounted() {
       console.log('Chapter');
-      // Create Converter
-    // https://github.com/showdownjs/showdown 
-    converter = new showdown.Converter({});
   },
   created () {
       // Highlight Code Parts
@@ -38,7 +40,6 @@ export default {
   methods:{
       convertMarkdown: function(text){
         let outputHtml = [] ;
-        
         // Text to Array
         // text = text.split(/\n/);
         console.log('unformatted Text', text)
