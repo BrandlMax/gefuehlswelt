@@ -67,7 +67,8 @@ export default {
     MyScript.register(cmdeditorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: this.$store.state.access
+        language: 'de_DE',
+        server: this.$store.state.access,
       }
     });
 
@@ -226,7 +227,7 @@ export default {
           if (this.canUndo) this.undo();
           console.log('UNDO');
           return true;
-          
+
         case '>':
           if (this.canRedo) this.redo();
           console.log('REDO');

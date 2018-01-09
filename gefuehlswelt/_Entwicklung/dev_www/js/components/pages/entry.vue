@@ -66,7 +66,9 @@ export default {
     MyScript.register(cmdeditorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: this.$store.state.access
+        language: 'de_DE',
+        server: this.$store.state.access,
+        
       }
     });
 
@@ -236,7 +238,7 @@ export default {
         case 'inspire me':
           console.log('Inspire Me!')
           return true;
-          
+
         default:
           return false;
       }
