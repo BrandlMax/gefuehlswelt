@@ -11,10 +11,10 @@ import vueify from "vueify";
 
 import browserSync from "browser-sync";
 
-
+// Path
 
 gulp.task("default", () =>{
-    runSequence('clean',['index','javascript', 'libs', 'css' ,'src','browser-sync'],'watch')
+    runSequence('clean',['browser-sync'],'watch')
 })
 
 // TASKS
@@ -25,7 +25,7 @@ gulp.task("clean", () => {
 })
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync',['index','javascript', 'libs', 'css' ,'src'], function() {
     browserSync.init({
         server: {
             baseDir: "../gefuehlsweltCordova/www"
@@ -33,7 +33,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('browser-reload', function() {
+gulp.task('browser-reload',['index','javascript', 'libs', 'css' ,'src'], function() {
     browserSync.reload();
 });
 
@@ -72,5 +72,5 @@ gulp.task("index", () =>{
 
 // Passe auf veränderungen auf.
 gulp.task("watch", () => {
-    gulp.watch('dev_www/**', ['javascript', 'libs', 'index', 'css' ,'src','browser-reload']);
+    gulp.watch('dev_www/**', ['browser-reload']);
 })

@@ -54,8 +54,7 @@ export default {
     editorElement.addEventListener('click', () => {
 
       // Clean Canvas Before
-      editorElement.editor.clear();
-
+      
       var paths = document.getElementById('viewTransform').getElementsByTagName( 'path' );
       var pathsList = Array.prototype.slice.call(paths);
       var SVGPath;
@@ -94,6 +93,8 @@ export default {
             show: true
           });
 
+          editorElement.editor.clear();
+
         }else{
           editorElement.editor.clear();
         }
@@ -103,11 +104,21 @@ export default {
 	  });
 
     // Rechtsklick um Canvas zu leeren
-    editorElement.addEventListener('contextmenu', function(ev) {
+    editorElement.addEventListener('contextmenu', (ev) => {
       // ev.preventDefault();
       editorElement.editor.clear();
       return false;
     }, false);
+
+    // Undo and Redo
+    window.addEventListener('keydown', (e) => {
+      console.log(e.keyCode);
+      if(e.keyCode === 37){
+        this.undo();
+      }else if(e.keyCode === 39){
+        this.redo();
+      }
+    });
 
   },
   created () {

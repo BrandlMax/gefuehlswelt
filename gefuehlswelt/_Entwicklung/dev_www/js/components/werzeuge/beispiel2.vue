@@ -23,7 +23,6 @@ export default {
       var canvas = p5.createCanvas(toolData.width,toolData.height);
       canvas.parent('sketch_'+toolData.id);
       canvas.style('clip-path', 'url(#path_' + toolData.id +')');
-      canvas.style('-webkit-clip-path', 'url(#path_' + toolData.id +')');
     };
 
     p5.draw = function() {

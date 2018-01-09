@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="SVGMasks">
     <svg :if=" curName === 'Entry'" v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
 
         <defs>
