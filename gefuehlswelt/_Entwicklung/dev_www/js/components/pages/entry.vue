@@ -66,11 +66,16 @@ export default {
     MyScript.register(cmdeditorElement, {
       recognitionParams: {
         type: 'TEXT',
-        language: 'de_DE',
+        apiVersion: 'V4',
         server: this.$store.state.access,
         
       }
     });
+
+  // Deutsch
+  cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
+
+
 
     // MultiLayer Fix
     editorElement.addEventListener('pointerdown', (e) => {

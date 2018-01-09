@@ -368,8 +368,9 @@ exports.default = {
     MyScript.register(cmdeditorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: this.$store.state.access,
-        language: 'de_DE'
+        apiVersion: 'V4',
+        server: this.$store.state.access
+
       }
     });
 
@@ -535,7 +536,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9570dcf4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-9570dcf4", __vue__options__)
+    hotAPI.reload("data-v-9570dcf4", __vue__options__)
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],6:[function(require,module,exports){
@@ -588,10 +589,12 @@ exports.default = {
     MyScript.register(cmdeditorElement, {
       recognitionParams: {
         type: 'TEXT',
-        language: 'de_DE',
+        apiVersion: 'V4',
         server: this.$store.state.access
       }
     });
+
+    cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
 
     editorElement.addEventListener('pointerdown', function (e) {
       var new_e = new e.constructor(e.type, e);
@@ -755,7 +758,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-33b6da95", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-33b6da95", __vue__options__)
+    hotAPI.reload("data-v-33b6da95", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],7:[function(require,module,exports){
