@@ -316,7 +316,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n#cmdCanvas[data-v-9570dcf4]{\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
 
@@ -363,7 +363,44 @@ exports.default = {
       }
     });
 
-    editorElement.addEventListener('click', function () {
+    var cmdeditorElement = document.getElementById('cmdCanvas');
+
+    MyScript.register(cmdeditorElement, {
+      recognitionParams: {
+        type: 'TEXT',
+        server: this.$store.state.access
+      }
+    });
+
+    editorElement.addEventListener('pointerdown', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerleave', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointermove', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerout', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerup', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('click', function (e) {
+
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
 
       var paths = document.getElementById('viewTransform').getElementsByTagName('path');
       var pathsList = Array.prototype.slice.call(paths);
@@ -397,16 +434,25 @@ exports.default = {
             show: true
           });
           editorElement.editor.clear();
-        } else {
-          editorElement.editor.clear();
-        }
+          cmdeditorElement.editor.clear();
+        } else {}
       });
     });
 
     editorElement.addEventListener('contextmenu', function (ev) {
       editorElement.editor.clear();
+      cmdeditorElement.editor.clear();
       return false;
     }, false);
+
+    cmdeditorElement.addEventListener('exported', function (event) {
+      console.log('Erkannt:', event.detail.exports['text/plain']);
+
+      if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
+        cmdeditorElement.editor.clear();
+        editorElement.editor.clear();
+      }
+    });
 
     window.addEventListener('keydown', function (e) {
       console.log(e.keyCode);
@@ -442,13 +488,31 @@ exports.default = {
     recogCmd: function recogCmd(gestik) {
       switch (gestik) {
         case '<':
+          if (this.canUndo) this.undo();
           console.log('UNDO');
           return true;
+
         case '>':
+          if (this.canRedo) this.redo();
           console.log('REDO');
-        case 's':
-          console.log('Show SVG');
           return true;
+
+        case 's':
+          this.showSVGlayer = !this.showSVGlayer;
+          console.log('Show SVG', this.showSVGlayer);
+          return true;
+
+        case '.':
+          return true;
+
+        case 'hilfe':
+          console.log('Hilfe');
+          return true;
+
+        case 'inspire me':
+          console.log('Inspire Me!');
+          return true;
+
         default:
           return false;
       }
@@ -459,7 +523,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n    Entry "+_vm._s(_vm.$route.params.id)+"\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((this.$store.state.layers),function(layer,index){return _c('myScriptLayer',{key:index,attrs:{"if":layer.show,"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n    Entry "+_vm._s(_vm.$route.params.id)+"\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((this.$store.state.layers),function(layer,index){return _c('myScriptLayer',{key:index,attrs:{"if":layer.show,"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}}})})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-9570dcf4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -474,7 +538,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n#cmdCanvas[data-v-33b6da95]{\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
 
@@ -518,7 +582,44 @@ exports.default = {
       }
     });
 
-    editorElement.addEventListener('click', function () {
+    var cmdeditorElement = document.getElementById('cmdCanvas');
+
+    MyScript.register(cmdeditorElement, {
+      recognitionParams: {
+        type: 'TEXT',
+        server: this.$store.state.access
+      }
+    });
+
+    editorElement.addEventListener('pointerdown', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerleave', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointermove', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerout', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerup', function (e) {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('click', function (e) {
+
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
 
       var paths = document.getElementById('viewTransform').getElementsByTagName('path');
       var pathsList = Array.prototype.slice.call(paths);
@@ -554,16 +655,25 @@ exports.default = {
           });
 
           editorElement.editor.clear();
-        } else {
-          editorElement.editor.clear();
-        }
+          cmdeditorElement.editor.clear();
+        } else {}
       });
     });
 
     editorElement.addEventListener('contextmenu', function (ev) {
       editorElement.editor.clear();
+      cmdeditorElement.editor.clear();
       return false;
     }, false);
+
+    cmdeditorElement.addEventListener('exported', function (event) {
+      console.log('Erkannt:', event.detail.exports['text/plain']);
+
+      if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
+        cmdeditorElement.editor.clear();
+        editorElement.editor.clear();
+      }
+    });
 
     window.addEventListener('keydown', function (e) {
       console.log(e.keyCode);
@@ -598,13 +708,29 @@ exports.default = {
     recogCmd: function recogCmd(gestik) {
       switch (gestik) {
         case '<':
+          if (this.canUndo) this.undo();
           console.log('UNDO');
           return true;
+
         case '>':
+          if (this.canRedo) this.redo();
           console.log('REDO');
+          return true;
+
         case 's':
           this.showSVGlayer = !this.showSVGlayer;
           console.log('Show SVG', this.showSVGlayer);
+          return true;
+
+        case '.':
+          return true;
+
+        case 'hilfe':
+          console.log('Hilfe');
+          return true;
+
+        case 'inspire me':
+          console.log('Inspire Me!');
           return true;
         default:
           return false;
@@ -616,7 +742,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-33b6da95"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -627,7 +753,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-33b6da95", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-33b6da95", __vue__options__)
+    hotAPI.reload("data-v-33b6da95", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],7:[function(require,module,exports){

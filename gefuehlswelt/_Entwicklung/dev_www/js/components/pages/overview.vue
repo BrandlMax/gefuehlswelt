@@ -4,6 +4,12 @@
   journals
   </div>
 
+  <div id="cmdCanvas" touch-action="none">
+  cmd
+  </div>
+
+
+
   <SVGLayer 
     v-if="showSVGlayer" 
     v-bind:SVGdata="{id: SVGid, path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}">
@@ -40,6 +46,10 @@ export default {
   mounted() {
     var PageID = 0;
 
+
+    // CREATE EDITOR
+
+    // JOURNAL EDITOR 
     var editorElement = document.getElementById('mainCanvas');
     
     // API Register
@@ -50,8 +60,55 @@ export default {
       }
     });
 
+    // CMD EDITOR
+    var cmdeditorElement = document.getElementById('cmdCanvas');
+    
+    // API Register
+    MyScript.register(cmdeditorElement, {
+      recognitionParams: {
+        type: 'TEXT',
+        server: this.$store.state.access
+      }
+    });
+
+
+
+
+
+
     // Journal Eingabe
-    editorElement.addEventListener('click', () => {
+
+    // MultiLayer Fix
+    editorElement.addEventListener('pointerdown', (e) => {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerleave', (e) => {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointermove', (e) => {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerout', (e) => {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+    editorElement.addEventListener('pointerup', (e) => {
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
+    });
+
+
+    editorElement.addEventListener('click', (e) => {
+
+      var new_e = new e.constructor(e.type, e);
+      cmdeditorElement.dispatchEvent(new_e);
 
       // Clean Canvas Before
       
@@ -94,21 +151,37 @@ export default {
           });
 
           editorElement.editor.clear();
+          cmdeditorElement.editor.clear();
 
         }else{
-          editorElement.editor.clear();
+          
         }
 
       });
 
-	  });
+    });
 
     // Rechtsklick um Canvas zu leeren
     editorElement.addEventListener('contextmenu', (ev) => {
       // ev.preventDefault();
       editorElement.editor.clear();
+      cmdeditorElement.editor.clear();
       return false;
     }, false);
+
+
+
+  // CMD Layer
+  cmdeditorElement.addEventListener('exported', (event) => {
+        console.log('Erkannt:',event.detail.exports['text/plain']);
+        
+        // Erkenne Command Request
+        if(this.recogCmd(event.detail.exports['text/plain'].toLowerCase())){
+          cmdeditorElement.editor.clear();
+          editorElement.editor.clear();
+        }
+  });
+
 
     // Undo and Redo
     window.addEventListener('keydown', (e) => {
@@ -150,13 +223,29 @@ export default {
     recogCmd: function(gestik){
       switch(gestik){
         case '<':
+          if (this.canUndo) this.undo();
           console.log('UNDO');
           return true;
+          
         case '>':
+          if (this.canRedo) this.redo();
           console.log('REDO');
+          return true;
+
         case 's':
           this.showSVGlayer = !this.showSVGlayer;
           console.log('Show SVG', this.showSVGlayer);
+          return true;
+
+        case '.':
+          return true;
+
+        case 'hilfe':
+          console.log('Hilfe')
+          return true;
+
+        case 'inspire me':
+          console.log('Inspire Me!')
           return true;
         default:
           return false;
@@ -176,6 +265,17 @@ export default {
       left: 0;
       display: -webkit-box;
       touch-action: none;
+  }
+  #cmdCanvas{
+      height: 100vh;
+      width: 100vw;
+      background: rgb(0, 255, 136);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: -webkit-box;
+      touch-action: none;
+      z-index: 0;
   }
 </style>
 
