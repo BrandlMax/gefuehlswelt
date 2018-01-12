@@ -64,33 +64,7 @@ const store = new Vuex.Store({
     },
     mutations: {
         emptyState(state) {
-
-            this.replaceState({
-                firstload: true,
-                loadState: {},
-                help: false,
-                LayerCount: 0,
-                layers: [],
-                JournalCount: 0,
-                journals: [],
-                curAccessPoint: 0,
-                access: [{
-                        name: 'kontakt@brandl-maximilian.de',
-                        applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
-                        hmacKey: '061d41b0-2693-40fe-a59e-a5a69db5433b'
-                    },
-                    {
-                        name: 'hi@brandl-maximilian.de',
-                        applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-                        hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
-                    },
-                    {
-                        name: 'Other',
-                        applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
-                        hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
-                    }
-                ]
-            });
+            this.replaceState(JSON.parse(localStorage.getItem("urEmptyState")));
         },
 
         defineEmptyState(state, data) {

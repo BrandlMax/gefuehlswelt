@@ -44,13 +44,16 @@
                 SVGx: 736.0255126953125,
                 SVGy: 202.65835571289062,
                 showSVGlayer: true
+                // FirstLoad
+                
             }
         },
         mounted() {
 
             var PageID = 0;
 
-
+            // UNDO REDO WITH PERSIST FIX
+            localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
             // CREATE EDITOR
 
             // JOURNAL EDITOR 

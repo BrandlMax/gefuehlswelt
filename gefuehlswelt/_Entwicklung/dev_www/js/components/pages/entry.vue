@@ -51,6 +51,10 @@
             }
         },
         mounted() {
+                
+            // UNDO REDO WITH PERSIST FIX
+            localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
+
             console.log('Current Page', this.pageID)
             // TOOL Editor
             var editorElement = document.getElementById('mainCanvas');

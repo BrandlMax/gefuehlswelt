@@ -367,7 +367,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-04298aa4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-04298aa4", __vue__options__)
+    hotAPI.rerender("data-v-04298aa4", __vue__options__)
   }
 })()}
 },{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"../werzeuge/inspire.vue":10,"../werzeuge/texttool.vue":11,"../werzeuge/uglypen.vue":12,"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],4:[function(require,module,exports){
@@ -468,6 +468,8 @@ exports.default = {
     },
     mounted: function mounted() {
         var _this = this;
+
+        localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
 
         console.log('Current Page', this.pageID);
 
@@ -726,6 +728,8 @@ exports.default = {
         var _this = this;
 
         var PageID = 0;
+
+        localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
 
         var editorElement = document.getElementById('mainCanvas');
 
@@ -1560,30 +1564,7 @@ var store = new Vuex.Store({
     },
     mutations: {
         emptyState: function emptyState(state) {
-
-            this.replaceState({
-                firstload: true,
-                loadState: {},
-                help: false,
-                LayerCount: 0,
-                layers: [],
-                JournalCount: 0,
-                journals: [],
-                curAccessPoint: 0,
-                access: [{
-                    name: 'kontakt@brandl-maximilian.de',
-                    applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
-                    hmacKey: '061d41b0-2693-40fe-a59e-a5a69db5433b'
-                }, {
-                    name: 'hi@brandl-maximilian.de',
-                    applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-                    hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
-                }, {
-                    name: 'Other',
-                    applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
-                    hmacKey: '39b70b53-6c54-4e8c-b8e4-e5c0e4081324'
-                }]
-            });
+            this.replaceState(JSON.parse(localStorage.getItem("urEmptyState")));
         },
         defineEmptyState: function defineEmptyState(state, data) {
             state.loadState = JSON.stringify(state);
