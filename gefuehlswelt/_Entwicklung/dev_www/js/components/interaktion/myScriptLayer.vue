@@ -1,18 +1,71 @@
 <template>
     <div class="toolLayer">
 
+        <UglyPen class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'ugly pen'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width,
+                x: layerData.x,
+                y: layerData.y,
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </UglyPen>
+
+
+        <TextTool class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'text'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </TextTool>
+
         <meinWerkzeug class="maskedlayer"
             stouch-action="none"
             v-if="Tool === 'mandala'"
-            :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
-            :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
         </meinWerkzeug>
 
         <meinAnderesWerkzeug class="maskedlayer"
             touch-action="none"
             v-if="Tool === 'doodle'" 
-            :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
-            :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
         </meinAnderesWerkzeug> 
 
         <div
@@ -20,7 +73,12 @@
             v-if="Tool === 'NoTool'"
             :id="'layer_'+layerData.id"  
             class="layer maskedlayer" 
-            :style="{ clipPath: 'url(#path_' + layerData.id +')',top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')',
+                top:layerData.y+'px', 
+                left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'}">
         </div>
 
     </div>
@@ -29,6 +87,9 @@
 <script>
     import meinWerkzeug from '../werzeuge/beispiel.vue';
     import meinAnderesWerkzeug from '../werzeuge/beispiel2.vue';
+
+    import TextTool from '../werzeuge/texttool.vue';
+    import UglyPen from '../werzeuge/uglypen.vue';
 
     export default {
         props: ['layerData'],
@@ -103,7 +164,9 @@
         },
         components: {
             meinWerkzeug,
-            meinAnderesWerkzeug
+            meinAnderesWerkzeug,
+            TextTool,
+            UglyPen
         },
         methods: {
             // Current Tool
@@ -138,6 +201,10 @@
                     case 'mandala':
                         return true;
                     case 'doodle':
+                        return true;
+                    case 'text':
+                        return true;
+                    case 'ugly pen':
                         return true;
                     default:
                         return false;

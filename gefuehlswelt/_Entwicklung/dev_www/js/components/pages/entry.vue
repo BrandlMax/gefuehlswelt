@@ -123,8 +123,8 @@
                         // Positions Info
                         var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
 
-                        console.log('PosInfo', posInfo);
-                        console.log('SVG Path', SVGPath);
+                        // console.log('PosInfo', posInfo);
+                        // console.log('SVG Path', SVGPath);
                         editorElement.editor.clear();
 
                         // Update SVG File

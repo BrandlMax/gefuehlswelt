@@ -70,7 +70,14 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"journal maskedlayer",style:([{ clipPath: 'url(#path_' + _vm.journalData.id +')', top:_vm.journalData.y+'px', left:_vm.journalData.x+'px', height: _vm.journalData.height+'px', width: _vm.journalData.width+'px', background: _vm.journalData.background}, {'-webkit-clip-path':'url(#path_' + _vm.journalData.id +')'}]),attrs:{"touch-action":"none","id":'layer_'+_vm.journalData.id}},[_vm._v("\njournal\n")])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"journal maskedlayer",style:([{ 
+        clipPath: 'url(#path_' + _vm.journalData.id +')', 
+        top:_vm.journalData.y+'px', left:_vm.journalData.x+'px', 
+        height: _vm.journalData.height+'px', 
+        width: _vm.journalData.width+'px', 
+        background: _vm.journalData.background}, 
+        {'-webkit-clip-path':'url(#path_' + _vm.journalData.id +')'
+    }]),attrs:{"touch-action":"none","id":'layer_'+_vm.journalData.id}},[_vm._v("\n    \n    journal\n")])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-ddefd23e"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -84,7 +91,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-ddefd23e", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],2:[function(require,module,exports){
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],2:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-bdb8c70a] {\n    position: absolute;\n    z-index: 2000;\n    background: rgb(39, 201, 166);\n    clip-path: url(#form);\n}")
 ;(function(){
 'use strict';
@@ -122,7 +129,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-bdb8c70a", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],3:[function(require,module,exports){
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],3:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-04298aa4] {\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n    ;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-04298aa4],\n.ms-editor svg[data-v-04298aa4] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
 ;(function(){
 'use strict';
@@ -138,6 +145,14 @@ var _beispiel2 = _interopRequireDefault(_beispiel);
 var _beispiel3 = require('../werzeuge/beispiel2.vue');
 
 var _beispiel4 = _interopRequireDefault(_beispiel3);
+
+var _texttool = require('../werzeuge/texttool.vue');
+
+var _texttool2 = _interopRequireDefault(_texttool);
+
+var _uglypen = require('../werzeuge/uglypen.vue');
+
+var _uglypen2 = _interopRequireDefault(_uglypen);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -203,7 +218,9 @@ exports.default = {
 
     components: {
         meinWerkzeug: _beispiel2.default,
-        meinAnderesWerkzeug: _beispiel4.default
+        meinAnderesWerkzeug: _beispiel4.default,
+        TextTool: _texttool2.default,
+        UglyPen: _uglypen2.default
     },
     methods: {
         currentTool: function currentTool() {
@@ -239,6 +256,10 @@ exports.default = {
                     return true;
                 case 'doodle':
                     return true;
+                case 'text':
+                    return true;
+                case 'ugly pen':
+                    return true;
                 default:
                     return false;
             }
@@ -249,7 +270,50 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"toolLayer"},[(_vm.Tool === 'mandala')?_c('meinWerkzeug',{staticClass:"maskedlayer",style:({ clipPath: 'url(#path_' + _vm.layerData.id +')', top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', height: _vm.layerData.height+'px', width: _vm.layerData.width+'px'}),attrs:{"stouch-action":"none","toolData":{id: _vm.layerData.id, height:_vm.layerData.height,width:_vm.layerData.width}}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'doodle')?_c('meinAnderesWerkzeug',{staticClass:"maskedlayer",style:({ clipPath: 'url(#path_' + _vm.layerData.id +')', top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', height: _vm.layerData.height+'px', width: _vm.layerData.width+'px'}),attrs:{"touch-action":"none","toolData":{id: _vm.layerData.id, height:_vm.layerData.height,width:_vm.layerData.width}}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'NoTool')?_c('div',{staticClass:"layer maskedlayer",style:({ clipPath: 'url(#path_' + _vm.layerData.id +')',top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', height: _vm.layerData.height+'px', width: _vm.layerData.width+'px'}),attrs:{"touch-action":"none","id":'layer_'+_vm.layerData.id}}):_vm._e()],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"toolLayer"},[(_vm.Tool === 'ugly pen')?_c('UglyPen',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width,
+            x: _vm.layerData.x,
+            y: _vm.layerData.y,
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'text')?_c('TextTool',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'mandala')?_c('meinWerkzeug',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'doodle')?_c('meinAnderesWerkzeug',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"touch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'NoTool')?_c('div',{staticClass:"layer maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')',
+            top:_vm.layerData.y+'px', 
+            left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'}),attrs:{"touch-action":"none","id":'layer_'+_vm.layerData.id}}):_vm._e()],1)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-04298aa4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -263,7 +327,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-04298aa4", __vue__options__)
   }
 })()}
-},{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],4:[function(require,module,exports){
+},{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"../werzeuge/texttool.vue":9,"../werzeuge/uglypen.vue":10,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],4:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("svg[data-v-3a023ee4] {\n    position: absolute;\n    z-index: -1000;\n    background: rgba(0, 0, 0, 0);\n}")
 ;(function(){
 "use strict";
@@ -317,7 +381,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-3a023ee4", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],5:[function(require,module,exports){
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],5:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n\n#cmdCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
@@ -420,8 +484,6 @@ exports.default = {
 
                     var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
 
-                    console.log('PosInfo', posInfo);
-                    console.log('SVG Path', SVGPath);
                     editorElement.editor.clear();
 
                     _this.SVGpath = SVGPath;
@@ -565,7 +627,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-9570dcf4", __vue__options__)
   }
 })()}
-},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],6:[function(require,module,exports){
+},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],6:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
@@ -787,7 +849,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-33b6da95", __vue__options__)
   }
 })()}
-},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],7:[function(require,module,exports){
+},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],7:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-1908c177] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}")
 ;(function(){
 'use strict';
@@ -876,7 +938,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-1908c177", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],8:[function(require,module,exports){
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],8:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-082716cb] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}")
 ;(function(){
 'use strict';
@@ -969,7 +1031,248 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-082716cb", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],9:[function(require,module,exports){
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],9:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-7612ff2f] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-7612ff2f]{\n    fill: #1820d2;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: ''
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        var toolData = this.toolData;
+
+        var editorElement = document.getElementById('sketch_' + this.toolData.id);
+
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
+            }
+        });
+
+        editorElement.addEventListener('exported', function (event) {
+            _this.saveToVuex();
+        });
+
+        setTimeout(function () {
+            checkIfLoaded();
+        }, 2000);
+
+        var checkIfLoaded = function checkIfLoaded() {
+            console.log('CheckIfLoaded');
+            if (document.getElementById('sketch_' + _this.toolData.id).getElementsByTagName('svg')[0]) {
+                _this.loadData();
+            } else {
+                setTimeout(function () {
+                    checkIfLoaded();
+                }, 2000);
+            }
+        };
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    if (_this2.saveData.constructor != Array) {
+                        _this2.saveData = l.tool.tooldata;
+                        document.getElementById('sketch_' + _this2.toolData.id).getElementsByTagName('svg')[0].innerHTML = _this2.saveData;
+                    }
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            var g = document.getElementById('sketch_' + this.toolData.id).getElementsByTagName('svg')[0].innerHTML;
+            this.saveData = g;
+        },
+        saveToVuex: function saveToVuex() {
+            this.saveToData();
+            var newSaveData = {
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch texttool",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-7612ff2f"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7612ff2f", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-7612ff2f", __vue__options__)
+  }
+})()}
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-af3ab4c0] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n\n.uglypen[data-v-af3ab4c0] {\n    fill: #1820d2;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+        var toolData = this.toolData;
+        var limit = 500;
+
+        var getRandomInt = function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        var el = document.getElementById('sketch_' + this.toolData.id);
+        var ctx = el.getContext('2d');
+
+        ctx.lineJoin = ctx.lineCap = 'round';
+
+        console.log(this.saveData);
+
+        for (var i = 1; i < this.saveData.length; i++) {
+            console.log();
+            ctx.beginPath();
+            ctx.moveTo(this.saveData[i - 1].x, this.saveData[i - 1].y);
+            ctx.lineWidth = this.saveData[i].width;
+            ctx.lineTo(this.saveData[i].x, this.saveData[i].y);
+            ctx.stroke();
+        }
+
+        var isDrawing;
+        var points = [];
+
+        el.onmousedown = function (e) {
+            isDrawing = true;
+            points.length = 0;
+
+            if (points.length < limit) {
+                points.push({
+                    x: e.clientX - _this.toolData.x,
+                    y: e.clientY - _this.toolData.y,
+                    width: getRandomInt(2, 2.5)
+                });
+            } else {
+                points.splice(0, 1);
+                points.push({
+                    x: e.clientX - _this.toolData.x,
+                    y: e.clientY - _this.toolData.y,
+                    width: getRandomInt(2, 2.5)
+                });
+            }
+        };
+
+        el.onmousemove = function (e) {
+            if (!isDrawing) return;
+
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            if (points.length < limit) {
+                points.push({
+                    x: e.clientX - _this.toolData.x,
+                    y: e.clientY - _this.toolData.y,
+                    width: getRandomInt(2, 2.5)
+                });
+            } else {
+                points.splice(0, 1);
+                points.push({
+                    x: e.clientX - _this.toolData.x,
+                    y: e.clientY - _this.toolData.y,
+                    width: getRandomInt(2, 2.5)
+                });
+            }
+
+            for (var i = 1; i < points.length; i++) {
+                ctx.beginPath();
+                ctx.moveTo(points[i - 1].x, points[i - 1].y);
+                ctx.lineWidth = points[i].width;
+                ctx.lineTo(points[i].x, points[i].y);
+                ctx.stroke();
+            }
+        };
+
+        el.onmouseup = function () {
+            isDrawing = false;
+            console.log('POINTS', points.length);
+            _this.saveData = points;
+            _this.saveToVuex();
+        };
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            console.log('SaveToVuex', this.saveData);
+
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('canvas',{staticClass:"sketch uglypen",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-af3ab4c0"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-af3ab4c0", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-af3ab4c0", __vue__options__)
+  }
+})()}
+},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],11:[function(require,module,exports){
 'use strict';
 
 var _vuexPersist = require('vuex-persist');
@@ -1054,7 +1357,7 @@ var store = new Vuex.Store({
                 layers: [],
                 JournalCount: 0,
                 journals: [],
-                curAccessPoint: 2,
+                curAccessPoint: 0,
                 access: [{
                     name: 'kontakt@brandl-maximilian.de',
                     applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
@@ -1095,12 +1398,19 @@ var store = new Vuex.Store({
         },
 
         updateToolSaveData: function updateToolSaveData(state, saveData) {
-            console.log('Update Save Data', saveData);
+            // console.log('Update Save Data', saveData);
 
             state.layers.forEach(function (l) {
                 //console.log('filter',[l.id, ToolData.layerID]);    
                 if (l.id === saveData.id) {
-                    l.tool.tooldata.push.apply(l.tool.tooldata, saveData.data);
+                    if (saveData.data.constructor === Array && saveData.type != "refresh") {
+                        l.tool.tooldata.push.apply(l.tool.tooldata, saveData.data);
+                    } else if (saveData.type === "refresh") {
+                        console.log('refreshed');
+                        l.tool.tooldata = saveData.data;
+                    } else {
+                        l.tool.tooldata = saveData.data;
+                    }
                 }
             });
         },
@@ -1135,7 +1445,7 @@ var vm = new Vue({
     store: store
 }).$mount('#app');
 
-},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":10,"vuex-persist":16}],10:[function(require,module,exports){
+},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":12,"vuex-persist":18}],12:[function(require,module,exports){
 'use strict';
 
 var EMPTY_STATE = 'emptyState';
@@ -1195,7 +1505,7 @@ module.exports = {
     }
 };
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -3406,7 +3716,7 @@ function stubFalse() {
 module.exports = merge;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -3592,7 +3902,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -3822,7 +4132,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -11749,7 +12059,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":12}],15:[function(require,module,exports){
+},{"_process":14}],17:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -11774,7 +12084,7 @@ exports.insert = function (css) {
   }
 }
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -12015,4 +12325,4 @@ exports.MockStorage = MockStorage;
 exports['default'] = VuexPersistence;
 
 
-},{"lodash.merge":11}]},{},[9]);
+},{"lodash.merge":13}]},{},[11]);

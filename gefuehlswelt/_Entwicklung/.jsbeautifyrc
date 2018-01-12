@@ -13,5 +13,6 @@
     "space-before-conditional": true,
     "tabsize": 4,
     "unescape-strings": false,
-    "wrap-line-length": 0
+    "wrap-line-length": 0,
+    "wrap-attributes": "force"
 }

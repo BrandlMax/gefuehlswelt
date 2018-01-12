@@ -71,7 +71,7 @@ const store = new Vuex.Store({
                 layers: [],
                 JournalCount: 0,
                 journals: [],
-                curAccessPoint: 2,
+                curAccessPoint: 0,
                 access: [{
                         name: 'kontakt@brandl-maximilian.de',
                         applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',
@@ -116,12 +116,20 @@ const store = new Vuex.Store({
         },
 
         updateToolSaveData: (state, saveData) => {
-            console.log('Update Save Data', saveData);
+            // console.log('Update Save Data', saveData);
 
             state.layers.forEach((l) => {
                 //console.log('filter',[l.id, ToolData.layerID]);    
                 if (l.id === saveData.id) {
-                    l.tool.tooldata.push.apply(l.tool.tooldata, saveData.data);
+                    if(saveData.data.constructor === Array && saveData.type != "refresh"){
+                        l.tool.tooldata.push.apply(l.tool.tooldata, saveData.data);
+                    } else if(saveData.type === "refresh"){
+                        console.log('refreshed');
+                        l.tool.tooldata = saveData.data;
+                    }else{
+                        l.tool.tooldata = saveData.data;
+                    }
+                    
                 }
             });
         },

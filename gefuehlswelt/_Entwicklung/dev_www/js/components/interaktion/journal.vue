@@ -1,6 +1,18 @@
 <template>
-    <div touch-action="none" :id="'layer_'+journalData.id"  class="journal maskedlayer" :style="[{ clipPath: 'url(#path_' + journalData.id +')', top:journalData.y+'px', left:journalData.x+'px', height: journalData.height+'px', width: journalData.width+'px', background: journalData.background}, {'-webkit-clip-path':'url(#path_' + journalData.id +')'}]">
-    journal
+    <div 
+        touch-action="none"
+        :id="'layer_'+journalData.id" 
+        class="journal maskedlayer" 
+        :style="[{ 
+            clipPath: 'url(#path_' + journalData.id +')', 
+            top:journalData.y+'px', left:journalData.x+'px', 
+            height: journalData.height+'px', 
+            width: journalData.width+'px', 
+            background: journalData.background}, 
+            {'-webkit-clip-path':'url(#path_' + journalData.id +')'
+        }]">
+        
+        journal
     </div>
 </template>
 
