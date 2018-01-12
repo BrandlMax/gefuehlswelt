@@ -8,6 +8,7 @@
   cmd
   </div>
 
+  <Help :toolData="{x: 500, y: 500}"></Help>
 
 
   <SVGLayer 
@@ -30,6 +31,8 @@
     //console.log('MainCanvas');
     import SVGLayer from '../interaktion/svg.vue';
     import Journal from '../interaktion/journal.vue';
+
+    import Help from '../werzeuge/help.vue';
 
     export default {
         data() {
@@ -182,6 +185,9 @@
                 if (this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
                     cmdeditorElement.editor.clear();
                     editorElement.editor.clear();
+                } else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                    cmdeditorElement.editor.clear();
+                    editorElement.editor.clear();
                 }
             });
 
@@ -205,7 +211,8 @@
         },
         components: {
             SVGLayer,
-            Journal
+            Journal,
+            Help
         },
         methods: {
             // this.$store.state
@@ -242,6 +249,11 @@
                         return true;
 
                     case '.':
+                        return true;
+                                                   
+                    case 'reset':
+                        localStorage.clear();
+                        location.reload();
                         return true;
 
                     case 'hilfe':

@@ -39,6 +39,7 @@ const store = new Vuex.Store({
     state: {
         firstload: true,
         loadState: {},
+        help: false,
         LayerCount: 0,
         layers: [],
         JournalCount: 0,
@@ -67,6 +68,7 @@ const store = new Vuex.Store({
             this.replaceState({
                 firstload: true,
                 loadState: {},
+                help: false,
                 LayerCount: 0,
                 layers: [],
                 JournalCount: 0,
@@ -135,8 +137,14 @@ const store = new Vuex.Store({
         },
 
         removeLayer: (state, Layer) => {
-            state.layers.splice(Layer.index, 1);
-            console.log('removedLayer', Layer.index);
+
+            state.layers.forEach((l) => {
+                //console.log('filter',[l.id, ToolData.layerID]);    
+                if (l.id === Layer.id) {
+                    l.show = false;
+                }
+            });
+
         },
 
         addJournal: (state, Journal) => {
@@ -147,9 +155,17 @@ const store = new Vuex.Store({
         },
 
         removeJournal: (state, Journal) => {
-            state.journals.splice(Journal.index, 1);
-            console.log('removedJournal', Journal.index);
+            state.journals.forEach((j) => {
+                //console.log('filter',[l.id, ToolData.layerID]);    
+                if (j.id === Journal.id) {
+                    j.show = false;
+                }
+            });
         },
+        showHelpLayer: (state, helpStatus) =>{
+            state.help = helpStatus;
+            console.log('show Help');
+        }
     },
     plugins: [vuexLocal.plugin]
 });

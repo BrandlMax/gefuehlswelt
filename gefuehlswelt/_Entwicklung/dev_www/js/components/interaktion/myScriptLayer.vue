@@ -3,7 +3,7 @@
 
         <UglyPen class="maskedlayer"
             stouch-action="none"
-            v-if="Tool === 'ugly pen'"
+            v-if="Tool === 'ugly'"
             :toolData="{
                 id: layerData.id, 
                 height:layerData.height,
@@ -68,6 +68,22 @@
             }">
         </meinAnderesWerkzeug> 
 
+        <Inspire class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'inspire'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Inspire>
+
         <div
             touch-action="none" 
             v-if="Tool === 'NoTool'"
@@ -90,6 +106,8 @@
 
     import TextTool from '../werzeuge/texttool.vue';
     import UglyPen from '../werzeuge/uglypen.vue';
+
+    import Inspire from '../werzeuge/inspire.vue';
 
     export default {
         props: ['layerData'],
@@ -132,6 +150,8 @@
                     }
                     this.$store.commit('updateLayerTool', newLayerData);
                     this.currentTool();
+                }else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                    editorElement.editor.clear();
                 }
 
                 // Delete
@@ -141,8 +161,7 @@
                     var newLayer = this.$store.state.layers[LayerIndex];
                     newLayer.show = false;
                     this.$store.commit('removeLayer', {
-                        index: LayerIndex,
-                        updatedLayer: newLayer
+                        id: this.layerData.id 
                     });
                 }
 
@@ -166,7 +185,8 @@
             meinWerkzeug,
             meinAnderesWerkzeug,
             TextTool,
-            UglyPen
+            UglyPen,
+            Inspire
         },
         methods: {
             // Current Tool
@@ -204,7 +224,9 @@
                         return true;
                     case 'text':
                         return true;
-                    case 'ugly pen':
+                    case 'ugly':
+                        return true;
+                    case 'inspire':
                         return true;
                     default:
                         return false;

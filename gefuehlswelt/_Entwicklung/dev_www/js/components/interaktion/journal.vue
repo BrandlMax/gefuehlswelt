@@ -43,12 +43,27 @@
             editorElement.addEventListener('exported', (event) => {
 
                 console.log('Erkannt:', event.detail.exports['text/plain']);
-                this.$router.push({
-                    name: 'Entry',
-                    params: {
-                        id: JournalID
-                    }
-                });
+
+                // Enter
+                if(this.recogEnter(event.detail.exports['text/plain'])){
+                    this.$router.push({
+                        name: 'Entry',
+                        params: {
+                            id: JournalID
+                        }
+                    });
+                }else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                    editorElement.editor.clear();
+                }
+
+                // Delete
+                if (this.recogDel(event.detail.exports['text/plain'])) {
+                    editorElement.editor.clear();
+
+                    this.$store.commit('removeJournal', {
+                        id: this.journalData.id 
+                    });
+                }
 
             });
 
@@ -72,6 +87,19 @@
                 return '-webkit-clip-path: url(#path_' + this.journalData.id + ')'
             },
             // Recognition
+            // Enter
+            recogEnter: function(gestik){
+                switch (gestik) {
+                    case 'v':
+                        return true;
+                    case '✓':
+                        return true;
+                    case 'V':
+                        return true;
+                    default:
+                        return false;
+                }               
+            },
             //Delete
             recogDel: function(gestik) {
                 switch (gestik) {

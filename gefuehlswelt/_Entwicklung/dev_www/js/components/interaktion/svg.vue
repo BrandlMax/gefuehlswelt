@@ -1,6 +1,6 @@
 <template>
     <div class="SVGMasks">
-    <svg :if=" curName === 'Entry'" v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
+    <svg v-if="curName === 'Entry'" v-for="(layer, index) in this.$store.state.layers" :key="index" id="MaskSVG" class="SVGcopy entryMask" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
 
         <defs>
             <clipPath :id="'path_'+layer.id">
@@ -13,7 +13,7 @@
         -->
     </svg>
 
-    <svg :if=" curPath === '/'" v-for="(layer, index) in this.$store.state.journals" :key="index" id="MaskSVG" class="SVGcopy" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
+    <svg v-if="curPath === '/'" v-for="(layer, index) in this.$store.state.journals" :key="index" id="MaskSVG" class="SVGcopy journalMask" :viewBox="generateViewBox(layer.w, layer.h)" :width="layer.w" :height="layer.h" preserveAspectRatio = "xMinYMin meet">
 
         <defs>
             <clipPath :id="'path_'+layer.id">
@@ -55,7 +55,7 @@
             }
         },
         mounted() {
-            //console.log('curPage', this.$route);
+            console.log('curName', [this.curName, this.curPath]);
         },
         created() {
 

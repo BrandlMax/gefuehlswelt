@@ -9,6 +9,8 @@
   cmd
   </div>
 
+  <Help :toolData="{x: 500, y: 500}"></Help>
+
   <Layer 
     v-if="showSVGlayer"
    :layerData="{height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}">
@@ -20,8 +22,9 @@
 
   <myScriptLayer 
     v-for="(layer, index) in giveToolsofEntry()" 
-    :key="index" 
-    :layerData="{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}">
+    :key="index"
+    v-if="layer.show" 
+    :layerData="{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w, show: layer.show}">
   </myScriptLayer>
 
 </div>
@@ -31,6 +34,8 @@
     import SVGLayer from '../interaktion/svg.vue';
     import Layer from '../interaktion/layer.vue';
     import myScriptLayer from '../interaktion/myScriptLayer.vue';
+    
+    import Help from '../werzeuge/help.vue';
 
     export default {
         data() {
@@ -178,6 +183,9 @@
                 if (this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
                     cmdeditorElement.editor.clear();
                     editorElement.editor.clear();
+                }else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                    cmdeditorElement.editor.clear();
+                    editorElement.editor.clear();
                 }
             });
 
@@ -202,7 +210,8 @@
         components: {
             SVGLayer,
             myScriptLayer,
-            Layer
+            Layer,
+            Help
         },
         methods: {
             // Check if Tool is part of this Page
@@ -257,8 +266,16 @@
                     case '.':
                         return true;
 
+                    case 'reset':
+                        localStorage.clear();
+                        this.$router.push({
+                            name: 'Overview'
+                        });
+                        return true;
+
                     case 'hilfe':
                         console.log('Hilfe')
+                        this.$store.commit('showHelpLayer', true)
                         return true;
 
                     case 'inspire me':

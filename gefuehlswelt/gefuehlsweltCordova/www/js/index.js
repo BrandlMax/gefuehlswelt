@@ -29,12 +29,25 @@ exports.default = {
         editorElement.addEventListener('exported', function (event) {
 
             console.log('Erkannt:', event.detail.exports['text/plain']);
-            _this.$router.push({
-                name: 'Entry',
-                params: {
-                    id: JournalID
-                }
-            });
+
+            if (_this.recogEnter(event.detail.exports['text/plain'])) {
+                _this.$router.push({
+                    name: 'Entry',
+                    params: {
+                        id: JournalID
+                    }
+                });
+            } else if (event.detail.exports['text/plain'].toLowerCase().includes("x")) {
+                editorElement.editor.clear();
+            }
+
+            if (_this.recogDel(event.detail.exports['text/plain'])) {
+                editorElement.editor.clear();
+
+                _this.$store.commit('removeJournal', {
+                    id: _this.journalData.id
+                });
+            }
         });
 
         editorElement.addEventListener('contextmenu', function (ev) {
@@ -50,6 +63,19 @@ exports.default = {
     methods: {
         maskedStyle: function maskedStyle() {
             return '-webkit-clip-path: url(#path_' + this.journalData.id + ')';
+        },
+
+        recogEnter: function recogEnter(gestik) {
+            switch (gestik) {
+                case 'v':
+                    return true;
+                case '✓':
+                    return true;
+                case 'V':
+                    return true;
+                default:
+                    return false;
+            }
         },
 
         recogDel: function recogDel(gestik) {
@@ -91,7 +117,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-ddefd23e", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],2:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],2:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-bdb8c70a] {\n    position: absolute;\n    z-index: 2000;\n    background: rgb(39, 201, 166);\n    clip-path: url(#form);\n}")
 ;(function(){
 'use strict';
@@ -129,7 +155,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-bdb8c70a", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],3:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],3:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-04298aa4] {\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n    ;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-04298aa4],\n.ms-editor svg[data-v-04298aa4] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
 ;(function(){
 'use strict';
@@ -153,6 +179,10 @@ var _texttool2 = _interopRequireDefault(_texttool);
 var _uglypen = require('../werzeuge/uglypen.vue');
 
 var _uglypen2 = _interopRequireDefault(_uglypen);
+
+var _inspire = require('../werzeuge/inspire.vue');
+
+var _inspire2 = _interopRequireDefault(_inspire);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -194,6 +224,8 @@ exports.default = {
                 };
                 _this.$store.commit('updateLayerTool', newLayerData);
                 _this.currentTool();
+            } else if (event.detail.exports['text/plain'].toLowerCase().includes("x")) {
+                editorElement.editor.clear();
             }
 
             if (_this.recogDel(event.detail.exports['text/plain'])) {
@@ -202,8 +234,7 @@ exports.default = {
                 var newLayer = _this.$store.state.layers[LayerIndex];
                 newLayer.show = false;
                 _this.$store.commit('removeLayer', {
-                    index: LayerIndex,
-                    updatedLayer: newLayer
+                    id: _this.layerData.id
                 });
             }
         });
@@ -220,7 +251,8 @@ exports.default = {
         meinWerkzeug: _beispiel2.default,
         meinAnderesWerkzeug: _beispiel4.default,
         TextTool: _texttool2.default,
-        UglyPen: _uglypen2.default
+        UglyPen: _uglypen2.default,
+        Inspire: _inspire2.default
     },
     methods: {
         currentTool: function currentTool() {
@@ -258,7 +290,9 @@ exports.default = {
                     return true;
                 case 'text':
                     return true;
-                case 'ugly pen':
+                case 'ugly':
+                    return true;
+                case 'inspire':
                     return true;
                 default:
                     return false;
@@ -270,7 +304,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"toolLayer"},[(_vm.Tool === 'ugly pen')?_c('UglyPen',{staticClass:"maskedlayer",style:({ 
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"toolLayer"},[(_vm.Tool === 'ugly')?_c('UglyPen',{staticClass:"maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')', 
             top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
             height: _vm.layerData.height+'px', 
@@ -308,6 +342,15 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
             id: _vm.layerData.id, 
             height:_vm.layerData.height,
             width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'inspire')?_c('Inspire',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
         }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'NoTool')?_c('div',{staticClass:"layer maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')',
             top:_vm.layerData.y+'px', 
@@ -324,13 +367,13 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-04298aa4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-04298aa4", __vue__options__)
+    hotAPI.reload("data-v-04298aa4", __vue__options__)
   }
 })()}
-},{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"../werzeuge/texttool.vue":9,"../werzeuge/uglypen.vue":10,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],4:[function(require,module,exports){
+},{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"../werzeuge/inspire.vue":10,"../werzeuge/texttool.vue":11,"../werzeuge/uglypen.vue":12,"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],4:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("svg[data-v-3a023ee4] {\n    position: absolute;\n    z-index: -1000;\n    background: rgba(0, 0, 0, 0);\n}")
 ;(function(){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -343,7 +386,9 @@ exports.default = {
             curPath: this.$route.path
         };
     },
-    mounted: function mounted() {},
+    mounted: function mounted() {
+        console.log('curName', [this.curName, this.curPath]);
+    },
     created: function created() {},
     destroyed: function destroyed() {},
 
@@ -367,7 +412,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"SVGMasks"},[_vm._l((this.$store.state.layers),function(layer,index){return _c('svg',{key:index,staticClass:"SVGcopy",attrs:{"if":_vm.curName === 'Entry',"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])])}),_vm._v(" "),_vm._l((this.$store.state.journals),function(layer,index){return _c('svg',{key:index,staticClass:"SVGcopy",attrs:{"if":_vm.curPath === '/',"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])])})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"SVGMasks"},[_vm._l((this.$store.state.layers),function(layer,index){return (_vm.curName === 'Entry')?_c('svg',{key:index,staticClass:"SVGcopy entryMask",attrs:{"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])]):_vm._e()}),_vm._v(" "),_vm._l((this.$store.state.journals),function(layer,index){return (_vm.curPath === '/')?_c('svg',{key:index,staticClass:"SVGcopy journalMask",attrs:{"id":"MaskSVG","viewBox":_vm.generateViewBox(layer.w, layer.h),"width":layer.w,"height":layer.h,"preserveAspectRatio":"xMinYMin meet"}},[_c('defs',[_c('clipPath',{attrs:{"id":'path_'+layer.id}},[_c('path',{attrs:{"transform":_vm.generateTransform(layer.x, layer.y),"x":"0","y":"0","d":layer.svgPath}})])])]):_vm._e()})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-3a023ee4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -381,7 +426,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-3a023ee4", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],5:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],5:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n\n#cmdCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
@@ -401,6 +446,10 @@ var _layer2 = _interopRequireDefault(_layer);
 var _myScriptLayer = require('../interaktion/myScriptLayer.vue');
 
 var _myScriptLayer2 = _interopRequireDefault(_myScriptLayer);
+
+var _help = require('../werzeuge/help.vue');
+
+var _help2 = _interopRequireDefault(_help);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -525,6 +574,9 @@ exports.default = {
             if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
                 cmdeditorElement.editor.clear();
                 editorElement.editor.clear();
+            } else if (event.detail.exports['text/plain'].toLowerCase().includes("x")) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
             }
         });
 
@@ -543,7 +595,8 @@ exports.default = {
     components: {
         SVGLayer: _svg2.default,
         myScriptLayer: _myScriptLayer2.default,
-        Layer: _layer2.default
+        Layer: _layer2.default,
+        Help: _help2.default
     },
     methods: {
         giveToolsofEntry: function giveToolsofEntry() {
@@ -595,8 +648,16 @@ exports.default = {
                 case '.':
                     return true;
 
+                case 'reset':
+                    localStorage.clear();
+                    this.$router.push({
+                        name: 'Overview'
+                    });
+                    return true;
+
                 case 'hilfe':
                     console.log('Hilfe');
+                    this.$store.commit('showHelpLayer', true);
                     return true;
 
                 case 'inspire me':
@@ -613,7 +674,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n    Entry "+_vm._s(_vm.$route.params.id)+"\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((_vm.giveToolsofEntry()),function(layer,index){return _c('myScriptLayer',{key:index,attrs:{"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n    Entry "+_vm._s(_vm.$route.params.id)+"\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((_vm.giveToolsofEntry()),function(layer,index){return (layer.show)?_c('myScriptLayer',{key:index,attrs:{"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w, show: layer.show}}}):_vm._e()})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-9570dcf4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -627,7 +688,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-9570dcf4", __vue__options__)
   }
 })()}
-},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],6:[function(require,module,exports){
+},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":9,"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],6:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
@@ -643,6 +704,10 @@ var _svg2 = _interopRequireDefault(_svg);
 var _journal = require('../interaktion/journal.vue');
 
 var _journal2 = _interopRequireDefault(_journal);
+
+var _help = require('../werzeuge/help.vue');
+
+var _help2 = _interopRequireDefault(_help);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -764,6 +829,9 @@ exports.default = {
             if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
                 cmdeditorElement.editor.clear();
                 editorElement.editor.clear();
+            } else if (event.detail.exports['text/plain'].toLowerCase().includes("x")) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
             }
         });
 
@@ -781,7 +849,8 @@ exports.default = {
 
     components: {
         SVGLayer: _svg2.default,
-        Journal: _journal2.default
+        Journal: _journal2.default,
+        Help: _help2.default
     },
     methods: {
         recogForm: function recogForm(gestik) {
@@ -818,6 +887,11 @@ exports.default = {
                 case '.':
                     return true;
 
+                case 'reset':
+                    localStorage.clear();
+                    location.reload();
+                    return true;
+
                 case 'hilfe':
                     console.log('Hilfe');
                     return true;
@@ -835,7 +909,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-33b6da95"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -849,7 +923,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-33b6da95", __vue__options__)
   }
 })()}
-},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],7:[function(require,module,exports){
+},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":9,"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],7:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-1908c177] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}")
 ;(function(){
 'use strict';
@@ -938,7 +1012,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-1908c177", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],8:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],8:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-082716cb] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}")
 ;(function(){
 'use strict';
@@ -1031,8 +1105,8 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-082716cb", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],9:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-7612ff2f] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-7612ff2f]{\n    fill: #1820d2;\n    background: #fff;\n}")
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],9:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".kleinerhelfer[data-v-f6204daa] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-f6204daa]{\n    fill: #1820d2;\n    background: #fff;\n}\nvideo[data-v-f6204daa]{\n    height: 100%;\n    width: 100%;\n}")
 ;(function(){
 'use strict';
 
@@ -1044,6 +1118,142 @@ exports.default = {
     data: function data() {
         return {
             saveData: ''
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        if (this.$store.state.help) {
+            var video = document.getElementById('helpvideo');
+            video.play();
+            var toolData = this.toolData;
+
+            video.addEventListener('ended', function (e) {
+                _this.$store.commit('showHelpLayer', false);
+            }, false);
+        }
+    },
+    updated: function updated() {
+        var _this2 = this;
+
+        if (this.$store.state.help) {
+            var video = document.getElementById('helpvideo');
+            video.play();
+
+            video.addEventListener('ended', function (e) {
+                _this2.$store.commit('showHelpLayer', false);
+            }, false);
+        }
+    },
+
+    methods: {}
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (this.$store.state.help)?_c('div',{staticClass:"kleinerhelfer"},[_c('video',{attrs:{"id":"helpvideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Help.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])]):_vm._e()}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-f6204daa"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f6204daa", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-f6204daa", __vue__options__)
+  }
+})()}
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-66055f60] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.inspire[data-v-66055f60]{\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: ''
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        var video = document.getElementById('inspirevideo');
+        video.play();
+
+        video.addEventListener('ended', function (e) {
+            console.log('Inspire End');
+            _this.$store.commit('removeLayer', {
+                id: _this.toolData.id
+            });
+        }, false);
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    if (_this2.saveData.constructor != Array) {
+                        _this2.saveData = l.tool.tooldata;
+                        document.getElementById('sketch_' + _this2.toolData.id).getElementsByTagName('svg')[0].innerHTML = _this2.saveData;
+                    }
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            var g = document.getElementById('sketch_' + this.toolData.id).getElementsByTagName('svg')[0].innerHTML;
+            this.saveData = g;
+        },
+        saveToVuex: function saveToVuex() {
+            this.saveToData();
+            var newSaveData = {
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch inspire",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', 
+    height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}},[_c('video',{attrs:{"id":"inspirevideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Inspire.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-66055f60"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-66055f60", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-66055f60", __vue__options__)
+  }
+})()}
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],11:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-7612ff2f] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-7612ff2f]{\n    fill: #1820d2;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: '<g id="pendingStrokes"></g>'
         };
     },
     mounted: function mounted() {
@@ -1087,7 +1297,7 @@ exports.default = {
             this.$store.state.layers.forEach(function (l) {
                 if (l.id === _this2.toolData.id) {
                     if (_this2.saveData.constructor != Array) {
-                        _this2.saveData = l.tool.tooldata;
+                        _this2.saveData = '<g id="pendingStrokes"></g>' + l.tool.tooldata;
                         document.getElementById('sketch_' + _this2.toolData.id).getElementsByTagName('svg')[0].innerHTML = _this2.saveData;
                     }
                 };
@@ -1095,13 +1305,13 @@ exports.default = {
         },
         saveToData: function saveToData(x, y) {
             var g = document.getElementById('sketch_' + this.toolData.id).getElementsByTagName('svg')[0].innerHTML;
-            this.saveData = g;
+            this.saveData = '<g id="pendingStrokes"></g> ' + g;
         },
         saveToVuex: function saveToVuex() {
             this.saveToData();
             var newSaveData = {
                 id: this.toolData.id,
-                data: this.saveData
+                data: '<g id="pendingStrokes"></g> ' + this.saveData
             };
             this.$store.commit('updateToolSaveData', newSaveData);
         }
@@ -1125,7 +1335,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-7612ff2f", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],10:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],12:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-af3ab4c0] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n\n.uglypen[data-v-af3ab4c0] {\n    fill: #1820d2;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1272,7 +1482,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-af3ab4c0", __vue__options__)
   }
 })()}
-},{"vue":16,"vue-hot-reload-api":15,"vueify/lib/insert-css":17}],11:[function(require,module,exports){
+},{"vue":18,"vue-hot-reload-api":17,"vueify/lib/insert-css":19}],13:[function(require,module,exports){
 'use strict';
 
 var _vuexPersist = require('vuex-persist');
@@ -1328,6 +1538,7 @@ var store = new Vuex.Store({
     state: {
         firstload: true,
         loadState: {},
+        help: false,
         LayerCount: 0,
         layers: [],
         JournalCount: 0,
@@ -1353,6 +1564,7 @@ var store = new Vuex.Store({
             this.replaceState({
                 firstload: true,
                 loadState: {},
+                help: false,
                 LayerCount: 0,
                 layers: [],
                 JournalCount: 0,
@@ -1416,8 +1628,13 @@ var store = new Vuex.Store({
         },
 
         removeLayer: function removeLayer(state, Layer) {
-            state.layers.splice(Layer.index, 1);
-            console.log('removedLayer', Layer.index);
+
+            state.layers.forEach(function (l) {
+                //console.log('filter',[l.id, ToolData.layerID]);    
+                if (l.id === Layer.id) {
+                    l.show = false;
+                }
+            });
         },
 
         addJournal: function addJournal(state, Journal) {
@@ -1428,8 +1645,16 @@ var store = new Vuex.Store({
         },
 
         removeJournal: function removeJournal(state, Journal) {
-            state.journals.splice(Journal.index, 1);
-            console.log('removedJournal', Journal.index);
+            state.journals.forEach(function (j) {
+                //console.log('filter',[l.id, ToolData.layerID]);    
+                if (j.id === Journal.id) {
+                    j.show = false;
+                }
+            });
+        },
+        showHelpLayer: function showHelpLayer(state, helpStatus) {
+            state.help = helpStatus;
+            console.log('show Help');
         }
     },
     plugins: [vuexLocal.plugin]
@@ -1445,7 +1670,7 @@ var vm = new Vue({
     store: store
 }).$mount('#app');
 
-},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":12,"vuex-persist":18}],12:[function(require,module,exports){
+},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":14,"vuex-persist":20}],14:[function(require,module,exports){
 'use strict';
 
 var EMPTY_STATE = 'emptyState';
@@ -1505,7 +1730,7 @@ module.exports = {
     }
 };
 
-},{}],13:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function (global){
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -3716,7 +3941,7 @@ function stubFalse() {
 module.exports = merge;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -3902,7 +4127,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -4132,7 +4357,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -12059,7 +12284,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":14}],17:[function(require,module,exports){
+},{"_process":16}],19:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -12084,7 +12309,7 @@ exports.insert = function (css) {
   }
 }
 
-},{}],18:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -12325,4 +12550,4 @@ exports.MockStorage = MockStorage;
 exports['default'] = VuexPersistence;
 
 
-},{"lodash.merge":13}]},{},[11]);
+},{"lodash.merge":15}]},{},[13]);

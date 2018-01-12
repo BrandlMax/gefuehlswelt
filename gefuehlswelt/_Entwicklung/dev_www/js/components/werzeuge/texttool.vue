@@ -10,7 +10,7 @@
         props: ['toolData'],
         data() {
             return {
-                saveData: '',
+                saveData: '<g id="pendingStrokes"></g>',
             }
         },
         mounted() {
@@ -57,7 +57,7 @@
                 this.$store.state.layers.forEach((l) => {
                     if (l.id === this.toolData.id) {
                         if (this.saveData.constructor != Array) {
-                            this.saveData = l.tool.tooldata;
+                            this.saveData = '<g id="pendingStrokes"></g>' + l.tool.tooldata;
                             document.getElementById('sketch_' + this.toolData.id).getElementsByTagName('svg')[0].innerHTML = this.saveData;
                         }
                     };
@@ -66,7 +66,7 @@
             saveToData: function(x, y) {
                 // console.log('SaveToData', this.saveData)
                 var g = document.getElementById('sketch_' + this.toolData.id).getElementsByTagName('svg')[0].innerHTML;
-                this.saveData = g;
+                this.saveData = '<g id="pendingStrokes"></g> ' + g;
 
             },
             saveToVuex: function() {
@@ -74,7 +74,7 @@
                 this.saveToData();
                 var newSaveData = {
                     id: this.toolData.id,
-                    data: this.saveData
+                    data: '<g id="pendingStrokes"></g> ' + this.saveData
                 }
                 this.$store.commit('updateToolSaveData', newSaveData);
             },
