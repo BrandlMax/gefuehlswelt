@@ -19,8 +19,8 @@
   </SVGLayer>
 
   <myScriptLayer 
-    v-for="(layer, index) in this.$store.state.layers" 
-    :if="layer.show" :key="index" 
+    v-for="(layer, index) in giveToolsofEntry()" 
+    :key="index" 
     :layerData="{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w}">
   </myScriptLayer>
 
@@ -35,6 +35,7 @@ import myScriptLayer from '../interaktion/myScriptLayer.vue';
 export default {
   data(){
       return{
+        pageID: parseInt(this.$route.params.id),
         // TEST SVG DATA
         SVGpath: "M210.08,61.91l-1.06,0.26h-1.06l-1.85,0.53l-1.06,0.26l-2.65,1.06l-1.32,1.06l-2.65,1.85l-1.32,1.59l-1.32,2.65l-0.26,1.06l-0.26,4.5l0.26,2.91l0.53,2.12l2.38,5.56l3.7,5.56l3.18,2.91l3.97,2.38l7.41,3.17l3.18,0.79l7.67,1.32l3.7,0.53h5.29h1.59l4.5-1.32l3.18-1.59l5.56-3.18l2.91-2.12l5.29-4.23l2.12-1.59l3.97-3.44l1.85-2.12l1.32-2.91l0.26-1.06v-3.7l-0.79-2.91l-2.65-5.03l-1.59-2.12l-1.06-1.32l-3.44-3.17l-3.97-2.65l-2.91-1.06l-2.38-0.79l-5.29-1.59l-5.56-1.06l-2.91-0.26l-2.12-0.26l-4.76-0.53h-1.85l-3.7,0.26l-1.59,0.26l-2.38,0.26h-1.06l-2.65,0.26h-1.32l-2.38,0.53h-0.79l-1.32,0.53l-1.85,1.59l-1.32,1.85l-0.53,1.85l-0.26,0.79",
         SVGheight: 192.49148559570312,
@@ -45,8 +46,7 @@ export default {
       }
   },
   mounted() {
-    var PageID = this.$route.params.id;
-
+    console.log('Current Page', this.pageID)
     // TOOL Editor
     var editorElement = document.getElementById('mainCanvas');
 
@@ -54,7 +54,7 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'DIAGRAM',
-        server: this.$store.state.access
+        server: this.$store.state.access[this.$store.state.curAccessPoint]
       }
     });
 
@@ -67,7 +67,7 @@ export default {
       recognitionParams: {
         type: 'TEXT',
         apiVersion: 'V4',
-        server: this.$store.state.access,
+        server: this.$store.state.access[this.$store.state.curAccessPoint],
         
       }
     });
@@ -139,13 +139,17 @@ export default {
           this.$store.commit('addLayer', {
             id: this.$store.state.LayerCount,
             SVGid: this.$store.state.LayerCount,
-            page: PageID,
+            page: this.pageID,
             x: posInfo.x,
             y: posInfo.y,
             w: posInfo.width,
             h: posInfo.height,
             svgPath: SVGPath,
-            show: true
+            show: true,
+            tool: {
+              toolname: 'NoTool',
+              tooldata: []
+            }
           });
           editorElement.editor.clear();
           cmdeditorElement.editor.clear();
@@ -200,6 +204,16 @@ export default {
     Layer
   },
   methods:{
+    // Check if Tool is part of this Page
+    giveToolsofEntry: function(){
+      //console.log('Filter?!')
+      let result = this.$store.state.layers.filter((layer)=>{
+        //console.log('Filter'[layer.page,this.pageID])
+        return layer.page === this.pageID
+      });
+      return result
+
+    },
     // this.$store.state
     // Recognition
     recogForm: function(gestik){
@@ -231,6 +245,10 @@ export default {
         case 's':
           this.showSVGlayer = !this.showSVGlayer;
           console.log('Show SVG', this.showSVGlayer);
+          return true;
+
+        case 'back':
+          this.$router.push({name : 'Overview'});
           return true;
 
         case '.':

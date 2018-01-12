@@ -45,7 +45,7 @@ y:606.57666015625
         SVGx: 736.0255126953125,
         SVGy: 202.65835571289062,
 */
-console.log('SVG Layer');
+//console.log('SVG Layer');
 
 export default {
   props: ['SVGdata'],
@@ -56,7 +56,7 @@ export default {
       }
   },
   mounted() {
-      console.log('curPage', this.$route);
+      //console.log('curPage', this.$route);
   },
   created () {
 

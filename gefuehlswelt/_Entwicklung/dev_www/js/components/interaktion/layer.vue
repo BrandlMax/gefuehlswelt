@@ -5,7 +5,7 @@
 
 <script>
 
-console.log('Layer');
+//console.log('Layer');
 
 export default {
   props: ['layerData'],

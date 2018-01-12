@@ -3,14 +3,14 @@
 
         <meinWerkzeug class="maskedlayer"
             stouch-action="none"
-            v-if="Tool === 'Werkzeug01'"
+            v-if="Tool === 'mandala'"
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
             :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </meinWerkzeug>
 
         <meinAnderesWerkzeug class="maskedlayer"
             touch-action="none"
-            v-if="Tool === 'Werkzeug02'" 
+            v-if="Tool === 'doodle'" 
             :toolData="{id: layerData.id, height:layerData.height,width:layerData.width}" 
             :style="{ clipPath: 'url(#path_' + layerData.id +')', top:layerData.y+'px', left:layerData.x+'px', height: layerData.height+'px', width: layerData.width+'px'}">
         </meinAnderesWerkzeug> 
@@ -39,7 +39,11 @@ export default {
   },
   mounted() {
     var LayerID = this.layerData.id;
+    // console.log('Mounted thislayerid', this.layerData)
     var LayerIndex = this.layerData.index;
+
+    // Check Current Tool
+    this.currentTool();
 
     var editorElement = document.getElementById('layer_'+LayerID);
 
@@ -47,7 +51,7 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: this.$store.state.access
+        server: this.$store.state.access[this.$store.state.curAccessPoint]
       }
     });
 
@@ -59,6 +63,14 @@ export default {
         // Erkenne Werkzeug Request
         if(this.recogTool(event.detail.exports['text/plain'].toLowerCase())){
 
+            console.log('Neues Tool erkannt', event.detail.exports['text/plain'].toLowerCase())
+
+            var newLayerData = {
+                layerID: this.layerData.id,
+                toolName: event.detail.exports['text/plain'].toLowerCase(),
+            }
+            this.$store.commit('updateLayerTool',newLayerData);
+            this.currentTool();
         }
 
         // Delete
@@ -93,6 +105,16 @@ export default {
       meinAnderesWerkzeug
   },
   methods:{
+    // Current Tool
+    currentTool: function(){
+        this.$store.state.layers.forEach((l) => {
+            //console.log('filter',[l.id, this.layerData.id]);    
+            if(l.id === this.layerData.id){
+                this.Tool = l.tool.toolname
+            };
+        })
+    },
+    // maskedStyle
     maskedStyle: function(){
       return '-webkit-clip-path: url(#path_' + this.journalData.id +')'
     },
@@ -113,30 +135,13 @@ export default {
     recogTool: function(gestik){
         switch(gestik){
             case 'mandala':
-                this.createTool('mandala');
                 return true;
             case 'doodle':
-                this.createTool('doodle');
                 return true;
             default:
                 return false;
       }
     },
-    // Werkzeug anlegen
-    createTool: function(gestik){
-        switch(gestik){
-            case 'mandala':
-                console.log('create Mandala');
-                this.Tool = 'Werkzeug01';
-                return true;
-            case 'doodle':
-                console.log('create Doodle');
-                this.Tool = 'Werkzeug02';
-                return true;
-            default:
-                return false;
-      }
-    }
   }
 }
 </script>

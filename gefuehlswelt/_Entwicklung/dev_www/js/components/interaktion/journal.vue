@@ -6,7 +6,7 @@
 
 <script>
 
-console.log('JournalLayer');
+// console.log('JournalLayer');
 
 export default {
   props: ['journalData'],
@@ -15,6 +15,7 @@ export default {
       }
   },
   mounted() {
+
     var JournalID = this.journalData.id;
     var JournalIndex = this.journalData.index;
 
@@ -24,7 +25,7 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'TEXT',
-        server: this.$store.state.access
+        server: this.$store.state.access[this.$store.state.curAccessPoint]
       }
     });
 

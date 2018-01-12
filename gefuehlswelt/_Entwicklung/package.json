@@ -25,6 +25,7 @@
     "sass": "^1.0.0-beta.2",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.5.3",
-    "vueify": "^9.4.1"
+    "vueify": "^9.4.1",
+    "vuex-persist": "^1.1.0"
   }
 }

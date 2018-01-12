@@ -27,7 +27,7 @@
 </template>
 
 <script>
-console.log('MainCanvas');
+//console.log('MainCanvas');
 import SVGLayer from '../interaktion/svg.vue';
 import Journal from '../interaktion/journal.vue';
 
@@ -44,6 +44,7 @@ export default {
       }
   },
   mounted() {
+    
     var PageID = 0;
 
 
@@ -56,7 +57,7 @@ export default {
     MyScript.register(editorElement, {
       recognitionParams: {
         type: 'DIAGRAM',
-        server: this.$store.state.access
+        server: this.$store.state.access[this.$store.state.curAccessPoint]
       }
     });
 
@@ -68,7 +69,7 @@ export default {
       recognitionParams: {
         type: 'TEXT',
         apiVersion: 'V4',
-        server: this.$store.state.access,
+        server: this.$store.state.access[this.$store.state.curAccessPoint],
       }
     });
 
