@@ -1,0 +1,17 @@
+{
+    "brace-style": "collapse",
+    "break-chained-methods": false,
+    "comma-first": false,
+    "detect-packers": true,
+    "e4x": false,
+    "end-with-newline": true,
+    "indent-inner-html": false,
+    "indent-scripts": "normal",
+    "jslint-happy": false,
+    "keep-array-indentation": true,
+    "max-preserve-newlines": 5,
+    "space-before-conditional": true,
+    "tabsize": 4,
+    "unescape-strings": false,
+    "wrap-line-length": 0
+}

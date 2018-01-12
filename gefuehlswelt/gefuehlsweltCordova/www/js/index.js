@@ -1,64 +1,70 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".journal[data-v-ddefd23e]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".journal[data-v-ddefd23e] {\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n}")
 ;(function(){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = {
-  props: ['journalData'],
-  data: function data() {
-    return {};
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var JournalID = this.journalData.id;
-    var JournalIndex = this.journalData.index;
-
-    var editorElement = document.getElementById('layer_' + JournalID);
-
-    MyScript.register(editorElement, {
-      recognitionParams: {
-        type: 'TEXT',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-      }
-    });
-
-    editorElement.addEventListener('exported', function (event) {
-
-      console.log('Erkannt:', event.detail.exports['text/plain']);
-      _this.$router.push({ name: 'Entry', params: { id: JournalID } });
-    });
-
-    editorElement.addEventListener('contextmenu', function (ev) {
-      ev.preventDefault();
-      editorElement.editor.clear();
-      return false;
-    }, false);
-  },
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {},
-  methods: {
-    maskedStyle: function maskedStyle() {
-      return '-webkit-clip-path: url(#path_' + this.journalData.id + ')';
+    props: ['journalData'],
+    data: function data() {
+        return {};
     },
+    mounted: function mounted() {
+        var _this = this;
 
-    recogDel: function recogDel(gestik) {
-      switch (gestik) {
-        case 'x':
-          return true;
-        case 'X':
-          return true;
-        case '×':
-          return true;
-        default:
-          return false;
-      }
+        var JournalID = this.journalData.id;
+        var JournalIndex = this.journalData.index;
+
+        var editorElement = document.getElementById('layer_' + JournalID);
+
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
+            }
+        });
+
+        editorElement.addEventListener('exported', function (event) {
+
+            console.log('Erkannt:', event.detail.exports['text/plain']);
+            _this.$router.push({
+                name: 'Entry',
+                params: {
+                    id: JournalID
+                }
+            });
+        });
+
+        editorElement.addEventListener('contextmenu', function (ev) {
+            ev.preventDefault();
+            editorElement.editor.clear();
+            return false;
+        }, false);
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+
+    components: {},
+    methods: {
+        maskedStyle: function maskedStyle() {
+            return '-webkit-clip-path: url(#path_' + this.journalData.id + ')';
+        },
+
+        recogDel: function recogDel(gestik) {
+            switch (gestik) {
+                case 'x':
+                    return true;
+                case 'X':
+                    return true;
+                case '×':
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
-  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -79,23 +85,24 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],2:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-bdb8c70a]{\n    position: absolute;\n    z-index: 2000;\n    background: rgb(39, 201, 166);\n    clip-path: url(#form);\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-bdb8c70a] {\n    position: absolute;\n    z-index: 2000;\n    background: rgb(39, 201, 166);\n    clip-path: url(#form);\n}")
 ;(function(){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = {
-  props: ['layerData'],
-  data: function data() {
-    return {};
-  },
-  mounted: function mounted() {},
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {},
-  methods: {}
+    props: ['layerData'],
+    data: function data() {
+        return {};
+    },
+    mounted: function mounted() {},
+    created: function created() {},
+    destroyed: function destroyed() {},
+
+    components: {},
+    methods: {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -116,12 +123,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-04298aa4]{\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-04298aa4], .ms-editor svg[data-v-04298aa4] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-04298aa4] {\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n    ;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-04298aa4],\n.ms-editor svg[data-v-04298aa4] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
 ;(function(){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _beispiel = require('../werzeuge/beispiel.vue');
@@ -135,107 +142,108 @@ var _beispiel4 = _interopRequireDefault(_beispiel3);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  props: ['layerData'],
-  data: function data() {
-    return {
-      Tool: 'NoTool' };
-  },
-  mounted: function mounted() {
-    var _this = this;
+    props: ['layerData'],
+    data: function data() {
+        return {
+            Tool: 'NoTool' };
+    },
+    mounted: function mounted() {
+        var _this = this;
 
-    var LayerID = this.layerData.id;
+        var LayerID = this.layerData.id;
 
-    var LayerIndex = this.layerData.index;
+        var LayerIndex = this.layerData.index;
 
-    this.currentTool();
+        this.currentTool();
 
-    var editorElement = document.getElementById('layer_' + LayerID);
+        var editorElement = document.getElementById('layer_' + LayerID);
 
-    MyScript.register(editorElement, {
-      recognitionParams: {
-        type: 'TEXT',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-      }
-    });
-
-    editorElement.addEventListener('exported', function (event) {
-
-      console.log('Erkannt:', event.detail.exports['text/plain']);
-
-      if (_this.recogTool(event.detail.exports['text/plain'].toLowerCase())) {
-
-        console.log('Neues Tool erkannt', event.detail.exports['text/plain'].toLowerCase());
-
-        var newLayerData = {
-          layerID: _this.layerData.id,
-          toolName: event.detail.exports['text/plain'].toLowerCase()
-        };
-        _this.$store.commit('updateLayerTool', newLayerData);
-        _this.currentTool();
-      }
-
-      if (_this.recogDel(event.detail.exports['text/plain'])) {
-        editorElement.editor.clear();
-
-        var newLayer = _this.$store.state.layers[LayerIndex];
-        newLayer.show = false;
-        _this.$store.commit('removeLayer', {
-          index: LayerIndex,
-          updatedLayer: newLayer
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
+            }
         });
-      }
-    });
 
-    editorElement.addEventListener('contextmenu', function (ev) {
-      editorElement.editor.clear();
-      return false;
-    }, false);
-  },
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {
-    meinWerkzeug: _beispiel2.default,
-    meinAnderesWerkzeug: _beispiel4.default
-  },
-  methods: {
-    currentTool: function currentTool() {
-      var _this2 = this;
+        editorElement.addEventListener('exported', function (event) {
 
-      this.$store.state.layers.forEach(function (l) {
-        if (l.id === _this2.layerData.id) {
-          _this2.Tool = l.tool.toolname;
-        };
-      });
+            console.log('Erkannt:', event.detail.exports['text/plain']);
+
+            if (_this.recogTool(event.detail.exports['text/plain'].toLowerCase())) {
+
+                console.log('Neues Tool erkannt', event.detail.exports['text/plain'].toLowerCase());
+
+                var newLayerData = {
+                    layerID: _this.layerData.id,
+                    toolName: event.detail.exports['text/plain'].toLowerCase()
+                };
+                _this.$store.commit('updateLayerTool', newLayerData);
+                _this.currentTool();
+            }
+
+            if (_this.recogDel(event.detail.exports['text/plain'])) {
+                editorElement.editor.clear();
+
+                var newLayer = _this.$store.state.layers[LayerIndex];
+                newLayer.show = false;
+                _this.$store.commit('removeLayer', {
+                    index: LayerIndex,
+                    updatedLayer: newLayer
+                });
+            }
+        });
+
+        editorElement.addEventListener('contextmenu', function (ev) {
+            editorElement.editor.clear();
+            return false;
+        }, false);
     },
+    created: function created() {},
+    destroyed: function destroyed() {},
 
-    maskedStyle: function maskedStyle() {
-      return '-webkit-clip-path: url(#path_' + this.journalData.id + ')';
+    components: {
+        meinWerkzeug: _beispiel2.default,
+        meinAnderesWerkzeug: _beispiel4.default
     },
+    methods: {
+        currentTool: function currentTool() {
+            var _this2 = this;
 
-    recogDel: function recogDel(gestik) {
-      switch (gestik) {
-        case 'x':
-          return true;
-        case 'X':
-          return true;
-        case '×':
-          return true;
-        default:
-          return false;
-      }
-    },
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.layerData.id) {
+                    _this2.Tool = l.tool.toolname;
+                };
+            });
+        },
 
-    recogTool: function recogTool(gestik) {
-      switch (gestik) {
-        case 'mandala':
-          return true;
-        case 'doodle':
-          return true;
-        default:
-          return false;
-      }
+        maskedStyle: function maskedStyle() {
+            return '-webkit-clip-path: url(#path_' + this.journalData.id + ')';
+        },
+
+        recogDel: function recogDel(gestik) {
+            switch (gestik) {
+                case 'x':
+                    return true;
+                case 'X':
+                    return true;
+                case '×':
+                    return true;
+                default:
+                    return false;
+            }
+        },
+
+        recogTool: function recogTool(gestik) {
+            switch (gestik) {
+                case 'mandala':
+                    return true;
+                case 'doodle':
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
-  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -274,6 +282,7 @@ exports.default = {
     mounted: function mounted() {},
     created: function created() {},
     destroyed: function destroyed() {},
+
     components: {},
     methods: {
         generateViewBox: function generateViewBox(w, h) {
@@ -309,12 +318,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n#cmdCanvas[data-v-9570dcf4]{\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n\n#cmdCanvas[data-v-9570dcf4] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _svg = require('../interaktion/svg.vue');
@@ -332,208 +341,211 @@ var _myScriptLayer2 = _interopRequireDefault(_myScriptLayer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  data: function data() {
-    return {
-      pageID: parseInt(this.$route.params.id),
+    data: function data() {
+        return {
+            pageID: parseInt(this.$route.params.id),
 
-      SVGpath: "M210.08,61.91l-1.06,0.26h-1.06l-1.85,0.53l-1.06,0.26l-2.65,1.06l-1.32,1.06l-2.65,1.85l-1.32,1.59l-1.32,2.65l-0.26,1.06l-0.26,4.5l0.26,2.91l0.53,2.12l2.38,5.56l3.7,5.56l3.18,2.91l3.97,2.38l7.41,3.17l3.18,0.79l7.67,1.32l3.7,0.53h5.29h1.59l4.5-1.32l3.18-1.59l5.56-3.18l2.91-2.12l5.29-4.23l2.12-1.59l3.97-3.44l1.85-2.12l1.32-2.91l0.26-1.06v-3.7l-0.79-2.91l-2.65-5.03l-1.59-2.12l-1.06-1.32l-3.44-3.17l-3.97-2.65l-2.91-1.06l-2.38-0.79l-5.29-1.59l-5.56-1.06l-2.91-0.26l-2.12-0.26l-4.76-0.53h-1.85l-3.7,0.26l-1.59,0.26l-2.38,0.26h-1.06l-2.65,0.26h-1.32l-2.38,0.53h-0.79l-1.32,0.53l-1.85,1.59l-1.32,1.85l-0.53,1.85l-0.26,0.79",
-      SVGheight: 192.49148559570312,
-      SVGwidth: 282.973388671875,
-      SVGx: 736.0255126953125,
-      SVGy: 202.65835571289062,
-      showSVGlayer: false
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
+            SVGpath: "M210.08,61.91l-1.06,0.26h-1.06l-1.85,0.53l-1.06,0.26l-2.65,1.06l-1.32,1.06l-2.65,1.85l-1.32,1.59l-1.32,2.65l-0.26,1.06l-0.26,4.5l0.26,2.91l0.53,2.12l2.38,5.56l3.7,5.56l3.18,2.91l3.97,2.38l7.41,3.17l3.18,0.79l7.67,1.32l3.7,0.53h5.29h1.59l4.5-1.32l3.18-1.59l5.56-3.18l2.91-2.12l5.29-4.23l2.12-1.59l3.97-3.44l1.85-2.12l1.32-2.91l0.26-1.06v-3.7l-0.79-2.91l-2.65-5.03l-1.59-2.12l-1.06-1.32l-3.44-3.17l-3.97-2.65l-2.91-1.06l-2.38-0.79l-5.29-1.59l-5.56-1.06l-2.91-0.26l-2.12-0.26l-4.76-0.53h-1.85l-3.7,0.26l-1.59,0.26l-2.38,0.26h-1.06l-2.65,0.26h-1.32l-2.38,0.53h-0.79l-1.32,0.53l-1.85,1.59l-1.32,1.85l-0.53,1.85l-0.26,0.79",
+            SVGheight: 192.49148559570312,
+            SVGwidth: 282.973388671875,
+            SVGx: 736.0255126953125,
+            SVGy: 202.65835571289062,
+            showSVGlayer: false
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
 
-    console.log('Current Page', this.pageID);
+        console.log('Current Page', this.pageID);
 
-    var editorElement = document.getElementById('mainCanvas');
+        var editorElement = document.getElementById('mainCanvas');
 
-    MyScript.register(editorElement, {
-      recognitionParams: {
-        type: 'DIAGRAM',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-      }
-    });
-
-    var cmdeditorElement = document.getElementById('cmdCanvas');
-
-    MyScript.register(cmdeditorElement, {
-      recognitionParams: {
-        type: 'TEXT',
-        apiVersion: 'V4',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-
-      }
-    });
-
-    cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
-
-    editorElement.addEventListener('pointerdown', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerleave', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointermove', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerout', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerup', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('click', function (e) {
-
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-
-      var paths = document.getElementById('viewTransform').getElementsByTagName('path');
-      var pathsList = Array.prototype.slice.call(paths);
-      var SVGPath;
-
-      pathsList.forEach(function (element, index) {
-        if (element.id.charAt(0) === "d") {
-          SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
-
-          var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-
-          console.log('PosInfo', posInfo);
-          console.log('SVG Path', SVGPath);
-          editorElement.editor.clear();
-
-          _this.SVGpath = SVGPath;
-          _this.SVGheight = posInfo.height;
-          _this.SVGwidth = posInfo.width;
-          _this.SVGx = posInfo.x;
-          _this.SVGy = posInfo.y;
-
-          _this.$store.commit('addLayer', {
-            id: _this.$store.state.LayerCount,
-            SVGid: _this.$store.state.LayerCount,
-            page: _this.pageID,
-            x: posInfo.x,
-            y: posInfo.y,
-            w: posInfo.width,
-            h: posInfo.height,
-            svgPath: SVGPath,
-            show: true,
-            tool: {
-              toolname: 'NoTool',
-              tooldata: []
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'DIAGRAM',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
             }
-          });
-          editorElement.editor.clear();
-          cmdeditorElement.editor.clear();
-        } else {}
-      });
-    });
+        });
 
-    editorElement.addEventListener('contextmenu', function (ev) {
-      editorElement.editor.clear();
-      cmdeditorElement.editor.clear();
-      return false;
-    }, false);
+        var cmdeditorElement = document.getElementById('cmdCanvas');
 
-    cmdeditorElement.addEventListener('exported', function (event) {
-      console.log('Erkannt:', event.detail.exports['text/plain']);
+        MyScript.register(cmdeditorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                apiVersion: 'V4',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
 
-      if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
-        cmdeditorElement.editor.clear();
-        editorElement.editor.clear();
-      }
-    });
+            }
+        });
 
-    window.addEventListener('keydown', function (e) {
-      console.log(e.keyCode);
-      if (e.keyCode === 37) {
-        _this.undo();
-      } else if (e.keyCode === 39) {
-        _this.redo();
-      }
-    });
-  },
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {
-    SVGLayer: _svg2.default,
-    myScriptLayer: _myScriptLayer2.default,
-    Layer: _layer2.default
-  },
-  methods: {
-    giveToolsofEntry: function giveToolsofEntry() {
-      var _this2 = this;
+        cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
 
-      var result = this.$store.state.layers.filter(function (layer) {
-        return layer.page === _this2.pageID;
-      });
-      return result;
+        editorElement.addEventListener('pointerdown', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerleave', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointermove', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerout', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerup', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('click', function (e) {
+
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+
+            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var pathsList = Array.prototype.slice.call(paths);
+            var SVGPath;
+
+            pathsList.forEach(function (element, index) {
+                if (element.id.charAt(0) === "d") {
+                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+
+                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+
+                    console.log('PosInfo', posInfo);
+                    console.log('SVG Path', SVGPath);
+                    editorElement.editor.clear();
+
+                    _this.SVGpath = SVGPath;
+                    _this.SVGheight = posInfo.height;
+                    _this.SVGwidth = posInfo.width;
+                    _this.SVGx = posInfo.x;
+                    _this.SVGy = posInfo.y;
+
+                    _this.$store.commit('addLayer', {
+                        id: _this.$store.state.LayerCount,
+                        SVGid: _this.$store.state.LayerCount,
+                        page: _this.pageID,
+                        x: posInfo.x,
+                        y: posInfo.y,
+                        w: posInfo.width,
+                        h: posInfo.height,
+                        svgPath: SVGPath,
+                        show: true,
+                        tool: {
+                            toolname: 'NoTool',
+                            tooldata: []
+                        }
+                    });
+                    editorElement.editor.clear();
+                    cmdeditorElement.editor.clear();
+                } else {}
+            });
+        });
+
+        editorElement.addEventListener('contextmenu', function (ev) {
+            editorElement.editor.clear();
+            cmdeditorElement.editor.clear();
+            return false;
+        }, false);
+
+        cmdeditorElement.addEventListener('exported', function (event) {
+            console.log('Erkannt:', event.detail.exports['text/plain']);
+
+            if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
+            }
+        });
+
+        window.addEventListener('keydown', function (e) {
+            console.log(e.keyCode);
+            if (e.keyCode === 37) {
+                _this.undo();
+            } else if (e.keyCode === 39) {
+                _this.redo();
+            }
+        });
     },
+    created: function created() {},
+    destroyed: function destroyed() {},
 
-    recogForm: function recogForm(gestik) {
-      switch (gestik) {
-        case '0':
-          return true;
-        case 'o':
-          return true;
-        case 'O':
-          return true;
-        case '˚':
-          return true;
-        default:
-          return false;
-      }
+    components: {
+        SVGLayer: _svg2.default,
+        myScriptLayer: _myScriptLayer2.default,
+        Layer: _layer2.default
     },
-    recogCmd: function recogCmd(gestik) {
-      switch (gestik) {
-        case '<':
-          if (this.canUndo) this.undo();
-          console.log('UNDO');
-          return true;
+    methods: {
+        giveToolsofEntry: function giveToolsofEntry() {
+            var _this2 = this;
 
-        case '>':
-          if (this.canRedo) this.redo();
-          console.log('REDO');
-          return true;
+            var result = this.$store.state.layers.filter(function (layer) {
+                return layer.page === _this2.pageID;
+            });
+            return result;
+        },
 
-        case 's':
-          this.showSVGlayer = !this.showSVGlayer;
-          console.log('Show SVG', this.showSVGlayer);
-          return true;
+        recogForm: function recogForm(gestik) {
+            switch (gestik) {
+                case '0':
+                    return true;
+                case 'o':
+                    return true;
+                case 'O':
+                    return true;
+                case '˚':
+                    return true;
+                default:
+                    return false;
+            }
+        },
+        recogCmd: function recogCmd(gestik) {
+            switch (gestik) {
+                case '<':
+                    if (this.canUndo) this.undo();
+                    console.log('UNDO');
+                    return true;
 
-        case 'back':
-          this.$router.push({ name: 'Overview' });
-          return true;
+                case '>':
+                    if (this.canRedo) this.redo();
+                    console.log('REDO');
+                    return true;
 
-        case '.':
-          return true;
+                case 's':
+                    this.showSVGlayer = !this.showSVGlayer;
+                    console.log('Show SVG', this.showSVGlayer);
+                    return true;
 
-        case 'hilfe':
-          console.log('Hilfe');
-          return true;
+                case 'back':
+                    this.$router.push({
+                        name: 'Overview'
+                    });
+                    return true;
 
-        case 'inspire me':
-          console.log('Inspire Me!');
-          return true;
+                case '.':
+                    return true;
 
-        default:
-          return false;
-      }
+                case 'hilfe':
+                    console.log('Hilfe');
+                    return true;
+
+                case 'inspire me':
+                    console.log('Inspire Me!');
+                    return true;
+
+                default:
+                    return false;
+            }
+        }
     }
-  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -550,16 +562,16 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9570dcf4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9570dcf4", __vue__options__)
+    hotAPI.rerender("data-v-9570dcf4", __vue__options__)
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95]{\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n#cmdCanvas[data-v-33b6da95]{\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-33b6da95] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
 ;(function(){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _svg = require('../interaktion/svg.vue');
@@ -573,188 +585,189 @@ var _journal2 = _interopRequireDefault(_journal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  data: function data() {
-    return {
-      SVGpath: "M210.08,61.91l-1.06,0.26h-1.06l-1.85,0.53l-1.06,0.26l-2.65,1.06l-1.32,1.06l-2.65,1.85l-1.32,1.59l-1.32,2.65l-0.26,1.06l-0.26,4.5l0.26,2.91l0.53,2.12l2.38,5.56l3.7,5.56l3.18,2.91l3.97,2.38l7.41,3.17l3.18,0.79l7.67,1.32l3.7,0.53h5.29h1.59l4.5-1.32l3.18-1.59l5.56-3.18l2.91-2.12l5.29-4.23l2.12-1.59l3.97-3.44l1.85-2.12l1.32-2.91l0.26-1.06v-3.7l-0.79-2.91l-2.65-5.03l-1.59-2.12l-1.06-1.32l-3.44-3.17l-3.97-2.65l-2.91-1.06l-2.38-0.79l-5.29-1.59l-5.56-1.06l-2.91-0.26l-2.12-0.26l-4.76-0.53h-1.85l-3.7,0.26l-1.59,0.26l-2.38,0.26h-1.06l-2.65,0.26h-1.32l-2.38,0.53h-0.79l-1.32,0.53l-1.85,1.59l-1.32,1.85l-0.53,1.85l-0.26,0.79",
-      SVGheight: 192.49148559570312,
-      SVGwidth: 282.973388671875,
-      SVGx: 736.0255126953125,
-      SVGy: 202.65835571289062,
-      showSVGlayer: true
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var PageID = 0;
-
-    var editorElement = document.getElementById('mainCanvas');
-
-    MyScript.register(editorElement, {
-      recognitionParams: {
-        type: 'DIAGRAM',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-      }
-    });
-
-    var cmdeditorElement = document.getElementById('cmdCanvas');
-
-    MyScript.register(cmdeditorElement, {
-      recognitionParams: {
-        type: 'TEXT',
-        apiVersion: 'V4',
-        server: this.$store.state.access[this.$store.state.curAccessPoint]
-      }
-    });
-
-    cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
-
-    editorElement.addEventListener('pointerdown', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerleave', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointermove', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerout', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('pointerup', function (e) {
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-    });
-
-    editorElement.addEventListener('click', function (e) {
-
-      var new_e = new e.constructor(e.type, e);
-      cmdeditorElement.dispatchEvent(new_e);
-
-      var paths = document.getElementById('viewTransform').getElementsByTagName('path');
-      var pathsList = Array.prototype.slice.call(paths);
-      var SVGPath;
-
-      pathsList.forEach(function (element, index) {
-        if (element.id.charAt(0) === "d") {
-          SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
-
-          var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
-
-          console.log('PosInfo', posInfo);
-          console.log('SVG Path', SVGPath);
-          editorElement.editor.clear();
-
-          _this.SVGpath = SVGPath;
-          _this.SVGheight = posInfo.height;
-          _this.SVGwidth = posInfo.width;
-          _this.SVGx = posInfo.x;
-          _this.SVGy = posInfo.y;
-
-          _this.$store.commit('addJournal', {
-            id: _this.$store.state.JournalCount,
-            SVGid: _this.$store.state.JournalCount,
-            page: PageID,
-            x: posInfo.x,
-            y: posInfo.y,
-            w: posInfo.width,
-            h: posInfo.height,
-            svgPath: SVGPath,
-            bg: '#' + Math.floor(Math.random() * 16777215).toString(16),
-            show: true
-          });
-
-          editorElement.editor.clear();
-          cmdeditorElement.editor.clear();
-        } else {}
-      });
-    });
-
-    editorElement.addEventListener('contextmenu', function (ev) {
-      editorElement.editor.clear();
-      cmdeditorElement.editor.clear();
-      return false;
-    }, false);
-
-    cmdeditorElement.addEventListener('exported', function (event) {
-      console.log('Erkannt:', event.detail.exports['text/plain']);
-
-      if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
-        cmdeditorElement.editor.clear();
-        editorElement.editor.clear();
-      }
-    });
-
-    window.addEventListener('keydown', function (e) {
-      console.log(e.keyCode);
-      if (e.keyCode === 37) {
-        _this.undo();
-      } else if (e.keyCode === 39) {
-        _this.redo();
-      }
-    });
-  },
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {
-    SVGLayer: _svg2.default,
-    Journal: _journal2.default
-  },
-  methods: {
-    recogForm: function recogForm(gestik) {
-      switch (gestik) {
-        case '0':
-          return true;
-        case 'o':
-          return true;
-        case 'O':
-          return true;
-        case '˚':
-          return true;
-        default:
-          return false;
-      }
+    data: function data() {
+        return {
+            SVGpath: "M210.08,61.91l-1.06,0.26h-1.06l-1.85,0.53l-1.06,0.26l-2.65,1.06l-1.32,1.06l-2.65,1.85l-1.32,1.59l-1.32,2.65l-0.26,1.06l-0.26,4.5l0.26,2.91l0.53,2.12l2.38,5.56l3.7,5.56l3.18,2.91l3.97,2.38l7.41,3.17l3.18,0.79l7.67,1.32l3.7,0.53h5.29h1.59l4.5-1.32l3.18-1.59l5.56-3.18l2.91-2.12l5.29-4.23l2.12-1.59l3.97-3.44l1.85-2.12l1.32-2.91l0.26-1.06v-3.7l-0.79-2.91l-2.65-5.03l-1.59-2.12l-1.06-1.32l-3.44-3.17l-3.97-2.65l-2.91-1.06l-2.38-0.79l-5.29-1.59l-5.56-1.06l-2.91-0.26l-2.12-0.26l-4.76-0.53h-1.85l-3.7,0.26l-1.59,0.26l-2.38,0.26h-1.06l-2.65,0.26h-1.32l-2.38,0.53h-0.79l-1.32,0.53l-1.85,1.59l-1.32,1.85l-0.53,1.85l-0.26,0.79",
+            SVGheight: 192.49148559570312,
+            SVGwidth: 282.973388671875,
+            SVGx: 736.0255126953125,
+            SVGy: 202.65835571289062,
+            showSVGlayer: true
+        };
     },
-    recogCmd: function recogCmd(gestik) {
-      switch (gestik) {
-        case '<':
-          if (this.canUndo) this.undo();
-          console.log('UNDO');
-          return true;
+    mounted: function mounted() {
+        var _this = this;
 
-        case '>':
-          if (this.canRedo) this.redo();
-          console.log('REDO');
-          return true;
+        var PageID = 0;
 
-        case 's':
-          this.showSVGlayer = !this.showSVGlayer;
-          console.log('Show SVG', this.showSVGlayer);
-          return true;
+        var editorElement = document.getElementById('mainCanvas');
 
-        case '.':
-          return true;
+        MyScript.register(editorElement, {
+            recognitionParams: {
+                type: 'DIAGRAM',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
+            }
+        });
 
-        case 'hilfe':
-          console.log('Hilfe');
-          return true;
+        var cmdeditorElement = document.getElementById('cmdCanvas');
 
-        case 'inspire me':
-          console.log('Inspire Me!');
-          return true;
-        default:
-          return false;
-      }
+        MyScript.register(cmdeditorElement, {
+            recognitionParams: {
+                type: 'TEXT',
+                apiVersion: 'V4',
+                server: this.$store.state.access[this.$store.state.curAccessPoint]
+            }
+        });
+
+        cmdeditorElement.editor.configuration.recognitionParams.v4.lang = 'de_DE';
+
+        editorElement.addEventListener('pointerdown', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerleave', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointermove', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerout', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('pointerup', function (e) {
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+        });
+
+        editorElement.addEventListener('click', function (e) {
+
+            var new_e = new e.constructor(e.type, e);
+            cmdeditorElement.dispatchEvent(new_e);
+
+            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var pathsList = Array.prototype.slice.call(paths);
+            var SVGPath;
+
+            pathsList.forEach(function (element, index) {
+                if (element.id.charAt(0) === "d") {
+                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+
+                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+
+                    console.log('PosInfo', posInfo);
+                    console.log('SVG Path', SVGPath);
+                    editorElement.editor.clear();
+
+                    _this.SVGpath = SVGPath;
+                    _this.SVGheight = posInfo.height;
+                    _this.SVGwidth = posInfo.width;
+                    _this.SVGx = posInfo.x;
+                    _this.SVGy = posInfo.y;
+
+                    _this.$store.commit('addJournal', {
+                        id: _this.$store.state.JournalCount,
+                        SVGid: _this.$store.state.JournalCount,
+                        page: PageID,
+                        x: posInfo.x,
+                        y: posInfo.y,
+                        w: posInfo.width,
+                        h: posInfo.height,
+                        svgPath: SVGPath,
+                        bg: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                        show: true
+                    });
+
+                    editorElement.editor.clear();
+                    cmdeditorElement.editor.clear();
+                } else {}
+            });
+        });
+
+        editorElement.addEventListener('contextmenu', function (ev) {
+            editorElement.editor.clear();
+            cmdeditorElement.editor.clear();
+            return false;
+        }, false);
+
+        cmdeditorElement.addEventListener('exported', function (event) {
+            console.log('Erkannt:', event.detail.exports['text/plain']);
+
+            if (_this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
+            }
+        });
+
+        window.addEventListener('keydown', function (e) {
+            console.log(e.keyCode);
+            if (e.keyCode === 37) {
+                _this.undo();
+            } else if (e.keyCode === 39) {
+                _this.redo();
+            }
+        });
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+
+    components: {
+        SVGLayer: _svg2.default,
+        Journal: _journal2.default
+    },
+    methods: {
+        recogForm: function recogForm(gestik) {
+            switch (gestik) {
+                case '0':
+                    return true;
+                case 'o':
+                    return true;
+                case 'O':
+                    return true;
+                case '˚':
+                    return true;
+                default:
+                    return false;
+            }
+        },
+        recogCmd: function recogCmd(gestik) {
+            switch (gestik) {
+                case '<':
+                    if (this.canUndo) this.undo();
+                    console.log('UNDO');
+                    return true;
+
+                case '>':
+                    if (this.canRedo) this.redo();
+                    console.log('REDO');
+                    return true;
+
+                case 's':
+                    this.showSVGlayer = !this.showSVGlayer;
+                    console.log('Show SVG', this.showSVGlayer);
+                    return true;
+
+                case '.':
+                    return true;
+
+                case 'hilfe':
+                    console.log('Hilfe');
+                    return true;
+
+                case 'inspire me':
+                    console.log('Inspire Me!');
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
-  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -780,70 +793,70 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = {
-  props: ['toolData'],
-  data: function data() {
-    return {
-      saveData: []
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.loadData();
-
-    var toolData = this.toolData;
-    var meinWerkzeug = new p5(function (p5) {
-
-      p5.setup = function () {
-        var canvas = p5.createCanvas(toolData.width, toolData.height);
-        canvas.parent('sketch_' + toolData.id);
-        canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
-
-        _this.saveData.forEach(function (point) {
-          p5.fill(255, 100, 50);
-          p5.ellipse(point.x, point.y, 25, 25);
-        });
-      };
-
-      p5.draw = function () {
-        p5.fill(255, 100, 50);
-        if (p5.mouseIsPressed) {
-          p5.ellipse(p5.mouseX, p5.mouseY, 25, 25);
-
-          _this.saveToData(p5.mouseX, p5.mouseY);
-        }
-      };
-    });
-  },
-
-  methods: {
-    loadData: function loadData() {
-      var _this2 = this;
-
-      this.$store.state.layers.forEach(function (l) {
-        if (l.id === _this2.toolData.id) {
-          _this2.saveData = l.tool.tooldata;
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
         };
-      });
     },
-    saveToData: function saveToData(x, y) {
-      this.saveData.push({
-        x: x,
-        y: y
-      });
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+        var meinWerkzeug = new p5(function (p5) {
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                _this.saveData.forEach(function (point) {
+                    p5.fill(255, 100, 50);
+                    p5.ellipse(point.x, point.y, 25, 25);
+                });
+            };
+
+            p5.draw = function () {
+                p5.fill(255, 100, 50);
+                if (p5.mouseIsPressed) {
+                    p5.ellipse(p5.mouseX, p5.mouseY, 25, 25);
+
+                    _this.saveToData(p5.mouseX, p5.mouseY);
+                }
+            };
+        });
     },
-    saveToVuex: function saveToVuex() {
-      console.log('SaveToVuex', this.saveData);
-      var newSaveData = {
-        id: this.toolData.id,
-        data: this.saveData
-      };
-      this.$store.commit('updateToolSaveData', newSaveData);
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            console.log('SaveToVuex', this.saveData);
+            var newSaveData = {
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
     }
-  }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -869,74 +882,74 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = {
-  props: ['toolData'],
-  data: function data() {
-    return {
-      saveData: []
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.loadData();
-
-    var toolData = this.toolData;
-
-
-    var meinWerkzeug = new p5(function (p5) {
-
-      p5.setup = function () {
-        var canvas = p5.createCanvas(toolData.width, toolData.height);
-        canvas.parent('sketch_' + toolData.id);
-        canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
-
-        _this.saveData.forEach(function (point) {
-          p5.fill(255);
-          p5.ellipse(point.x, point.y, 50, 50);
-        });
-      };
-
-      p5.draw = function () {
-        p5.fill(255);
-
-        if (p5.mouseIsPressed) {
-          p5.ellipse(p5.mouseX, p5.mouseY, 50, 50);
-
-          _this.saveToData(p5.mouseX, p5.mouseY);
-        }
-      };
-    });
-  },
-
-  methods: {
-    loadData: function loadData() {
-      var _this2 = this;
-
-      this.$store.state.layers.forEach(function (l) {
-        if (l.id === _this2.toolData.id) {
-          _this2.saveData = l.tool.tooldata;
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
         };
-      });
     },
-    saveToData: function saveToData(x, y) {
-      this.saveData.push({
-        x: x,
-        y: y
-      });
-    },
-    saveToVuex: function saveToVuex() {
-      console.log('SaveToVuex', this.saveData);
-      var newSaveData = {
-        id: this.toolData.id,
-        data: this.saveData
-      };
-      this.$store.commit('updateToolSaveData', newSaveData);
-    }
+    mounted: function mounted() {
+        var _this = this;
 
-  }
+        this.loadData();
+
+        var toolData = this.toolData;
+
+
+        var meinWerkzeug = new p5(function (p5) {
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                _this.saveData.forEach(function (point) {
+                    p5.fill(255);
+                    p5.ellipse(point.x, point.y, 50, 50);
+                });
+            };
+
+            p5.draw = function () {
+                p5.fill(255);
+
+                if (p5.mouseIsPressed) {
+                    p5.ellipse(p5.mouseX, p5.mouseY, 50, 50);
+
+                    _this.saveToData(p5.mouseX, p5.mouseY);
+                }
+            };
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            console.log('SaveToVuex', this.saveData);
+            var newSaveData = {
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
@@ -991,7 +1004,15 @@ var vuexLocal = new _vuexPersist2.default({
 });
 
 // Hier den Path eingeben wo ihr in der URL zu eurem Werkzeug kommt.
-var routes = [{ name: 'Overview', path: '/', component: _overview2.default }, { name: 'Entry', path: '/entry/:id', component: _entry2.default }];
+var routes = [{
+    name: 'Overview',
+    path: '/',
+    component: _overview2.default
+}, {
+    name: 'Entry',
+    path: '/entry/:id',
+    component: _entry2.default
+}];
 
 var router = new VueRouter({
     routes: routes
@@ -1069,7 +1090,7 @@ var store = new Vuex.Store({
                 //console.log('filter',[l.id, ToolData.layerID]);    
                 if (l.id === ToolData.layerID) {
                     l.tool.toolname = ToolData.toolName;
-                };
+                }
             });
         },
 
@@ -1080,7 +1101,7 @@ var store = new Vuex.Store({
                 //console.log('filter',[l.id, ToolData.layerID]);    
                 if (l.id === saveData.id) {
                     l.tool.tooldata.push.apply(l.tool.tooldata, saveData.data);
-                };
+                }
             });
         },
 
@@ -1120,58 +1141,58 @@ var vm = new Vue({
 var EMPTY_STATE = 'emptyState';
 
 module.exports = {
-  install: function install(Vue) {
-    Vue.mixin({
-      data: function data() {
-        return {
-          done: [],
-          undone: [],
-          newMutation: true
-        };
-      },
-      created: function created() {
-        var _this = this;
+    install: function install(Vue) {
+        Vue.mixin({
+            data: function data() {
+                return {
+                    done: [],
+                    undone: [],
+                    newMutation: true
+                };
+            },
+            created: function created() {
+                var _this = this;
 
-        this.$store.subscribe(function (mutation) {
-          if (mutation.type !== EMPTY_STATE) {
-            _this.done.push(mutation);
-          }
-          if (_this.newMutation) {
-            _this.undone = [];
-          }
+                this.$store.subscribe(function (mutation) {
+                    if (mutation.type !== EMPTY_STATE) {
+                        _this.done.push(mutation);
+                    }
+                    if (_this.newMutation) {
+                        _this.undone = [];
+                    }
+                });
+            },
+
+            computed: {
+                canRedo: function canRedo() {
+                    return this.undone.length;
+                },
+                canUndo: function canUndo() {
+                    return this.done.length;
+                }
+            },
+            methods: {
+                redo: function redo() {
+                    var commit = this.undone.pop();
+                    this.newMutation = false;
+                    this.$store.commit('' + commit.type, Object.assign({}, commit.payload));
+                    this.newMutation = true;
+                },
+                undo: function undo() {
+                    var _this2 = this;
+
+                    this.undone.push(this.done.pop());
+                    this.newMutation = false;
+                    this.$store.commit(EMPTY_STATE);
+                    this.done.forEach(function (mutation) {
+                        _this2.$store.commit('' + mutation.type, Object.assign({}, mutation.payload));
+                        _this2.done.pop();
+                    });
+                    this.newMutation = true;
+                }
+            }
         });
-      },
-
-      computed: {
-        canRedo: function canRedo() {
-          return this.undone.length;
-        },
-        canUndo: function canUndo() {
-          return this.done.length;
-        }
-      },
-      methods: {
-        redo: function redo() {
-          var commit = this.undone.pop();
-          this.newMutation = false;
-          this.$store.commit('' + commit.type, Object.assign({}, commit.payload));
-          this.newMutation = true;
-        },
-        undo: function undo() {
-          var _this2 = this;
-
-          this.undone.push(this.done.pop());
-          this.newMutation = false;
-          this.$store.commit(EMPTY_STATE);
-          this.done.forEach(function (mutation) {
-            _this2.$store.commit('' + mutation.type, Object.assign({}, mutation.payload));
-            _this2.done.pop();
-          });
-          this.newMutation = true;
-        }
-      }
-    });
-  }
+    }
 };
 
 },{}],11:[function(require,module,exports){

@@ -4,37 +4,34 @@
 </template>
 
 <script>
+    //console.log('Layer');
 
-//console.log('Layer');
+    export default {
+        props: ['layerData'],
+        data() {
+            return {}
+        },
+        mounted() {
 
-export default {
-  props: ['layerData'],
-  data(){
-      return{
-      }
-  },
-  mounted() {
+        },
+        created() {
 
-  },
-  created () {
+        },
+        destroyed() {
 
-  },
-  destroyed(){
+        },
+        components: {},
+        methods: {
 
-  },components: {
-  },
-  methods:{
-
-  }
-}
+        }
+    }
 </script>
 
 <style scoped>
-    .layer{
+    .layer {
         position: absolute;
         z-index: 2000;
         background: rgb(39, 201, 166);
         clip-path: url(#form);
     }
 </style>
-
