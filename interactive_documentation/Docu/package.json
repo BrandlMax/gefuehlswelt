@@ -24,6 +24,8 @@
     "sqlite3": "^3.1.13",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.5.3",
+    "vue-affix": "^0.2.4",
+    "vue-scrollactive": "^0.5.1",
     "vueify": "^9.4.1"
   }
 }

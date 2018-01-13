@@ -1,15 +1,22 @@
 // Import Werkzeuge.
 import Docu from './components/docu.vue';
-import Chapter from './components/chapter.vue';
-import Content from './content';
+
+// Plugins
+// https://eddiemf.github.io/vue-affix/
+import VueAffix from 'vue-affix';
+Vue.use(VueAffix);
+
+// https://github.com/eddiemf/vue-scrollactive
+import VueScrollactive from 'vue-scrollactive';
+Vue.use(VueScrollactive);
 
 // PATHS
 const routes = [
     {path: '/', component: Docu},
-    {name: 'Chapter', path: '/chapter/:id', component: Chapter}
 ]
 
 const router = new VueRouter({
+    mode: 'history',
     scrollBehavior: function(to, from, savedPosition) {
         if (to.hash) {
             return {selector: to.hash}
@@ -26,14 +33,15 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         name: 'Interactive Documentation Template',
-        chapters: Content,
     },
     mutations: {
         changeName: (state, newName) => {
             state.name = newName  
         },
     },
-  })
+})
+
+
 
 // RUN THIS SHIT.
 const vm = new Vue({

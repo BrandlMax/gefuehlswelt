@@ -35,7 +35,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-8d1f4536", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],2:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":11}],2:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -60,7 +60,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('h4',[_vm._v("!Abbildung2 hier!")])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('h4',{attrs:{"id":"abb2"}},[_vm._v("!Abbildung2 hier!")])])}]
 __vue__options__._scopeId = "data-v-74b2f89d"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -72,7 +72,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-74b2f89d", __vue__options__)
   }
 })()}
-},{"vue":11,"vue-hot-reload-api":10}],3:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":11}],3:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -80,68 +80,54 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _abb = require('./abbildungen/abb.vue');
+var _text = require('../parts/text.vue');
+
+var _text2 = _interopRequireDefault(_text);
+
+var _abb = require('../abbildungen/abb.vue');
 
 var _abb2 = _interopRequireDefault(_abb);
 
-var _abb3 = require('./abbildungen/abb2.vue');
+var _abb3 = require('../abbildungen/abb2.vue');
 
 var _abb4 = _interopRequireDefault(_abb3);
 
-var _showdownFootnotes = require('../../../node_modules/showdown-footnotes');
-
-var _showdownFootnotes2 = _interopRequireDefault(_showdownFootnotes);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var converter = new showdown.Converter({ extensions: [_showdownFootnotes2.default] });
-
 exports.default = {
-    props: ['chapterContent'],
+    props: ['idLink'],
     data: function data() {
         return {};
     },
-    mounted: function mounted() {
-        console.log('Chapter');
-    },
-    created: function created() {
-        hljs.initHighlightingOnLoad();
-    },
+    mounted: function mounted() {},
+    created: function created() {},
     destroyed: function destroyed() {},
     components: {
+        mdToText: _text2.default,
         abb: _abb2.default,
         abb2: _abb4.default
     },
-    methods: {
-        convertMarkdown: function convertMarkdown(text) {
-            var outputHtml = [];
-
-            console.log('unformatted Text', text);
-            var html = converter.makeHtml(text);
-
-            return html;
-        }
-    }
+    methods: {}
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter",domProps:{"innerHTML":_vm._s(_vm.convertMarkdown(_vm.chapterContent.markdown))}},_vm._l((_vm.chapterContent.abb),function(abb,index){return _c(abb,{key:index,tag:"component"})}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter",attrs:{"id":_vm.idLink}},[_c('mdToText',{attrs:{"uniqueTitle":'formattest'}},[_vm._v("\n# Test for Formats?\n\nAre we human because of unique traits and attributes not shared with either animal or machine? The definition of “human” is circular: we are human by virtue of the properties that make us human (i.e., distinct from animal and machine). It is a definition by negation: that which separates us from animal and machine is our “human-ness”.\n\n*We are human because we are not animal, nor machine. But such thinking has been rendered progressively less tenable by the advent of evolutionary and neo-evolutionary theories which postulate a continuum in nature between animals and Man.*\n\nOur uniqueness is partly quantitative and partly qualitative. Many animals are capable of cognitively manipulating symbols and using tools. Few are as adept at it as we are. These are easily quantifiable differences – two of many.\n\n\n# Markdown Top Level\n\nQualitative differences are a lot more difficult to substantiate. In the absence of privileged access to the animal mind, we cannot and don’t know if animals feel guilt, for instance. Do animals love? Do they have a concept of sin? What about object permanence, meaning, reasoning, self-awareness, critical thinking? Individuality? Emotions? Empathy? Is artificial intelligence (AI) an oxymoron? A machine that passes the Turing Test may well be described as “human”. But is it really? And if it is not – why isn’t it?\n\n\n## 2nd Level\n\nLiterature is full of stories of monsters – Frankenstein, the Golem – and androids or anthropoids. Their behaviour is more “humane” than the humans around them. This, perhaps, is what really sets humans apart: their behavioural unpredictability. It is yielded by the interaction between Mankind’s underlying immutable genetically-determined nature – and Man’s kaleidoscopically changing environments.\n\n\n## 2nd Level\n\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature – being the inevitable and inexorable outcome of our bestial ancestry – cannot be the subject of moral judgment.\n\n**3rd Level**\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature – being the inevitable and inexorable outcome of our bestial ancestry – cannot be the subject of moral judgment.\n\n\n# Melanie\n![Bildunterschrift: Das ist Melanie](https://d2mxuefqeaa7sj.cloudfront.net/s_895E577FE6EC85C7DC981C8E4FF92AB4539B02ACE9523AA9443D0E932B878054_1515249360812_E3EF2632-8274-4F53-8955-4B67436FD751.png)\n\n\nAn improved Turing Test would look for baffling and erratic patterns of misbehaviour to identify humans. Pico della Mirandola wrote in “Oration on the Dignity of Man” that Man was born without a form and can mould and transform – actually, create – himself at will. Existence precedes essence, said the [Link](http://www.google.de) marked underlined. **Bold**. *Italic*.\n\nThe one defining human characteristic may be our awareness of our mortality. The automatically triggered, “fight or flight”, battle for survival is common to all living things (and to appropriately programmed machines). Not so the catalytic effects of imminent death. These are uniquely human. The appreciation of the fleeting translates into aesthetics, the uniqueness of our ephemeral life breeds morality, and the scarcity of time gives rise to ambition and creativity.\n\n\n- Hello\n- This\n- is\n- a\n- List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of “free will”. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n1. This\n2. is \n3. numbered\n4. List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of “free will”. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n## Checkliste\n\n\n[ ] Checkliste 1\n[ ] Checkliste 2\n[ ] Checkliste 3\n\n\n## Converter Code\n\nYet, all these answers to the question: “What does it mean to be human” – are lacking.\n\n\n        // https://github.com/showdownjs/showdown\n        var converter = new showdown.Converter({noHeaderId: true});\n        var text = \"#Hello World!\";\n        var html = converter.makeHtml(text);\n        console.log(html);\n\nThe set of attributes we designate as human is subject to profound alteration. Drugs, neuroscience, introspection, and experience all cause irreversible changes in these traits and characteristics. The accumulation of these changes can lead, in principle, to the emergence of new properties, or to the abolition of old ones.\n\nAnimals and machines are not supposed to possess free will or exercise it. What, then, about fusions of machines and humans (bionics)? At which point does a human turn into a machine? And why should we assume that free will ceases to exist at that – rather arbitrary – point?\n\nIntrospection – the ability to construct self-referential and recursive models of the world – is supposed to be a uniquely human quality. What about introspective machines? Surely, say the critics, such machines are PROGRAMMED to introspect, as opposed to humans. To qualify as introspection, it must be WILLED, they continue. Yet, if introspection is willed – WHO wills it? Self-willed introspection leads to infinite regression and formal logical paradoxes.\n\nMoreover, the notion – if not the formal concept – of “human” rests on many hidden assumptions and conventions.\n\n\n# Youtube Video\n\n\nhttps://www.youtube.com/watch?v=DZlw-IS5OkI&\n\n\n[https://youtu.be/DZlw-IS5OkI](https://youtu.be/DZlw-IS5OkI)\n\nPolitical correctness notwithstanding – why presume that men and women (or different races) are identically human? Aristotle thought they were not. A lot separates males from females – genetically (both genotype and phenotype) and environmentally (culturally). What is common to these two sub-species that makes them both “human”?\n\nCan we conceive of a human without body (i.e., a Platonian Form, or soul)? Aristotle and Thomas Aquinas think not. A soul has no existence separate from the body. A machine-supported energy field with mental states similar to ours today – would it be considered human? What about someone in a state of coma – is he or she (or it) fully human?\n\nIs a new born baby human – or, at least, fully human – and, if so, in which sense? What about a future human race – whose features would be unrecognizable to us? Machine-based intelligence – would it be thought of as human? If yes, when would it be considered human?\n\nIn all these deliberations, we may be confusing “human” with “person”. The former is a private case of the latter. Locke’s person is a moral agent, a being responsible for its actions. It is constituted by the continuity of its mental states accessible to introspection.\n\n\n\n\n> Some random Quote:\n> Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^1] . \n> \n> – Some Random Dude\n\n\nLocke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^2].\n\nDescartes’ objection that one cannot specify conditions of singularity and identity over time for disembodied souls is right only if we assume that such “souls” possess no energy. A bodiless intelligent energy matrix which maintains its form and identity over time is conceivable. Certain AI and genetic software programs already do it.\n\nStrawson is Cartesian and Kantian in his definition of a “person” as a “primitive”. Both the corporeal predicates and those pertaining to mental states apply equally, simultaneously, and inseparably to all the individuals of that type of entity. Human beings are one such entity. Some, like Wiggins, limit the list of possible persons to animals – but this is far from rigorously necessary and is unduly restrictive [^3].\n\n**The truth is probably in a synthesis:**\n\nA person is **any type of fundamental** and irreducible entity whose typical physical individuals (i.e., members) are capable of continuously experiencing a range of states of consciousness and permanently having a list of psychological attributes.\n\nThis definition allows for non-animal persons and recognizes the personhood of a brain damaged human (“capable of experiencing”). It also incorporates Locke’s view of humans as possessing an ontological status similar to “clubs” or “nations” – their personal identity consists of a variety of interconnected psychological continuities.\n\n[^1]: Some Awesome Guy, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^2]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^3]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n")]),_vm._v(" "),_c('abb'),_vm._v(" "),_c('abb2')],1)}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-086ac22e"
+__vue__options__._scopeId = "data-v-2da550a4"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-086ac22e", __vue__options__)
+    hotAPI.createRecord("data-v-2da550a4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-086ac22e", __vue__options__)
+    hotAPI.rerender("data-v-2da550a4", __vue__options__)
   }
 })()}
-},{"../../../node_modules/showdown-footnotes":8,"./abbildungen/abb.vue":1,"./abbildungen/abb2.vue":2,"vue":11,"vue-hot-reload-api":10}],4:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("body{\n    font-family: 'importedLato', Arial, sans-serif;\n    font-size: 16px;\n    line-height: 32px;\n    color: #333333;\n    background: #F3F2EE;\n\n    margin: 0;\n    padding: 0;\n}\n\nh1, h2, h3, h4, h5{\n    font-family: 'selimaregular', cursive;\n    color: #333333;\n}\n\nh1{\n    font-size: 55px;\n    line-height: 50px;\n    margin-top: 60px;\n}\n\nh2{\n    font-size: 32px;\n}\n\nimg{\n    width: 100%;\n}\n\na {\n    text-decoration: none;\n    color: #6EB5C9;\n    opacity: 1;\n}\n\na:hover{\n    opacity: 0.5;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.contentarea{\n    max-width: 640px;\n    margin: 0 auto;\n    margin-top: 20vh;\n    padding: 40px;\n}\n\n/* Quotes */\n\nblockquote p {\n    display: inline;\n}\n\nblockquote {\n    margin-left: 0;\n    padding-left: 40px;\n    border-left: 5px solid #BADCCC;\n}\n\n/* Table of Content */\n#toc_container {\n    position: fixed;\n    top: 10vh;\n    padding-top: 20px;\n    padding-bottom: 20px;\n    border-left: 3px solid #6EB5C9;\n    opacity: 0.3;\n    font-size: 12px;\n    -webkit-transition: all 0.5s;\n    transition: all 0.5s;\n    height: 80vh;\n    overflow: scroll;\n}\n\n#toc_container:hover{\n    opacity: 1;\n    -webkit-transition: all 0.5s;\n    transition: all 0.5s;\n}\n\n.toc_content a {\n    display: block;\n}")
+},{"../abbildungen/abb.vue":1,"../abbildungen/abb2.vue":2,"../parts/text.vue":5,"vue":13,"vue-hot-reload-api":11}],4:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Global Style */\n\nbody{\n    font-family: 'importedLato', Arial, sans-serif;\n    font-size: 16px;\n    line-height: 32px;\n    color: #333333;\n    background: #F3F2EE;\n\n    margin: 0;\n    padding: 0;\n}\n\nh1, h2, h3, h4, h5{\n    font-family: 'selimaregular', cursive;\n    color: #333333;\n}\n\nh1{\n    font-size: 55px;\n    line-height: 50px;\n    margin-top: 60px;\n}\n\nh2{\n    font-size: 32px;\n}\n\nimg{\n    width: 100%;\n}\n\na {\n    text-decoration: none;\n    color: #6EB5C9;\n    opacity: 1;\n}\n\na:hover{\n    opacity: 0.5;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.contentarea{\n    max-width: 640px;\n    margin: 0 auto;\n    margin-top: 20vh;\n    padding: 40px;\n}\n\n/* Quotes */\n\nblockquote p {\n    display: inline;\n}\n\nblockquote {\n    margin-left: 0;\n    padding-left: 40px;\n    border-left: 5px solid #BADCCC;\n}\n\n/* Sidebar */\n.sidebar-menu.vue-affix.affix {\n    width: 230px;\n}\n\n.sidebar-menu.vue-affix.affix-top {\n    position: fixed;\n    top: 20vh;\n}\n\nnav.scrollactive-nav.menu-list {\n    width: 100%;\n}\n\n.sidebar-menu a.subitem {\n    padding-left: 40px;\n}\n\n.sidebar-menu a {\n    display: block;\n    padding-left: 20px;\n    opacity: 0.5;\n\n    -webkit-transition: all 1s;\n    transition: all 1s;\n    font-size: 13px;\n}\n\n.sidebar-menu a:hover {\n    opacity: 1;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.sidebar-menu a.active {\n    font-weight: bold;\n    font-size: 14px;\n    opacity: 1;\n}")
 ;(function(){
 'use strict';
 
@@ -149,9 +135,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _chapter = require('./chapter.vue');
+var _chapter_format = require('./chapters/chapter_format.vue');
 
-var _chapter2 = _interopRequireDefault(_chapter);
+var _chapter_format2 = _interopRequireDefault(_chapter_format);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -168,17 +154,11 @@ exports.default = {
     },
     mounted: function mounted() {
         console.log('Docu', this.$store.state.chapters);
-
-        $('.chapter').jqTOC({
-            tocTopLink: '',
-            tocTitle: '',
-            tocShowOnClick: false
-        });
     },
     created: function created() {},
     destroyed: function destroyed() {},
     components: {
-        Chapter: _chapter2.default
+        ChapterFormat: _chapter_format2.default
     },
     methods: {}
 };
@@ -186,7 +166,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('div',{staticClass:"contentarea",attrs:{"id":"content"}},_vm._l((this.$store.state.chapters),function(item,index){return _c('Chapter',{key:index,attrs:{"chapterContent":item}})}))])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('affix',{staticClass:"sidebar-menu vue-affix affix",staticStyle:{"width":"250px, top: 20vh"},attrs:{"scrollAffix":false,"offset":{top: '20vh', bottom: 40 },"relative-element-selector":"#content"}},[_c('scrollactive',{staticClass:"menu-list",attrs:{"offset":100,"duration":1000,"active-class":"active"}},[_c('a',{staticClass:"scrollactive-item",attrs:{"href":"#FormatTest","title":"Format Test"}},[_vm._v("Format Test")]),_vm._v(" "),_c('a',{staticClass:"scrollactive-item",attrs:{"href":"#markdowntoplevel","title":"markdowntoplevel"}},[_vm._v("Markdown Top Level")]),_vm._v(" "),_c('a',{staticClass:"scrollactive-item",attrs:{"href":"#melanie","title":"melanie"}},[_vm._v("Melanie")]),_vm._v(" "),_c('a',{staticClass:"subitem scrollactive-item",attrs:{"href":"#abb2","title":"Abbildung"}},[_vm._v("Abbildung2")])])],1),_vm._v(" "),_c('div',{staticClass:"contentarea",attrs:{"id":"content"}},[_c('ChapterFormat',{attrs:{"idLink":'FormatTest'}})],1)],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -196,48 +176,101 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-2ce43e51", __vue__options__)
   } else {
-    hotAPI.reload("data-v-2ce43e51", __vue__options__)
+    hotAPI.rerender("data-v-2ce43e51", __vue__options__)
   }
 })()}
-},{"./chapter.vue":3,"vue":11,"vue-hot-reload-api":10,"vueify/lib/insert-css":12}],5:[function(require,module,exports){
+},{"./chapters/chapter_format.vue":3,"vue":13,"vue-hot-reload-api":11,"vueify/lib/insert-css":14}],5:[function(require,module,exports){
+;(function(){
 'use strict';
 
-module.exports = [
-// Kapitel 1
-{
-  title: 'Dokumentation',
-  markdown: '\n\n# Dokumentation\n\n# Gef\xFChlswelt\n*Ein Ort f\xFCr deine Gedanken und Emotionen*\n\n**Feinkonzept** \n**Dokumentation**\nWintersemester 2017/18\nHochschule Darmstadt\nStudiengang: Interactive Media Design\n**Team 2**\nBrandl, Maximilian (750997)\nHerdt, Janett (751078)\nKlinger, Alessa (750842)\n\n\n# **Die Formalien**\n## **Die Quellenformate**\n\n*F\xFCr Webseiten*\n\xB9 Quelle-im-Internet.domain, Titel [Aktualisierungsdatum: tt.mm.yy]\n*F\xFCr Bilder oder Grafiken aus dem Internet*\n\xB2 Quelle-im-Internet.domain, Titel [Aktualisierungsdatum: tt.mm.yy], Lizenz\n*F\xFCr B\xFCcher*\n\xB3 Autor-Nachname, Autor-Vorname: Buchtitel, Ausgabe, Auflage, Erscheinungsdatum, Verlag, Buchseite\n\n## **Der Sprachgebrauch**\n\nBei der Erw\xE4hnung eines Nutzers sollen sich nicht nur eine weibliche und m\xE4nnliche, sondern auch alle anderen Geschlechter angesprochen f\xFChlen, um den Lesefluss nicht zu beeintr\xE4chtigen. Wir sind gegen jeglicher Art von Sexismus.\n\n## **Das Kennzeichen**\n\nDie Person, die den Text verfasst hat, kennzeichnet sich mit dem Vornamen am Ende des Textes wie folgt:\n\u2013 Beispielname\n\n\n# **Management Summary**\n\nDas Produkt *Gef\xFChlswelt* ist ein interaktives Mediensystem - \xE4hnlich einem Tablet - zur Unterstu\u0308tzung der geistigen Mobilit\xE4t im Leben dessen Nutzer.\nAls prim\xE4re Nutzer sehen wir schreibfreudige, junge Frauen, die Klarheit im Kopf schaffen wollen. *Gef\xFChlswelt* ist f\xFCr diese ein digitales Journal, das ihre Gedanken organisiert, automatisch abspeichert und dabei absolute Datensicherheit bietet. Deshalb ist auch keine Verbindung zum Internet mit *Gef\xFChlswelt* m\xF6glich.\nEs wird eine Umgebung geschaffen, in der sich der Nutzer nicht ablenken lassen kann oder sich von anderen Applikationen gest\xF6rt f\xFChlt. Ein Ort, der zur Fokussierung einl\xE4dt, weshalb wir auf Pop-Ups und Gamification Elemente verzichten. Eine st\xE4ndige Selbst-Quantifizierung ist nicht Sinn der Sache, sondern die gewollte und bewusstere Selbstwahrnehmung.\nMehr als ein Kalender oder To-Do Listen, die bereits zur Selbstorganisation dienen, um sich den Kopf freizuhalten, ist *Gef\xFChlswelt* ein Ort f\xFCr ihre Emotionen und Gedanken, den sie ihr Leben lang sch\xE4tzen werden. Indem *Gef\xFChlswelt* die passende Umgebung ist, um sich selbst auszusch\xFCtten. Der Bedarf, ihre In\xADnen\xADwelt individuell manifestieren zu k\xF6nnen, besteht bei unserer Nutzergruppe bereits. Deshalb sollen sie auch schnell, einfach und frei - ohne Scheu oder Reue - innerhalb von *Gef\xFChlswelt* experimentieren k\xF6nnen. Anhand von Templates und frei w\xE4hlbaren Modulen wird dies erm\xF6glicht.\nIm Gegensatz zum analogen Journal, verf\xFCgt *Gef\xFChlswelt* \xFCber ein breites Spektrum an Eingabemethoden und Verarbeitungsoptionen. Dennoch beh\xE4lt es im Gegensatz zum Ge\xADgen\xADpart ein konsistent, handlich angenehmes Volumen. Die Oberfl\xE4chenbeschaffenheit eines Journals soll trotzdem gegeben sein, um ein vertrautes haptisches Feedback zu gew\xE4hrleisten.\nDer Nutzer lernt sich mit der Zeit selbst besser kennen, beh\xE4lt einen \xDCberblick \xFCber seine *Gef\xFChlswelt* und kann sorglos Gedanken offenbaren, die keinen anderen Ort zur \xC4u\xDFerung haben. Damit verschafft er sich geistige Offenheit, die es ihm erm\xF6glichen wird, neue Wege zu gehen.\nDamit wir unsere Nutzergruppe erreichen, soll *Gef\xFChlswelt* auf Social Media Plattformen bekannt werden. Youtuber, die bereits Journaling betreiben, sollen als Influencer engagiert werden. Das Produkt wird in unserem Online Shop angeboten und kann entweder zum Vollpreis oder durch ein flexibles und kosteng\xFCnstiges monatliches Abonnementmodell erworben werden.\nEin technisches Konzept f\xFCr die Umsetzung von *Gef\xFChlswelt* liegt dieser Dokumentation bei. Darin sind alle n\xF6tigen Komponenten, wie Soft- und Hardware, ein Interaktionsmodell und das Produktdesign detailliert beschrieben.\n\u2013 Janett\n\n# **Die Organisation**\n## **Das Team**\n![](https://lh4.googleusercontent.com/r_dVUmP9t58xmDZtrRVE0zLiPLpRcMj8bVe_Ahb_JO7nlRxCMcXV1ArKhqg4COPUd2D4PRRHK6Ws2y4CND-0Zz51yVuNlWAvwpGqmKs5c6s7ZpImdZr4qtDMOd6bFKQlBqcsdFAA)\n\n\n**Die Teamregeln**\n\n1. T\xE4gliche Meeting-Notizen in Paper vorbereiten.\n2. Zielzeiten f\xFCr Meetings vorher festlegen.\n3. Entscheidungen am Ende des Meetings treffen.\n4. Aufgaben, die bei Paper festgehalten werden, zu der Agenda hinzuf\xFCgen, wenn m\xF6glich auch Personen und Deadline.\n5. Stoppuhr-Verfahren.\n6. Recherche diskutieren.\n7. Damit jeder immer auf dem selben Standpunkt ist, werden Rechercheergebnisse immer besprochen. Links m\xFCssen einen TLDR Titel haben.\n8. Teilaspekte sofort Prototypen.\n9. Motivationsfutter ist Key.\n10. 60 min des Meetings dienen der Besprechung der neuesten Updates.\n11. **Keine Heroes!**\n\n**Die Zielfestlegung und Erfahrungen**\nZu Anfang unseres Projektes erstellten wir uns eine Zielsetzungsliste, mit der wir immer gew\xE4hrleisten k\xF6nnen, noch auf Zielkurs zu sein.\n\n1. Ein portfoliof\xE4higes Projekt.\n2. Sinnvoll Menschen helfen.\n3. Erfolgreiche Gruppenarbeit durch heterogenes Ergebnis und St\xE4rken aller in der Arbeit finden.\n4. Kreative, radikale Idee, die Sinn macht und n\xFCtzlich ist.\n5. Mit einem kleinen Ansto\xDF die Welt verbessern.\n\nWir definierten auch Learnings aus vorangegangen Semestern anhand derer wir f\xFCr diesj\xE4hriges Semester lernen wollen.\n\n1. Hilfsbereitschaft und keine Angst Hilfe anzufordern.\n2. Offene Kommunikation/Ehrlichkeit bei Timings.\n3. Qualit\xE4tskontrolle (Fragen).\n4. **Erdung bei Tagtr\xE4umen.**\n5. Kurze und deutliche Notizen.\n6. Konsequente und schnelle Entscheidungen.\n7. Auf Motivation achten und R\xFCcksicht aufeinander nehmen.\n8. Zeiten einplanen f\xFCr Learnings/Tutoring.\n9. W\xF6chentliche Review und Preview.\n10. Zentraler Ort f\xFCr alle Dateien und Dokumente einsichtig sowie Kollaboration.\n11. Wir sind Menschen, keine Maschinen.\n\n\u2013 Alessa\n\n## **Das Betreuerteam**\n\n**Design**\nProf. Tsunemitsu, Tanaka\nProf. Krajewski, Andrea\n**Marketing & Management**\nDr. Voigt, Stefan\n**Creative Coding**\nProf. Coenen, Claudius\nFritzsche, Sebastian\n**Mentoring**\nStasch, Dieter\n**Tutor**\nRink, Jenni\n**Dokumentation**\nHaase, Sebastian\n**Sound Design & Vertonung**\nHaas, Martin\n**Dramaturgie & Video**\nZebis, Tomas\n**Interactive Future Werkschau 2018**\nOstoike, Janni\n\n# **Die Aufgabenstellung**\n\nDies ist die Dokumentation des Semesterprojekts vom Wintersemester 2017/18, an der Hochschule Darmstadt, des Studiengangs *Interactive Media Design.*\nDas Leitmotiv des 3. Semesters lautet: **,,festlegen\u201D**\nDas Semesterziel ist es, verschiedene Methodiken aus den Bereichen Design, Informatik und Management kennenzulernen und anzuwenden. Anhand der Methodiken und Coachings soll eine interdisziplin\xE4re Arbeitsweise erlernt werden, ein tragf\xE4higes Konzept und dazu ein in der Praxis umsetzbarer Prototyp entwickelt werden.\nDas Team, bestehend aus Janett Herdt, Alessa Klinger und Maximilian Brandl, stellte sich mit\xADhil\xADfe des Betreuerteams folgender Aufgabe:\n**Entwickeln Sie ein interaktives Mediensystem zur Unterst\xFCtzung der Mobilit\xE4t in unserem Leben.**\n\u2013 Janett\n\n## **Die Geistige Mobilit\xE4t**\n\nUnser Projekt besch\xE4ftigt sich mit der geistigen Mobilit\xE4t: Einen Ausgangspunkt zu definieren, an dem sich unsere Nutzer gerade in ihrem mentalen Ist-Status befinden. Sie besitzen den Wunsch, diesen Zustand zu verlassen, der sie dazu bringt, diesen Status zu ver\xE4ndern bzw. zu verbessern. Sie sehen hier Optimierungsbedarf und wissen, dass bei keinerlei Ver\xE4nderung des Ausgangspunktes ihr mentaler Status sich verschlechtern kann bzw. anhaltend schlecht bleibt.\nDieser Antrieb veranlasst sie dazu, Ver\xE4nderungen in Gang zu bringen. Die Folgen dieser Ver\xE4nderung sind, sofern sie unser Medium regelm\xE4\xDFig nutzen, positiv und f\xFChren zu einem verbesserten anhaltenden Ist-Zustand, der mehr Klarheit im Kopf hervorruft. Dies f\xFChrt zu einigen Langzeitentwicklungen, wie mehr Achtsamkeit und einer verbesserte Selbstwahrnehmung.\n\n![](https://lh6.googleusercontent.com/JuAskBY9peVg1CUqbnQA744-LLzN4kc5txU2THFcvOKKWTcE31OGpfmuk2DgNraYveRPvPVLorFibXLO9_ANojQSdq4875P9JxZeEjNZDQY_DSF3WGql0wUgcGjd2Z6VWyJTx0ou)\n\n\n\n# **Die Achtsamkeit**\n## **Die Emotionen**\n\nJeder Mensch empfindet, und dies ununterbrochen.\nEmotionen sind eine stetige, in uns laufende Maschinerie, die niemals stoppt. Wir genie\xDFen ein Gl\xFCcksgef\xFChl, wie etwa, wenn wir unerwartet von einem Freund ein warmes St\xFCck Kuchen serviert bekommen. Genauso k\xF6nnen wir im n\xE4chsten Moment zutiefst entt\xE4uscht und sauer sein, wenn wir bei einer Verabredung vergessen werden. Manchmal kann man sich dabei f\xFChlen wie ein armer Fischer auf seinem kleinen h\xF6lzernen Boot, der den Wellen einer st\xFCrmischen See ausgeliefert ist.\nMach doch mal den Selbsttest. Entspanne dich. Atme und mache dir bewusst, was du gerade empfindest. Dann versuche, die Empfindungen und Emotionen zu benennen.\nEs ist bemerkenswert, wie viel unerkannt den ganzen Tag in uns vorgeht und wie Emotionen unser Handeln beeinflussen k\xF6nnen.\n\nIn den 1990er Jahren wurde f\xFCr das, was du gerade kurz versucht hast, ein Begriff gefunden. Es handelt sich um die emotionale Intelligenz (EI), oder vielmehr die innere Achtsamkeit: Das Erkennen und Zur\xFCcktreten von den eigenen Gef\xFChlen.\nWer jedoch den Begriff am meisten gepr\xE4gt hat, ist der Psychologe D. Goleman. Er beschreibt: \u201EIm besten Fall erm\xF6glicht Achtsamkeit gerade ein solches gleichm\xFCtiges Wahrnehmen leidenschaftlicher oder st\xFCrmischer Gef\xFChle.\u201C\nGoleman definierte, was einen emotional intelligenten Menschen ausmacht, so:\n1. Selbstwahrnehmung \nDas Erkennen des eigenen Gef\xFChls, w\xE4hrend es auftritt, ist die Grundlage der emotionalen Intelligenz.\n2. Emotionen handhaben\nGef\xFChle so zu handhaben, dass sie angemessen sind, ist eine F\xE4higkeit, die auf der Selbstwahrnehmung aufbaut.\n3. Emotionen in die Tat umsetzen\n\u201EEmotionen in den Dienst eines Ziels zu stellen, ist (...) wesentlich f\xFCr unsere Aufmerksamkeit, f\xFCr Selbstmotivation und K\xF6nnerschaft sowie f\xFCr Kreativit\xE4t\u201C. Emotionale Selbstbeherrschung - Gratifikation hinausschieben und Impulsivit\xE4t unterdr\xFCcken - ist die Grundlage jeder Art von Erfolg.\n4. Empathie\nZu wissen, was andere f\xFChlen - eine weitere F\xE4higkeit, die auf der emotionalen Selbstwahrnehmung aufbaut - ist Grundlage der Menschenkenntnis.\n\u2013 Alessa\n\n## **Der Umgang mit der eigenen Gef\xFChlswelt**\n\nUm selbst achtsamer zu werden, m\xFCssen wir also lernen, wie wir mit eben diesen besonders starken Gef\xFChlen umgehen.\nRichard Lazarus entwickelte 1974 eine Coping-Methode, die sich mit eben diesem Bew\xE4ltigen der inneren Gef\xFChlswelt auseinandersetzt.\nDabei ging er davon aus, dass nicht die objektive Stresssituation eine Bedeutung spiele, sondern die subjektive Interpretation des Individuums.\nDabei gibt es 3 prim\xE4re Verarbeitungsmechanismen des Individuums:\n1. Active coping\n\n- Planning\n- Suppression of competing activities\n- Restraint coping\n- Seeking social support--instrumental\n- Seeking social support--emotional .\n- Positive reinterpretation & growth\n\n2. Acceptance\n\n- Turning to religion\n- Focus on & venting of emotion\n\n3. Denial\n\n- Behavioral disengagement\n- Mental disengagement\n- Alcohol-drug disengagement\n\nDie Auswertung dieses Tests ergab, dass vor allem Probanden, welche Active Coping betrieben, einen positiven Langzeiteffekt erzielen konnten. Wohingegen diese, die Acceptance oder Denial Coping betrieben, weit weniger erfolgreich ihr Stresslevel reduzieren konnten oder wenn, nur kurzzeitig.\n\u2013 Alessa\n\n## **Der Weg zur Achtsamkeit**\n\nBereits Sokrates beschrieb in seinen Inschriften:\n\u201EErkenne dich selbst.\u201C\nNach Goleman spricht er damit einen Grundbaustein der emotionalen Intelligenz (EI) an.\nIndem man sich und seinen Inneren Zustand anerkennt und diesen benennen kann (Metakognition), erlangt man die Kontrolle und Sicherheit \xFCber sein Leben zur\xFCck.\nDie Methode des aktiven Aufschreibens von gef\xFChlten Emotionen bei einem Stressreiz regt nachweislich die Amygdala an, welche in unserem Gehirn den Part \xFCbernimmt, Angst zu erkennen und Alarmsignale weiterzuleiten, um das Individuum vor Gefahr zu sch\xFCtzen.\nWenn wir nun ein Gef\xFChl des \xC4rgers benennen, so Lieberman und Wissenschaftler, wird unsere Amygdala weniger gereizt, sondern der Pr\xE4frontale Cortex angeregt. Dieser ist f\xFCr die Behaviorale Inhibition und das Verarbeiten von Emotionen zust\xE4ndig.\n\nNun sind wir nicht mehr der Fischer von vorhin, der ausgeliefert auf der Wellenflut seiner Emotionen auf und ab schaukelt, sondern sitzen im Trockenen und beobachten diese Wellen mit Interesse und Einsicht.\nBesonders Jugendliche, bei denen der logische Teil des Gehirns bis 25 Jahren noch nicht voll entwickelt ist, entscheiden oft im Affekt und gef\xFChlsorientiert. Dies kann schon fr\xFCh zu Frust, Aggression, R\xFCckzug und Selbstentfremdung f\xFChren. Daher ist es nicht unverst\xE4ndlich, warum 50% aller Depressionen schon im jugendlichen Alter beginnen. Die fehlende Distanz und der Prozess des Erlernens, dass wir nicht unsere Gef\xFChle sind, ist oft eine Erfahrung, die Individuen erst sp\xE4ter in einer Therapie lernen, wenn es schon zu einer Depression oder einem Burn-Out gekommen ist.\nDabei ist eine Therapie nur der Schritt, wenn es schon zu sp\xE4t ist. Es geht vor allem um das aktive Verarbeiten und Benennen der Gef\xFChle. Dies kann schriftlich oder k\xFCnstlerisch erfolgen und Jugendlichen bzw. jungen Erwachsenen helfen, ihrer Innenwelt eine Form zu geben und so achtsamer in ihrem Alltag zu sein.\n\u2013 Alessa\n\n## **Unser Manifesto**\n\nDas Projekt *Gef\xFChlswelt* m\xF6chte eben diesen Jugendlichen und jungen Erwachsenen eine M\xF6glichkeit bieten, ihre Emotionen offenzulegen und zu manifestieren, um einen R\xFCckgang der sozialen Kompetenz, Pessimismus und mangelndes Selbstvertrauen zu vermeiden. Wir m\xF6chten ihnen ein Werkzeug an die Hand geben, mit welchem sie sich selbst wahrnehmen k\xF6nnen und ein besseres Bewusstsein f\xFCr sich selbst schaffen, um Klarheit im Kopf zu erlangen.\n\n![](https://lh4.googleusercontent.com/wL6ZBoF9xz4HSbQcr-swfDe9OV0Iwz8hkTHVtvT8KriSvUtXMuBY62vNwUNMxUUxKxXhNKLlDG-qC_3SKX-i6gprYSI8AIOs09NmJZTkdEKzPtQys11TeyiSRxFhAQFfB1MXJ1XX)\n\n\n                                                                                                                        *Abbildung, Anhang*\n\u2013 Alessa   \n\n# **Die Problematik**\n## **Die Ideenfindung**\n\nZu Beginn versuchten wir im Gespr\xE4ch herauszufinden, wie die verschiedenen Projektvisionen f\xFCr jedes Teammitglied aussehen. Wir erkannten relativ schnell, welche Keypoints f\xFCr die Gruppe besonders wertvoll zu sein scheinen: Eine soziale Problematik, mit der wir Menschen wirklich helfen k\xF6nnen. Unsere Erkenntnisse des letzten Semesters lie\xDFen wir auch mit einflie\xDFen, dass Research fundierter sein muss. Wir wollen uns mehr Zeit nehmen, um unsere Nutzer intensiver kennenzulernen.\nWir wollten einen breiten Pool an Ideen ansammeln. Wir zirkulierten Zettel, indem wir die Ideen der anderen erweiterten, um so auf m\xF6glichst unkonventionelle Gedankensplitter zu kommen. Unsere Ideen besprachen wir auf Umsetzbarkeit und Potenzial. Es fiel uns schwer, tats\xE4chlich zu entscheiden, welche Idee f\xFCr unsere Gruppe die beste Wahl war. Die Entscheidungsmatrix half uns dabei, da wir nun gemeinsame Nenner hatten, anhand dessen wir mit einem Punktesystem von 1 bis 10 bewerten konnten.\nWir entschieden uns f\xFCr den tragbaren Emotionstracker durch Research. Wir stellten fest, dass es schon eine gro\xDFe Anzahl an Menschen gibt, die ihre Emotionen analog aufzeichneten. Besonders auf YouTube fanden wir zahlreiche Journaler, die so begeistert vom Mood Tracking sind, dass sie sogar Tutorials geben und andere Menschen ansto\xDFen wollen, mit dem Journalen zu beginnen.\nF\xFCr uns war klar, dass wir diesen Menschen helfen k\xF6nnen, sich noch intensiver mit ihren Gef\xFChlen auseinanderzusetzen, um gl\xFCcklicher und ausgeglichener zu sein.\n\u2013 Alessa\n\n## **Der L\xF6sungsansatz**\n\nUm eine optimale L\xF6sung in Form eines Mediensystems f\xFCr unsere zuk\xFCnftigen Nutzer zu entwickeln, gilt es, sich zuerst mit der bereits vorhandenen Nutzerbasis vertraut zu machen. Daf\xFCr m\xFCssen wir erst einmal ihre Motivationen und Probleme n\xE4her kennenlernen.\n\n![](https://lh5.googleusercontent.com/gwW4x3t6lEYsXoKTL43XTv9owE-zBgdWvCnC5A0235kdTVa1FRAY44WJnFt39Jcqpn4zIw39FP86x0FTwOiUoousDQR6s3hKVjJm3YThxSV46dudQUr7kabWzAJvj6-SwtoZCrxN)\n\n\n*Abbildung, Anhang*\n**Desk-Research**\nWir haben uns anhand verschiedener Aussagen von YouTubern, die bereits Journaling betreiben, eine grobe \xDCbersicht \xFCber ihre Kernmotivatoren erstellt.\nDabei fielen uns folgende Gemeinsamkeiten auf:\n\n- Sie haben bereits das Bed\xFCrfnis und die Bereitschaft, sich mit sich selbst zu befassen\n- Sie nehmen sich die Zeit hierf\xFCr; r\xE4umen Zeit in ihren Alltag ein\n- Ihnen ist es wichtig eine Erinnerung vom vergangenen \u201EIch\u201C zu haben und darauf einen R\xFCckblick werfen zu k\xF6nnen\n- Sie wollen dadurch ihre pers\xF6nliche Entwicklung festhalten\n- Sie sind tendenziell introvertiert; sie m\xF6chten ihre *Gef\xFChlswelt* verarbeiten, aber dies nicht im sozialen Kontext\n\nIhr Ziel haben sie auch klar beschrieben. Journaling wird nicht getan, um Langeweile zu vertreiben, sondern um den Kopf frei zu bekommen, von all den Gedanken, die keinen Ort zum Ausdruck finden. Dabei legen sie keinen Wert auf eine spontane Momentaufnahme inmitten des Tages, sondern nehmen sich die Zeit nach dem Aufstehen oder abends, vor dem Schlafengehen, um sich mit ihrer Innenwelt intensiv und konzentriert zu besch\xE4ftigen.\nNach Daniel Goleman gilt dies als erster Schritt zum Emotionalen Management. Der Umgang mit den eigenen Gef\xFChl f\xE4ngt damit an, sich selbst wahrzunehmen.\nDurch achtsame Selbstwahrnehmung erh\xF6ht man die Wahrscheinlichkeit, seinen Gem\xFCtszustand ver\xE4ndern zu k\xF6nnen. Dies kann sich vor allem bei beunruhigenden Gef\xFChlen wie Zorn, Angst, Depression, Pessimismus und Einsamkeit als sehr hilfreich erweisen.  ****\nEin ausgeglichener Gem\xFCtszustand ist mehr als angenehm, er hilft uns auch gesund zu bleiben. \nWir schlie\xDFen uns der Meinung von Goleman und Wissenschaftlern an. Eine vorbeugende Gewohnheit ist durchaus erstrebenswert. Dem Gem\xFCtszustand vorbeugend zu helfen, bietet vielerlei Vorteile auf dem Weg zu einem gesunden und erf\xFCllten Leben.\n**Die Feldrecherche**\nEs klingt so einfach, dennoch ist der erste Schritt in Richtung Journaling schwer. Wir haben uns damit besch\xE4ftigt, Probleme ausfindig zu machen, die Menschen davon abhalten, ein Journal zu f\xFChren.\nEinige YouTuber haben offengelegt, was sie in ihren Anf\xE4ngen vom Journaling abgehalten hat und womit sie immer wieder Probleme hatten. Die eigene Handschrift war, bei manchen, der Faktor, der sie dazu gebracht hat mit dem Journaling f\xFCr einige Zeit aufzuh\xF6ren. Diese Problematik konnten wir auch durch Experteninterviews im Thalia in Darmstadt best\xE4tigen. Des Weiteren f\xFChlten sich einige Journaler nicht kreativ genug im Vergleich zu ihren Idolen auf sozialen Medien, die sie zum Journaling inspiriert haben. Einige gaben auch an, dass sie sich dazu gezwungen f\xFChlten, sich zu verstellen, weil sie Angst hatten, dass jemand Einsicht in ihre Texte bekommen k\xF6nnte.\nDer Zeitfaktor spielte f\xFCr viele auch eine wichtige Rolle. Um alles mit der eigenen Handschrift gestalten zu k\xF6nnen, erforderte es erstens viel M\xFChe und zweitens viel Zeit. Ihnen war die Gestaltung der Eintr\xE4ge und das Cover ihres Journals dennoch sehr wichtig.\n**Unser L\xF6sungsansatz:** ***Gef\xFChlswelt***\nWir m\xF6chten einen Ort f\xFCr die Emotionen und Gedanken unserer Nutzer schaffen, damit sie von den positiven Effekten der Selbstwahrnehmung profitieren k\xF6nnen. So haben wir es uns zur Aufgabe gemacht, die Stolpersteine auf dem Weg dorthin beiseite zu r\xE4umen.\nUm eine Umgebung zu schaffen, die es dem Nutzer erlaubt fokussiert zu bleiben, haben wir uns f\xFCr ein eigenst\xE4ndiges, nicht ans Internet gebundenes Mediensystem mit Touchscreen entschieden. St\xF6rfaktoren wie Reminder, Pop-Ups und Gamification Elemente, die das Messen, die Bewertung und die Selbst-Quantifizierung der Nutzer anregen, fallen bei uns weg, da diese nicht dem Ziel dienen, Klarheit im Kopf zu schaffen.\nDie Community die das Journaling anregt, m\xF6chten wir ausbauen und f\xF6rdern, indem wir auch ein Forum anlegen. Hier sollen sich die Nutzer gegenseitig Tipps geben k\xF6nnen, Erfahrungen teilen und praktische Elemente wie Templates zur Verf\xFCgung stellen k\xF6nnen. \nMit der steigenden Anzahl an Conversational Interfaces, die auch kein fremdes Konzept f\xFCr die Digital Natives Generation sind, m\xF6chte wir auch die Stimme als neue Komponente des Journalings integrieren. Etwas, das analog mit einem Journal nicht machbar ist. Dabei ist die Umsetzung von Sprache-zu-Text f\xFCr diejenigen sinnvoll, die schreibfaul sind oder nicht die Zeit haben ihren Eintrag mit aufwendiger Handarbeit auszuschm\xFCcken.\nEin Touchscreen-Eingabestift soll daf\xFCr sorgen, dass das gewohnte Schreiben erm\xF6glicht wird und die Handschrift dann in Text konvertiert werden kann, sollte man die eigene nicht m\xF6gen.\n**Unser Leitmotiv**\nWir m\xF6chten mit *Gef\xFChlswelt* eine User Experience schaffen, die auf Papier nicht nachzuahmen ist, als digitale L\xF6sung f\xFCr die analogen Probleme und Beschr\xE4nkungen beim Journaling.\nUm unser Produkt an Interessenten zu bringen, wurde recherchiert, in welchem Marktsegment unsere Nutzergruppe unterwegs ist.\n\u2013 Janett\n\n# **Die Nutzergruppe**\n\n**Soziodemografisch**\nUnsere Nutzergruppe sind junge Frauen im Altersbild zwischen 15-25 Jahren. Sie wohnen, da sie noch zur Schule oder Universit\xE4t gehen, bei ihren Eltern oder in einer WG o. \xC4. Sie wurden intellektuell aufgeschlossen erzogen. Ihre Eltern stammen aus dem Mittelstand bis gehobenen Mittelstand. Ihre Eltern haben entweder ein soziales oder kreatives Berufsbild und  verf\xFCgen \xFCber ein Jahresgehalt zwischen 40.000 - 80.000 EUR.\nDa unsere Nutzergruppe gerade dabei ist, ihre schulische Ausbildung abzuschlie\xDFen und in die Arbeitswelt einzutreten, sind sie sehr beansprucht vom t\xE4glichen Lernen. Sie haben einen Minijob bei einer \xDCbersetzungsfirma in ihrer Wohnstadt o. \xE4. Dieser ist zwar nicht der ideale Job, in dem sie sp\xE4ter t\xE4tig sind, doch bringt er ein kleines Einkommen, mit dem erforderliche Anschaffungen - wie ein neuer Laptop etc. - get\xE4tigt werden k\xF6nnen.\nDas Einkommen unserer Nutzergruppe betr\xE4gt also zwischen 0 - 450 EUR, dazu kommt bei einigen die M\xF6glichkeit, Baf\xF6G zu beziehen. \n\n![](https://lh4.googleusercontent.com/a6RsNr8ngmFAG7uc4mQWNqFhyo78i6fwbS7KrioXTimGE8ERzrGKz5bO0sh5fhyoQDhWRmYy66i_BW9M0Q2OAhVJlxz500-wq0z9Mes0aoXRXu5ukKDzCtEB6O6hcFmDYlRb2w4A)\n\n\n*Abbildung*\n**Adaptiv\u2010pragmatisches Milieu: Die moderne junge Mitte**\nUnsere Nutzergruppe sehen wir in der modernen jungen Mitte. Sie sind an der Schwelle zum Erwachsenwerden. Sie haben ein ausgepr\xE4gtes Bed\xFCrfnis nach Verankerung und Zugeh\xF6rigkeit, gleichzeitig sind sie leistungsbereit und m\xF6chten f\xFCr die Zukunft alle Optionen offen halten.\nSie sind neuen Technologien gegen\xFCber offen und nutzen das Internet, um sich zu vernetzen und Ideen auszutauschen.\n\n**Psychologisches Profil**\nUnsere jungen Frauen haben vielseitige Interessen. Sie sind aufgeschlossen und ihr Meinungsbild ist liberal. Sie sind bereit, sich mit sich selbst zu besch\xE4ftigen und sich ihrer schwachen Momente bewusst. Sie sind selbstkritisch und sehen sich eher als einen \u201EWork in Progress\u201D. Sie besitzen ein hohes Interesse an der eigenen Selbstverwirklichung. Es reicht ihnen nicht, nur einen Job auszu\xFCben, der ihnen ein gutes finanzielles Einkommen bietet. Er muss sie auch komplett ausf\xFCllen. Gleichzeitig muss er jedoch finanzielle Sicherheit bieten. Eine schwierige Balance, die es jetzt schon zu planen gilt.\nDiese jungen Frauen haben in der Regel ein paar sehr gute Freunde, die dieselben Interessen und Ziele haben. Sie suchen Zugeh\xF6rigkeit und tiefere Beziehungen. Diese sind ihnen wichtiger als ein gro\xDFer Freundeskreis und geben ihrer introvertierten Pers\xF6nlichkeit mehr Zuversicht. Spa\xDF ist zwar auch wichtig, wenn diese Beziehungen gepflegt werden, jedoch ist ein Austausch an Gef\xFChlen und Gedanken wichtiger. Sie sind kreativ, kochen oder besuchen gemeinsam das Kino oder andere T\xE4tigkeiten, die f\xFCr introvertierte Menschen gemacht sind.\n\u2013 Alessa\n\n## **Unsere Persona: Melanie**\n\n\u201EPersonas *(lat. Maske)* sind Nutzermodelle, die Personen einer Zielgruppe in ihren Merkmalen charakterisieren.\u201D\n\n![](https://lh4.googleusercontent.com/iJJUgfWjH0n7tfBVuel-qWf7Ynayfp0hSmczxlNuPgJJVI2hsfW4B72A9rsci7dYz2u5HnkT6kAKYLGwf1BApuAXUHl14nMjPfpPflw0_xsm5IIAu2iv56PUeHBINc_qW9HoVCaX)\n\n\n                                                                                                                                                                      *Abbildung* , *Anhang*\n**Eine Erz\xE4hlung aus Sicht von Melanie**\n\u201EIch bin 20 Jahre alt und wohne noch bei meinen Eltern, da ich gerade Japanologie studiere. Ich mache mir h\xE4ufig Gedanken, ob ich gut genug bin, nach meinem Studium eine gute Schriftstellerin zu werden.\nIch bin introvertiert, sensibel im Umgang mit meinen Mitmenschen, interessiert an aktuellen Trends, ehrgeizig, m\xF6chte mich selbst optimieren und bin ein kreativer Freigeist.\nMir geht es oft so, dass ich mich \xFCberfordert f\xFChle von zu vielen Eindr\xFCcken und Empfindungen, die ich den Tag \xFCber habe. Ich w\xE4re gerne selbstbewusster, oft bin ich aber eher still und beobachte. Ich mache mir dann oft Gedanken dar\xFCber, was meine Kommilitonen von mir denken.\nWenn ich Abends zur Ruhe komme, verbringe ich am liebsten Zeit in meinem Zimmer und mit meiner Katze. Dann nehme ich mir bewusst Zeit f\xFCr mich selbst und verfasse meine Journal-Eintr\xE4ge. Das Schreiben gibt mir Kraft und Ruhe, um den Tag zu reflektieren. Ich beschreibe dabei Situationen, in denen ich mich unsicher gef\xFChlt habe. Ich mag einen Jungen sehr gerne, aber er ist lieber mit einem anderen M\xE4dchen zusammen. Dann frage ich mich, warum kann ich nicht so sein wie sie?\nIch hasse es, wenn die anderen M\xE4dchen immer abf\xE4llig auf meine Schuhe schauen.\nEs ist gar nicht so leicht, jeden Abend zu schreiben. Oft fehlt mir eigentlich die Zeit dazu und ich sollte lieber mehr f\xFCr die Universit\xE4t lernen.\nWenn ich dann fertig bin mit meinem Journal, lese ich noch ein paar Seiten in meinem neuen Lieblingsbuch.\nMeine engsten Freunde wissen wie es mir geht,  trotzdem ist es schwierig, mit ihnen \xFCber alles zu sprechen. Meine Mutter denkt, es ist Zeitverschwendung, in mein Journal zu schreiben. Sie versteht aber nicht, dass ich nur so produktiv sein kann. Es hilft zu sehen, was mich gerade besch\xE4ftigt. Manchmal sind es so viele wirre Gedanken, dass ich diese ein bisschen strukturieren muss. Ich m\xF6chte ein solches Journal erschaffen wie meine Vorbilder auf YouTube und Instagram.\u201D\n\u2013 Alessa\n\n## **Der Nutzungskontext**\n\nUm eine gute User Experience zu gestalten, m\xFCssen wir die Schritte betrachten mit denen der Nutzer sein Ziel erreichen kann. Die Empfindung des Nutzers vor, w\xE4hrend und nach der Nutzung des Produkts ist das Ausschlaggebende f\xFCr eine gute User Experience.\nMittels User Stories (Anwendererz\xE4hlungen) wird die Handlung und das Ziel des Nutzers erz\xE4hlt. Zus\xE4tzlich wird beschrieben was der Nutzer will und warum. Damit wollen wir uns einen \xDCberblick \xFCber die Anforderungen an *Gef\xFChlswelt* schaffen.\nIn einer Brainstorming Session wurden mehrere Anwendererz\xE4hlungen beschrieben und nach zwei Bereichen des Produkts sortiert. Das Schema einer User Story wird wie folgt beschrieben: Als <*Rolle*> m\xF6chte ich <*Ziel/Wunsch*>, um <*Nutzen*>.\n**Die Produkteigenschaften (au\xDFen)**\n[Haptik]: Als Nutzer m\xF6chte ich eine angenehme Oberfl\xE4che am Produkt sp\xFCren, damit ich Spa\xDF daran habe es zu benutzen. \n[Cover]: Als Nutzer m\xF6chte ich ein individuelles Produkt haben, um meine eigene Pers\xF6nlichkeit darin sehen zu k\xF6nnen.\n[Cover]: Als Nutzer m\xF6chte ich, das \xC4u\xDFere meines Journal regelm\xE4\xDFig ver\xE4ndern k\xF6nnen, um ein Individuelles Produkt zu haben.\n\n- \n\n[Mobilit\xE4t]: Als Nutzer m\xF6chte ich mich bequem ins Bett legen k\xF6nnen, um am Ende des Tages meine Gedanken festzuhalten. \n[Gewicht]: Als Nutzer m\xF6chte ich mir keine Gedanken machen wie schwer das Produkt ist, um mich jederzeit darauf verlassen zu k\xF6nnen darin zu schreiben.\n**Die Produkteigenschaften (innen)**\n[Datensicherheit]: Als Nutzer m\xF6chte ich dass keiner Zugang zu meiner niedergeschriebenen Innenwelt hat, um meiner Daten sicher zu sein und ehrlich mit mir selbst zu sein.\n\n- \n\n[Navigation]: Als Nutzer m\xF6chte ich nicht lange \xFCberlegen wie ich mich im Produkt navigiere, um es nicht schwieriger zu haben als auf einem Blatt Papier.\n[Mobilit\xE4t]: Als Nutzer will ich schnell zu einem Eintrag kommen, um es nicht als Belastung zu sehen.\n[Datenstruktur]: Als Nutzer m\xF6chte ich mich meine Gedanken archivieren zu k\xF6nnen, um die M\xF6glichkeit auf einen R\xFCckblick zu haben.\n[Datenstruktur]: Als Nutzer m\xF6chte ich die M\xF6glichkeit haben bestimmte Inhalte als Lebensabschnitte zusammenzufassen, um einen Fertigzustand zu haben.\n[Datenspeicherung]: Als Nutzer m\xF6chte ich mein Journal ein Leben lang f\xFChren, um die Entwicklung \xFCber meine Lebenszeit zu beobachten.\n[Interaktion]: Als Nutzer m\xF6chte ich mit meiner Stimme meine Emotionen farblich darstellen lassen, um Mood Tracking zu betreiben.\n[Interaktion]: Als Nutzer m\xF6chte ich mit den Fingern auf der Oberfl\xE4che des Produkts etwas ver\xE4ndern k\xF6nnen, um auf eine neue Weise mit dem Inhalt interagieren zu k\xF6nnen.\n[Interaktion]: Als Nutzer m\xF6chte ich, einfach durch vergangene Eintr\xE4ge st\xF6bern, um alte Erinnerungen und Gedankenans\xE4tze zu sehen.\n[Reflektion]: Als Nutzer m\xF6chte ich neues \xFCber mich selbst lernen, um einen Fortschritt zu versp\xFCren.\n\n**Die ersten Anforderungen an** ***Gef\xFChlswelt***\n**Nach Au\xDFen** soll *Gef\xFChlswelt* ein Stabiles Gef\xFChl vermitteln. Das Produkt soll nicht fragil wirken. Das Haptische Feedback des Produkts muss angenehm und sinnlich sein. Das Cover soll gestaltbar und austauschbar sein. Die Individualit\xE4t des Nutzers soll sich an der Oberfl\xE4che von *Gef\xFChlswelt* widerspiegeln*.* Die Benutzungsoberfl\xE4che soll mit Ber\xFChrung auch m\xF6glich sein.\n**Im Inneren** soll Datensicherheit geben sein. Die Datenstruktur sollte so einfach und \xFCbersichtlich wie m\xF6glich gestaltet werden. Eintr\xE4ge sollen so verwaltet werden k\xF6nnen, dass der Zugriff auf diese nicht m\xFChselig ist und ein R\xFCckblick zu jeder Zeit m\xF6glich ist.\n*Gef\xFChlswelt* soll mehr als ein Blatt Papier k\xF6nnen. Verschiedene Eingabemethoden und Interaktionsm\xF6glichkeiten sind hierf\xFCr n\xF6tig.\n**Als Konversationspartner** soll *Gef\xFChlswelt* eine helfende Natur haben. Der Nutzer m\xF6chte geleitet werden, um sich mit *Gef\xFChlswelt* vertraut zu machen. Die Anwendung soll unparteiisch sein; der Nutzer soll nicht bewertet werden.\n\u2013 Janett\n\n**Ein Szenario**\nDas Storyboard dient zur Skizzierung eines Szenarios. In diesem Szenario soll der Kontext in dem sich der Nutzer befindet und die Anforderungen an *Gef\xFChlswelt* deutlich werden. Dabei gehen wir davon aus, dass das zu erstellende Produkt bereits gibt und stellen uns vor, in welcher konkreten Situation und wie der Nutzer mit dem System seine Ziele erreicht.\n\u2013 Janett\n\n\n\n\n![](https://docs.google.com/drawings/u/1/d/s5IExddoe4Lh2CeL_867L0g/image?w=572&h=254&rev=23&ac=1)\n\n\n**Das Interaktionsdesign**\n**Der Charakter**\nDa unsere Nutzer ihr Journal nutzen, um emotional schwierige Situation zu verarbeiten, kann sich dies schon verwirrend und aufreibend gestalten. *Gef\xFChlswelt* m\xF6chte daher ein **Gegenpol** zum empfundenen inneren Gef\xFChlschaos darstellen.\n*Gef\xFChlswelt* sollte einen **reduzierten Charakter** besitzen. Reduziert in dem Sinne, alles wegzulassen, was den Nutzer vom Prozess ablenkt, Freiheit im Kopf zu erlangen.\nMan beginnt seinen Eintrag mit einem wei\xDFen Blatt, wie man es in seinem Journal vorfindet. Alle zus\xE4tzlichen Funktionen werden im unteren Bildschirmrand \u201Eversteckt\u201D, um den **Blick nach Innen** zu verst\xE4rken.\n**Beziehungskonzept**\nDas System und der Nutzer haben eine **vertrauensvolle Beziehung**. *Gef\xFChlswelt* schl\xE4ft, wenn es nicht aktiviert wird, um den zur\xFCckhaltenden, passiven Charakter zu wahren. Das System wird nur aktiviert, wenn der Nutzer *Gef\xFChlswelt* \xF6ffnet, um es zu starten. Die Initiative geht also immer vom Nutzer aus, das Device reagiert.\nIdealerweise soll es f\xFCr den Nutzer als **Spiegelbild** der inneren Welt dienen. Dabei ver\xE4ndert sich sowohl das \xC4u\xDFere anhand der Covers, die gestaltet werden sowie das Innenleben. Mit der Zeit kann so eine **Monografie** **der Gef\xFChlsgeschichte** entstehen. Er verwendet es, um seine Geschichte offenzulegen, genauso wie bereits geschriebene Eintr\xE4ge zu reflektieren und so seine derzeitige Situation in einem neuen Kontext zu sehen. Somit baut der Nutzer auch eine **pers\xF6nliche Bindung** zum Ger\xE4t auf, da sie all diese Situationen mit *Gef\xFChlswelt* gemeistert hat.\n\n**Verhaltensregeln**\nDer Nutzer leert seine Gedanken und organisiert diese mit dem System, das Anlegen von Journal-Segmenten geschieht fast automatisch, so dass der Nutzer sich keine Gedanken \xFCber die **Organisation** machen muss.\nAnders als bei einem analogen Journal bieten wir die M\xF6glichkeit, Eintr\xE4ge unkompliziert und ohne Seiten herauszurei\xDFen, zu **l\xF6schen** oder **aufzur\xE4umen**. Der Nutzer wird so in seiner Kreativit\xE4t nicht gest\xF6rt.\nDurch das **freie Experimentieren** mit dem Device im Free-Canvas-Mode f\xF6rdert *Gef\xFChlswelt* die Ausdrucksfreiheit des Nutzers. Er soll zum experimentieren in der Lage sein und f\xFCr sich einen Weg finden, wie er am besten ausdr\xFCcken kann, was in ihm vorgeht.\nKein Gedanke/Gef\xFChl ist schlecht: Unerw\xFCnschte Eintr\xE4ge werden zun\xE4chst in den Papierkorb verschoben und erst dann endg\xFCltig gel\xF6scht. Dies verhindert Gr\xFCbeln dar\xFCber, ob eine Idee zur Visualisierung geeignet ist oder nicht. Dieses Element kann durch **Wiederverwendung** eventuell an einer anderen Stelle des Journals wesentlich passender sein.\nEine **Sammlung** besonders gelungener Eintr\xE4ge verst\xE4rkt das positive Langzeitgef\xFChl als Anerkennung.\nEr individualisiert sein Device und macht es so zu einem Ort, um seine **Pers\xF6nlichkeit** zu zeigen und sich selbst zu erfahren.\n\n**Interakionstonalit\xE4t**\nDie Atmosph\xE4re von *Gef\xFChlswelt* soll **ruhig** und **souver\xE4n** sein durch eine aufger\xE4umte Benutzeroberfl\xE4che und reduzierter Farbgebung. Gleichzeitig ist es ein **Ort der Kreativit\xE4t**, der freigeistig ist um so offen wie m\xF6glich f\xFCr die Gef\xFChle des Nutzers zu sein und  einzuladen, zu gestalten. Das System wertet nicht, sondern ist **neutral** und besitzt keine Meinung, dies ist besonders wichtig f\xFCr eine vertrauensvolle Beziehung, in der sich der Nutzer unserem digitalen Journal anvertrauen kann, ohne Angst haben zu m\xFCssen, dass Dritte es lesen k\xF6nnten. Dies best\xE4tigten auch Experten-Interviews, die wir mit Journalern f\xFChrten. Dass ein **Sicherheitsgef\xFChl** unabdingbar ist, um ehrlich mit sich selbst zu sein, w\xE4hrend man seine Eintr\xE4ge macht.\n*Gef\xFChlswelt* soll sich **unkompliziert** anf\xFChlen. So einfach, wie man ein analoges Journal verwendet, mit welchem unsere Nutzer bereits vertraut sind, so einfach wird man auch in der Lage sein, unser Device zu nutzen. \n\n**Interaktions-Werkzeuge**\n**Der Stift**\nDer Stift ist ein Tool, welches es dem Nutzer einfacher macht, sich im Free Canvas Mode kreativ auszudr\xFCcken. Er kann unterschiedliche Mal- und Schreibtechniken annehmen, wie z. B ein Aquarell oder Gouache, um seinen individuellen Duktus zu finden.\n**Die Buchmetapher**\nDa unser Device auch die Sinnlichkeit eines Buches nachempfinden m\xF6chte, \xFCbernahmen wir das Format eines Buches. Es soll die Haptik eines guten alten Buches besitzen, um eine gewisse Wertigkeit zu suggerieren.  \n*Gef\xFChlswelt* m\xF6chte ein Hybrid der Sinnlichkeit eines Buches und der M\xF6glichkeiten eines digitalen Devices sein.\n**Das Cover**\nDas Cover ist f\xFCr unsere Nutzer ein Tr\xE4ger, um seine Kreativit\xE4t auszuleben. Es ist auswechselbar, um alle Abschnitte seines Lebens unterschiedlich zu gestalten. So kann vielf\xE4ltig und kreativ experimentiert werden, ohne sich Sorgen machen zu m\xFCssen, dass der erste Entwurf gelingt.\n**Der Interaktionsstil**\nDer verstehende Stil: *Gef\xFChlswelt* ist ein geduldiger, souver\xE4ner Zuh\xF6rer, der sich zur\xFCcknimmt und offen ist f\xFCr die Individualit\xE4t und das Gef\xFChlsleben des Nutzers.\n\u2013 Alessa\n**Das Interaktionsmodell**\nDas Interaktionsmodell dient zur Veranschaulichung der Verhaltensregeln des Produkts.\nHierbei soll ersichtlich sein, was der Nutzer mit *Gef\xFChlswelt* machen kann und wie es auf den Nutzer reagiert. Dabei wurde darauf geachtet, dass das Nutzungserlebnis m\xF6glichst angenehm ist, um eine vertrauensvolle Beziehung zwischen dem Nutzer und *Gef\xFChlswelt* aufzubauen.\n\u2013 Janett\n\n\n\n![](https://docs.google.com/drawings/u/1/d/s9Y85UmZAbye-lw7_nCeGJQ/image?w=518&h=370&rev=17&ac=1)\n\n\n\n# **Das Konzept**\n## **Die Technik**\n\n**Unser erster Prototyp**\n**Hardware**\n**iPad Mini**\nDa der Fokus unseres Prototyps stark auf der Eingabe und Interaktion mit unserer Anwendung gelegen hat, haben wir uns f\xFCr eine fertige Hardware-Grundlage entschieden. Das Tablet deckte alle Hardware Komponenten ab, die wir ben\xF6tigten. \n**Software**\n**Cordova / Phonegap**\nDer Prototyp wurde in einer bekannten Umgebung als mobile Website entwickelt, um so auf unsere bisherigen Kenntnisse in HTML/CSS und Javascript aufzubauen. Um der mobilen Website auch auf Systemkomponenten (z.B. Kamera oder Mikrofon) Zugriff zu geben nutzten wir das Apache Framework Cordova, um eine hybride Applikation zu entwickeln, welche die L\xFCcke zwischen mobiler Website und nativer App schlie\xDFt. \nF\xFCr das Testen auf dem Ger\xE4t nutzten wir die Phonegap Developer App, mit welcher wir im Team plattformunabh\xE4ngig sowohl auf Windows oder auch Mac entwickeln und testen konnten.\nCordova ist unter der Apache 2.0 License ver\xF6ffentlicht.\n\n**VueJS f\xFCr Templates und Module**\nVue (gesprochen /vju\u02D0/, wie das englische view) ist ein progressives Framework zum Entwickeln von User-Interfaces. Wir nutzen Vue f\xFCr das Routing (Navigation) und um unsere Anwendung in Templates und Modulen (Komponenten) zu unterteilen. \nVue wurde unter der MIT License ver\xF6ffentlicht.\n**Sprache zu Text**\nF\xFCr die Sprache zu Text Funktion experimentierten wir mit verschiedenen Online-Speech-Recognition-Anbietern. Zun\xE4chst die Web Speech API: Diese funktionierte auf der Desktop-Umgebung hervorragend, jedoch wurde sie noch nicht von Safari unterst\xFCtzt. Danach nutzten wir die iOS Speech Recognition, welche funktionierte, jedoch keine zufriedenstellenden Ergebnisse im Vergleich zur Google Cloud Speech API lieferte, welche eine Cloud-L\xF6sung w\xE4re. \n**Handschrift zu Text**\nZur Handschrifterkennung nutzten wir die SDK von MyScript, welche Schriften und Formen erkennt und diese umwandeln kann. Dies funktionierte schnell und zufriedenstellend.\n**Die Datenbank**\nAls Testdatenbank bot sich WebSQL f\xFCr uns an, obwohl diese nicht weiter gewartet und von der W3 empfohlen wird. Cordova schl\xE4gt WebSQL dennoch als Speicherl\xF6sung vor. WebSQL basiert auf einer Variante von SQL, somit konnten wir f\xFCr unsere Zwecke testen und Erfahrungen sammeln, ob ein Datenbank Management System, wie zum Beispiel SQLite, f\xFCr unser Endprodukt in Frage kommt. \n\u2013 Max\n**Die ERM Skizze**\nUm eine \xDCbersicht \xFCber die n\xF6tigen Entit\xE4ten und deren Beziehung f\xFCr unsere zuk\xFCnftige Datenbank zu machen, haben wir eine grobe Skizze angelegt.\nDabei haben wir uns dazu entschieden, die *Sammelmappe* und den *Papierkorb* als State-Attribute den *Eintr\xE4gen* zuzuordnen.\nEin Exemplar von *Gef\xFChlswelt* soll jeweils nur einen registrierten Nutzer haben, damit die Privatsph\xE4re gesch\xFCtzt werden kann.\nEin Journal darf aus verschiedenen Eintr\xE4gen bestehen.\nEin Template kann f\xFCr verschiedenen Eintr\xE4ge ausgew\xE4hlt werden, jedoch kann ein Eintrag nur aus einem Template bestehen. Die Templates bestehen aus entweder einem oder mehreren, verschiedenen Modulen, die sich der Nutzer ausw\xE4hlen kann. Damit werden auch verschiedene Module in mehreren Templates verwendet werden.\n\n\n![](https://lh3.googleusercontent.com/VfhTfAqBCHG9EtY1nZsfzJtlND6Ajog7j-r6XVuiegfvRBPb3byhS2dvwJ8YfNd-_0arhidv-GJUlFTv7sCOC0smoAG6fs1On24bhFaCsvfTXokisw-WvO-QMNcTCpX3s4lS_LGq)\n\n\n*ERM (Entity\u2013Relationship Model) Skizze*\n\nWeiterf\xFChrend soll noch ein logischer Entwurf entwickelt und anschlie\xDFend sollen mittels SQL (Structured Query Language) unsere Datenbest\xE4nde angelegt werden.\n\u2013 Janett\uFFFD\n**Der MVP Prototyp**\n\n![](https://lh6.googleusercontent.com/P_X2UP5nCy5lAH7Z5uz1KqQDP8Q_0dNZCAazOJW0-SOeV4C5iLI2cDMwRmK429xhhejKIioor9GqAe7JXSNIBomDpYoSMWO6dUjgm-XTEeSXiAQ5VBHSVl1lp4tBcCwkNmk89Iyv)\n\n\n*Abbildung, Anhang*\n**Journal anlegen und durchst\xF6bern**\nIn einer \xDCbersicht soll man Journals anlegen, ausw\xE4hlen und l\xF6schen k\xF6nnen.\n\n**Eintrag anlegen**\nInnerhalb dieser Journals soll man Eintr\xE4ge machen k\xF6nnen, indem man eine leere Seite oder ein Template w\xE4hlt.\n\n**Module ausw\xE4hlen**\nAuf der leeren Seite soll es eine Toolbar geben, \xFCber diese man Module (Mandala, Text, Free Canvas) einf\xFCgen kann.\n\n**Speichern**\nDas Speichern der Eintr\xE4ge soll automatisch erfolgen.\n\n**Haptik des Covers**\nDas \xE4u\xDFere Look & Feel unseres Prototyps sollte stabiler werden sowie verschiedene Cover-Materialien ausprobiert werden.\n\u2013 Max\n**Die Softwarearchitektur des ersten Prototyps**\n\n\n![](https://lh5.googleusercontent.com/rctMDWyfI8qXY9dT9rZ5pFrO3vnjD8siw8SM-rXKGQ9T2g3dTg_EArrFRxhYc-3ubZohmJmY3sF53kt_vRZAZJRiuZBTdHtg-7tHSy4jnEuYX3N8ix2puxI7GdtnQJk5550j-JQj)\n\n\n\nIm ersten Schritt dient der dev_www Ordner zum gemeinsamen arbeiten und um alle Codeschnipsel zusammenzuf\xFChren, so dass aber der bereits vorhandene Teil der Software Architektur nicht ver\xE4ndert wird und so eine Sicherheitsebene geschaffen wird. \nAls n\xE4chstes wird Vue.js genutzt, um den Rahmen zwischen unseren externen Libraries wie P5.js etc. und dem User-Interface zu schaffen. Es ist f\xFCr das User-Interface unserer gesamten Pages der Anwendung zust\xE4ndig.\nWir nutzen einen Gulp-Workflow um unsere Daten zu organisieren und mit Browserify zu b\xFCndeln. Dies vereinfacht enorm unseren Workflow und spart uns Zeit. Zudem k\xF6nnen wir so durch eine Babel Integration neue ES6 Befehle nutzen und haben die M\xF6glichkeit Vue Templates zu nutzen.\nIm www Ordner befinden sich nun alle zusammengef\xFCgten Daten. Nun kommt Cordova ins Spiel, welche unsere HTML & JS Dateien verpackt und es so auf den bekannten mobilen Plattformen laufen l\xE4sst.\n- Alessa\n\n**Die Funktionen**\nUm uns einen \xDCberblick \xFCber alle m\xF6glichen Funktionen bzw. Nutzeroptionen die im Prototypen umgesetzt werden k\xF6nnten zu machen, wurde die unten folgende Auflistung erstellt. Dies dient zur Visualisierung aller Optionen, wird jedoch nicht als endg\xFCltige Architektur vorgesehen.\n\n![](https://lh5.googleusercontent.com/IGdZ2MCln3ea6ptwe46ju9b9UrvnJ21nXjrUfpRzMMG9AqhaW9i3xjWVTe-Kj-VlIp3pMIxN4-MLkKcXfKTBCOzUcFl7yrxW3MaEFXXud3_Wiyk34XxHpf3Xi9S6I9J3bSuJhEsy)\n\n\n*Abbildung, Anhang*\n**Die Legende**\nDie Aktionen in dunkelorangenen, eckigen Klammern werden vom Nutzer ausgef\xFChrt. Hier darf der Nutzer eine Aktion ausf\xFChren, wie zum Beispiel mit der Kamera einen QR-Code lesen lassen oder eine Auswahl treffen, wie zum Beispiel eine Font ausw\xE4hlen.\nDie Aktionen als dunkelorangene, offene Dreiecke werden vom System automatisch \xFCbernommen. Dies passiert sofort und ohne weitere Aufforderung vom Nutzer, wie zum Beispiel das Abspielen einer Animation.\nDie schwarze, h\xFClsenf\xF6rmige Umrandung zeigt auf, was der Nutzer immer tun kann, wie zum Beispiel das Cover von *Gef\xFChlswelt* auswechseln oder dieses individueller gestalten.\nDie schwarzen, abgerundeten Rechtecke indizieren eine Option die auch durch eine Fingergestik aufrufbar ist.\nDie schwarze, hexagonale Umrandung weist auf den Zustand von *Gef\xFChlswelt.*\n\n![](https://lh4.googleusercontent.com/k6jKMdVj646fZ_yU5MIk0qmqfl0uyxOahaiJ7X5P2sdgCMfFDCDQOTzum2chg0jzB4Vxf1fDbRs6Ned6W-YNc37hUL8wbTOLSS6xK73mP5AEZDPVdFHWf8C72lvBHtJrGSzhKTyO)\n\n\n\u2013 Janett\n\n**Die Produktbeschreibung**\n\n![](https://lh5.googleusercontent.com/N94wsFnfoI96EeN_KqYiVUMPiiu3dp3OCd4ffkpf721QaO0dQqGEWtHQYe3Y5Hwoq5SZWuSo2i3t7GCA04dsVs3dpg_4_W06IUOwkXS0JgmNVYVqz1LVZuWdswmgm9tSGZAFB8c3)\n\n\n*Abbildung, Anhang*\n**Hardware**\n**Single-Board-Computer**\nAls Grundlage von *Gef\xFChlswelt* ben\xF6tigen wir einen Single-Board-Computer, auf dem ein Linux-Betriebssystem und unsere Anwendung laufen kann.\n**Akku**\nLithium-Polymer-Batterie mit ca 32,4 Wattstunden, vergleichbar bei dem iPad.\nDer Akku kann \xFCber ein USB-Ladekabel aufgeladen werden.\n**Speicher f\xFCr System & Anwendung**\nDas System sowie die Anwendung werden auf einen internen Flashspeicher gespeichert.\n**SD-Kartenspeicherslots**\nAlle Nutzerdaten sowie die Datenbank werden auf einer herausnehmbare SD-Karte gespeichert. Es wird dabei zwei SD-Kartenslots geben, um jederzeit seinen Speicher auf eine gr\xF6\xDFere SD-Karte zu transferieren. Die SD-Karte mit den Nutzerdaten wird verschl\xFCsselt.\n**Display**\nEin LCD Multi-Touch Display mit einer Gr\xF6\xDFe von 7,9 Zoll.\n**Stylus (Stift)**\nMit den Sensoren des Stylus soll es f\xFCr den Nutzer so angenehm wie m\xF6glich gemacht werden, seine Eintr\xE4ge zu schreiben. Deshalb wird der Stylus drucksensibel und \xFCbertr\xE4gt den Winkel des Stifts, um beispielsweise zu schraffieren. Dar\xFCber hinaus soll es m\xF6glich sein, beim Schreiben seine Handfl\xE4che auf das Display zu legen, ohne dabei die Funktionalit\xE4t des Stifts zu beeintr\xE4chtigen.\n\n**Bluetooth Schnittstelle**\nDer Stylus sowie Extensions kommunizieren \xFCber eine Bluetooth-Schnittstelle miteinander.\n\n**Kamera**\nWir haben zwei Kameras, eine Frontkamera \xFCber dem Display sowie eine R\xFCckkamera, um Bilder aufzunehmen oder QR-Codes zu scannen. Diese Anordnung ist auch g\xE4ngig bei Tablets.\n\n**Fingerabdrucksensor**\nEs wird auf der R\xFCckseite zudem einen Fingerabdrucksensor geben, um sich so zu authentifizieren.\n**Mikrofon**\nUm Audioaufnahmen zu erm\xF6glichen oder f\xFCr die Speech-to-Text-Funktion haben wir ein Mikrofon integriert.\n\n**Cover**\nDurch austauschbare Covers soll der Nutzer *Gef\xFChlswelt* individualisieren k\xF6nnen.\n\u2013 Max\n\n**Software**\n**\xDCbersicht**\nDie Anwendung wird eine \xDCbersicht \xFCber die angelegten Journals haben. Hier kann man neue Journals anlegen, l\xF6schen, bearbeiten und durchsuchen. Es dient als eine Art Bibliothek und Startpunkt.\n**Sammelmappe**\nIn der Sammelmappe werden alle favorisierten Eintr\xE4ge gesammelt. Sie dienen als Lesezeichen und verweisen auf den jeweiligen Journaleintrag.\n\n**Papierkorb**\nIm Papierkorb finden wir alle gel\xF6schten Eintr\xE4ge und Journals.\n\n**Journals**\nEin Journal besteht aus einem gew\xE4hlten Cover und verschiedenen Eintr\xE4gen.\n\n**Eintr\xE4ge**\nEin Eintrag besteht aus einem Template.\n**Templates**\nEin Template besteht entweder aus vordefinierten und angeordneten Modulen oder aus einem freiem Template, in das Module hinzugef\xFCgt und angeordnet werden k\xF6nnen.\n**Datenbank**\nDurch seine serverlose Architektur und das Speichern der Tabellen in eine Datei (relationale Datenbank) bietet sich SQLite als Datenbankl\xF6sung f\xFCr *Gef\xFChlswelt* an. SQLite ist zudem Public Domain.\n**Module**\n**Bild**\nDas Bild-Modul erm\xF6glicht es, aufgenommene Bilder in den Eintrag hinzuzuf\xFCgen.\n**Audio**\nMit dem Audio-Modul kann man Memos oder Song-Schnipsel aufzeichnen, um sie in seinem Eintrag zu speichern.\n**Text**\nDas Textmodul bietet mehrere Eingabem\xF6glichkeiten. Entweder man gibt den Text \xFCber eine Displaytastatur ein, \xFCber Spracheingabe oder Handschrifterkennung. Am Ende wird alles in Text umgewandelt, dessen Schriftart man anpassen kann. \n\xDCber dritte Anbieter wie Calligraphr k\xF6nnen Nutzer auch ihre eigene Handschrift entwerfen oder andere Fonts \xFCber QR-Code in ihre *Gef\xFChlswelt* \xFCbertragen.\nF\xFCr die Handschrifterkennung nutzen wir die MyScript SDK, f\xFCr die wir pro Device Lizenzen kaufen m\xFCssen.\nDie Spracheingabe m\xFCsste offline funktionieren und pr\xE4zise sein. Ein vergleichbares System entwickelt aktuell Google und wurde bereits erfolgreich auf einem Nexus 5 getestet. Wenn man dort kein Lizenzmodell erwerben kann, m\xFCsste man auf Basis von Mozilla Deep Speech, einer Open Source Speech-To-Text Engine, eine L\xF6sung entwickeln bzw. adaptieren.\n**Free Canvas**\nIm Free-Canvas-Modul k\xF6nnen Nutzer frei zeichnen, malen oder zum Beispiel einen handschriftlichen Eintrag schreiben. Hier wird nichts umgewandelt.\n**Generative Visualisierung**\n\xDCber Generative-Visualiserungs-Module wird dem Nutzer die M\xF6glichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Eintr\xE4ge anzulegen.\nDurch Stifteingaben, Mikrofon oder Kamera Input k\xF6nnen so individuelle Visualisierungen durch einen Algorithmus erzeugt werden.\nEin Beispiel w\xE4re das Mood-Mandala-Modul, in welchem der Nutzer individuelle Mandalas anhand einer Zeichnung mit dem Stift generieren kann, um sie dann auszumalen.\nGenerative Visualisierungen sollen eine Kernkomponente von *Gef\xFChlswelt* werden, an deren Anfang wir uns erst befinden.\n**Module von Dritten**\nDurch eine SDK bieten wir dritten Entwicklern die M\xF6glichkeit, eigene Module f\xFCr *Gef\xFChlswelt* zu schreiben. Nutzer k\xF6nnen diese dann via QR-Codes \xFCber den Template-Store installieren.\n\n**QR Reader**\n**Updates**\nDa *Gef\xFChlswelt* nicht am Internet angeschlossen ist, werden Software Updates \xFCber QR-Codes eingespielt.\n**Software Injection SDK**\nModule und Templates von Dritten k\xF6nnen ebenfalls \xFCber QR Codes aus dem Template Store installiert werden.\n**Sicherheit**\n**Offline**\nDa in *Gef\xFChlswelt* die innersten und intimsten Gedanken und Gef\xFChle unserer Nutzer gespeichert werden, wollen wir diese Daten vor Einsicht Dritter sch\xFCtzen. Mit der Entscheidung, *Gef\xFChlswelt* keine Internet-Anbindung zu geben, hat der Nutzer so die Kontrolle \xFCber seine Daten.\n**Fingerprint**\nDer Nutzer kann seinen Fingerabdruck speichern, um damit schnell Zugriff auf *Gef\xFChlswelt* zu bekommen. Diese Funktion l\xE4sst sich auch deaktivieren.\n**Passwort**\nWir haben festgestellt, dass Fingerprint nicht so sicher ist, wie bisher gedacht.\nDeshalb bleibt bei uns das Passwort als Authentifizierungsebene erhalten. Sollte aus einem Grund der Zugang \xFCber Fingerprint verwehrt bleiben, hat der Nutzer noch die M\xF6glichkeit, sich mit seinem Passwort anzumelden.\n**QR-Schl\xFCssel**\nEine potenzielle Alternative w\xE4re es, unseren Nutzern zus\xE4tzlich einen QR-Code-Schl\xFCssel mitzugeben, der bei dem Fehlen eines Fingerprints oder auch Passworts die M\xF6glichkeit gibt, wieder auf die eigenen Daten zugreifen zu k\xF6nnen.\n**Verschl\xFCsselung**\nWir verschl\xFCsseln unsere Daten mit einer AES-256-Verschl\xFCsselung, vergleichbar mit der Methode beim iPhone oder iPad, um so eine schnelle und energieeffiziente Verschl\xFCsselung zu bieten. Wichtig ist, dass selbst nach dem Entwenden der SD-Karte die Daten nicht ohne Schl\xFCssel gelesen werden k\xF6nnen.\nUns ist bewusst, dass es keinen hundertprozentigen Schutz der Daten gibt und auch die sicherste Verschl\xFCsselung ist bei einem zu schwachen Passwort wenig hilfreich.\n**Extensions**\n**Coping-Plattformen**\nWir m\xF6chten Entwicklern die M\xF6glichkeit geben, eigene Produkte um *Gef\xFChlswelt* herum zu entwickeln oder mit *Gef\xFChlswelt* zu verbinden. Beispielsweise um Gef\xFChle und Gedanken durch VR/AR in die dritte Dimension zu bringen. Inspiration k\xF6nnte Google Tiltbrush sein.\n**Emotional-Tracker**\nJeder vierte deutsche Internetnutzer setzt auf Gesundheits- oder Fitness-Tracker. Dass neben der k\xF6rperlichen Fitness in naher Zukunft  auch mentale Fitness getrackt wird, ist nur noch eine Frage der Zeit, zumal man L\xF6sungen wie vom Anbieter Sentio Solutions mit ihrem Myfeel-Band vorbestellen kann. Hier m\xF6chten wir M\xF6glichkeiten schaffen, dass man sp\xE4ter diese Daten in seinen *Gef\xFChlswelt*-Eintrag einflie\xDFen lassen kann.\n**Community**\n**Template Store**\nDer Template Store ist der Marktplatz f\xFCr Templates und Module. Gef\xF6rdert durch die Community, k\xF6nnen hier kommerzielle und oder nicht kommerzielle Templates ausgew\xE4hlt und via QR-Code auf *Gef\xFChlswelt* \xFCbertragen werden. Jedes Template oder Modul wird dabei redaktionell gepr\xFCft und nach Schadcode untersucht.\n**Cover Store**\nHier k\xF6nnen Cover, von uns oder der Community gestaltet, erworben werden. \n\u2013 Max\n\n## **Das Design**\n\n**Die \xC4u\xDFere Gestaltung**\nUm das Gef\xFChl eines Buches nicht zu verlieren, versuchten wir einige Elemente des \u201E**Buchgef\xFChls**\u201D zu \xFCbernehmen. Ein Buch besteht genau genommen aus Holz, also einem lebendigen Material. Deswegen ist es unser Ziel, dem Journal auch einen \u201E**nat\xFCrlichen Charakter**\u201D zu vermitteln. Es erh\xE4lt eine gewisse **Handlichkeit**, ist robust.\nEs kann sich verformen und altern, so dass eine ganz eigene \xC4sthetik entsteht. Ein ganz wichtiger Aspekt eines Journals ist, dass es mit seinem Besitzer eine Geschichte entwickelt.\nKleine Bildchen, die aus dem Journal herausschauen oder eine Wellung der Bl\xE4tter erinnern den Besitzer an **Geschichten** aus seinem Leben. **Covers** helfen dem Nutzer dabei, diese Form der Erinnerung an seine pers\xF6nliche Geschichte beizubehalten. Diese sollen immer wieder neu gestaltet werden k\xF6nnen. Es ver\xE4ndert sich, so wie sich auch unser Nutzer ver\xE4ndert.\nUnser Ziel ist also, vom aufger\xE4umten, sterilen Gef\xFChl des Digitalen wegzugehen, hin zu einer lebenden \xE4u\xDFeren Gestaltung, um einen Begleiter zu erschaffen, der durch alle H\xF6hen und Tiefen des Lebens geht.\nF\xFCr unsere fokussierte K\xE4ufergruppe ist es auch nicht wichtig, dass unser Device einen besonders exklusiven, teuren Eindruck macht. Es soll **lebendig** und **kreativ** erscheinen und damit f\xFCr unsere Nutzergruppe vertraut erscheinen.\n\u2013 Alessa\n**Die Innere Gestaltung**\n**Der Charakter von** ***Gef\xFChlswelt***\n*Gef\xFChlswelt* soll Klarheit im Kopf schaffen. Deshalb soll es im Charakter **einen ruhigen Gegenpol** zu seinem Nutzer bilden, um **ausgeglichen, entspannt, subtil und souver\xE4n** zu sein, und eine Atmosph\xE4re zu schaffen, sich seiner Gedanken und Gef\xFChle anzunehmen und diese zu manifestieren. Das bedeutet auch, dass *Gef\xFChlswelt* **unkompliziert** und **selbsterkl\xE4rend** ist und so den Nutzer durch einfache Arbeitsschritte zum Ziel f\xFChrt. Durch gezielte und reduzierte Funktionalit\xE4t ist *Gef\xFChlswelt* **fokussiert** und gibt dem Nutzer nur die n\xF6tigen Funktionen, die er gerade in dem Kontext gebrauchen kann.\nDaten werden **gut organisiert** abgespeichert, so dass der Nutzer sp\xE4ter seine Eintr\xE4ge ordnen und wiederfinden kann.\n*Gef\xFChlswelt* wirkt zun\xE4chst f\xFCr seine Nutzergruppe **unkonventionell**, was sich sp\xE4ter zu **kreativ** entwickeln soll. Das zeigt sich in den bislang nicht gekannten M\xF6glichkeiten des Journaling, sei es durch die verschiedenen digitalen Eingabemethoden oder den generativen Modulen, die dem Nutzer zur Verf\xFCgung stehen.\n \nDas f\xFChrt zur n\xE4chsten Eigenschaft von *Gef\xFChlswelt*, es ist **inspirierend** und **leitend**, indem es Vorschl\xE4ge f\xFCr gewisse Journaling Methoden (Templates) anbietet, abh\xE4ngig von dem Ziel, welches der Nutzer hat. \nEs bietet Hilfe an und gibt dem Nutzer eine Einf\xFChrung und Vorschl\xE4ge. Es gibt jedoch nur Hilfestellung, wenn n\xF6tig, um den Nutzer nicht abzulenken. Das zeigt sich in den Inhalts- bzw. kontextbezogenen Auswahlm\xF6glichkeiten in Men\xFCs oder Toolbars.\nDer Nutzer soll sich bei der Interaktion mit *Gef\xFChlswelt* gut aufgehoben und wohl f\xFChlen und sich bei seinem Eintrag keine Sorgen machen m\xFCssen, wie zum Beispiel \xFCber den Speicher. In dieser Hinsicht soll *Gef\xFChlswelt* **gro\xDFz\xFCgig** sein, so dass gen\xFCgend Speicher vorhanden ist. Die zuverl\xE4ssige Speicherung sorgt daf\xFCr, die Gedanken und Gef\xFChle unseres Nutzer sorglos \xFCber einen langen Zeitraum zu erfassen. \n**Die Gestaltungssprache**\nF\xFCr unsere Nutzergruppe soll *Gef\xFChlswelt* nicht wie eine einfache digitale Kopie ihres analogen Journals sein. Die Herausforderung besteht darin, den Eintrag selbst wie einen analogen Journaleintrag aussehen zu lassen, dabei aber die digitalen Funktionen unterzubringen. Den digitalen Elementen wollen wir keinen realistischen Skeuomorphismus verleihen, denn auch, wenn wir \xE4u\xDFerlich einem Buch \xE4hneln, sind wir im Innern digital. Das wollen wir auch nicht verstecken, sondern die Sinnlichkeit des Analogen und die Vorteile des Digitalen verkn\xFCpfen.\nDurch Metaphern f\xFChlen sich unsere Nutzer \u201Ezu Hause\u201D. Sie haben optisch ein Journal vor sich und k\xF6nnen darin durch die bekannten Gesten bl\xE4ttern und interagieren, sowie mit unserem Stylus hineinschreiben. Ihr neuer Journal-Eintrag startet mit einer leeren Seite. Hierf\xFCr verwenden wir kein 100% Wei\xDF, sondern eines mit einem leichten Cremeton. F\xFCr Farben generell nutzen wir Pastellfarben, die etwas abgemattet sind, um an Farben auf Papier bzw. dem CMYK-Farbraum zu erinnern. \n\u2013 Max\n\n**Unsere leitende Idee**\nGef\xFChlswelt soll dem Nutzer nicht das Gef\xFChl der Verlorenheit im Unendlichen geben. Ihm soll es m\xF6glich sein, einen Rahmen zu schaffen. Dieser wird anhand einer eigens gezeichneter Form erm\xF6glicht, die der Nutzer durch eine freie Zeichnung bestimmt. Diese geschlossene Form bezeichnen wir als *Gedankensph\xE4re*. Jede *Gedankensph\xE4re* repr\xE4sentiert ein eigenes Journal mit einer begrenzten Anzahl an Eintr\xE4gen. Es kann jedoch eine unendliche Anzahl an *Gedankensph\xE4ren* angelegt werden.\n\n![](https://lh6.googleusercontent.com/AQJzvX2zAfNDhlpClnza1ziEJXCuK8XJ52Pp5uq3NWD-_PYuaid92BexOSSpBM74z1dS-_PyY_3Uk5HbRB8T5nD_6ZRsXhusx3NZI2TSpyF__zgOUhKivzyB03XthxKsgXDUQLIA)\n\n\nDaf\xFCr soll eine unendlich gro\xDFe Fl\xE4che existieren, auf welche der Nutzer *Gedankensph\xE4ren* zeichnen kann. Auf diesem zweidimensionalen Raum kann sich der Nutzer durch Touch oder mit dem Stift frei bewegen. Die Navigation funktioniert in alle Himmelsrichtungen.\n\n![](https://lh6.googleusercontent.com/iJjSABV7Bv4yWNQmgE4EuPrCWMkssJmTwUj9PO5EV4kPcEB12p6PTU8wGNlpQtPrWb7NfwUeOacK3LjTqDT1ULyy8bOkg15jsUGNhnFLG1nSIbfEOdi-UIKSwXCnBQxJoijezIrZ)\n\n\n**Die Interaktionsmethode**\nDie prim\xE4re Interaktionsmethode f\xFCr den Nutzer soll durch Zeichnen, Malen und vor allem der eigenen Handschrift erfolgen. Wir m\xF6chten, dass der Nutzer seinen eigenen Duktus in *Gef\xFChlswelt* zu sch\xE4tzen lernt. Hierbei ist es wichtig zu beachten, dass es auch Kurzformen der Zeichnungen geben soll, um einen m\xFChseligen Prozess zu vermeiden. Unsere Intention ist es, vom starren Ger\xFCst eines Men\xFCs und jeglicher Buttons wegzukommen und eine innovative Art der Interaktion zu schaffen.\n\n![](https://lh3.googleusercontent.com/xq-mwptNiFAFwlKkQq-1y0KhjaP7hROeaCwF8lDFhqvP9SWYiZL0QU5gB9yFHnR8_d4vNeH0KS6bDAlR5KE9i3f-1oPgMPfL349hDWToB0KSOy20LWeO0j8QJ0EQlQV2D2YTW0ZW)\n\n\n*Ein Beispiel hierf\xFCr w\xE4re die Men\xFCeinstellung, um die Willkommens-Animation von Gef\xFChlswelt, welche nach dem \xD6ffnen des Covers abgespielt wird, zu deaktivieren.***\uFFFD**\n**Eine Auswahl treffen**\nDas Umkreisen oder abhaken einer Entscheidungsm\xF6glichkeit soll best\xE4tigen, dass man diesen Inhalt ausgew\xE4hlt hat. Das durchkreuzen f\xFChrt zum Abbruch, Verneinen oder Schlie\xDFen der Option. Dies w\xE4re f\xFCr die Grundeinstellungen und Module vorgesehen. \n\n![](https://lh6.googleusercontent.com/6GB-n7d48InL8SIURQBbxJ106DPB1_gfirW3y5Y6I2_L6cOHe5xElZAG82VUIJ1MoGS23Iwr5J3psYnQtksNqSvZNSNHDipzjeLGdvUg7zuTtTP3fmy7YPzmZbBi62oB_MbLP7VN)\n\n\n\n\n![](https://lh5.googleusercontent.com/9Oi4zaEDLnCkPDbubeyjS8wW6PD7fuyp2M7wCzxOwFn8BVDMfxjfbikN0DMoyt-JHH8dLD72zARNaY-Fqke_uIHCjzWfMGjCFj_B_E3-qHmwpidnj9mmLYCWJG9WSIF8AFmJZWUd)\n\n\n**Hilfestellung von** ***Gef\xFChlswelt***\nWenn der Nutzer nicht weiter wei\xDF und das Wort Hilfe schreibt, soll im Hintergrund eine anleitende Animation abgespielt werden, die den Nutzer leitet. Dies geschieht durch einen Kreis, welcher die Stiftspitze simuliert und so dem Nutzer die Bewegungsabl\xE4ufe bzw. Muster vorf\xFChrt.\nDies nimmt dem Nutzer die Fl\xE4che zur Eingabe nicht weg, sondern verl\xE4uft im Hintergrund und verschwindet nach zwei Abl\xE4ufen.\n\n![](https://lh6.googleusercontent.com/CDX5wFKOAuTWDRIFxHlDQ8FZoaXTA6JDtBG7MIFv7HTSmQZBN3WWfIJHfvmCs9oOHr3lT-WkABWcbmpEWbIg8AZ7X6KjiGaAbtMPqgfoCbGTFF95G7KuxePpKjB18ykNqH1RjHbs)\n\n\n\n![](https://lh4.googleusercontent.com/gR165XbI0ohapsq6F2jBzly2q1z2OVQ1Bz8VD9WxZ-I6vD4J0FUmF4LIT1wuJgRKkgZbgLEvi9OoRXp7ujTNdWMzOQUasF9rcSl-q0Dp4JfWlC16udAM1wxctJ1Aey_F8F432uCC)\n\n\n**Die Module**\nEin Modul kann von dem Nutzer anhand einer Freihandform hinzugef\xFCgt werden. Innerhalb dieser Form wird der Modulname geschrieben. Die Form dient als Maske und Fl\xE4che f\xFCr den Modulinhalt.\nEin Beispiel f\xFCr aufzurufende Module w\xE4re der Inspire Modus. Dieser soll dem Nutzer Anregungen geben, um seine pers\xF6nliche Note zu finden und ausleben zu k\xF6nnen. Dies erfolgt durch Vorschl\xE4ge, die innerhalb einer Form angezeigt werden k\xF6nnen. Hierbei wollen wir eine kurze Modul-Vorschau bieten, durch die der Nutzer eine Auswahl treffen kann. Durch das Zeichnen eines Kreuzes in der Vorschau wird das n\xE4chste Modul angezeigt, durch einen Haken wird das Modul best\xE4tigt und somit ausgew\xE4hlt. Der Modulname erscheint zus\xE4tzlich unterhalb der Visualisierung, damit der Nutzer \xFCber die Zeit, die Namen seiner Lieblingsmodule lernen kann, um sie schneller hinzuzuf\xFCgen zu k\xF6nnen.\n**Die Sicherheit**\nEine Idee w\xE4re auch, die eigene Handschrift als Passwort einzusetzen. Damit k\xF6nnte man komplizierte und lange Passw\xF6rter potenziell vermeiden. Dadurch bleibt dem Nutzer Mikrostress erspart. \xC4hnlich wie bei Dynahand w\xFCrde es dem Nutzer m\xF6glich sein, eine eigene Form als Passwort zu erstellen. Dies w\xE4re nur eine zus\xE4tzliche Option, zu den bereits genannten M\xF6glichkeiten der Passworteingabe.\n\n![](https://lh5.googleusercontent.com/V62z8kv2CDL5JOv3fJofWTl-I13UY5MCmsQIDUwClJw305W_iY8YYoVieVUahVwpG-hE8ncS6z_bKo9KFVL_T1yuOOHSTc2jgtImogm9IF2Em6dehkyvpazTyBX6U8yozzmJ6zk8)\n\n\n**Die Eintr\xE4ge**\nEinzelne Eintr\xE4ge werden als *Gedankensplitter* benannt. Die Anzahl an *Gedankensplittern* beeinflusst die Gestaltung der inneren Fl\xE4che der *Gedankensph\xE4re.* Desto mehr *Gedankensplitter* es gibt, desto mehr Segmente werden generiert. Diese Ver\xE4nderung kennzeichnet, dass ein Eintrag innerhalb eines Journals erstellt wurde. Dies soll dem Nutzer ein Gef\xFChl der Progression geben und auch veranschaulichen.\n\n![](https://lh3.googleusercontent.com/2fOBPWjIy_0NGWu--zx9BjblyES-orc3dwgpAP3_ElE2ndt5NoVUgEZkzFuDNZgRdaLdMauPd-C9Kl_PWAXCQzsuR0khNPrm0DQI_EaWzct-jnIATJoAkjwztmKEQH0XXSQ-hgDy)\n\n\nEin neuer Eintrag wird dadurch erstellt, indem der Nutzer die Fl\xE4che des gezeichneten Journals ber\xFChrt, sei es mit dem Stift oder mit dem Finger.\n\n\n![](https://lh5.googleusercontent.com/HfNreKuYhTUvgN8h_GFptsmyTKK8N0h42n618rWphizeufVm3XF9NVYNZJChIk8amFNmJGoa8EOmcTOzkgooSslMQb69cZP3-2HfSKZGDPnKFl8OMWt_SkEM8iQrnflyTEz_fyTJ)\n\n\n\n\n**Unser n\xE4chster Schritt: Die Umsetzungsphase**\nDieses Ideen Ger\xFCst dient zur weiteren Bearbeitung unseres Prototyps. Ein n\xE4heres Usability-Testing dieser Ideen steht uns in der Entwicklungsphase noch vor. Durch Rapid Prototyping wollen wir noch festlegen, was f\xFCr das Endprodukt realisierbar und sinnvoll w\xE4re.\n**Hinweis**\nDie Abbildungen dienen zur Visualisierung der textlichen Beschreibung des User Inputs und des gew\xFCnschten Outputs. Die gew\xE4hlte Illustrationsmethode spiegelt nicht das Endprodukt wieder.\n\u2013 Janett, Max\n\n## **Das Management**\n\n**Der Business Canvas**\nMit dem Business Canvas bekamen wir einen \xDCberblick \xFCber die wichtigsten Schl\xFCsselfaktoren unseres Management Konzepts.\n\n![](https://lh3.googleusercontent.com/592d44bhqCrKFoDJlwHGFp3pvhRAtMnOEP-DleR-Rs2tXgL1A5BvmspTVcRaZ4E5mP9sQtInGwpjfWlWS25HEtv3u9tU5XpmSlHj6g1u0SnvIAK5haW51pbYn0b7OqUfM3tBxjS7)\n\n\n*Abbildung, Anhang* \n\u2013 Alessa\n**Die Stakeholder Map**\nDie Stakeholder Map nutzen wir, um die Abh\xE4ngigkeit aller Beteiligten untereinander und mit *Gef\xFChlswelt* aufzuschl\xFCsseln. \n\n\n\n![](https://lh6.googleusercontent.com/z0rve4nI3RJSJmXce7ZXj5XHCQllqaVLbtwCeoFToXcuJ4W7jiRoczel4vMT3AJxbduan1aNacv1iuqcv3fbFtfD8XX9vOKffAUu6544vSgf7dgIlQ1jHfl-7NP-U7objc5TySn5)\n\n\n\n**Ableitung:**\n*Gef\xFChlswelt* wird als Konzept verkauft. Produziert wird bei einer unabh\xE4ngigen Firma, welche g\xFCnstige und unseren Qualit\xE4tsstandards entsprechenden Kondition bietet. Unsere Angestellten k\xFCmmern sich um die Social-Media-Pr\xE4senz, SEO etc. Um die Produktionszahl und Nachfrage zu testen, werden fr\xFCh Beta-Tester/eine Kickstarter-Kampagne gestartet. Eine Preorder-Seite ziehen wir auch in Betracht. Der Hauptverkauf findet \xFCber unseren *Gef\xFChlswelt-*Onlineshop **statt. Deswegen werden auch unser Marketing-Scope Influencer und Online-Magazine sein, da diese Medien f\xFCr unsere Zielgruppe am besten geeignet sind.  Das Produkt wird direkt an den K\xE4ufer/Endnutzer geliefert.\nIn Zukunft k\xF6nnen wir uns vorstellen, mit Vertragspartnern wie Weltbild, Hugendubel oder TKMaxx zusammenzuarbeiten. Dadurch reagieren wir auf die K\xE4ufergruppe Eltern, welche *Gef\xFChlswelt* als Geschenk f\xFCr ihre Kinder kaufen m\xF6chte, jedoch eher in bekannteren L\xE4den einkauft, statt im Internet.\n\u2013 Alessa\n\n# **Die Vision**\n\n**Der Ist-Zustand**\nIn dieser Dokumentation sind bereits die grundlegenden Entscheidungen bez\xFCglich des Charakters der Anwendung, der Nutzergruppe und der technischen Umsetzung getroffen worden.\nWeiterf\xFChrend wird ein Prototyp umgesetzt, um jegliche Thesen, die in diesem Dokument vorgef\xFChrt wurden, im Idealfall zu best\xE4tigen. Innerhalb eines Usability-Tests sollte noch \xFCberpr\xFCft werden, ob das User Interface f\xFCr den Nutzer tats\xE4chlich selbsterkl\xE4rend und leicht zu bedienen ist. Die Best\xE4tigung einer angenehmen User-Experience k\xF6nnte durch die Beobachtung eines freiwilligen, kleinen Nutzer-Pools von 6 bis 7 Personen, die unseren Prototypen \xFCber einen kurzen Zeitraum testen, noch erzielt werden.\n**Der Soll-Zustand**\nUnsere Wunschvorstellung ist, dass *Gef\xFChlswelt* seinen Nutzern einen Ort bietet, an dem sich die Selbstoffenbarung als ein nat\xFCrlicher Prozess und als ein Freude bringendes Ereignis anf\xFChlt. Letztlich ist das Ziel: Ein klarer Kopf und ein ausgeglichener Gem\xFCtszustand, was ihnen verhelfen soll, ihre innere Mitte zu finden und damit auch gl\xFCcklicher zu werden.\n\u2013 Janett\n\n# **Quellenverzeichnis**\n\n**Webseiten**\nhttps://www.kjp.med.uni-muenchen.de/download/depr_erkrankungen_kjp.pdf, Dipl.-Psych. Yvonne Schiller: Wann ist es noch Pubert\xE4t, wann schon Depression? Depressive Erkrankungen bei Kindern und Jugendlichen. [Aktualisierungsdatum: 30.11.17] \nhttps://www.researchgate.net/publication/216626194_A_meta-analytic_investigation_of_the_relationship_between_emotional_intelligence_and_health, A meta-analytic investigation of the relationship between emotional intelligence and health [Aktualisierungsdatum: 06.12.17]\nhttps://www.researchgate.net/publication/222693042_A_comprehensive_meta-analysis_of_the_relationship_between_Emotional_Intelligence_and_health, A comprehensive meta-analysis of the relationship between Emotional Intelligence and health [Aktualisierungsdatum: 06.12.17]\nhttps://insights.ovid.com/pubmed?pmid=18725425, Positive Psychological Well-Being and Mortality: A Quantitative Review of Prospective Observational Studies [Aktualisierungsdatum: 06.12.17]\n https://www.neuewerte.de/blog/conversational-interfaces-ai-chatbots/, Conversational User Interfaces, AI und Chatbots [Aktualisierungsdatum: 06.12.17]\nhttps://www.sinus-institut.de/sinus-loesungen/sinus-milieus-deutschland/, Sinus Milieus \xDCbersicht [Aktualisierungsdatum: 05.12.17]\nhttps://www.onlinemarketing-praxis.de/glossar/personas, Begriffskl\xE4rung Persona [Aktualisierungsdatum: 05.12.17]\nhttps://www.apple.com/de/ipad-mini-4/specs/, iPad mini 4 \u2013 Technische Daten [Aktualisierungsdatum: 02.12.17]\nhttp://cordova.apache.org/, Apache Cordova [Aktualisierungsdatum: 02.12.17]\nhttp://cordova.apache.org/docs/en/latest/guide/overview/index.html, Architectural overview of Cordova platform - Apache Cordova [Aktualisierungsdatum: 02.12.17]\nhttp://docs.phonegap.com/getting-started/2-install-mobile-app/, Step 2: Install Mobile App | PhoneGap Docs [Aktualisierungsdatum: 02.12.17]\n[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0), Apache License, Version 2.0 [Aktualisierungsdatum: 02.12.17]\nhttps://vuejs.org/v2/guide/, Introduction \u2014 Vue.js [Aktualisierungsdatum: 02.12.17]\nhttps://router.vuejs.org/de/essentials/getting-started.html, Erste Schritte \xB7 vue-router [Aktualisierungsdatum: 02.12.17]\nhttps://opensource.org/licenses/MIT, The MIT License | Open Source Initiative [Aktualisierungsdatum: 02.12.17]\nhttps://w3c.github.io/speech-api/speechapi.html, Web Speech API Specification [Aktualisierungsdatum: 02.12.17]\nhttps://developer.apple.com/documentation/speech, Speech | Apple Developer Documentation [Aktualisierungsdatum: 02.12.17]\nhttps://cloud.google.com/speech/, Speech API - Speech Recognition  |  Google Cloud Platform [Aktualisierungsdatum: 02.12.17]\nhttps://developer.myscript.com/, Cross-platform handwriting recognition APIs | MyScript Developer [Aktualisierungsdatum: 02.12.17]\nhttps://www.w3.org/TR/webdatabase/, Web SQL Database [Aktualisierungsdatum: 07.12.17]\nhttps://cordova.apache.org/docs/en/latest/cordova/storage/storage.html, Storage - Apache Cordova [Aktualisierungsdatum: 07.12.17]\nhttps://www.sqlite.org/index.html, SQLite Home Page, [Aktualisierungsdatum: 07.12.17]\n https://www.apple.com/de/ipad-mini-4/specs/, iPad mini 4 \u2013 Technische Daten [Aktualisierungsdatum: 02.12.17]\nhttps://sqlite.org/different.html, Distinctive Features Of SQLite [Aktualisierungsdatum: 02.12.17]\nhttps://www.calligraphr.com/de/, Calligraphr - Zeichnen Sie Ihre eigenen Fonts. [Aktualisierungsdatum: 02.12.17]\nhttps://developer.myscript.com/pricing, Pricing | MyScript Developer [Aktualisierungsdatum: 02.12.17]\nhttps://arxiv.org/pdf/1603.03185.pdf, Personalized Speech Recognition  On  Mobile  Devices [Aktualisierungsdatum: 02.12.17]\nhttps://blog.mozilla.org/blog/2017/11/29/announcing-the-initial-release-of-mozillas-open-source-speech-recognition-model-and-voice-dataset/, Announcing the Initial Release of Mozilla\u2019s Open Source Speech Recognition Model and Voice Dataset [Aktualisierungsdatum: 02.12.17]\nhttps://www.ccc.de/en/campaigns/aktivitaeten_biometrie/fingerabdruck_kopieren*,* CCC | Wie k\xF6nnen Fingerabdr\xFCcke nachgebildet werden? **[Aktualisierungsdatum: 02.12.17]\nhttps://www.apple.com/business/docs/iOS_Security_Guide.pdf, iOS Security - iOS 10 March 2017 [Aktualisierungsdatum: 02.12.17]\nhttps://www.tiltbrush.com/, Tiltbrush by Google [Aktualisierungsdatum: 02.12.17]\nhttp://www.gfk.com/de/insights/press-release/jeder-vierte-deutsche-internetnutzer-setzt-auf-gesundheits-apps-oder-fitness-tracker/, Jeder vierte deutsche Internetnutzer setzt auf Gesundheits-Apps oder Fitness-Tracker. [Aktualisierungsdatum: 02.12.17]\nhttp://www.myfeel.co/, Feel [Aktualisierungsdatum: 02.12.17]\n https://www.technologyreview.com/s/408147/handwritten-passwords/, Handwritten Passwords [Aktualisierungsdatum: 09.12.17]\n\n**Bilder oder Grafiken aus dem Internet**\nhttp://www.pngmart.com/files/1/Book-PNG-HD.png, Buch, CC-Lizenz\nhttps://mockuphone.com/static/images/devices/apple-iphone6plus-spacegrey-portrait.png, IPhone, CC-Lizenz\n\n**B\xFCcher**\nMyers, David G., Hoppe-Graff, Siegfried, Keller, Barbara: *Psychologie.* 3., vollst. \xFCberarb. und erw. Aufl. Berlin : Springer, 2014 (Springer-Lehrbuch)\nGoleman, Daniel: Emotionale Intelligenz. Ungek\xFCrzte Ausg., 4. Aufl. M\xFCnchen: Dt. Taschenbuch-Verl., 1997 (Dtv 36020)\nCarver, Charles S. ; Scheier, Michael F. ; Weintraub, Jagdish K.: Assessing coping strategies: A theoretically based approach. In: Journal of Personality and Social Psychology **56 (1989) \nLieberman, Matthew D., Eisenberger, Naomi I.,  Crockett, Molly J.,  Tom, Sabrina M., Pfeifer, Jennifer H., Way, Baldwin M.: Putting feelings into words : Affect labeling disrupts amygdala activity in response to affective stimuli. **In: Psychological science 18 (2007)\nSiegler, Robert,  Eisenberg, Nancy, DeLoache, Judy: Entwicklungspsychologie im Kindes- und Jugendalter*.* 4. Aufl. 2016\nGoleman, Daniel: Emotionale Intelligenz, Ungek\xFCrzte Ausgabe, 26. Auflage\nGoleman, Daniel: Emotionale Intelligenz. Ungek\xFCrzte Ausg., 4. Aufl. M\xFCnchen : Dt. Taschenbuch-Verl., 1997 (Dtv 36020)\n\n**Weiterf\xFChrende Recherchequellen**\nAbramson, L. Y., Seligman, M. E. , Teasdale, J. D.: Learned helplessness in humans : Critique and reformulation. In: Journal of abnormal psychology 87 (1978), Nr.1\nBower, Gordon H., Spence, Kenneth Wartenbee, Spence, Janet Taylor, Medin, Douglas L.: The Psychology of learning and motivation : Advances in research and theory. New York, London, San Diego, Tokyo : Academic Press, 1967-1993 \nFarrahi, Hassan, Kafi, Seyed Mousa, Karimi, Tamjid, Delazar, Robabeh: Emotional Intelligence and Its Relationship With General Health Among the Students of University of Guilan, Iran. In: Iranian journal of psychiatry and behavioral sciences 9 (2015), Nr. 3, e1582 \nMartins, Alexandra, Ramalho, Nelson,  Morin, Estelle: A comprehensive meta-analysis of the relationship between Emotional Intelligence and health. In: Personality and Individual Differences 49 (2010), Nr. 6\nMccullough, Michael E.,  Emmons, Robert A., Tsang, Jo-Ann: The grateful disposition : A conceptual and empirical topography. In: Journal of Personality and Social Psychology 82 (2002), Nr. 1\nNevermann, Christiane ; Reicher, Hannelore: Depressionen im Kindes- und Jugendalter : Erkennen, Verstehen, Helfen. Orig.-Ausg. M\xFCnchen : Beck, 2001 (Beck\'sche Reihe 1440)\n[https://www.theguardian.com/books/2013/dec/20/bridget-jones-effect-life-thirtysomething-single-woman](https://www.theguardian.com/books/2013/dec/20/bridget-jones-effect-life-thirtysomething-single-woman), The Bridget Jones effect: how life has changed for the single woman [Aktualisierungsdatum30.11.17]\n\n\n\n\n\n\n\n# **Anhang**\n\nAnhang 1.1:\n\n![](https://lh6.googleusercontent.com/aRXLb97IwhN_VpNrq0vX-qGITr1cWssEwSZ9LYLeuED1V1qAc2St6CUrVXtqX4dCNMCL7WmSUWHiMw9eLV6-s8LW-9LRupl7o1BnzuUbgXdWDKatwKmpE7o6DVnxRVxdXNtWK-xE)\n\n\nAnhang 1.2:\n\n![](https://lh3.googleusercontent.com/oiCZpDAQqVEsb3NsHLsyKFoNLwBqr_DIkqXrhRHGibZ_cKt7zj2TKHbPI6T-zblEE9_gQFOJNA-EKvePe-4sex0lD0DmRllKvg8_iaUjKvVaHi1N_WyGuj7KT2uqn6RIPXhvAQwU)\n\n\nAnhang 1.3:\n\n![](https://lh5.googleusercontent.com/GsXTQ3h5YLb0bj-onosMNi52BgAbZf12NCn4YVLNtf6BqvOQk2LIAcVq9CUXQpGMq-ZGOebu-UiKSxymq2Ouu8Ai_ucO7euqAdmkSZK7VBJQnzv103eWGiVguF-OdNiMk60wfuQz)\n\n\nAnhang 2:\n\n![](https://lh4.googleusercontent.com/cEJQ5ec9RTdNjNUEeDfuYSlRYNPwIFAVYpdOKBoNFgdoyTGW6whqyjk2ZMsZjWF729waMfzibxTgRmjfaxCC6nnjL-IvrCbM8CG7NbleqGRyAXGO158V8t_uhmEsrqP8dwuDiNou)\n\n\n\nAnhang 3:\n\n![](https://lh5.googleusercontent.com/kEEEtKsvE-s6Ks-XIuIR3L2r4wwQjDzDP1PWQMEb8zG1B-wYxja8H8LoZEAb_AXLGiUpXUvCbzCxaBnZfotMZVbZmHtPrxnKNZYw7_doP1O7m9sWz5asQaAIIvlAIO9Hu5e7IP6M)\n\n\nAnhang 4.1:\n\n![](https://lh3.googleusercontent.com/HgjIoTiHaGbK7-0QlIW6OWbOGUR0OJC-jeREmiapAvJPIIDkP90JRG29Sf1w8h86IruP4P0oU_0oJlF3HWESbO-IBIoNkJ6JlrPkcLOUkcpzj1e5pqhzXybODadq1_XOynlGPGCK)\n\n\nAnhang 4.2:\n\n![](https://lh4.googleusercontent.com/diA_19PPl54Mra59GRdjC2Q_hfQv2RHlnMBoJjTD0MtimpUQPpkOKsa9zsglow5oKksMBFsbFqfEEoMuB7jyXwKnQgj9Egl3lHZN9apFrtdCgly9ZM-y9RUpNkr68owH87ONiXHi)\n\n\nAnhang 4.3\n\n![](https://lh3.googleusercontent.com/VjYz0WggUbSVab8-txvUP7A1egHdsPax82SGm15z37xqpyj5fF58yJ6EEF2g5NzA_673ClgulSb4LjBC9EV5sVf1OAetq56_D3HtMdDn9WkbRjt3eLn-o-BVq47oeKknNPot2Gim)\n\n\nAnhang 4.4:\n\n![](https://lh4.googleusercontent.com/eePb2-oshPGsodjlEcUMwFGsPkc5SWOgMwGe6RhSlVrU97gu7M6yaDwk6xSfih8iDX-c3xNncMcSkxQJ4mcZ4v9T7CYm2sBfKiWios1vlQ5OLao8s6jMzoYK7wTZ7I8P7kutmOag)\n\n\nAnhang 5:\n\n![](https://lh6.googleusercontent.com/qnh2XrMmqHNltN5rrLW_6KKaeq3tYzF5wl8BSbqrf2fD9PIPsLRy_gt-DFsKY2sGRP242fO7hWRcIdE9MutHdIXYGpg_Lo0PLNUen3hcMjB79clxxbPOIMCLxGv1exX9DF9Vtglk)\n\n\n\n\nAnhang 6:\n\n![](https://lh5.googleusercontent.com/IBrmgsKrB7dfUM43y-6qv8Q3Vsv0JYQieejO7OPk3gaertS_X7k3h4kL7bMg9Xxm1kjgbMIsyHjaR3BPEpAJw_VqB_DygQ7J97ay1yjLtvPdT2QTDnLKsHr4TQZBZXtILhyCsefp)\n\n\n\nAnhang 7:\n\n![](https://lh6.googleusercontent.com/wVnYFZN2Oq1mL3BMhN5pkfSaj5ppVjp_3YAHwao9vF9dn6FNcIuUmnhJ5TjErqFCVLJN0jkTSNbLSkEKXahZoU4eKbxCtpZFmovcu_hUHv1__3pK9E1lN04fAmhh7DCPsH5bH0fh)\n\n\nAnhang 8:\n\n![](https://lh4.googleusercontent.com/_vnmhMOXYBrG3TJV4WVMZe_mkep9uJFPsrJl-YyEg6M3NoASFhXE1pzaZF_HWYJvVelgfMjzJ0Pp9iSOnxQJz3FErmlGWpuPWCEUNMI_YIlVQ5nsIBgiJ_N8SBQ6GpTJdqxggZ3o)\n\n\n\nAnhang 9:\n\n![](https://lh4.googleusercontent.com/1eRUkzA01YXnnQ-ZSbCwUxZnFu2Z_fsxP9vwJUXX8FsQji5f4wkN0U4yS-ovXUKAjMSdzybk0JT6IKwM7mdi27kSaL_vppeRzy3HCmKN5EiokriroV9dSBg0rtYQO-PbHk1Kd6CR)\n\n\n\n\n\n\n',
-  abb: ['abb']
-},
-// Kapitel 2
-{
-  title: 'Format Test',
-  markdown: '\n\n# Test for Formats?\n\nAre we human because of unique traits and attributes not shared with either animal or machine? The definition of \u201Chuman\u201D is circular: we are human by virtue of the properties that make us human (i.e., distinct from animal and machine). It is a definition by negation: that which separates us from animal and machine is our \u201Chuman-ness\u201D.\n\n*We are human because we are not animal, nor machine. But such thinking has been rendered progressively less tenable by the advent of evolutionary and neo-evolutionary theories which postulate a continuum in nature between animals and Man.*\n\nOur uniqueness is partly quantitative and partly qualitative. Many animals are capable of cognitively manipulating symbols and using tools. Few are as adept at it as we are. These are easily quantifiable differences \u2013 two of many.\n\n\n# Markdown Top Level\n\nQualitative differences are a lot more difficult to substantiate. In the absence of privileged access to the animal mind, we cannot and don\u2019t know if animals feel guilt, for instance. Do animals love? Do they have a concept of sin? What about object permanence, meaning, reasoning, self-awareness, critical thinking? Individuality? Emotions? Empathy? Is artificial intelligence (AI) an oxymoron? A machine that passes the Turing Test may well be described as \u201Chuman\u201D. But is it really? And if it is not \u2013 why isn\u2019t it?\n\n\n## 2nd Level\n\nLiterature is full of stories of monsters \u2013 Frankenstein, the Golem \u2013 and androids or anthropoids. Their behaviour is more \u201Chumane\u201D than the humans around them. This, perhaps, is what really sets humans apart: their behavioural unpredictability. It is yielded by the interaction between Mankind\u2019s underlying immutable genetically-determined nature \u2013 and Man\u2019s kaleidoscopically changing environments.\n\n\n## 2nd Level\n\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature \u2013 being the inevitable and inexorable outcome of our bestial ancestry \u2013 cannot be the subject of moral judgment.\n\n**3rd Level**\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature \u2013 being the inevitable and inexorable outcome of our bestial ancestry \u2013 cannot be the subject of moral judgment.\n\n\n# Melanie\n![Bildunterschrift: Das ist Melanie](https://d2mxuefqeaa7sj.cloudfront.net/s_895E577FE6EC85C7DC981C8E4FF92AB4539B02ACE9523AA9443D0E932B878054_1515249360812_E3EF2632-8274-4F53-8955-4B67436FD751.png)\n\n\nAn improved Turing Test would look for baffling and erratic patterns of misbehaviour to identify humans. Pico della Mirandola wrote in \u201COration on the Dignity of Man\u201D that Man was born without a form and can mould and transform \u2013 actually, create \u2013 himself at will. Existence precedes essence, said the [Link](http://www.google.de) marked underlined. **Bold**. *Italic*.\n\nThe one defining human characteristic may be our awareness of our mortality. The automatically triggered, \u201Cfight or flight\u201D, battle for survival is common to all living things (and to appropriately programmed machines). Not so the catalytic effects of imminent death. These are uniquely human. The appreciation of the fleeting translates into aesthetics, the uniqueness of our ephemeral life breeds morality, and the scarcity of time gives rise to ambition and creativity.\n\n\n- Hello\n- This\n- is\n- a\n- List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of \u201Cfree will\u201D. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n1. This\n2. is \n3. numbered\n4. List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of \u201Cfree will\u201D. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n## Checkliste\n\n\n[ ] Checkliste 1\n[ ] Checkliste 2\n[ ] Checkliste 3\n\n\n## Converter Code\n\nYet, all these answers to the question: \u201CWhat does it mean to be human\u201D \u2013 are lacking.\n\n\n        // https://github.com/showdownjs/showdown\n        var converter = new showdown.Converter({noHeaderId: true});\n        var text = "#Hello World!";\n        var html = converter.makeHtml(text);\n        console.log(html);\n\nThe set of attributes we designate as human is subject to profound alteration. Drugs, neuroscience, introspection, and experience all cause irreversible changes in these traits and characteristics. The accumulation of these changes can lead, in principle, to the emergence of new properties, or to the abolition of old ones.\n\nAnimals and machines are not supposed to possess free will or exercise it. What, then, about fusions of machines and humans (bionics)? At which point does a human turn into a machine? And why should we assume that free will ceases to exist at that \u2013 rather arbitrary \u2013 point?\n\nIntrospection \u2013 the ability to construct self-referential and recursive models of the world \u2013 is supposed to be a uniquely human quality. What about introspective machines? Surely, say the critics, such machines are PROGRAMMED to introspect, as opposed to humans. To qualify as introspection, it must be WILLED, they continue. Yet, if introspection is willed \u2013 WHO wills it? Self-willed introspection leads to infinite regression and formal logical paradoxes.\n\nMoreover, the notion \u2013 if not the formal concept \u2013 of \u201Chuman\u201D rests on many hidden assumptions and conventions.\n\n\n# Youtube Video\n\n\nhttps://www.youtube.com/watch?v=DZlw-IS5OkI&\n\n\n[https://youtu.be/DZlw-IS5OkI](https://youtu.be/DZlw-IS5OkI)\n\nPolitical correctness notwithstanding \u2013 why presume that men and women (or different races) are identically human? Aristotle thought they were not. A lot separates males from females \u2013 genetically (both genotype and phenotype) and environmentally (culturally). What is common to these two sub-species that makes them both \u201Chuman\u201D?\n\nCan we conceive of a human without body (i.e., a Platonian Form, or soul)? Aristotle and Thomas Aquinas think not. A soul has no existence separate from the body. A machine-supported energy field with mental states similar to ours today \u2013 would it be considered human? What about someone in a state of coma \u2013 is he or she (or it) fully human?\n\nIs a new born baby human \u2013 or, at least, fully human \u2013 and, if so, in which sense? What about a future human race \u2013 whose features would be unrecognizable to us? Machine-based intelligence \u2013 would it be thought of as human? If yes, when would it be considered human?\n\nIn all these deliberations, we may be confusing \u201Chuman\u201D with \u201Cperson\u201D. The former is a private case of the latter. Locke\u2019s person is a moral agent, a being responsible for its actions. It is constituted by the continuity of its mental states accessible to introspection.\n\n\n\n\n> Some random Quote:\n> Locke\u2019s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person[^2]. \n> \n> \u2013 Some Random Dude\n\n\nLocke\u2019s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person[^2].\n\nDescartes\u2019 objection that one cannot specify conditions of singularity and identity over time for disembodied souls is right only if we assume that such \u201Csouls\u201D possess no energy. A bodiless intelligent energy matrix which maintains its form and identity over time is conceivable. Certain AI and genetic software programs already do it.\n\nStrawson is Cartesian and Kantian in his definition of a \u201Cperson\u201D as a \u201Cprimitive\u201D. Both the corporeal predicates and those pertaining to mental states apply equally, simultaneously, and inseparably to all the individuals of that type of entity. Human beings are one such entity. Some, like Wiggins, limit the list of possible persons to animals \u2013 but this is far from rigorously necessary and is unduly restrictive [^3].\n\n**The truth is probably in a synthesis:**\n\nA person is **any type of fundamental** and irreducible entity whose typical physical individuals (i.e., members) are capable of continuously experiencing a range of states of consciousness and permanently having a list of psychological attributes.\n\nThis definition allows for non-animal persons and recognizes the personhood of a brain damaged human (\u201Ccapable of experiencing\u201D). It also incorporates Locke\u2019s view of humans as possessing an ontological status similar to \u201Cclubs\u201D or \u201Cnations\u201D \u2013 their personal identity consists of a variety of interconnected psychological continuities.\n\n[^1]: Some Awesome Guy, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^2]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^3]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n\n',
-  abb: ['abb2']
-}];
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-},{}],6:[function(require,module,exports){
+var _showdownFootnotes = require('../../../../node_modules/showdown-footnotes');
+
+var _showdownFootnotes2 = _interopRequireDefault(_showdownFootnotes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var converter = new showdown.Converter({
+    extensions: [_showdownFootnotes2.default]
+});
+exports.default = {
+    props: ['uniqueTitle'],
+    data: function data() {
+        return {};
+    },
+    mounted: function mounted() {
+        var innerHTML = this.convertMarkdown(this.$slots.default[0].text);
+        document.getElementById(this.uniqueTitle).innerHTML = innerHTML;
+    },
+    created: function created() {
+        hljs.initHighlightingOnLoad();
+    },
+    destroyed: function destroyed() {},
+
+    components: {},
+    methods: {
+        convertMarkdown: function convertMarkdown(text) {
+            var outputHtml = [];
+
+            var html = converter.makeHtml(text);
+
+            return html;
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"text",attrs:{"id":_vm.uniqueTitle}},[_vm._t("default")],2)}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-01f802e0"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-01f802e0", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-01f802e0", __vue__options__)
+  }
+})()}
+},{"../../../../node_modules/showdown-footnotes":8,"vue":13,"vue-hot-reload-api":11}],6:[function(require,module,exports){
 'use strict';
 
 var _docu = require('./components/docu.vue');
 
 var _docu2 = _interopRequireDefault(_docu);
 
-var _chapter = require('./components/chapter.vue');
+var _vueAffix = require('vue-affix');
 
-var _chapter2 = _interopRequireDefault(_chapter);
+var _vueAffix2 = _interopRequireDefault(_vueAffix);
 
-var _content = require('./content');
+var _vueScrollactive = require('vue-scrollactive');
 
-var _content2 = _interopRequireDefault(_content);
+var _vueScrollactive2 = _interopRequireDefault(_vueScrollactive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// PATHS
-var routes = [{ path: '/', component: _docu2.default }, { name: 'Chapter', path: '/chapter/:id', component: _chapter2.default }]; // Import Werkzeuge.
+// Import Werkzeuge.
+Vue.use(_vueAffix2.default);
 
+// https://github.com/eddiemf/vue-scrollactive
+
+
+// Plugins
+// https://eddiemf.github.io/vue-affix/
+
+Vue.use(_vueScrollactive2.default);
+
+// PATHS
+var routes = [{ path: '/', component: _docu2.default }];
 
 var router = new VueRouter({
+    mode: 'history',
     scrollBehavior: function scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
             return { selector: to.hash };
@@ -253,8 +286,7 @@ Vue.use(Vuex);
 
 var store = new Vuex.Store({
     state: {
-        name: 'Interactive Documentation Template',
-        chapters: _content2.default
+        name: 'Interactive Documentation Template'
     },
     mutations: {
         changeName: function changeName(state, newName) {
@@ -269,7 +301,7 @@ var vm = new Vue({
     store: store
 }).$mount('#app');
 
-},{"./components/chapter.vue":3,"./components/docu.vue":4,"./content":5}],7:[function(require,module,exports){
+},{"./components/docu.vue":4,"vue-affix":10,"vue-scrollactive":12}],7:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -4992,6 +5024,1011 @@ if (typeof define === 'function' && define.amd) {
 
 
 },{}],10:[function(require,module,exports){
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["vue-affix"] = factory();
+	else
+		root["vueAffix"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/dist/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _affix = __webpack_require__(1);
+
+var _affix2 = _interopRequireDefault(_affix);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Plugin = {};
+
+Plugin.install = function (Vue) {
+  if (Plugin.install.installed) return;
+
+  Vue.component('affix', _affix2.default);
+};
+
+if (typeof window !== 'undefined' && window.Vue) {
+  Plugin.install(window.Vue);
+}
+
+exports.default = Plugin;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(2)
+}
+var Component = __webpack_require__(7)(
+  /* script */
+  __webpack_require__(8),
+  /* template */
+  __webpack_require__(9),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(3);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(5)("044fa194", content, true);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".vue-affix{position:relative}.affix{position:fixed}.affix-bottom{position:relative}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+var listToStyles = __webpack_require__(6)
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+module.exports = function (parentId, list, _isProduction) {
+  isProduction = _isProduction
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[data-vue-ssr-id~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    /**
+     * The relative element selector string. The relative element is
+     * the element you want your affix to be related to, as it will
+     * not be related to the window. The element will be affixed when
+     * the window reaches the relative element.
+     *
+     * @example '#contact'
+     * @type {String}
+     */
+    relativeElementSelector: {
+      type: String,
+      required: true
+    },
+
+    /**
+     * This is the offset margin between the top/bottom of the window
+     * before the affix is applied.
+     *
+     * @type {Object}
+     */
+    offset: {
+      type: Object,
+      default: function _default() {
+        return {
+          top: 40,
+          bottom: 40
+        };
+      }
+    },
+
+    /**
+     * Checks if the plugin should be enabled/disabled based
+     * on true/false, good for conditional rendering like
+     * mobile behavior.
+     *
+     * @type {Boolean}
+     */
+    enabled: {
+      type: Boolean,
+      default: true
+    },
+
+    /**
+     * Sets if the affix should be 'scrollable' when it is
+     * taller than the viewport or if it should always be
+     * affixed to the top until it reaches the end of the
+     * relative element.
+     *
+     * @type {Boolean}
+     */
+    scrollAffix: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  computed: {
+    /**
+     * Computes the relative element selector to an element.
+     *
+     * @return {Element} document.querySelector(this.relativeElementSelector)
+     */
+    relativeElement: function relativeElement() {
+      return document.querySelector(this.relativeElementSelector);
+    }
+  },
+
+  data: function data() {
+    return {
+      affixHeight: null,
+      affixBottomPos: null,
+      affixRect: null,
+      relativeElmBottomPos: null,
+      relativeElmOffsetTop: null,
+      topPadding: null,
+      lastState: null,
+      currentState: null,
+      currentScrollAffix: null,
+      distanceFromTop: window.pageYOffset,
+      lastDistanceFromTop: window.pageYOffset,
+      scrollingUp: null,
+      scrollingDown: null
+    };
+  },
+
+
+  methods: {
+    setDynamicVariables: function setDynamicVariables() {
+      this.distanceFromTop = window.pageYOffset;
+      this.affixRect = this.$el.getBoundingClientRect();
+      this.affixHeight = this.$el.offsetHeight;
+      this.affixBottomPos = this.distanceFromTop + this.affixRect.bottom;
+      this.screenBottomPos = this.distanceFromTop + window.innerHeight;
+      this.relativeElmBottomPos = this.distanceFromTop + this.relativeElement.getBoundingClientRect().bottom;
+      this.relativeElmOffsetTop = this.getOffsetTop(this.relativeElement);
+    },
+    onScroll: function onScroll() {
+      if (!this.enabled) {
+        this.removeClasses();
+        return;
+      }
+
+      this.setDynamicVariables();
+
+      if (this.affixHeight + this.offset.top >= this.relativeElement.offsetHeight) {
+        return;
+      }
+
+      this.handleAffix();
+    },
+    handleAffix: function handleAffix() {
+      if (this.scrollAffix && this.affixHeight > window.innerHeight) {
+        this.setScrollingDirection();
+
+        if (this.currentScrollAffix === 'scrollaffix-top') {
+          if (this.distanceFromTop + this.offset.top >= this.affixInitialTop) {
+            this.setScrollAffixScrolling();
+          }
+        }
+
+        if (this.scrollingDown && this.currentScrollAffix === 'scrollaffix-scrolling') {
+          if (this.screenBottomPos >= this.affixBottomPos + this.offset.bottom && this.screenBottomPos < this.relativeElmBottomPos) {
+            this.setScrollAffixDown();
+          }
+        }
+
+        if (this.scrollingUp && this.currentScrollAffix === 'scrollaffix-scrolling') {
+          if (this.distanceFromTop + this.offset.top + this.topPadding < this.affixRect.top + this.distanceFromTop) {
+            this.setScrollAffixUp();
+          }
+        }
+
+        if (this.scrollingDown && this.currentScrollAffix === 'scrollaffix-down') {
+          if (this.screenBottomPos >= this.relativeElmBottomPos + this.offset.bottom) {
+            this.setScrollAffixBottom();
+          }
+        }
+
+        if (this.currentScrollAffix === 'scrollaffix-bottom' && this.screenBottomPos < this.relativeElmBottomPos) {
+          this.setScrollAffixScrolling();
+        }
+
+        if (this.scrollingUp && this.currentScrollAffix === 'scrollaffix-down' || this.scrollingDown && this.currentScrollAffix === 'scrollaffix-up') {
+          this.setScrollAffixScrolling();
+        }
+
+        if (this.scrollingUp && this.currentScrollAffix === 'scrollaffix-up' && this.distanceFromTop < this.relativeElmOffsetTop - this.offset.top) {
+          this.setScrollAffixTop();
+        }
+
+        this.lastScrollAffixState = this.currentScrollAffix;
+        this.lastDistanceFromTop = this.distanceFromTop;
+
+        return;
+      }
+
+      if (this.distanceFromTop < this.relativeElmOffsetTop - this.offset.top) {
+        this.setAffixTop();
+      }
+
+      if (this.distanceFromTop >= this.relativeElmOffsetTop - this.offset.top && this.relativeElmBottomPos - this.offset.bottom >= this.distanceFromTop + this.topPadding + this.affixHeight + this.offset.top) {
+        this.setAffix();
+      }
+
+      if (this.relativeElmBottomPos - this.offset.bottom < this.distanceFromTop + this.topPadding + this.affixHeight + this.offset.top) {
+        this.setAffixBottom();
+      }
+
+      this.lastState = this.currentState;
+    },
+
+
+    /**
+     * Sets the initial position of the affixed element
+     * when scrollAffix is set to true.
+     */
+    initScrollAffix: function initScrollAffix() {
+      if (this.distanceFromTop < this.affixInitialTop - this.offset.top) {
+        this.setScrollAffixTop();
+      } else if (this.screenBottomPos >= this.affixBottomPos + this.offset.bottom && this.screenBottomPos < this.relativeElmBottomPos) {
+        this.setScrollAffixDown();
+      } else if (this.screenBottomPos >= this.relativeElmBottomPos) {
+        this.setScrollAffixBottom();
+      } else {
+        this.setScrollAffixScrolling();
+      }
+    },
+
+
+    /**
+     * Sets te currentScrollAffix to 'scrolling' to indicate that
+     * the window is scrolling inside the affixed element.
+     */
+    setScrollAffixScrolling: function setScrollAffixScrolling() {
+      this.currentScrollAffix = 'scrollaffix-scrolling';
+      this.$el.style.top = this.affixRect.top + this.distanceFromTop - this.affixInitialTop + 'px';
+      this.$el.style.bottom = 'auto';
+      this.removeClasses();
+      this.emitEvent();
+    },
+
+
+    /**
+     * Sets the position of the affixed element to be fixed
+     * at the top of the screen, as you are scrolling UP.
+     */
+    setScrollAffixUp: function setScrollAffixUp() {
+      this.currentScrollAffix = 'scrollaffix-up';
+
+      if (this.currentScrollAffix !== this.lastState) {
+        this.$el.style.top = this.topPadding + this.offset.top + 'px';
+        this.$el.style.bottom = 'auto';
+        this.removeClasses();
+        this.emitEvent();
+        this.$el.classList.add('affix');
+      }
+    },
+
+
+    /**
+     * Sets the position of the affixed element to be fixed
+     * at the bottom of the screen, as you are scrolling DOWN.
+     */
+    setScrollAffixDown: function setScrollAffixDown() {
+      this.currentScrollAffix = 'scrollaffix-down';
+
+      if (this.currentScrollAffix !== this.lastState) {
+        this.$el.style.bottom = this.offset.bottom + 'px';
+        this.$el.style.top = 'auto';
+        this.removeClasses();
+        this.emitEvent();
+        this.$el.classList.add('affix');
+      }
+    },
+
+
+    /**
+     * Sets the position of the affixed element to be at the
+     * most top.
+     */
+    setScrollAffixTop: function setScrollAffixTop() {
+      this.currentScrollAffix = 'scrollaffix-top';
+      this.$el.style.top = 0;
+      this.$el.style.bottom = 'auto';
+      this.removeClasses();
+      this.emitEvent();
+    },
+
+
+    /**
+     * Sets the position of the affixed element to be at the
+     * most bottom.
+     */
+    setScrollAffixBottom: function setScrollAffixBottom() {
+      this.currentScrollAffix = 'scrollaffix-bottom';
+      this.$el.style.top = this.relativeElmBottomPos - this.affixInitialTop - this.affixHeight + 'px';
+      this.$el.style.bottom = 'auto';
+      this.removeClasses();
+      this.emitEvent();
+    },
+
+
+    /**
+     * Sets the direction the window is being scrolled.
+     */
+    setScrollingDirection: function setScrollingDirection() {
+      if (this.distanceFromTop > this.lastDistanceFromTop) {
+        this.scrollingDown = true;
+        this.scrollingUp = false;
+      } else {
+        this.scrollingUp = true;
+        this.scrollingDown = false;
+      }
+    },
+
+
+    /**
+     * Sets the affix-top class to indicate that the element is
+     * above the relative element.
+     */
+    setAffixTop: function setAffixTop() {
+      this.currentState = 'affix-top';
+
+      if (this.currentState !== this.lastState) {
+        this.emitEvent();
+        this.removeClasses();
+        this.$el.classList.remove('affix');
+        this.$el.classList.add('affix-top');
+        this.$el.style.top = null;
+      }
+    },
+
+
+    /**
+     * Sets the affix class to indicate that the element is
+     * fixed to the top of the relative element.
+     */
+    setAffix: function setAffix() {
+      this.currentState = 'affix';
+      this.$el.style.top = this.topPadding + this.offset.top + 'px';
+
+      if (this.currentState !== this.lastState) {
+        this.emitEvent();
+        this.removeClasses();
+        this.$el.classList.add('affix');
+      }
+    },
+
+
+    /**
+     * Sets the affix-bottom class to indicate that the element is
+     * below the relative element.
+     */
+    setAffixBottom: function setAffixBottom() {
+      this.currentState = 'affix-bottom';
+      this.$el.style.top = this.relativeElement.offsetHeight - this.affixHeight - this.offset.bottom - this.topPadding + 'px';
+
+      if (this.currentState !== this.lastState) {
+        this.emitEvent();
+        this.removeClasses();
+        this.$el.classList.add('affix-bottom');
+      }
+    },
+
+
+    /**
+     * Removes all three affix classes.
+     */
+    removeClasses: function removeClasses() {
+      this.$el.classList.remove('affix-top');
+      this.$el.classList.remove('affix');
+      this.$el.classList.remove('affix-bottom');
+    },
+
+
+    /**
+     * Emits the events based on the current state of the affix.
+     */
+    emitEvent: function emitEvent() {
+      if (this.scrollAffix && this.lastScrollAffixState) {
+        this.$emit(this.currentScrollAffix.replace('-', ''));
+      }
+
+      if (this.lastState) {
+        this.$emit(this.currentState.replace('-', ''));
+      }
+    },
+
+
+    /**
+     * Gets the top offset position of an element in the document.
+     *
+     * @param  {Element} element
+     * @return {Number}
+     */
+    getOffsetTop: function getOffsetTop(element) {
+      var yPosition = 0;
+      var nextElement = element;
+
+      while (nextElement) {
+        yPosition += nextElement.offsetTop;
+        nextElement = nextElement.offsetParent;
+      }
+
+      return yPosition;
+    }
+  },
+
+  mounted: function mounted() {
+    this.$el.classList.add('vue-affix');
+    this.affixInitialTop = this.getOffsetTop(this.$el);
+    this.topPadding = this.affixInitialTop - this.getOffsetTop(this.relativeElement);
+
+    this.setDynamicVariables();
+
+    if (this.scrollAffix) this.initScrollAffix();
+
+    this.onScroll();
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ })
+/******/ ]);
+});
+},{}],11:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -5221,7 +6258,683 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["vue-scrollactive"] = factory();
+	else
+		root["vue-scrollactive"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/dist/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _scrollactive = __webpack_require__(1);
+
+var _scrollactive2 = _interopRequireDefault(_scrollactive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Plugin = {};
+
+Plugin.install = function (Vue) {
+  if (Plugin.install.installed) return;
+
+  Vue.component('scrollactive', _scrollactive2.default);
+};
+
+if (typeof window !== 'undefined' && window.Vue) {
+  Plugin.install(window.Vue);
+}
+
+exports.default = Plugin;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(3),
+  /* template */
+  __webpack_require__(5),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bezierEasing = __webpack_require__(4);
+
+var _bezierEasing2 = _interopRequireDefault(_bezierEasing);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  props: {
+    /**
+    * Class that will be applied in the menu item.
+    *
+    * @default  'is-active'
+    * @type {String}
+    */
+    activeClass: {
+      type: String,
+      default: 'is-active'
+    },
+
+    /**
+    * Amount of space between top of screen and the section to
+    * highlight. (Usually your fixed header's height)
+    *
+    * @default 20
+    * @type {Number}
+    */
+    offset: {
+      type: Number,
+      default: 20
+    },
+
+    /**
+    * Enables/disables the scrolling when clicking in a menu item.
+    * Disable if you'd like to handle the scrolling by your own.
+    *
+    * @default true
+    * @type {Boolean}
+    */
+    clickToScroll: {
+      type: Boolean,
+      default: true
+    },
+
+    /**
+    * The duration of the scroll animation when clicking to scroll
+    * is activated.
+    *
+    * @default 600
+    * @type {Number}
+    */
+    duration: {
+      type: Number,
+      default: 600
+    },
+
+    /**
+    * Defines if the plugin should track the section change when
+    * clicking an item to scroll to its section. If set to true,
+    * it will always keep track and change the active class to the
+    * current section while scrolling, if false, the active class
+    * will be immediately applied to the clicked menu item, ignoring
+    * the passed sections until the scrolling is over.
+    *
+    * @default false
+    * @type {Boolean}
+    */
+    alwaysTrack: {
+      type: Boolean,
+      default: false
+    },
+
+    /**
+    * Your custom easing value for the click to scroll functionality.
+    * It must be a string with 4 values separated by commas in a
+    * cubic bezier format.
+    *
+    * @default '.5,0,.35,1'
+    * @type {String}
+    */
+    bezierEasingValue: {
+      type: String,
+      default: '.5,0,.35,1'
+    }
+  },
+
+  data: function data() {
+    return {
+      observer: null,
+      scrollactiveItems: [],
+      bezierEasing: _bezierEasing2.default,
+      currentItem: null,
+      lastActiveItem: null
+    };
+  },
+
+
+  computed: {
+    /**
+    * Computes the bezier easing string value into an array.
+    *
+    * @return {Array.<string>}
+    */
+    cubicBezierArray: function cubicBezierArray() {
+      return this.bezierEasingValue.split(',');
+    }
+  },
+
+  mounted: function mounted() {
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+    if (!this.observer) {
+      // Watch for DOM changes in the scrollactive element wrapper
+      this.observer = new MutationObserver(this.initScrollactiveItems);
+      this.observer.observe(this.$refs['scrollactive-nav-wrapper'], {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    this.initScrollactiveItems();
+    this.removeActiveClass();
+    this.currentItem = this.getItemInsideWindow();
+
+    if (this.currentItem) this.currentItem.classList.add(this.activeClass);
+
+    window.addEventListener('scroll', this.onScroll);
+  },
+  updated: function updated() {
+    this.initScrollactiveItems();
+  },
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.cancelAnimationFrame(window.AFRequestID);
+  },
+
+
+  methods: {
+    /**
+    * Will be called when scrolling event is triggered to handle the addition of the active class
+    * in the current section item and fire the change event.
+    *
+    * @param {Object} event Scroll event.
+    */
+    onScroll: function onScroll(event) {
+      this.currentItem = this.getItemInsideWindow();
+
+      if (this.currentItem !== this.lastActiveItem) {
+        this.removeActiveClass();
+        this.$emit('itemchanged', event, this.currentItem, this.lastActiveItem);
+        this.lastActiveItem = this.currentItem;
+      }
+
+      // Current item might be null if not inside any section
+      if (this.currentItem) this.currentItem.classList.add(this.activeClass);
+    },
+
+
+    /**
+     * Gets the scrollactive item that corresponds to the current section inside the window
+     *
+     * @return {node} Scrollactive item node.
+     */
+    getItemInsideWindow: function getItemInsideWindow() {
+      var _this = this;
+
+      var currentItem = void 0;
+
+      [].forEach.call(this.scrollactiveItems, function (node) {
+        var target = document.getElementById(node.hash.substr(1));
+
+        if (window.pageYOffset >= _this.getOffsetTop(target) - _this.offset) {
+          currentItem = node;
+        }
+      });
+
+      return currentItem;
+    },
+
+
+    /**
+    * Sets the list of menu items, adding or removing the click listener depending on the
+    * clickToScroll prop.
+    */
+    initScrollactiveItems: function initScrollactiveItems() {
+      var _this2 = this;
+
+      this.scrollactiveItems = this.$el.querySelectorAll('.scrollactive-item');
+
+      if (this.clickToScroll) {
+        [].forEach.call(this.scrollactiveItems, function (scrollactiveItem) {
+          scrollactiveItem.addEventListener('click', _this2.scrollToTargetElement);
+        });
+        return;
+      }
+
+      [].forEach.call(this.scrollactiveItems, function (scrollactiveItem) {
+        scrollactiveItem.removeEventListener('click', _this2.scrollToTargetElement);
+      });
+    },
+
+
+    /**
+     * Keep the old setScrollactiveItems method in order to avoid breaking existing projects that
+     * used the previous version and upgraded to this one.
+     *
+     * @deprecated
+     */
+    setScrollactiveItems: function setScrollactiveItems() {
+      this.initScrollactiveItems();
+    },
+
+
+    /**
+    * Handles the scrolling when clicking a menu item.
+    *
+    * @param {Object} event The click event.
+    */
+    scrollToTargetElement: function scrollToTargetElement(event) {
+      var _this3 = this;
+
+      event.preventDefault();
+
+      var hash = event.currentTarget.hash;
+
+      var target = document.getElementById(hash.substr(1));
+
+      if (!target) {
+        console.warn('[vue-scrollactive] Element \'' + hash + '\' was not found. Make sure it is set in the DOM.');
+        return;
+      }
+
+      /**
+       *  Temporarily removes the scroll listener and the request animation frame so the active
+       *  class will only be applied to the clicked element, and not all elements while the window
+       *  is scrolling.
+       */
+      if (!this.alwaysTrack) {
+        window.removeEventListener('scroll', this.onScroll);
+        window.cancelAnimationFrame(window.AFRequestID);
+
+        this.removeActiveClass();
+        event.currentTarget.classList.add(this.activeClass);
+      }
+
+      var targetDistanceFromTop = this.getOffsetTop(target);
+      var startingY = window.pageYOffset;
+      var difference = targetDistanceFromTop - startingY;
+      var easing = this.bezierEasing(this.cubicBezierArray[0], this.cubicBezierArray[1], this.cubicBezierArray[2], this.cubicBezierArray[3]);
+      var start = null;
+
+      var step = function step(timestamp) {
+        if (!start) start = timestamp;
+
+        var progress = timestamp - start;
+        var progressPercentage = progress / _this3.duration;
+
+        if (progress >= _this3.duration) progress = _this3.duration;
+        if (progressPercentage >= 1) progressPercentage = 1;
+
+        var perTick = startingY + easing(progressPercentage) * (difference - _this3.offset);
+
+        window.scrollTo(0, perTick);
+
+        if (progress < _this3.duration) {
+          window.AFRequestID = window.requestAnimationFrame(step);
+        } else {
+          window.addEventListener('scroll', _this3.onScroll);
+          // Update the location hash after we've finished animating
+          if (window.history.pushState) {
+            window.history.pushState(null, null, hash);
+          } else {
+            window.location.hash = hash;
+          }
+        }
+      };
+
+      window.requestAnimationFrame(step);
+    },
+
+
+    /**
+    * Gets the top offset position of an element in the document.
+    *
+    * @param  {Element} element
+    * @return {number}
+    */
+    getOffsetTop: function getOffsetTop(element) {
+      var yPosition = 0;
+      var nextElement = element;
+
+      while (nextElement) {
+        yPosition += nextElement.offsetTop;
+        nextElement = nextElement.offsetParent;
+      }
+
+      return yPosition;
+    },
+
+
+    /**
+     * Removes the active class from all scrollactive items.
+     */
+    removeActiveClass: function removeActiveClass() {
+      var _this4 = this;
+
+      [].forEach.call(this.scrollactiveItems, function (node) {
+        node.classList.remove(_this4.activeClass);
+      });
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+/**
+ * https://github.com/gre/bezier-easing
+ * BezierEasing - use bezier curve for transition easing function
+ * by Gaëtan Renaudeau 2014 - 2015 – MIT License
+ */
+
+// These values are established by empiricism with tests (tradeoff: performance VS precision)
+var NEWTON_ITERATIONS = 4;
+var NEWTON_MIN_SLOPE = 0.001;
+var SUBDIVISION_PRECISION = 0.0000001;
+var SUBDIVISION_MAX_ITERATIONS = 10;
+
+var kSplineTableSize = 11;
+var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
+
+var float32ArraySupported = typeof Float32Array === 'function';
+
+function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
+function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
+function C (aA1)      { return 3.0 * aA1; }
+
+// Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
+function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT; }
+
+// Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
+function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
+
+function binarySubdivide (aX, aA, aB, mX1, mX2) {
+  var currentX, currentT, i = 0;
+  do {
+    currentT = aA + (aB - aA) / 2.0;
+    currentX = calcBezier(currentT, mX1, mX2) - aX;
+    if (currentX > 0.0) {
+      aB = currentT;
+    } else {
+      aA = currentT;
+    }
+  } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
+  return currentT;
+}
+
+function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
+ for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
+   var currentSlope = getSlope(aGuessT, mX1, mX2);
+   if (currentSlope === 0.0) {
+     return aGuessT;
+   }
+   var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
+   aGuessT -= currentX / currentSlope;
+ }
+ return aGuessT;
+}
+
+module.exports = function bezier (mX1, mY1, mX2, mY2) {
+  if (!(0 <= mX1 && mX1 <= 1 && 0 <= mX2 && mX2 <= 1)) {
+    throw new Error('bezier x values must be in [0, 1] range');
+  }
+
+  // Precompute samples table
+  var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+  if (mX1 !== mY1 || mX2 !== mY2) {
+    for (var i = 0; i < kSplineTableSize; ++i) {
+      sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
+    }
+  }
+
+  function getTForX (aX) {
+    var intervalStart = 0.0;
+    var currentSample = 1;
+    var lastSample = kSplineTableSize - 1;
+
+    for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
+      intervalStart += kSampleStepSize;
+    }
+    --currentSample;
+
+    // Interpolate to provide an initial guess for t
+    var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
+    var guessForT = intervalStart + dist * kSampleStepSize;
+
+    var initialSlope = getSlope(guessForT, mX1, mX2);
+    if (initialSlope >= NEWTON_MIN_SLOPE) {
+      return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
+    } else if (initialSlope === 0.0) {
+      return guessForT;
+    } else {
+      return binarySubdivide(aX, intervalStart, intervalStart + kSampleStepSize, mX1, mX2);
+    }
+  }
+
+  return function BezierEasing (x) {
+    if (mX1 === mY1 && mX2 === mY2) {
+      return x; // linear
+    }
+    // Because JavaScript number are imprecise, we should guarantee the extremes are right.
+    if (x === 0) {
+      return 0;
+    }
+    if (x === 1) {
+      return 1;
+    }
+    return calcBezier(getTForX(x), mY1, mY2);
+  };
+};
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nav', {
+    ref: "scrollactive-nav-wrapper",
+    staticClass: "scrollactive-nav"
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ })
+/******/ ]);
+});
+},{}],13:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -13148,7 +14861,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":7}],12:[function(require,module,exports){
+},{"_process":7}],14:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}

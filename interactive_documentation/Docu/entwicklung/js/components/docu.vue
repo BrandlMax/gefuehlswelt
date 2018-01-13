@@ -1,14 +1,38 @@
 <template>
     <div class="docu">
+        <!-- Navigation -->
+        <affix 
+            class="sidebar-menu vue-affix affix" 
+            :scrollAffix="false"
+            :offset="{top: '20vh', bottom: 40 }"
+            relative-element-selector="#content" 
+            style="width: 250px, top: 20vh">
+            
+            <scrollactive class="menu-list" :offset="100" :duration="1000" active-class="active">
+
+            <a href="#FormatTest" class="scrollactive-item" title="Format Test">Format Test</a>
+
+            <a href="#markdowntoplevel" class="scrollactive-item" title="markdowntoplevel">Markdown Top Level</a>
+            
+            <a href="#melanie" class="scrollactive-item" title="melanie">Melanie</a>
+
+            <a href="#abb2" class="subitem scrollactive-item" title="Abbildung">Abbildung2</a>
+
+            
+            </scrollactive>
+
+        </affix>
+
         <div id="content" class="contentarea">
-            <Chapter v-for="(item, index) in this.$store.state.chapters" :key="index" :chapterContent="item">
-            </Chapter>
+            <ChapterFormat :idLink="'FormatTest'"></ChapterFormat>
         </div>
     </div>
 </template>
 
 <script>
-import Chapter from './chapter.vue';
+// Kapitel einfügen
+import ChapterFormat from './chapters/chapter_format.vue';
+
 
 // Search
 document.addEventListener("keydown", (e) => {
@@ -19,6 +43,7 @@ document.addEventListener("keydown", (e) => {
     // console.log('event',e);
 });
 
+
 export default {
   props: [],
   data(){
@@ -28,13 +53,6 @@ export default {
   },
   mounted() {
       console.log('Docu', this.$store.state.chapters);
-
-      // Create Table of Content
-       $('.chapter').jqTOC({
-           tocTopLink: '',
-           tocTitle: '',
-           tocShowOnClick: false,
-       });
   },
   created () {
 
@@ -42,7 +60,7 @@ export default {
   destroyed(){
 
   },components: {
-      Chapter
+      ChapterFormat
   },
   methods:{
 
@@ -51,6 +69,8 @@ export default {
 </script>
 
 <style>
+
+/* Global Style */
 
 body{
     font-family: 'importedLato', Arial, sans-serif;
@@ -113,29 +133,45 @@ blockquote {
     border-left: 5px solid #BADCCC;
 }
 
-/* Table of Content */
-#toc_container {
+/* Sidebar */
+.sidebar-menu.vue-affix.affix {
+    width: 230px;
+}
+
+.sidebar-menu.vue-affix.affix-top {
     position: fixed;
-    top: 10vh;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-left: 3px solid #6EB5C9;
-    opacity: 0.3;
-    font-size: 12px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    height: 80vh;
-    overflow: scroll;
+    top: 20vh;
 }
 
-#toc_container:hover{
-    opacity: 1;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+nav.scrollactive-nav.menu-list {
+    width: 100%;
 }
 
-.toc_content a {
+.sidebar-menu a.subitem {
+    padding-left: 40px;
+}
+
+.sidebar-menu a {
     display: block;
+    padding-left: 20px;
+    opacity: 0.5;
+
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-size: 13px;
 }
+
+.sidebar-menu a:hover {
+    opacity: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.sidebar-menu a.active {
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 1;
+}
+
 </style>
 

@@ -966,12 +966,12 @@ In all these deliberations, we may be confusing “human” with “person”. T
 
 
 > Some random Quote:
-> Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person[^2]. 
+> Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^1] . 
 > 
 > – Some Random Dude
 
 
-Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person[^2].
+Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^2].
 
 Descartes’ objection that one cannot specify conditions of singularity and identity over time for disembodied souls is right only if we assume that such “souls” possess no energy. A bodiless intelligent energy matrix which maintains its form and identity over time is conceivable. Certain AI and genetic software programs already do it.
 

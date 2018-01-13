@@ -13,7 +13,7 @@ var exportpath = "../DocuTemplate/public";
 
 // Erster Aufruf
 gulp.task("default", () =>{
-    runSequence('clean',['index','javascript', 'src','browser-sync'],'watch')
+    runSequence('clean',['browser-sync'],'watch')
 })
 
 // Ordner leeren
@@ -23,7 +23,7 @@ gulp.task("clean", () => {
 })
 
 // Automatisch Seite neu laden
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['index','javascript','src'], function() {
     browserSync.init({
         server: {
             baseDir: exportpath
@@ -31,7 +31,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('browser-reload', function() {
+gulp.task('browser-reload', ['index','javascript','src'], function() {
     browserSync.reload();
 });
 
@@ -60,5 +60,5 @@ gulp.task("index", () =>{
 
 // Passe auf veränderungen auf.
 gulp.task("watch", () => {
-    gulp.watch('entwicklung/**', ['javascript', 'src', 'index', 'browser-reload']);
+    gulp.watch('entwicklung/**', ['browser-reload']);
 })

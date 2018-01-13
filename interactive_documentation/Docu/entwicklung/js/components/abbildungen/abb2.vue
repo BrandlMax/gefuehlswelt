@@ -1,6 +1,6 @@
 <template>
     <div class="chapter">
-        <h4>!Abbildung2 hier!</h4>
+        <h4 id="abb2">!Abbildung2 hier!</h4>
     </div>
 </template>
 
