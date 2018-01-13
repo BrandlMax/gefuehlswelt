@@ -12,7 +12,7 @@
 
             <a href="#FormatTest" class="scrollactive-item" title="Format Test">Format Test</a>
 
-            <a href="#markdowntoplevel" class="scrollactive-item" title="markdowntoplevel">Markdown Top Level</a>
+            <a href="#markdown-top-level" class="scrollactive-item" title="markdowntoplevel">Markdown Top Level</a>
             
             <a href="#melanie" class="scrollactive-item" title="melanie">Melanie</a>
 

@@ -41,8 +41,6 @@ const store = new Vuex.Store({
     },
 })
 
-
-
 // RUN THIS SHIT.
 const vm = new Vue({
     router,
