@@ -1,6 +1,24 @@
 <template>
     <div class="toolLayer">
 
+        <PatternTool class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'pattern'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width,
+                x: layerData.x,
+                y: layerData.y,
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </PatternTool>
+
         <UglyPen class="maskedlayer"
             stouch-action="none"
             v-if="Tool === 'ugly'"
@@ -106,6 +124,7 @@
 
     import TextTool from '../werzeuge/texttool.vue';
     import UglyPen from '../werzeuge/uglypen.vue';
+    import PatternTool from '../werzeuge/pattern.vue';
 
     import Inspire from '../werzeuge/inspire.vue';
 
@@ -186,7 +205,8 @@
             meinAnderesWerkzeug,
             TextTool,
             UglyPen,
-            Inspire
+            Inspire,
+            PatternTool
         },
         methods: {
             // Current Tool
@@ -227,6 +247,8 @@
                     case 'ugly':
                         return true;
                     case 'inspire':
+                        return true;
+                    case 'pattern':
                         return true;
                     default:
                         return false;
