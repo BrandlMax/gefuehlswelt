@@ -277,7 +277,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-01f802e0", __vue__options__)
   } else {
-    hotAPI.reload("data-v-01f802e0", __vue__options__)
+    hotAPI.rerender("data-v-01f802e0", __vue__options__)
   }
 })()}
 },{"../../../../node_modules/markdown-it":12,"../../../../node_modules/markdown-it-anchor":10,"../../../../node_modules/markdown-it-footnote":11,"../../../../node_modules/marked":64,"../../../../node_modules/showdown-footnotes":72,"vue":87,"vue-hot-reload-api":85}],6:[function(require,module,exports){
@@ -312,7 +312,6 @@ Vue.use(_vueScrollactive2.default);
 var routes = [{ path: '/', component: _docu2.default }];
 
 var router = new VueRouter({
-    mode: 'history',
     scrollBehavior: function scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
             return { selector: to.hash };
