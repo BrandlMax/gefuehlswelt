@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'selimaregular';
+    src: url('../fonts/selima/selima_-webfont.woff') format('woff'),
+         url('../fonts/selima/selima_-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'importedLato';
+    src: url('../fonts/Lato/Lato-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'importedLato';
+    src: url('../fonts/Lato/Lato-Italic.ttf')  format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'importedLato';
+    src: url('../fonts/Lato/Lato-Bold.ttf')  format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'importedLato';
+    src: url('../fonts/Lato/Lato-BoldItalic.ttf')  format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
