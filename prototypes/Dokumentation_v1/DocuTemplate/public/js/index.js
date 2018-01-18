@@ -24,15 +24,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('h4',[_vm._v("!Abbildung hier!")])])}]
-__vue__options__._scopeId = "data-v-8d1f4536"
+__vue__options__._scopeId = "data-v-2a88c876"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8d1f4536", __vue__options__)
+    hotAPI.createRecord("data-v-2a88c876", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8d1f4536", __vue__options__)
+    hotAPI.rerender("data-v-2a88c876", __vue__options__)
   }
 })()}
 },{"vue":87,"vue-hot-reload-api":85}],2:[function(require,module,exports){
@@ -61,15 +61,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('h4',{attrs:{"id":"abb2"}},[_vm._v("!Abbildung2 hier!")])])}]
-__vue__options__._scopeId = "data-v-74b2f89d"
+__vue__options__._scopeId = "data-v-26a7efac"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-74b2f89d", __vue__options__)
+    hotAPI.createRecord("data-v-26a7efac", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-74b2f89d", __vue__options__)
+    hotAPI.rerender("data-v-26a7efac", __vue__options__)
   }
 })()}
 },{"vue":87,"vue-hot-reload-api":85}],3:[function(require,module,exports){
@@ -115,15 +115,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter",attrs:{"id":_vm.idLink}},[_c('mdToText',{attrs:{"uniqueTitle":'formattest'}},[_vm._v("\n# Test for Formats?\n\nAre we human because of unique traits and attributes not shared with either animal or machine? The definition of “human” is circular: we are human by virtue of the properties that make us human (i.e., distinct from animal and machine). It is a definition by negation: that which separates us from animal and machine is our “human-ness”.\n\n*We are human because we are not animal, nor machine. But such thinking has been rendered progressively less tenable by the advent of evolutionary and neo-evolutionary theories which postulate a continuum in nature between animals and Man.*\n\nOur uniqueness is partly quantitative and partly qualitative. Many animals are capable of cognitively manipulating symbols and using tools. Few are as adept at it as we are. These are easily quantifiable differences – two of many.\n\n\n# Markdown Top Level\n\nQualitative differences are a lot more difficult to substantiate. In the absence of privileged access to the animal mind, we cannot and don’t know if animals feel guilt, for instance. Do animals love? Do they have a concept of sin? What about object permanence, meaning, reasoning, self-awareness, critical thinking? Individuality? Emotions? Empathy? Is artificial intelligence (AI) an oxymoron? A machine that passes the Turing Test may well be described as “human”. But is it really? And if it is not – why isn’t it?\n\n\n## 2nd Level\n\nLiterature is full of stories of monsters – Frankenstein, the Golem – and androids or anthropoids. Their behaviour is more “humane” than the humans around them. This, perhaps, is what really sets humans apart: their behavioural unpredictability. It is yielded by the interaction between Mankind’s underlying immutable genetically-determined nature – and Man’s kaleidoscopically changing environments.\n\n\n## 2nd Level\n\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature – being the inevitable and inexorable outcome of our bestial ancestry – cannot be the subject of moral judgment.\n\n**3rd Level**\nThe Constructivists even claim that Human Nature is a mere cultural artefact. Sociobiologists, on the other hand, are determinists. They believe that human nature – being the inevitable and inexorable outcome of our bestial ancestry – cannot be the subject of moral judgment.\n\n\n# Melanie\n![Bildunterschrift: Das ist Melanie](https://d2mxuefqeaa7sj.cloudfront.net/s_895E577FE6EC85C7DC981C8E4FF92AB4539B02ACE9523AA9443D0E932B878054_1515249360812_E3EF2632-8274-4F53-8955-4B67436FD751.png)\n\n\nAn improved Turing Test would look for baffling and erratic patterns of misbehaviour to identify humans. Pico della Mirandola wrote in “Oration on the Dignity of Man” that Man was born without a form and can mould and transform – actually, create – himself at will. Existence precedes essence, said the [Link](http://www.google.de) marked underlined. **Bold**. *Italic*.\n\nThe one defining human characteristic may be our awareness of our mortality. The automatically triggered, “fight or flight”, battle for survival is common to all living things (and to appropriately programmed machines). Not so the catalytic effects of imminent death. These are uniquely human. The appreciation of the fleeting translates into aesthetics, the uniqueness of our ephemeral life breeds morality, and the scarcity of time gives rise to ambition and creativity.\n\n\n- Hello\n- This\n- is\n- a\n- List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of “free will”. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n1. This\n2. is \n3. numbered\n4. List\n\nIn an infinite life, everything materializes at one time or another, so the concept of choice is spurious. The realization of our finiteness forces us to choose among alternatives. This act of selection is predicated upon the existence of “free will”. Animals and machines are thought to be \ndevoid of choice, slaves to their genetic or human programming.\n\n\n## Checkliste\n\n\n[ ] Checkliste 1\n[ ] Checkliste 2\n[ ] Checkliste 3\n\n\n## Converter Code\n\nYet, all these answers to the question: “What does it mean to be human” – are lacking.\n\n\n        // https://github.com/showdownjs/showdown\n        var converter = new showdown.Converter({noHeaderId: true});\n        var text = \"#Hello World!\";\n        var html = converter.makeHtml(text);\n        console.log(html);\n\nThe set of attributes we designate as human is subject to profound alteration. Drugs, neuroscience, introspection, and experience all cause irreversible changes in these traits and characteristics. The accumulation of these changes can lead, in principle, to the emergence of new properties, or to the abolition of old ones.\n\nAnimals and machines are not supposed to possess free will or exercise it. What, then, about fusions of machines and humans (bionics)? At which point does a human turn into a machine? And why should we assume that free will ceases to exist at that – rather arbitrary – point?\n\nIntrospection – the ability to construct self-referential and recursive models of the world – is supposed to be a uniquely human quality. What about introspective machines? Surely, say the critics, such machines are PROGRAMMED to introspect, as opposed to humans. To qualify as introspection, it must be WILLED, they continue. Yet, if introspection is willed – WHO wills it? Self-willed introspection leads to infinite regression and formal logical paradoxes.\n\nMoreover, the notion – if not the formal concept – of “human” rests on many hidden assumptions and conventions.\n\n\n# Youtube Video\n\n\nhttps://www.youtube.com/watch?v=DZlw-IS5OkI&\n\n\n[https://youtu.be/DZlw-IS5OkI](https://youtu.be/DZlw-IS5OkI)\n\nPolitical correctness notwithstanding – why presume that men and women (or different races) are identically human? Aristotle thought they were not. A lot separates males from females – genetically (both genotype and phenotype) and environmentally (culturally). What is common to these two sub-species that makes them both “human”?\n\nCan we conceive of a human without body (i.e., a Platonian Form, or soul)? Aristotle and Thomas Aquinas think not. A soul has no existence separate from the body. A machine-supported energy field with mental states similar to ours today – would it be considered human? What about someone in a state of coma – is he or she (or it) fully human?\n\nIs a new born baby human – or, at least, fully human – and, if so, in which sense? What about a future human race – whose features would be unrecognizable to us? Machine-based intelligence – would it be thought of as human? If yes, when would it be considered human?\n\nIn all these deliberations, we may be confusing “human” with “person”. The former is a private case of the latter. Locke’s person is a moral agent, a being responsible for its actions. It is constituted by the continuity of its mental states accessible to introspection.\n\n\n\n\n> Some random Quote:\n> Locke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^1] . \n> \n> – Some Random Dude\n\n\nLocke’s is a functional definition. It readily accommodates non-human persons (machines, energy matrices) if the functional conditions are satisfied. Thus, an android which meets the prescribed requirements is more human than a brain dead person [^2].\n\nDescartes’ objection that one cannot specify conditions of singularity and identity over time for disembodied souls is right only if we assume that such “souls” possess no energy. A bodiless intelligent energy matrix which maintains its form and identity over time is conceivable. Certain AI and genetic software programs already do it.\n\nStrawson is Cartesian and Kantian in his definition of a “person” as a “primitive”. Both the corporeal predicates and those pertaining to mental states apply equally, simultaneously, and inseparably to all the individuals of that type of entity. Human beings are one such entity. Some, like Wiggins, limit the list of possible persons to animals – but this is far from rigorously necessary and is unduly restrictive [^3].\n\n**The truth is probably in a synthesis:**\n\nA person is **any type of fundamental** and irreducible entity whose typical physical individuals (i.e., members) are capable of continuously experiencing a range of states of consciousness and permanently having a list of psychological attributes.\n\nThis definition allows for non-animal persons and recognizes the personhood of a brain damaged human (“capable of experiencing”). It also incorporates Locke’s view of humans as possessing an ontological status similar to “clubs” or “nations” – their personal identity consists of a variety of interconnected psychological continuities.\n\n[^1]: Some Awesome Guy, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^2]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n[^3]: Another Awesome Link, [www.google.de](http://www.google.de), besucht am 07.01.2018\n\n")]),_vm._v(" "),_c('abb'),_vm._v(" "),_c('abb2')],1)}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-2da550a4"
+__vue__options__._scopeId = "data-v-353621bf"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2da550a4", __vue__options__)
+    hotAPI.createRecord("data-v-353621bf", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2da550a4", __vue__options__)
+    hotAPI.rerender("data-v-353621bf", __vue__options__)
   }
 })()}
 },{"../abbildungen/abb.vue":1,"../abbildungen/abb2.vue":2,"../parts/text.vue":5,"vue":87,"vue-hot-reload-api":85}],4:[function(require,module,exports){
@@ -174,9 +174,9 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2ce43e51", __vue__options__)
+    hotAPI.createRecord("data-v-0fc013e0", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2ce43e51", __vue__options__)
+    hotAPI.rerender("data-v-0fc013e0", __vue__options__)
   }
 })()}
 },{"./chapters/chapter_format.vue":3,"vue":87,"vue-hot-reload-api":85,"vueify/lib/insert-css":88}],5:[function(require,module,exports){
@@ -269,15 +269,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"text",attrs:{"id":_vm.uniqueTitle}},[_vm._t("default")],2)}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-01f802e0"
+__vue__options__._scopeId = "data-v-2d872cdf"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-01f802e0", __vue__options__)
+    hotAPI.createRecord("data-v-2d872cdf", __vue__options__)
   } else {
-    hotAPI.reload("data-v-01f802e0", __vue__options__)
+    hotAPI.rerender("data-v-2d872cdf", __vue__options__)
   }
 })()}
 },{"../../../../node_modules/markdown-it":12,"../../../../node_modules/markdown-it-anchor":10,"../../../../node_modules/markdown-it-footnote":11,"../../../../node_modules/marked":64,"../../../../node_modules/showdown-footnotes":72,"vue":87,"vue-hot-reload-api":85}],6:[function(require,module,exports){
