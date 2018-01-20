@@ -1,14 +1,37 @@
 <template>
-    <div id="Modal">
-        <h2>Modal Window</h2>
-    </div>
+    <transition name="modal">
+        <div class="modal-mask" @click="$emit('close')">
+        <div class="modal-wrapper">
+            <div class="modal-container">
+                <div @click="$emit('close')" id="modal_closeBtn">
+                    <img src="../../../src/img/Close.png" alt="close">
+                </div>
+
+                <div v-if="modalType === 'video'" class="modal_video">
+                    <video controls="true" autoplay="true">
+                        <slot></slot>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div v-if="modalType === 'image'" class="modal_image">
+                        <slot></slot>
+                </div>
+
+                <div  v-if="modalType === 'excel'" class="modal_excel">
+                    <h1>Excel</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </transition>
 </template>
 
 <script>
 // Import
 
 export default {
-  props: [],
+  props: ['modalType', 'autoPush'],
   data(){
       return{
       }
@@ -28,46 +51,61 @@ export default {
 </script>
 
 <style scoped>
+
+#modal_closeBtn {
+    width: 4vw;
+    position: absolute;
+    right: 4vw;
+    cursor: pointer;
+    z-index: 9998;
+    margin-top: -1vw;
+}
+
 .modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: table;
+    transition: opacity .3s ease;
 }
 
 .modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
-
-.modal-body {
-  margin: 20px 0;
+    width: 90vw;
+    margin: 0px auto;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-default-button {
-  float: right;
+    float: right;
 }
+
+
+/* Video */
+.modal_video {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_video video {
+    width: 100%;
+}
+
 
 /*
  * The following styles are auto-applied to elements with
@@ -79,17 +117,17 @@ export default {
  */
 
 .modal-enter {
-  opacity: 0;
+    opacity: 0;
 }
 
 .modal-leave-active {
-  opacity: 0;
+    opacity: 0;
 }
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 </style>

@@ -1,14 +1,11 @@
 <template>
 <div id="pagination">
-    <div class="dot" @click="changePage('one')">
-        <img src="../../src/img/dot.png">
+
+    <div v-for="(point, index) in this.$router.options.routes" :key="index" :class="['dot tooltip', {active: checkActive(point.name)}]" @click="changePage(point.name)">
+        <img :src="'../../src/img/dot_'+ point.color+'.png'">
+        <span class="tooltiptext">{{point.title}} {{index}}</span>
     </div>
-    <div class="dot" @click="changePage('two')">
-        <img src="../../src/img/dot.png">
-    </div>
-    <div class="dot" @click="changePage('three')">
-        <img src="../../src/img/dot.png">
-    </div>
+
 </div>
 </template>
 
@@ -19,9 +16,12 @@ export default {
   props: [],
   data(){
       return{
+          curPath: this.$route.name
       }
   },
   mounted() {
+      console.log('Router', this.$router.options.routes);
+       console.log('Router Detail', this.$route.path);
   },
   created () {
   },
@@ -31,9 +31,13 @@ export default {
 
   },
   methods:{
-      changePage(target){
-          console.log('Change Page:', target)
-      }
+    changePage(id){
+        this.$router.push({ name: id})
+    },
+    checkActive(name){
+        console.log('checkActive', this.curPath === '/'+ name)
+        return this.curPath === name;
+    }
   }
 }
 </script>
@@ -51,7 +55,63 @@ export default {
     padding-bottom: 0.5vw;
     padding-right: 1vh;
     padding-left: 1vh;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.5s ease;
 }
+
+.dot:hover{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.dot.active{
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    opacity: 0;
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    position: absolute;
+    z-index: 1;
+
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
 
 </style>
 
