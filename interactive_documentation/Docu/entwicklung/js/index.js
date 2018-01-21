@@ -41,3 +41,26 @@ const vm = new Vue({
     store
 }).$mount('#app');
 
+
+// DEBUGGIN'
+window.onresize = function(){
+    function gcd (a, b) {
+        return (b == 0) ? a : gcd (b, a%b);
+    }
+
+    var w = window.innerHeight;
+    var h = window.innerWidth;
+    var r = gcd (w, h);
+
+    console.log('Window Ratio Data', [{
+        dimensions: w + ' x ' + h,
+        GCD: r,
+        Aspect: w/r + ":" +  h/r
+    }])
+    console.log('Kennzahl1', w/h);
+    // WENN KENNZAHL 2 größer als 2 dann Passt das Buch nicht mehr hinein
+    console.log('Kennzahl2', h/w);
+    console.log('Kennzahl3', w-h);
+    console.log('Kennzahl4', h-w);
+   
+};

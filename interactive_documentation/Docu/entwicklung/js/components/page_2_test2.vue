@@ -32,9 +32,10 @@
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
-        <div class="arrow right" @click="changePage('3')">
+        <!-- <div class="arrow right" @click="changePage('3')">
             <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
-        </div>
+        </div> -->
+
     </div>
 </template>
 
@@ -90,84 +91,6 @@ export default {
 </script>
 
 <style>
-
-/* Global Style */
-
-body{
-    font-family: 'importedLato', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 32px;
-    color: #333333;
-    background: #F3F2EE;
-
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5{
-    font-family: 'selimaregular', cursive;
-    color: #333333;
-    font-weight: normal;
-}
-
-h1{
-    font-size: 4vw;
-}
-
-h2{
-    font-size: 3vw;
-}
-
-img{
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: #6EB5C9;
-    opacity: 1;
-}
-
-a:hover{
-    opacity: 0.5;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-}
-
-.docu{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-}
-
-.arrow {
-    position: absolute;
-    z-index: 9000;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: all 0.5s ease
-}
-
-.arrow:hover{
-    opacity: 1.0;
-}
-
-.arrow.left {
-    left: 0;
-    width: 10vw;
-    margin-left: 20px;
-}
-
-.arrow.right {
-    right: 0;
-    width: 10vw;
-    margin-right: 20px;
-}
-
 
 </style>
 
