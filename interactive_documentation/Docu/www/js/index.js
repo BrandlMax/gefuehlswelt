@@ -32,7 +32,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8671d820", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8671d820", __vue__options__)
+    hotAPI.reload("data-v-8671d820", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],2:[function(require,module,exports){
@@ -69,7 +69,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6d32c6de", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6d32c6de", __vue__options__)
+    hotAPI.reload("data-v-6d32c6de", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],3:[function(require,module,exports){
@@ -106,7 +106,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-03fabbca", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-03fabbca", __vue__options__)
+    hotAPI.reload("data-v-03fabbca", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],4:[function(require,module,exports){
@@ -156,7 +156,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-ac27c0c8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-ac27c0c8", __vue__options__)
+    hotAPI.reload("data-v-ac27c0c8", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],5:[function(require,module,exports){
@@ -221,7 +221,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-76b38f7f", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-76b38f7f", __vue__options__)
+    hotAPI.reload("data-v-76b38f7f", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],6:[function(require,module,exports){
@@ -276,7 +276,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7887d584", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7887d584", __vue__options__)
+    hotAPI.reload("data-v-7887d584", __vue__options__)
   }
 })()}
 },{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],7:[function(require,module,exports){
@@ -355,7 +355,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4693f801", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4693f801", __vue__options__)
+    hotAPI.reload("data-v-4693f801", __vue__options__)
   }
 })()}
 },{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],8:[function(require,module,exports){
@@ -439,7 +439,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-76a9c6ac", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-76a9c6ac", __vue__options__)
+    hotAPI.reload("data-v-76a9c6ac", __vue__options__)
   }
 })()}
 },{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/coverSlider.vue":5,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],9:[function(require,module,exports){
@@ -518,7 +518,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-18e92a12", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-18e92a12", __vue__options__)
+    hotAPI.reload("data-v-18e92a12", __vue__options__)
   }
 })()}
 },{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],10:[function(require,module,exports){
