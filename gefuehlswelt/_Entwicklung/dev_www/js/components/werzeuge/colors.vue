@@ -5,8 +5,9 @@
 </template>
 
 <script>
-    // CIRCLES
-    // Auf Grundlage von Janett Herdt (angepasst für den Prototyp)
+    // Colors
+    // https://codepen.io/tksiiii/pen/wpaQMV
+    // Alessa Klinger (angepasst für den Prototyp)
     export default {
         props: ['toolData'],
         data() {
@@ -18,9 +19,6 @@
             // Load Data from Server
             this.loadData();
 
-            var circles = [];
-            var numberOfCircles;
-
             var toolData = this.toolData;
             var el = document.getElementById('sketch_' + this.toolData.id);
             //--------- p5 Code Here --------------
@@ -29,10 +27,14 @@
             var meinWerkzeug = new p5((p5) => {
                 // console.log('this Inside P5', this);
 
-                // Calculating a random integer
-                function getRandomInt(min, max) {
-                    return Math.floor(Math.random() * (max - min + 1)) + min;
-                }
+                var isDrawing = false;
+
+                let angle = 0;
+                let phaseScale = 0;
+                let phaseColor = 0;
+                let sizeRatio = 0;
+                let sizeRatioOffset = sizeRatio * 1.9;
+
 
                 p5.setup = () => {
 
@@ -41,45 +43,96 @@
                     canvas.parent('sketch_' + toolData.id);
                     canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
 
-                    // console.log('circlelength', this.saveData)
-                    // Load Before
                     for (var i = 0; i < this.saveData.length; i++) {
-                        circles.push(new Circle(this.saveData[i].x, this.saveData[i].y, this.saveData[i].size, this.saveData[i].r, this.saveData[i].g, this.saveData[i].b));
-                    }
+                    p5.push();
+                        p5.translate(this.saveData[i].x, this.saveData[i].y);
+                        p5.rotate(this.saveData[i].angle);
+                        p5.scale(sizeRatio * p5.sin(this.saveData[i].phaseScale) + 3.5);
 
-                    // console.log('circlelength', circles)
+                        p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                        p5.strokeWeight(0.1);
+                        p5.stroke(255, 255, 255, 130);
+
+                        p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                        let c = p5.color(this.saveData[i].phaseColor, 100, 100, 0.05);
+                        p5.fill(c);
+                        p5.ellipse(-5, -5, 50, 50);
+                    p5.pop();
+                    }
 
                 };
 
                 p5.draw = () => {
+                        angle %= p5.TWO_PI;
+                        angle += 0.20;
 
-                    for (var i = 0; i < circles.length; i++) {
-                        circles[i].display();
-                    }
+                        phaseScale %= p5.TWO_PI;
+                        phaseScale += 0.1;
 
+                        phaseColor %= 360;
+                        phaseColor += 0.6;
                 };
 
                 var isDrawing = false;
+
                 el.onmousedown = (e) => {
                     isDrawing = true;
-                    circles.push(new Circle(p5.mouseX, p5.mouseY));
-                    this.saveData = circles;
-                    // console.log('saveDatainPress', this.saveData)
-                    // console.log('circlelength', circles);
+
+                    p5.push();
+                        p5.translate(p5.mouseX, p5.mouseY);
+                        p5.rotate(angle);
+                        p5.scale(sizeRatio * p5.sin(phaseScale) + 3.5);
+
+                        p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                        p5.strokeWeight(0.1);
+                        p5.stroke(255, 255, 255, 130);
+
+                        p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                        let c = p5.color(phaseColor, 100, 100, 0.05);
+                        p5.fill(c);
+                        p5.ellipse(-5, -5, 50, 50);
+                    p5.pop();
+
+                    this.saveData.push({
+                        x: p5.mouseX,
+                        y: p5.mouseY,
+                        angle: angle,
+                        phaseScale: phaseScale,
+                        phaseColor: phaseColor,
+                    })
                 }
 
                 el.onmousemove = (e) => {
                     if (isDrawing) {
-                        circles.push(new Circle(p5.mouseX, p5.mouseY));
-                        this.saveData = circles;
-                        // console.log('saveDatainPress', this.saveData)
-                        // console.log('circlelength', circles);
+
+                    p5.push();
+                        p5.translate(p5.mouseX, p5.mouseY);
+                        p5.rotate(angle);
+                        p5.scale(sizeRatio * p5.sin(phaseScale) + 3.5);
+
+                        p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                        p5.strokeWeight(0.1);
+                        p5.stroke(255, 255, 255, 130);
+
+                        p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                        let c = p5.color(phaseColor, 100, 100, 0.05);
+                        p5.fill(c);
+                        p5.ellipse(-5, -5, 50, 50);
+                    p5.pop();
+
+                    this.saveData.push({
+                        x: p5.mouseX,
+                        y: p5.mouseY,
+                        angle: angle,
+                        phaseScale: phaseScale,
+                        phaseColor: phaseColor,
+                    })
+
                     }
                 }
 
                 el.onmouseup = () => {
                     isDrawing = false;
-                    this.saveData = circles;
                     this.saveToVuex()
                 };
 

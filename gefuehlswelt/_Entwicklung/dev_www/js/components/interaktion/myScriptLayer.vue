@@ -118,9 +118,9 @@
             }">
         </Circles>
 
-        <Mandala class="maskedlayer"
+        <Sketch class="maskedlayer"
             stouch-action="none"
-            v-if="Tool === 'mandala'"
+            v-if="Tool === 'sketch'"
             :toolData="{
                 id: layerData.id, 
                 height:layerData.height,
@@ -132,7 +132,7 @@
                 height: layerData.height+'px', 
                 width: layerData.width+'px'
             }">
-        </Mandala>
+        </Sketch>
 
         <RainBrush class="maskedlayer"
             stouch-action="none"
@@ -166,6 +166,56 @@
             }">
         </Rose>
 
+        <Colors class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'colors'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Colors>
+
+
+        <Fade class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'fade'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Fade>
+
+
+        <Spin class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'spin'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Spin>
+
         <div
             touch-action="none" 
             v-if="Tool === 'NoTool'"
@@ -191,9 +241,13 @@
     import PatternTool from '../werzeuge/pattern.vue';
 
     import Circles from '../werzeuge/circles.vue';
-    import Mandala from '../werzeuge/Mandala.vue';
+    import Sketch from '../werzeuge/Sketch.vue';
     import RainBrush from '../werzeuge/rainbrush.vue';
     import Rose from '../werzeuge/rose.vue';
+
+    import Colors from '../werzeuge/colors.vue';
+    import Fade from '../werzeuge/fade.vue';
+    import Spin from '../werzeuge/spin.vue';
 
     import Inspire from '../werzeuge/inspire.vue';
 
@@ -277,9 +331,12 @@
             Inspire,
             PatternTool,
             Circles,
-            Mandala,
+            Sketch,
             RainBrush,
-            Rose
+            Rose,
+            Colors,
+            Fade,
+            Spin,
         },
         methods: {
             // Current Tool
@@ -327,9 +384,15 @@
                         return true;
                     case 'rose':
                         return true;
-                    case 'mandala':
-                        return true;
                     case 'rain':
+                        return true;
+                    case 'colors':
+                        return true;
+                    case 'fade':
+                        return true;
+                    case 'spin':
+                        return true;
+                    case 'sketch':
                         return true;
                     default:
                         return false;

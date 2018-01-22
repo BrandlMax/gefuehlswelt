@@ -5,8 +5,9 @@
 </template>
 
 <script>
-    // CIRCLES
-    // Auf Grundlage von Janett Herdt (angepasst für den Prototyp)
+    // Spin
+    // https://codepen.io/tksiiii/pen/wpaQMV
+    // Alessa Klinger (angepasst für den Prototyp)
     export default {
         props: ['toolData'],
         data() {
@@ -18,9 +19,6 @@
             // Load Data from Server
             this.loadData();
 
-            var circles = [];
-            var numberOfCircles;
-
             var toolData = this.toolData;
             var el = document.getElementById('sketch_' + this.toolData.id);
             //--------- p5 Code Here --------------
@@ -29,57 +27,57 @@
             var meinWerkzeug = new p5((p5) => {
                 // console.log('this Inside P5', this);
 
-                // Calculating a random integer
-                function getRandomInt(min, max) {
-                    return Math.floor(Math.random() * (max - min + 1)) + min;
-                }
+                var isDrawing = false;
+
+                let windowW = window.innerWidth;
+                let windowH = window.innerHeight;
+                let centerW = windowW / 0.2;
+                let centerH = windowH / 0.2;
+                let circle;
+                let circles = [];
+                let shortSide;
+
 
                 p5.setup = () => {
-
+                    shortSide = p5.min(toolData.width, toolData.height);
                     // Create Canvas
                     var canvas = p5.createCanvas(toolData.width, toolData.height);
                     canvas.parent('sketch_' + toolData.id);
                     canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
 
-                    // console.log('circlelength', this.saveData)
-                    // Load Before
                     for (var i = 0; i < this.saveData.length; i++) {
-                        circles.push(new Circle(this.saveData[i].x, this.saveData[i].y, this.saveData[i].size, this.saveData[i].r, this.saveData[i].g, this.saveData[i].b));
-                    }
 
-                    // console.log('circlelength', circles)
+                    }
 
                 };
 
                 p5.draw = () => {
 
-                    for (var i = 0; i < circles.length; i++) {
-                        circles[i].display();
-                    }
-
                 };
 
                 var isDrawing = false;
+
                 el.onmousedown = (e) => {
                     isDrawing = true;
-                    circles.push(new Circle(p5.mouseX, p5.mouseY));
-                    this.saveData = circles;
-                    // console.log('saveDatainPress', this.saveData)
-                    // console.log('circlelength', circles);
+
+
+                    this.saveData.push({
+
+                    })
                 }
 
                 el.onmousemove = (e) => {
                     if (isDrawing) {
-                        circles.push(new Circle(p5.mouseX, p5.mouseY));
-                        this.saveData = circles;
-                        // console.log('saveDatainPress', this.saveData)
-                        // console.log('circlelength', circles);
+
+                        this.saveData.push({
+
+                        })
+
                     }
                 }
 
                 el.onmouseup = () => {
                     isDrawing = false;
-                    this.saveData = circles;
                     this.saveToVuex()
                 };
 

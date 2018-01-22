@@ -1,8 +1,7 @@
 <template>
 <div id="displayFrame">
-
+    <div class="PageTitle">Gedankensplitter {{ $route.params.id }}</div> 
   <div id="mainCanvas" touch-action="none">
-    Entry {{ $route.params.id }}
   </div>
 
   <div id="cmdCanvas" touch-action="none">
@@ -315,5 +314,14 @@
         display: -webkit-box;
         touch-action: none;
         z-index: 0;
+    }
+    .PageTitle {
+        position: absolute;
+        z-index: 10000;
+        opacity: 0.3;
+        font-family: 'selimaregular', cursive;
+        font-size: 22px;
+        margin-left: 20px;
+        margin-top: 15px;
     }
 </style>

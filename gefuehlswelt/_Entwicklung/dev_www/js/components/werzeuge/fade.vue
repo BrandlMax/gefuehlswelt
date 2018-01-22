@@ -5,8 +5,9 @@
 </template>
 
 <script>
-    // CIRCLES
-    // Auf Grundlage von Janett Herdt (angepasst für den Prototyp)
+    // Fade
+    // https://codepen.io/tksiiii/pen/wdgaLd
+    // Alessa Klinger (angepasst für den Prototyp)
     export default {
         props: ['toolData'],
         data() {
@@ -18,9 +19,6 @@
             // Load Data from Server
             this.loadData();
 
-            var circles = [];
-            var numberOfCircles;
-
             var toolData = this.toolData;
             var el = document.getElementById('sketch_' + this.toolData.id);
             //--------- p5 Code Here --------------
@@ -28,12 +26,7 @@
 
             var meinWerkzeug = new p5((p5) => {
                 // console.log('this Inside P5', this);
-
-                // Calculating a random integer
-                function getRandomInt(min, max) {
-                    return Math.floor(Math.random() * (max - min + 1)) + min;
-                }
-
+                
                 p5.setup = () => {
 
                     // Create Canvas
