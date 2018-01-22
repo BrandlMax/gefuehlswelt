@@ -56,7 +56,7 @@
 
         <meinWerkzeug class="maskedlayer"
             stouch-action="none"
-            v-if="Tool === 'mandala'"
+            v-if="Tool === 'orange'"
             :toolData="{
                 id: layerData.id, 
                 height:layerData.height,
@@ -72,7 +72,7 @@
 
         <meinAnderesWerkzeug class="maskedlayer"
             touch-action="none"
-            v-if="Tool === 'doodle'" 
+            v-if="Tool === 'white'" 
             :toolData="{
                 id: layerData.id, 
                 height:layerData.height,
@@ -102,6 +102,70 @@
             }">
         </Inspire>
 
+        <Circles class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'circles'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Circles>
+
+        <Mandala class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'mandala'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Mandala>
+
+        <RainBrush class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'rain'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </RainBrush>
+
+        <Rose class="maskedlayer"
+            stouch-action="none"
+            v-if="Tool === 'rose'"
+            :toolData="{
+                id: layerData.id, 
+                height:layerData.height,
+                width:layerData.width
+            }" 
+            :style="{ 
+                clipPath: 'url(#path_' + layerData.id +')', 
+                top:layerData.y+'px', left:layerData.x+'px', 
+                height: layerData.height+'px', 
+                width: layerData.width+'px'
+            }">
+        </Rose>
+
         <div
             touch-action="none" 
             v-if="Tool === 'NoTool'"
@@ -125,6 +189,11 @@
     import TextTool from '../werzeuge/texttool.vue';
     import UglyPen from '../werzeuge/uglypen.vue';
     import PatternTool from '../werzeuge/pattern.vue';
+
+    import Circles from '../werzeuge/circles.vue';
+    import Mandala from '../werzeuge/Mandala.vue';
+    import RainBrush from '../werzeuge/rainbrush.vue';
+    import Rose from '../werzeuge/rose.vue';
 
     import Inspire from '../werzeuge/inspire.vue';
 
@@ -206,7 +275,11 @@
             TextTool,
             UglyPen,
             Inspire,
-            PatternTool
+            PatternTool,
+            Circles,
+            Mandala,
+            RainBrush,
+            Rose
         },
         methods: {
             // Current Tool
@@ -238,9 +311,9 @@
             //Werkzeuge
             recogTool: function(gestik) {
                 switch (gestik) {
-                    case 'mandala':
+                    case 'orange':
                         return true;
-                    case 'doodle':
+                    case 'white':
                         return true;
                     case 'text':
                         return true;
@@ -249,6 +322,14 @@
                     case 'inspire':
                         return true;
                     case 'pattern':
+                        return true;
+                    case 'circles':
+                        return true;
+                    case 'rose':
+                        return true;
+                    case 'mandala':
+                        return true;
+                    case 'rain':
                         return true;
                     default:
                         return false;
