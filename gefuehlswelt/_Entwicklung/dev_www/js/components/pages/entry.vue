@@ -1,5 +1,6 @@
 <template>
 <div id="displayFrame">
+    <div class="paperstyle"></div>
     <div class="PageTitle">Gedankensplitter {{ $route.params.id }}</div> 
   <div id="mainCanvas" touch-action="none">
   </div>
@@ -323,5 +324,19 @@
         font-size: 22px;
         margin-left: 20px;
         margin-top: 15px;
+    }
+    .paperstyle{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background: url(src/png/paper.jpg);
+        z-index: 20000;
+        top: 0;
+        left: 0;
+        background-attachment: fixed;
+        background-size: cover;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        opacity: 0.6;
     }
 </style>
