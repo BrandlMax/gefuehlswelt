@@ -123,18 +123,19 @@
 
                 // Clean Canvas Before
 
-                var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+                var paths = document.getElementById('MODEL-viewTransform').getElementsByTagName('path');
                 var pathsList = Array.prototype.slice.call(paths);
                 var SVGPath;
 
                 // Check if there is a Form
                 pathsList.forEach((element, index) => {
                     // Is there a Fill Path?
-                    if (element.id.charAt(0) === "d") {
-                        SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+                    if (element.id.charAt(6) === "d") {
+                        console.log('Charset', element.id.charAt(6));
+                        SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
                         // Positions Info
-                        var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+                        var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
                         console.log('PosInfo', posInfo);
                         console.log('SVG Path', SVGPath);

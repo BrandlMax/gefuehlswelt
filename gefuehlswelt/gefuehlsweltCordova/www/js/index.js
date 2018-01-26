@@ -655,15 +655,17 @@ exports.default = {
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
-            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var paths = document.getElementById('MODEL-viewTransform').getElementsByTagName('path');
             var pathsList = Array.prototype.slice.call(paths);
             var SVGPath;
 
             pathsList.forEach(function (element, index) {
-                if (element.id.charAt(0) === "d") {
-                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+                console.log('Charset', element.id.charAt(6));
+                if (element.id.charAt(6) === "d") {
+                    console.log('TEST?!');
+                    SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
-                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+                    var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
                     editorElement.editor.clear();
 
@@ -912,15 +914,16 @@ exports.default = {
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
-            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var paths = document.getElementById('MODEL-viewTransform').getElementsByTagName('path');
             var pathsList = Array.prototype.slice.call(paths);
             var SVGPath;
 
             pathsList.forEach(function (element, index) {
-                if (element.id.charAt(0) === "d") {
-                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+                if (element.id.charAt(6) === "d") {
+                    console.log('Charset', element.id.charAt(6));
+                    SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
-                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+                    var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
                     console.log('PosInfo', posInfo);
                     console.log('SVG Path', SVGPath);
@@ -1054,7 +1057,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a7549234", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-a7549234", __vue__options__)
+    hotAPI.reload("data-v-a7549234", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],7:[function(require,module,exports){
