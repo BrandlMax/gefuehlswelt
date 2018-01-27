@@ -1,5 +1,6 @@
 <template>
     <div class="docu">
+        <LangSwitch></LangSwitch>
 
         <transition name="fade">           
             <BookBG v-if="bookBG"></BookBG>
@@ -7,9 +8,15 @@
 
         <BookContent>
             <div slot="left">
-                <h1>Product Demo</h1>
-                <p>
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Product Demo</h1>
+                <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Cover EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
             </div>
 
@@ -28,11 +35,11 @@
             <!-- <source src="../../src/vids/trailer_test.mp4" type="video/mp4"> -->
         </Modal>
 
-        <div class="arrow left" @click="changePage('1')">
+        <div class="arrow aleft" @click="changePage('1')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
-        <!-- <div class="arrow right" @click="changePage('3')">
+        <!-- <div class="arrow aright" @click="changePage('3')">
             <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
         </div> -->
 
@@ -45,6 +52,7 @@ import BookBG from './book/bookbg.vue';
 import BookContent from './book/bookcontent.vue';
 import Pagination from './book/pagination.vue';
 import Modal from './book/modal.vue';
+import LangSwitch from './book/langswitch.vue';
 // interComps
 import TutVideo from './interactiveComps/tutorialVideo.vue';
 
@@ -77,7 +85,8 @@ export default {
       BookContent,
       Pagination,
       Modal,
-      TutVideo
+      TutVideo,
+      LangSwitch
   },
   methods:{
     checkClick(){

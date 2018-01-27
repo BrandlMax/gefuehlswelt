@@ -52,6 +52,7 @@ export default {
 
 .dot {
     width: 3vh;
+    max-width: 23px;
     padding-bottom: 0.5vw;
     padding-right: 1vh;
     padding-left: 1vh;

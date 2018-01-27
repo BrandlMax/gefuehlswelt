@@ -151,5 +151,35 @@ export default {
         height: 10vw;
         cursor: pointer;
     }
+
+    @media only screen and (orientation: portrait) {
+        .coverPreview{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-bottom: 4vw;
+        }
+        .color_switches{
+            position: relative;
+            margin-left: 15vw;
+            cursor: pointer;
+            margin-top: -43vw;
+            margin-bottom: 7vw;
+        }
+        .dropoverlay {
+            position: absolute;
+            width: 23.8vw;
+            height: 38.24vw;
+            background: rgba(255, 0, 0, 0);
+            right: 5.45vw;
+            border-radius: 0.2vw 1vw 1vw 0.2vw;
+        }
+        img.rubberband {
+            width: 1.5vw;
+            position: absolute;
+            right: 2.9vw;
+        }
+    }
 </style>
 

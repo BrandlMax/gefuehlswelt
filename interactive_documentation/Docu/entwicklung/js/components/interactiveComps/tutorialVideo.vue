@@ -64,20 +64,19 @@ export default {
 
 video{
     width: 100%;
-    border: 3px solid rgba(255, 255, 255, 0);
 }
 
 .tutvideo {
     width: 34.4vw;
     position: absolute;
+    margin-top: 0.26vw;
 }
 
 #startBtn{
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 46vw;
-    border: 3px solid rgba(255, 255, 255, 0);
+    height: 45.8vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +94,7 @@ video{
     border-width: 25px 0px 25px 40px;
     border-style: solid;
     border-color: transparent transparent transparent #ffffff;
-    margin-left: 1vw;
+    margin-left: 13px;
 }
 
 .triangleBg{

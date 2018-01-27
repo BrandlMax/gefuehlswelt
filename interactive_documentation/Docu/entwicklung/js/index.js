@@ -27,10 +27,11 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         name: 'Interactive Documentation',
+        lang: true, // true = de
     },
     mutations: {
-        changeName: (state, newName) => {
-            state.name = newName  
+        changeLanguage: (state, newName) => {
+            state.lang = !state.lang  
         },
     },
 })

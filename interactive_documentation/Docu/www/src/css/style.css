@@ -98,30 +98,141 @@ a:hover{
     opacity: 1.0;
 }
 
-.arrow.left {
+.aleft {
     left: 0;
     width: 10vw;
     margin-left: 20px;
 }
 
-.arrow.right {
+.aright {
     right: 0;
     width: 10vw;
     margin-right: 20px;
 }
+
+
+/* Book BG */
+#bookbg {
+    position: absolute;
+    width: 83vw;
+}
+
+
+/* Book Content */ 
+
+
+
+#bookcontent {
+    position: absolute;
+    width: 83vw;
+    display: flex;
+    justify-content: space-around;
+    height: 45vw;
+}
+
+.side{
+
+    width: 34.4vw;
+}
+
+.left{
+    /* background: #ffc043; */
+    margin-top: -1vw;
+    padding: 3vw;
+    box-sizing: border-box;
+    padding-left: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right{
+    /* background: #43ffc7; */
+    margin-right: 1vw;
+    margin-top: -1vw;
+    box-sizing: border-box;
+}
+
+.textArea {
+
+}
+
+.left p{
+    opacity: 0.45;
+    color: #000000;
+    /* line-height: 2.5vw;
+    font-size: 1.3vw; */
+    font-size: 16px;
+    line-height: 32px;
+    max-width: 450px;
+}
+
+.left h1{
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.iFrameSlot{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+
 
 /*/////// Responsive Mode ///////*/
 
 /* Smartphone Mode */
 @media only screen and (max-width: 500px) {
     body {
-        background-color: lightblue;
+        /* background-color: lightblue; */
     }
 }
 
 /* Height Mode */
 @media only screen and (max-width: 200px) {
     body {
-        background-color: rgb(19, 95, 0);
+        /* background-color: rgb(19, 95, 0); */
     }
+}
+
+@media only screen and (orientation: portrait) {
+    body {
+        /* background-color: lightblue; */
+    }
+
+    #bookcontent[data-v-6d32c6de] {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    #bookbg{
+        display: none;
+    }
+
+    .side {
+        width: 60vw;
+    }
+
+    iframe {
+        height: 46.2vw;
+        width: 34.3vw;
+        margin-top: -1vw;
+        margin-left: 0.4vw;
+    }
+
 }

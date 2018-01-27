@@ -29,10 +29,5 @@ export default {
 
 <style scoped>
 
-#bookbg {
-    position: absolute;
-    width: 83vw;
-}
-
 </style>
 
