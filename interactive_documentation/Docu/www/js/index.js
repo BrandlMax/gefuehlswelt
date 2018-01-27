@@ -33,7 +33,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-8671d820", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13}],2:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27}],2:[function(require,module,exports){
 ;(function(){
 "use strict";
 
@@ -68,7 +68,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-6d32c6de", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13}],3:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27}],3:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */\n\n#langswitch[data-v-6c40c2a4] {\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    opacity: 0.2;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n#langswitch[data-v-6c40c2a4]:hover {\n    opacity: 1.0;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n.switch[data-v-6c40c2a4] {\n  position: relative;\n  display: inline-block;\n    width: 40px;\n    height: 23px;\n}\n\n.switch input[data-v-6c40c2a4] {display:none;}\n\n.slider[data-v-6c40c2a4] {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n    background: url(../src/img/EN.png);\n    background-size: cover;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider[data-v-6c40c2a4]:before {\n  position: absolute;\n  content: \"\";\n    height: 18px;\n    width: 18px;\n    left: 3px;\n    bottom: 2px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider[data-v-6c40c2a4] {\n    background: url(../src/img/DE.png);\n    background-size: cover;\n}\n\ninput:focus + .slider[data-v-6c40c2a4] {\n  box-shadow: 0 0 1px #2196F3;\n}\n\ninput:checked + .slider[data-v-6c40c2a4]:before {\n  -webkit-transform: translateX(16px);\n  -ms-transform: translateX(16px);\n  transform: translateX(16px);\n}\n\n/* Rounded sliders */\n.slider.round[data-v-6c40c2a4] {\n  border-radius: 34px;\n}\n\n.slider.round[data-v-6c40c2a4]:before {\n  border-radius: 50%;\n}")
 ;(function(){
 'use strict';
@@ -112,7 +112,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-6c40c2a4", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],4:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27,"vueify/lib/insert-css":29}],4:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#modal_closeBtn[data-v-03fabbca] {\n    width: 4vw;\n    position: absolute;\n    right: 4vw;\n    cursor: pointer;\n    z-index: 9998;\n    margin-top: -1vw;\n}\n\n.modal-mask[data-v-03fabbca] {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .8);\n    display: table;\n    transition: opacity .3s ease;\n}\n\n.modal-wrapper[data-v-03fabbca] {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.modal-container[data-v-03fabbca] {\n    width: 90vw;\n    margin: 0px auto;\n    padding: 20px 20px;\n    background-color: #fff;\n    border-radius: 2px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);\n    transition: all .3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n\n.modal-default-button[data-v-03fabbca] {\n    float: right;\n}\n\n\n/* Video */\n.modal_video[data-v-03fabbca] {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal_video video[data-v-03fabbca] {\n    width: 100%;\n}\n\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n\n.modal-enter[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-leave-active[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-enter .modal-container[data-v-03fabbca],\n.modal-leave-active .modal-container[data-v-03fabbca] {\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n}")
 ;(function(){
 'use strict';
@@ -149,7 +149,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-03fabbca", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],5:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27,"vueify/lib/insert-css":29}],5:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#pagination[data-v-ac27c0c8] {\n    position: absolute;\n    bottom: 0;\n    display: flex;\n}\n\n.dot[data-v-ac27c0c8] {\n    width: 3vh;\n    max-width: 23px;\n    padding-bottom: 0.5vw;\n    padding-right: 1vh;\n    padding-left: 1vh;\n    cursor: pointer;\n    opacity: 0.2;\n    transition: all 0.5s ease;\n}\n\n.dot[data-v-ac27c0c8]:hover{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n.dot.active[data-v-ac27c0c8]{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Tooltip container */\n.tooltip[data-v-ac27c0c8] {\n    position: relative;\n    display: inline-block;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-ac27c0c8] {\n    opacity: 0;\n    width: 120px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -60px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n}\n\n.tooltip .tooltiptext[data-v-ac27c0c8]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-ac27c0c8] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}")
 ;(function(){
 'use strict';
@@ -199,7 +199,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-ac27c0c8", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],6:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27,"vueify/lib/insert-css":29}],6:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".coverPreview[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    left: 70px;\n    width: 70vw;\n}\n\n.color_switches[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    margin-left: 10vw;\n    cursor: pointer;\n}\n\n.cover_switch[data-v-76b38f7f] {\n    overflow: hidden;\n    height: 5vw;\n    width: 5vw;\n    border-radius: 102vw;\n    margin-bottom: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.cover_switch img[data-v-76b38f7f] {\n    width: 180%;\n}\n\n.cover_switch.fill[data-v-76b38f7f] {\n    background: #66bbb1;\n    font-size: 30px;\n    color: #fff;\n}\n\n.dropoverlay[data-v-76b38f7f]{\n    position: absolute;\n    width: 27.8vw;\n    height: 44.56vw;\n    background: rgba(255, 0, 0, 0);\n    right: 6.45vw;\n    border-radius: 0.2vw 1vw 1vw 0.2vw;\n}\n\n#dropcover[data-v-76b38f7f]{\n    background-image: url('');\n    background-size: cover;\n    background-position: center;\n}\n\nimg.rubberband[data-v-76b38f7f] {\n    width: 1.74vw;\n    position: absolute;\n    right: 3.4vw;\n}\n\n#addCover[data-v-76b38f7f] {\n    position: absolute;\n    /* pointer-events: none; */\n    width: 5vw;\n    height: 5vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\ninput#coverUploader[data-v-76b38f7f] {\n    height: 10vw;\n    cursor: pointer;\n}\n\n@media only screen and (orientation: portrait) {\n    .coverPreview[data-v-76b38f7f]{\n        position: relative;\n        top: 0;\n        left: 0;\n        width: 100%;\n        margin-bottom: 4vw;\n    }\n    .color_switches[data-v-76b38f7f]{\n        position: relative;\n        margin-left: 15vw;\n        cursor: pointer;\n        margin-top: -43vw;\n        margin-bottom: 7vw;\n    }\n    .dropoverlay[data-v-76b38f7f] {\n        position: absolute;\n        width: 23.8vw;\n        height: 38.24vw;\n        background: rgba(255, 0, 0, 0);\n        right: 5.45vw;\n        border-radius: 0.2vw 1vw 1vw 0.2vw;\n    }\n    img.rubberband[data-v-76b38f7f] {\n        width: 1.5vw;\n        position: absolute;\n        right: 2.9vw;\n    }\n}")
 ;(function(){
 'use strict';
@@ -264,7 +264,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-76b38f7f", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],7:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27,"vueify/lib/insert-css":29}],7:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-7887d584]{\n    width: 100%;\n}\n\n.tutvideo[data-v-7887d584] {\n    width: 34.4vw;\n    position: absolute;\n    margin-top: 0.26vw;\n}\n\n#startBtn[data-v-7887d584]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 45.8vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-7887d584]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 13px;\n}\n\n.triangleBg[data-v-7887d584]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-7887d584], .fade-leave-active[data-v-7887d584] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-7887d584], .fade-leave-to[data-v-7887d584] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
 ;(function(){
 'use strict';
@@ -319,7 +319,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-7887d584", __vue__options__)
   }
 })()}
-},{"vue":14,"vue-hot-reload-api":13,"vueify/lib/insert-css":15}],8:[function(require,module,exports){
+},{"vue":28,"vue-hot-reload-api":27,"vueify/lib/insert-css":29}],8:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -401,7 +401,581 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.rerender("data-v-4693f801", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":14,"vue-hot-reload-api":13}],9:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],9:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1563b791", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-1563b791", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],10:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Marke EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-71307585", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-71307585", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],11:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-e41b4cea", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-e41b4cea", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],12:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("ERM")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("ERM EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c39dca22", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-c39dca22", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],13:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3584fbc7", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-3584fbc7", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],14:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('16')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-172c6562", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-172c6562", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],15:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kontakt EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a863169c", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-a863169c", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],16:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -483,12 +1057,99 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-76a9c6ac", __vue__options__)
+    hotAPI.createRecord("data-v-d60dcb26", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-76a9c6ac", __vue__options__)
+    hotAPI.rerender("data-v-d60dcb26", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":6,"./interactiveComps/tutorialVideo.vue":7,"vue":14,"vue-hot-reload-api":13}],10:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":6,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],17:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+var _coverSlider = require('./interactiveComps/coverSlider.vue');
+
+var _coverSlider2 = _interopRequireDefault(_coverSlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        CoverSlider: _coverSlider2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Specs")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Specs EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('CoverSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f60610f", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-4f60610f", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":6,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],18:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -558,37 +1219,585 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Product Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Cover EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productsphäre Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productsphäre EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('2')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('4')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18e92a12", __vue__options__)
+    hotAPI.createRecord("data-v-602b591a", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-18e92a12", __vue__options__)
+    hotAPI.rerender("data-v-602b591a", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":14,"vue-hot-reload-api":13}],11:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],19:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5ffa09e2", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-5ffa09e2", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],20:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('4')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2428e968", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-2428e968", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],21:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7dc3ac30", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-7dc3ac30", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],22:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Styleguide")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Styleguide EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a6c97142", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-a6c97142", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],23:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-202b5c2e", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-202b5c2e", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],24:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-bc472770", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-bc472770", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":7,"vue":28,"vue-hot-reload-api":27}],25:[function(require,module,exports){
 'use strict';
 
 var _page_0_intro = require('./components/page_0_intro.vue');
 
 var _page_0_intro2 = _interopRequireDefault(_page_0_intro);
 
-var _page_1_test = require('./components/page_1_test.vue');
+var _page_1_Cover = require('./components/page_1_Cover.vue');
 
-var _page_1_test2 = _interopRequireDefault(_page_1_test);
+var _page_1_Cover2 = _interopRequireDefault(_page_1_Cover);
 
-var _page_2_test = require('./components/page_2_test2.vue');
+var _page_2_Specs = require('./components/page_2_Specs.vue');
 
-var _page_2_test2 = _interopRequireDefault(_page_2_test);
+var _page_2_Specs2 = _interopRequireDefault(_page_2_Specs);
+
+var _page_3_ProductSphaeren = require('./components/page_3_ProductSphaeren.vue');
+
+var _page_3_ProductSphaeren2 = _interopRequireDefault(_page_3_ProductSphaeren);
+
+var _page_4_ProductSplitter = require('./components/page_4_ProductSplitter.vue');
+
+var _page_4_ProductSplitter2 = _interopRequireDefault(_page_4_ProductSplitter);
+
+var _page_5_ProductWerkzeuge = require('./components/page_5_ProductWerkzeuge.vue');
+
+var _page_5_ProductWerkzeuge2 = _interopRequireDefault(_page_5_ProductWerkzeuge);
+
+var _page_6_ProductHilfe = require('./components/page_6_ProductHilfe.vue');
+
+var _page_6_ProductHilfe2 = _interopRequireDefault(_page_6_ProductHilfe);
+
+var _page_7_Styleguide = require('./components/page_7_Styleguide.vue');
+
+var _page_7_Styleguide2 = _interopRequireDefault(_page_7_Styleguide);
+
+var _page_8_Persona = require('./components/page_8_Persona.vue');
+
+var _page_8_Persona2 = _interopRequireDefault(_page_8_Persona);
+
+var _page_9_Userstory = require('./components/page_9_Userstory.vue');
+
+var _page_9_Userstory2 = _interopRequireDefault(_page_9_Userstory);
+
+var _page_10_Kostenanalyse = require('./components/page_10_Kostenanalyse.vue');
+
+var _page_10_Kostenanalyse2 = _interopRequireDefault(_page_10_Kostenanalyse);
+
+var _page_11_Marke = require('./components/page_11_Marke.vue');
+
+var _page_11_Marke2 = _interopRequireDefault(_page_11_Marke);
+
+var _page_12_Systemdiagramm = require('./components/page_12_Systemdiagramm.vue');
+
+var _page_12_Systemdiagramm2 = _interopRequireDefault(_page_12_Systemdiagramm);
+
+var _page_13_ERM = require('./components/page_13_ERM.vue');
+
+var _page_13_ERM2 = _interopRequireDefault(_page_13_ERM);
+
+var _page_14_PrototypAufbau = require('./components/page_14_PrototypAufbau.vue');
+
+var _page_14_PrototypAufbau2 = _interopRequireDefault(_page_14_PrototypAufbau);
+
+var _page_15_PrototypFunktion = require('./components/page_15_PrototypFunktion.vue');
+
+var _page_15_PrototypFunktion2 = _interopRequireDefault(_page_15_PrototypFunktion);
+
+var _page_16_Kontakt = require('./components/page_16_Kontakt.vue');
+
+var _page_16_Kontakt2 = _interopRequireDefault(_page_16_Kontakt);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // PATHS
-var routes = [{ path: '/', name: '0', component: _page_0_intro2.default, title: 'intro', color: 'turkis' }, { path: '/1', name: '1', component: _page_1_test2.default, title: 'second', color: 'turkis' }, { path: '/2', name: '2', component: _page_2_test2.default, title: 'third', color: 'red' }]; // Import Werkzeuge.
+var routes = [{ path: '/', name: '0', component: _page_0_intro2.default, title: 'intro', color: 'turkis' }, { path: '/1', name: '1', component: _page_1_Cover2.default, title: 'Covers', color: 'turkis' }, { path: '/2', name: '2', component: _page_2_Specs2.default, title: 'Specs', color: 'turkis' }, { path: '/3', name: '3', component: _page_3_ProductSphaeren2.default, title: 'Sphären', color: 'turkis' }, { path: '/4', name: '4', component: _page_4_ProductSplitter2.default, title: 'Splitter', color: 'turkis' }, { path: '/5', name: '5', component: _page_5_ProductWerkzeuge2.default, title: 'Tools', color: 'turkis' }, { path: '/6', name: '6', component: _page_6_ProductHilfe2.default, title: 'Hilfe', color: 'turkis' }, { path: '/7', name: '7', component: _page_7_Styleguide2.default, title: 'Styleguide', color: 'rose' }, { path: '/8', name: '8', component: _page_8_Persona2.default, title: 'Persona', color: 'rose' }, { path: '/9', name: '9', component: _page_9_Userstory2.default, title: 'Userstory', color: 'rose' }, { path: '/10', name: '10', component: _page_10_Kostenanalyse2.default, title: 'Kostenanalyse', color: 'orange' }, { path: '/11', name: '11', component: _page_11_Marke2.default, title: 'Marke', color: 'orange' }, { path: '/12', name: '12', component: _page_12_Systemdiagramm2.default, title: 'Systemdiagramm', color: 'red' }, { path: '/13', name: '13', component: _page_13_ERM2.default, title: 'ERM', color: 'red' }, { path: '/14', name: '14', component: _page_14_PrototypAufbau2.default, title: 'Prototyp Aufbau', color: 'red' }, { path: '/15', name: '15', component: _page_15_PrototypFunktion2.default, title: 'Prototyp Funktion', color: 'red' }, { path: '/16', name: '16', component: _page_16_Kontakt2.default, title: 'Kontakt', color: 'turkis' }]; // Import Werkzeuge.
 
 
 var router = new VueRouter({
@@ -624,28 +1833,29 @@ var vm = new Vue({
 }).$mount('#app');
 
 // DEBUGGIN'
-window.onresize = function () {
-    function gcd(a, b) {
-        return b == 0 ? a : gcd(b, a % b);
-    }
+// window.onresize = function(){
+//     function gcd (a, b) {
+//         return (b == 0) ? a : gcd (b, a%b);
+//     }
 
-    var w = window.innerHeight;
-    var h = window.innerWidth;
-    var r = gcd(w, h);
+//     var w = window.innerHeight;
+//     var h = window.innerWidth;
+//     var r = gcd (w, h);
 
-    console.log('Window Ratio Data', [{
-        dimensions: w + ' x ' + h,
-        GCD: r,
-        Aspect: w / r + ":" + h / r
-    }]);
-    console.log('Kennzahl1', w / h);
-    // WENN KENNZAHL 2 größer als 2 dann Passt das Buch nicht mehr hinein
-    console.log('Kennzahl2', h / w);
-    console.log('Kennzahl3', w - h);
-    console.log('Kennzahl4', h - w);
-};
+//     console.log('Window Ratio Data', [{
+//         dimensions: w + ' x ' + h,
+//         GCD: r,
+//         Aspect: w/r + ":" +  h/r
+//     }])
+//     console.log('Kennzahl1', w/h);
+//     // WENN KENNZAHL 2 größer als 2 dann Passt das Buch nicht mehr hinein
+//     console.log('Kennzahl2', h/w);
+//     console.log('Kennzahl3', w-h);
+//     console.log('Kennzahl4', h-w);
 
-},{"./components/page_0_intro.vue":8,"./components/page_1_test.vue":9,"./components/page_2_test2.vue":10}],12:[function(require,module,exports){
+// };
+
+},{"./components/page_0_intro.vue":8,"./components/page_10_Kostenanalyse.vue":9,"./components/page_11_Marke.vue":10,"./components/page_12_Systemdiagramm.vue":11,"./components/page_13_ERM.vue":12,"./components/page_14_PrototypAufbau.vue":13,"./components/page_15_PrototypFunktion.vue":14,"./components/page_16_Kontakt.vue":15,"./components/page_1_Cover.vue":16,"./components/page_2_Specs.vue":17,"./components/page_3_ProductSphaeren.vue":18,"./components/page_4_ProductSplitter.vue":19,"./components/page_5_ProductWerkzeuge.vue":20,"./components/page_6_ProductHilfe.vue":21,"./components/page_7_Styleguide.vue":22,"./components/page_8_Persona.vue":23,"./components/page_9_Userstory.vue":24}],26:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -831,7 +2041,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],13:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -1061,7 +2271,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],14:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -8988,7 +10198,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":12}],15:[function(require,module,exports){
+},{"_process":26}],29:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -9013,4 +10223,4 @@ exports.insert = function (css) {
   }
 }
 
-},{}]},{},[11]);
+},{}]},{},[25]);
