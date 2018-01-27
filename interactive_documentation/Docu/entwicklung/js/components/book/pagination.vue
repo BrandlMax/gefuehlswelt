@@ -3,7 +3,7 @@
 
     <div v-for="(point, index) in this.$router.options.routes" :key="index" :class="['dot tooltip', {active: checkActive(point.name)}]" @click="changePage(point.name)">
         <img :src="'../../src/img/dot_'+ point.color+'.png'">
-        <span class="tooltiptext">{{point.title}} {{index}}</span>
+        <span class="tooltiptext">{{point.title}}</span>
     </div>
 
 </div>
@@ -83,7 +83,7 @@ export default {
     width: 120px;
     bottom: 100%;
     left: 50%; 
-    margin-left: -60px; 
+    margin-left: -70px; 
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
@@ -95,6 +95,9 @@ export default {
 
     margin-bottom: 10px;
     transition: all 0.5s ease;
+
+    line-height: 22px;
+    padding: 10px;
 }
 
 .tooltip .tooltiptext::after {

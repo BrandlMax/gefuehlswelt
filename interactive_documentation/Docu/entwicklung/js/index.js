@@ -91,5 +91,5 @@ const vm = new Vue({
 //     console.log('Kennzahl2', h/w);
 //     console.log('Kennzahl3', w-h);
 //     console.log('Kennzahl4', h-w);
-   
+
 // };

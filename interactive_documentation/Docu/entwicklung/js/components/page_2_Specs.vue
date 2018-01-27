@@ -21,7 +21,7 @@
             </div>
 
             <div class="iFrameSlot" slot="right">
-                <CoverSlider></CoverSlider>
+                <SpecsSlider></SpecsSlider>
             </div>           
         </BookContent>
 
@@ -52,6 +52,7 @@ import LangSwitch from './book/langswitch.vue';
 // interComps
 import TutVideo from './interactiveComps/tutorialVideo.vue';
 import CoverSlider from './interactiveComps/coverSlider.vue';
+import SpecsSlider from './interactiveComps/specsSlider.vue';
 
 
 // Search
@@ -84,7 +85,8 @@ export default {
       Modal,
       TutVideo,
       CoverSlider,
-      LangSwitch
+      LangSwitch,
+      SpecsSlider
   },
   methods:{
     checkClick(){
