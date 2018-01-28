@@ -28,7 +28,7 @@
 
         <Modal v-if="showModal" @close="showModal = false" modalType="video">
             <!-- <img src="../../src/img/mel.png" alt="textImage"> -->
-            <source src="../../src/vids/trailer_test.mp4" type="video/mp4">
+            <source src="../../src/vids/Trailer.mp4" type="video/mp4">
         </Modal>
 
         <!-- <div class="arrow aleft" @click="changePage('2')">
@@ -59,7 +59,7 @@ export default {
   data(){
       return{
           bookBG: false,
-          showModal: false,
+          showModal: true,
       }
   },
   mounted() {

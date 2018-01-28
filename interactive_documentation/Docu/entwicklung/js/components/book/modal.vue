@@ -19,7 +19,8 @@
                 </div>
 
                 <div  v-if="modalType === 'excel'" class="modal_excel">
-                    <h1>Excel</h1>
+                            <iframe :src="iframelink">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -31,7 +32,7 @@
 // Import
 
 export default {
-  props: ['modalType', 'autoPush'],
+  props: ['modalType', 'iframelink', 'autoPush'],
   data(){
       return{
       }
@@ -71,6 +72,7 @@ export default {
     background-color: rgba(0, 0, 0, .8);
     display: table;
     transition: opacity .3s ease;
+    cursor: zoom-out;
 }
 
 .modal-wrapper {
@@ -82,9 +84,9 @@ export default {
     width: 90vw;
     margin: 0px auto;
     padding: 20px 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, .33); */
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -104,6 +106,11 @@ export default {
 
 .modal_video video {
     width: 100%;
+}
+
+
+.modal_excel iframe {
+    height: 50vw;
 }
 
 

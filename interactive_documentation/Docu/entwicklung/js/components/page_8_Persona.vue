@@ -6,21 +6,51 @@
         </transition>
 
         <BookContent>
-            <div slot="left">
+            <!-- sad -->
+            <div v-if="this.$store.state.persona === 'sad'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Persona</h1>
+                <h1 v-if="this.$store.state.lang">Persona Sad</h1>
                 <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Persona EN</h1>
+                <h1 v-if="!this.$store.state.lang">Persona Sad EN</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+            <!-- Normal -->
+            <div v-if="this.$store.state.persona === 'normal'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Persona Normal</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Persona Normal EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+
+            <!-- Happy-->
+            <div v-if="this.$store.state.persona === 'happy'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Persona Happy</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Persona Happy EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <div class="iFrameSlot" slot="right">
+                <PersonaSlider></PersonaSlider>
             </div>           
         </BookContent>
 
@@ -50,6 +80,7 @@ import Modal from './book/modal.vue';
 import LangSwitch from './book/langswitch.vue';
 // interComps
 import TutVideo from './interactiveComps/tutorialVideo.vue';
+import PersonaSlider from './interactiveComps/PersonaSlider.vue';
 
 
 // Search
@@ -81,7 +112,8 @@ export default {
       Pagination,
       Modal,
       TutVideo,
-      LangSwitch
+      LangSwitch,
+      PersonaSlider
   },
   methods:{
     checkClick(){

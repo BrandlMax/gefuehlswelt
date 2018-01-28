@@ -30,10 +30,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-8671d820", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-8671d820", __vue__options__)
+    hotAPI.reload("data-v-8671d820", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28}],2:[function(require,module,exports){
+},{"vue":31,"vue-hot-reload-api":30}],2:[function(require,module,exports){
 ;(function(){
 "use strict";
 
@@ -65,11 +65,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6d32c6de", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6d32c6de", __vue__options__)
+    hotAPI.reload("data-v-6d32c6de", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */\n\n#langswitch[data-v-6c40c2a4] {\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    opacity: 0.2;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n#langswitch[data-v-6c40c2a4]:hover {\n    opacity: 1.0;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n.switch[data-v-6c40c2a4] {\n  position: relative;\n  display: inline-block;\n    width: 40px;\n    height: 23px;\n}\n\n.switch input[data-v-6c40c2a4] {display:none;}\n\n.slider[data-v-6c40c2a4] {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n    background: url(../src/img/EN.png);\n    background-size: cover;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider[data-v-6c40c2a4]:before {\n  position: absolute;\n  content: \"\";\n    height: 18px;\n    width: 18px;\n    left: 3px;\n    bottom: 2px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider[data-v-6c40c2a4] {\n    background: url(../src/img/DE.png);\n    background-size: cover;\n}\n\ninput:focus + .slider[data-v-6c40c2a4] {\n  box-shadow: 0 0 1px #2196F3;\n}\n\ninput:checked + .slider[data-v-6c40c2a4]:before {\n  -webkit-transform: translateX(16px);\n  -ms-transform: translateX(16px);\n  transform: translateX(16px);\n}\n\n/* Rounded sliders */\n.slider.round[data-v-6c40c2a4] {\n  border-radius: 34px;\n}\n\n.slider.round[data-v-6c40c2a4]:before {\n  border-radius: 50%;\n}")
+},{"vue":31,"vue-hot-reload-api":30}],3:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */\n\n#langswitch[data-v-6c40c2a4] {\n    position: absolute;\n    z-index: 30000;\n    top: 20px;\n    right: 20px;\n    opacity: 0.2;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n#langswitch[data-v-6c40c2a4]:hover {\n    opacity: 1.0;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n.switch[data-v-6c40c2a4] {\n  position: relative;\n  display: inline-block;\n    width: 40px;\n    height: 23px;\n}\n\n.switch input[data-v-6c40c2a4] {display:none;}\n\n.slider[data-v-6c40c2a4] {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n    background: url(../src/img/EN.png);\n    background-size: cover;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider[data-v-6c40c2a4]:before {\n  position: absolute;\n  content: \"\";\n    height: 18px;\n    width: 18px;\n    left: 3px;\n    bottom: 2px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider[data-v-6c40c2a4] {\n    background: url(../src/img/DE.png);\n    background-size: cover;\n}\n\ninput:focus + .slider[data-v-6c40c2a4] {\n  box-shadow: 0 0 1px #2196F3;\n}\n\ninput:checked + .slider[data-v-6c40c2a4]:before {\n  -webkit-transform: translateX(16px);\n  -ms-transform: translateX(16px);\n  transform: translateX(16px);\n}\n\n/* Rounded sliders */\n.slider.round[data-v-6c40c2a4] {\n  border-radius: 34px;\n}\n\n.slider.round[data-v-6c40c2a4]:before {\n  border-radius: 50%;\n}")
 ;(function(){
 'use strict';
 
@@ -109,11 +109,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-6c40c2a4", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-6c40c2a4", __vue__options__)
+    hotAPI.reload("data-v-6c40c2a4", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],4:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#modal_closeBtn[data-v-03fabbca] {\n    width: 4vw;\n    position: absolute;\n    right: 4vw;\n    cursor: pointer;\n    z-index: 9998;\n    margin-top: -1vw;\n}\n\n.modal-mask[data-v-03fabbca] {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .8);\n    display: table;\n    transition: opacity .3s ease;\n}\n\n.modal-wrapper[data-v-03fabbca] {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.modal-container[data-v-03fabbca] {\n    width: 90vw;\n    margin: 0px auto;\n    padding: 20px 20px;\n    background-color: #fff;\n    border-radius: 2px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);\n    transition: all .3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n\n.modal-default-button[data-v-03fabbca] {\n    float: right;\n}\n\n\n/* Video */\n.modal_video[data-v-03fabbca] {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal_video video[data-v-03fabbca] {\n    width: 100%;\n}\n\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n\n.modal-enter[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-leave-active[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-enter .modal-container[data-v-03fabbca],\n.modal-leave-active .modal-container[data-v-03fabbca] {\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n}")
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],4:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#modal_closeBtn[data-v-03fabbca] {\n    width: 4vw;\n    position: absolute;\n    right: 4vw;\n    cursor: pointer;\n    z-index: 9998;\n    margin-top: -1vw;\n}\n\n.modal-mask[data-v-03fabbca] {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .8);\n    display: table;\n    transition: opacity .3s ease;\n    cursor: zoom-out;\n}\n\n.modal-wrapper[data-v-03fabbca] {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.modal-container[data-v-03fabbca] {\n    width: 90vw;\n    margin: 0px auto;\n    padding: 20px 20px;\n    /* background-color: #fff; */\n    border-radius: 2px;\n    /* box-shadow: 0 2px 8px rgba(0, 0, 0, .33); */\n    transition: all .3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n\n.modal-default-button[data-v-03fabbca] {\n    float: right;\n}\n\n\n/* Video */\n.modal_video[data-v-03fabbca] {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal_video video[data-v-03fabbca] {\n    width: 100%;\n}\n\n\n.modal_excel iframe[data-v-03fabbca] {\n    height: 50vw;\n}\n\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n\n.modal-enter[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-leave-active[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-enter .modal-container[data-v-03fabbca],\n.modal-leave-active .modal-container[data-v-03fabbca] {\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n}")
 ;(function(){
 'use strict';
 
@@ -121,7 +121,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  props: ['modalType', 'autoPush'],
+  props: ['modalType', 'iframelink', 'autoPush'],
   data: function data() {
     return {};
   },
@@ -135,7 +135,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"modal"}},[_c('div',{staticClass:"modal-mask",on:{"click":function($event){_vm.$emit('close')}}},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal-container"},[_c('div',{attrs:{"id":"modal_closeBtn"},on:{"click":function($event){_vm.$emit('close')}}},[_c('img',{attrs:{"src":"../../../src/img/Close.png","alt":"close"}})]),_vm._v(" "),(_vm.modalType === 'video')?_c('div',{staticClass:"modal_video"},[_c('video',{attrs:{"controls":"true","autoplay":"true"}},[_vm._t("default"),_vm._v("\n                    Your browser does not support the video tag.\n                ")],2)]):_vm._e(),_vm._v(" "),(_vm.modalType === 'image')?_c('div',{staticClass:"modal_image"},[_vm._t("default")],2):_vm._e(),_vm._v(" "),(_vm.modalType === 'excel')?_c('div',{staticClass:"modal_excel"},[_c('h1',[_vm._v("Excel")])]):_vm._e()])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"modal"}},[_c('div',{staticClass:"modal-mask",on:{"click":function($event){_vm.$emit('close')}}},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal-container"},[_c('div',{attrs:{"id":"modal_closeBtn"},on:{"click":function($event){_vm.$emit('close')}}},[_c('img',{attrs:{"src":"../../../src/img/Close.png","alt":"close"}})]),_vm._v(" "),(_vm.modalType === 'video')?_c('div',{staticClass:"modal_video"},[_c('video',{attrs:{"controls":"true","autoplay":"true"}},[_vm._t("default"),_vm._v("\n                    Your browser does not support the video tag.\n                ")],2)]):_vm._e(),_vm._v(" "),(_vm.modalType === 'image')?_c('div',{staticClass:"modal_image"},[_vm._t("default")],2):_vm._e(),_vm._v(" "),(_vm.modalType === 'excel')?_c('div',{staticClass:"modal_excel"},[_c('iframe',{attrs:{"src":_vm.iframelink}})]):_vm._e()])])])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-03fabbca"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -146,11 +146,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-03fabbca", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-03fabbca", __vue__options__)
+    hotAPI.reload("data-v-03fabbca", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#pagination[data-v-ac27c0c8] {\n    position: absolute;\n    bottom: 0;\n    display: flex;\n}\n\n.dot[data-v-ac27c0c8] {\n    width: 3vh;\n    max-width: 23px;\n    padding-bottom: 0.5vw;\n    padding-right: 1vh;\n    padding-left: 1vh;\n    cursor: pointer;\n    opacity: 0.2;\n    transition: all 0.5s ease;\n}\n\n.dot[data-v-ac27c0c8]:hover{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n.dot.active[data-v-ac27c0c8]{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Tooltip container */\n.tooltip[data-v-ac27c0c8] {\n    position: relative;\n    display: inline-block;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-ac27c0c8] {\n    opacity: 0;\n    width: 120px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -70px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-ac27c0c8]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-ac27c0c8] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}")
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],5:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#pagination[data-v-ac27c0c8] {\n    position: absolute;\n    bottom: 0;\n    display: flex;\n}\n\n.dot[data-v-ac27c0c8] {\n    width: 3vh;\n    max-width: 23px;\n    padding-bottom: 0.5vw;\n    padding-right: 1vh;\n    padding-left: 1vh;\n    cursor: pointer;\n    opacity: 0.2;\n    transition: all 0.5s ease;\n}\n\n.dot[data-v-ac27c0c8]:hover{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n.dot.active[data-v-ac27c0c8]{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Tooltip container */\n.tooltip[data-v-ac27c0c8] {\n    position: relative;\n    display: inline-block;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-ac27c0c8] {\n    opacity: 0;\n    width: 120px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -70px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-ac27c0c8]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-ac27c0c8] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\nspan.tooltiptext[data-v-ac27c0c8] {\n    pointer-events: none;\n}")
 ;(function(){
 'use strict';
 
@@ -196,11 +196,124 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-ac27c0c8", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-ac27c0c8", __vue__options__)
+    hotAPI.reload("data-v-ac27c0c8", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".coverPreview[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    left: 70px;\n    width: 70vw;\n}\n\n.color_switches[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    margin-left: 10vw;\n    cursor: pointer;\n}\n\n.cover_switch[data-v-76b38f7f] {\n    overflow: hidden;\n    height: 5vw;\n    width: 5vw;\n    border-radius: 102vw;\n    margin-bottom: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.cover_switch img[data-v-76b38f7f] {\n    width: 180%;\n}\n\n.cover_switch.fill[data-v-76b38f7f] {\n    background: #66bbb1;\n    font-size: 30px;\n    color: #fff;\n}\n\n.dropoverlay[data-v-76b38f7f]{\n    position: absolute;\n    width: 27.8vw;\n    height: 44.56vw;\n    background: rgba(255, 0, 0, 0);\n    right: 6.45vw;\n    border-radius: 0.2vw 1vw 1vw 0.2vw;\n}\n\n#dropcover[data-v-76b38f7f]{\n    background-image: url('');\n    background-size: cover;\n    background-position: center;\n}\n\nimg.rubberband[data-v-76b38f7f] {\n    width: 1.74vw;\n    position: absolute;\n    right: 3.4vw;\n}\n\n#addCover[data-v-76b38f7f] {\n    position: absolute;\n    /* pointer-events: none; */\n    width: 5vw;\n    height: 5vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\ninput#coverUploader[data-v-76b38f7f] {\n    height: 10vw;\n    cursor: pointer;\n}\n\n@media only screen and (orientation: portrait) {\n    .coverPreview[data-v-76b38f7f]{\n        position: relative;\n        top: 0;\n        left: 0;\n        width: 100%;\n        margin-bottom: 4vw;\n    }\n    .color_switches[data-v-76b38f7f]{\n        position: relative;\n        margin-left: 15vw;\n        cursor: pointer;\n        margin-top: -43vw;\n        margin-bottom: 7vw;\n    }\n    .dropoverlay[data-v-76b38f7f] {\n        position: absolute;\n        width: 23.8vw;\n        height: 38.24vw;\n        background: rgba(255, 0, 0, 0);\n        right: 5.45vw;\n        border-radius: 0.2vw 1vw 1vw 0.2vw;\n    }\n    img.rubberband[data-v-76b38f7f] {\n        width: 1.5vw;\n        position: absolute;\n        right: 2.9vw;\n    }\n}")
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],6:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-1915fd54] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-1915fd54] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-1915fd54]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-1915fd54] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-1915fd54] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-1915fd54] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-1915fd54] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-1915fd54]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-1915fd54]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-1915fd54]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-1915fd54] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-1915fd54] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-1915fd54] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-1915fd54] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-1915fd54] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-1915fd54] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-1915fd54] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-1915fd54] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-1915fd54] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-1915fd54] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-1915fd54] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-1915fd54] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-1915fd54] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-1915fd54] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-1915fd54] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-1915fd54] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-1915fd54] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-1915fd54] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: [],
+  data: function data() {
+    return {
+      curProduct: 'normal',
+      extraProd: false
+    };
+  },
+  mounted: function mounted() {
+    var newState = {
+      name: 'persona',
+      sliderState: this.curProduct
+    };
+    this.$store.commit('changeSliderState', newState);
+  },
+  created: function created() {},
+  destroyed: function destroyed() {},
+  components: {},
+  methods: {
+    switchProduct: function switchProduct(n) {
+      this.curProduct = n;
+
+      var newState = {
+        name: 'persona',
+        sliderState: n
+      };
+      this.$store.commit('changeSliderState', newState);
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"productShow"},[('sad' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_sad.png"}}):_vm._e(),_vm._v(" "),('normal' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_normal.png"}}):_vm._e(),_vm._v(" "),('happy' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_happy.png"}}):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"specControls"},[(this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'sad' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('sad')}}},[_vm._v("Schlechter Tag")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : 'normal' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('normal')}}},[_vm._v("Melanie")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'happy' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('happy')}}},[_vm._v("Guter Tag")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'sad' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('sad')}}},[_vm._v("Bad day")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : 'normal' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('normal')}}},[_vm._v("Melanie")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'happy' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('happy')}}},[_vm._v("Good day")]):_vm._e()])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-1915fd54"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1915fd54", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-1915fd54", __vue__options__)
+  }
+})()}
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],7:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-2453471c] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-2453471c] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-2453471c]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-2453471c] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-2453471c] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-2453471c] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-2453471c] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-2453471c]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-2453471c]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-2453471c]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-2453471c] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-2453471c] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-2453471c] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-2453471c] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-2453471c] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-2453471c] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-2453471c] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-2453471c] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-2453471c] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-2453471c] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-2453471c] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-2453471c] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-2453471c] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-2453471c] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-2453471c] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-2453471c] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-2453471c] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-2453471c] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: [],
+  data: function data() {
+    return {
+      curProduct: '7',
+      extraProd: false
+    };
+  },
+  mounted: function mounted() {
+
+    var newState = {
+      name: 'userstory',
+      sliderState: this.curProduct
+    };
+    this.$store.commit('changeSliderState', newState);
+  },
+  created: function created() {},
+  destroyed: function destroyed() {},
+  components: {},
+  methods: {
+    switchProduct: function switchProduct(n) {
+      this.curProduct = n;
+
+      var newState = {
+        name: 'userstory',
+        sliderState: n
+      };
+      this.$store.commit('changeSliderState', newState);
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"productShow"},[('7' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_sad.png"}}):_vm._e(),_vm._v(" "),('10' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_normal.png"}}):_vm._e(),_vm._v(" "),('14' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_happy.png"}}):_vm._e(),_vm._v(" "),('18' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_sad.png"}}):_vm._e(),_vm._v(" "),('20' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_normal.png"}}):_vm._e(),_vm._v(" "),('23' == _vm.curProduct)?_c('img',{attrs:{"src":"../../../src/img/mel_happy.png"}}):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"specControls"},[(this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : '7' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('7')}}},[_vm._v("7:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '10' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('10')}}},[_vm._v("10:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '14' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('14')}}},[_vm._v("14:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '18' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('18')}}},[_vm._v("18:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '20' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('20')}}},[_vm._v("20:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : '23' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('23')}}},[_vm._v("23:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : '7' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('7')}}},[_vm._v("7:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '10' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('10')}}},[_vm._v("10:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '14' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('14')}}},[_vm._v("14:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '18' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('18')}}},[_vm._v("18:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '20' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('20')}}},[_vm._v("20:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : '23' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('23')}}},[_vm._v("23:00")]):_vm._e()])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-2453471c"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2453471c", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-2453471c", __vue__options__)
+  }
+})()}
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],8:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".coverPreview[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    left: 70px;\n    width: 70vw;\n}\n\n.color_switches[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    margin-left: 10vw;\n    cursor: pointer;\n}\n\n.cover_switch[data-v-76b38f7f] {\n    overflow: hidden;\n    height: 5vw;\n    width: 5vw;\n    border-radius: 102vw;\n    margin-bottom: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.cover_switch img[data-v-76b38f7f] {\n    width: 180%;\n}\n\n.cover_switch.fill[data-v-76b38f7f] {\n    background: #66bbb1;\n    font-size: 30px;\n    color: #fff;\n}\n\n.dropoverlay[data-v-76b38f7f]{\n    position: absolute;\n    width: 27.6vw;\n    height: 44.19vw;\n    background: rgba(255, 0, 0, 0);\n    right: 6.45vw;\n    border-radius: 0.2vw 1vw 1vw 0.2vw;\n    margin-top: 0.24vw;\n}\n\n#dropcover[data-v-76b38f7f]{\n    background-image: none;\n    background-size: cover;\n    background-position: center;\n    mix-blend-mode: screen;\n    opacity: 0.98;\n}\n\nimg.rubberband[data-v-76b38f7f] {\n    width: 1.73vw;\n    position: absolute;\n    right: 3.4vw;\n    mix-blend-mode: unset;\n}\n\n#addCover[data-v-76b38f7f] {\n    position: absolute;\n    /* pointer-events: none; */\n    width: 5vw;\n    height: 5vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\ninput#coverUploader[data-v-76b38f7f] {\n    height: 10vw;\n    cursor: pointer;\n}\n\n@media only screen and (orientation: portrait) {\n    .coverPreview[data-v-76b38f7f]{\n        position: relative;\n        top: 0;\n        left: 0;\n        width: 100%;\n        margin-bottom: 4vw;\n    }\n    .color_switches[data-v-76b38f7f]{\n        position: relative;\n        margin-left: 15vw;\n        cursor: pointer;\n        margin-top: -43vw;\n        margin-bottom: 7vw;\n    }\n    .dropoverlay[data-v-76b38f7f] {\n        position: absolute;\n        width: 23.8vw;\n        height: 38.24vw;\n        background: rgba(255, 0, 0, 0);\n        right: 5.45vw;\n        border-radius: 0.2vw 1vw 1vw 0.2vw;\n    }\n    img.rubberband[data-v-76b38f7f] {\n        width: 1.5vw;\n        position: absolute;\n        right: 2.9vw;\n    }\n}")
 ;(function(){
 'use strict';
 
@@ -211,7 +324,7 @@ exports.default = {
     props: [],
     data: function data() {
         return {
-            curProduct: 'product_0',
+            curProduct: 'product_1',
             extraProd: false
         };
     },
@@ -240,8 +353,10 @@ exports.default = {
     methods: {
         switchProduct: function switchProduct(n) {
             this.curProduct = 'product_' + n;
+            this.extraProd = false;
         },
         addExtra: function addExtra() {
+            this.curProduct = 'product_0';
             this.extraProd = true;
         }
     }
@@ -250,7 +365,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"coverPreview"},[(_vm.extraProd)?_c('div',{staticClass:"dropoverlay",attrs:{"id":"dropcover"}},[_c('img',{staticClass:"rubberband",attrs:{"src":"../../../src/img/band.png","alt":"band"}})]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":'../../../src/img/' + _vm.curProduct + '.png',"alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"color_switches"},[_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_1.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(0)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_2.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_3.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch fill",on:{"click":function($event){_vm.addExtra()}}},[_c('div',{attrs:{"id":"addCover"}},[_vm._v("+")]),_vm._v(" "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('input',{attrs:{"multiple":"false","type":"file","id":"coverUploader"}})])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"coverPreview"},[(_vm.extraProd)?_c('div',{staticClass:"dropoverlay",attrs:{"id":"dropcover"}},[_c('img',{staticClass:"rubberband",attrs:{"src":"../../../src/img/band.png","alt":"band"}})]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":'../../../src/img/' + _vm.curProduct + '.png',"alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"color_switches"},[_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_1.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(2)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_2.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(3)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_3.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(4)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_4.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(0)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_0.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch fill",on:{"click":function($event){_vm.addExtra()}}},[_c('div',{attrs:{"id":"addCover"}},[_vm._v("+")]),_vm._v(" "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('input',{attrs:{"multiple":"false","type":"file","accept":".png,.jpg","id":"coverUploader"}})])])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-76b38f7f"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -261,10 +376,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-76b38f7f", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-76b38f7f", __vue__options__)
+    hotAPI.reload("data-v-76b38f7f", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],7:[function(require,module,exports){
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],9:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-b5d412c0] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-b5d412c0] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-b5d412c0]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-b5d412c0] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-b5d412c0] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-b5d412c0] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-b5d412c0] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-b5d412c0]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-b5d412c0]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-b5d412c0]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-b5d412c0] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-b5d412c0] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-b5d412c0] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-b5d412c0] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-b5d412c0] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-b5d412c0] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-b5d412c0] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-b5d412c0] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-b5d412c0] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-b5d412c0] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-b5d412c0] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-b5d412c0] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-b5d412c0] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-b5d412c0] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-b5d412c0] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-b5d412c0] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-b5d412c0] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-b5d412c0] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
 ;(function(){
 'use strict';
@@ -280,13 +395,25 @@ exports.default = {
             extraProd: false
         };
     },
-    mounted: function mounted() {},
+    mounted: function mounted() {
+        var newState = {
+            name: 'specs',
+            sliderState: this.curProduct
+        };
+        this.$store.commit('changeSliderState', newState);
+    },
     created: function created() {},
     destroyed: function destroyed() {},
     components: {},
     methods: {
         switchProduct: function switchProduct(n) {
             this.curProduct = n;
+
+            var newState = {
+                name: 'specs',
+                sliderState: n
+            };
+            this.$store.commit('changeSliderState', newState);
         }
     }
 };
@@ -305,10 +432,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-b5d412c0", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-b5d412c0", __vue__options__)
+    hotAPI.reload("data-v-b5d412c0", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],8:[function(require,module,exports){
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],10:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-7887d584]{\n    width: 100%;\n}\n\n.tutvideo[data-v-7887d584] {\n    width: 34.4vw;\n    position: absolute;\n    margin-top: 0.26vw;\n}\n\n#startBtn[data-v-7887d584]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 45.8vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-7887d584]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 13px;\n}\n\n.triangleBg[data-v-7887d584]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-7887d584], .fade-leave-active[data-v-7887d584] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-7887d584], .fade-leave-to[data-v-7887d584] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
 ;(function(){
 'use strict';
@@ -360,10 +487,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7887d584", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7887d584", __vue__options__)
+    hotAPI.reload("data-v-7887d584", __vue__options__)
   }
 })()}
-},{"vue":29,"vue-hot-reload-api":28,"vueify/lib/insert-css":30}],9:[function(require,module,exports){
+},{"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],11:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -402,7 +529,7 @@ exports.default = {
     data: function data() {
         return {
             bookBG: false,
-            showModal: false
+            showModal: true
         };
     },
     mounted: function mounted() {
@@ -433,7 +560,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Intro")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Intro EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Intro")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Intro EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/Trailer.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -442,10 +569,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4693f801", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4693f801", __vue__options__)
+    hotAPI.reload("data-v-4693f801", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],10:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],12:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".klickzone {\n    height: 45.8vw;\n    cursor: zoom-in;\n    position: absolute;\n    width: 33vw;\n    margin-left: -0.6vw;\n    margin-top: -1vw;\n}")
 ;(function(){
 'use strict';
 
@@ -515,19 +643,20 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},slot:"right"},[_c('div',{staticClass:"klickzone",attrs:{"id":"scrollarea"},on:{"click":function($event){_vm.showModal = true}}}),_vm._v(" "),_c('iframe',{attrs:{"id":"scrolltarget","src":"http://localhost:3000/src/iFrame/projektcalc"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"excel","iframelink":"http://localhost:3000/src/iFrame/projektcalc"},on:{"close":function($event){_vm.showModal = false}}}):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-1563b791", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-1563b791", __vue__options__)
+    hotAPI.reload("data-v-1563b791", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],11:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],13:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -597,7 +726,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Marke EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Marke EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/prism.png","alt":"Brand Identity Prism"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/prism_full.png","alt":"Brand Identity Prism"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -606,10 +735,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-71307585", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-71307585", __vue__options__)
+    hotAPI.reload("data-v-71307585", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],12:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],14:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -679,7 +808,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/systemskizze.png","alt":"Systemskizze"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/systemskizze_full.png","alt":"Systemskizze"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -688,10 +817,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-e41b4cea", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-e41b4cea", __vue__options__)
+    hotAPI.reload("data-v-e41b4cea", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],13:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],15:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -761,7 +890,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("ERM")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("ERM EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("ERM")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("ERM EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/ERM.png","alt":"ERM"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/ERM_full.png","alt":"ERM"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -770,10 +899,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-c39dca22", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-c39dca22", __vue__options__)
+    hotAPI.reload("data-v-c39dca22", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],14:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],16:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -843,7 +972,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Aufbau EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/systemskizzeproto.png","alt":"Systemskizze Prototyp"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/systemskizzeproto_full.png","alt":"Systemskizze Prototyp"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -852,10 +981,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3584fbc7", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-3584fbc7", __vue__options__)
+    hotAPI.reload("data-v-3584fbc7", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],15:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],17:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -925,7 +1054,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('16')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/systemskizzeproto.png","alt":"Prototyp Funktionen"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/systemskizzeproto_full.png","alt":"Prototyp Funktionen"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('16')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -934,10 +1063,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-172c6562", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-172c6562", __vue__options__)
+    hotAPI.reload("data-v-172c6562", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],16:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],18:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1007,7 +1136,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kontakt EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Kontakt EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/team.png","alt":"Team Gefühlswelt"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/team_full.png","alt":"Team Gefühlswelt"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('15')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1016,10 +1145,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a863169c", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-a863169c", __vue__options__)
+    hotAPI.reload("data-v-a863169c", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],17:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],19:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1103,10 +1232,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-d60dcb26", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-d60dcb26", __vue__options__)
+    hotAPI.reload("data-v-d60dcb26", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":6,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],18:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":8,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],20:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1186,7 +1315,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Specs")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Specs EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('SpecsSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.specs === 'front')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Specs Front")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Specs Front EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.specs === 'inside')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Specs Inside")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Specs Inside EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.specs === 'back')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Specs Back")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Specs Back EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('SpecsSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1195,10 +1324,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-4f60610f", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-4f60610f", __vue__options__)
+    hotAPI.reload("data-v-4f60610f", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":6,"./interactiveComps/specsSlider.vue":7,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],19:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":8,"./interactiveComps/specsSlider.vue":9,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],21:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1277,10 +1406,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-602b591a", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-602b591a", __vue__options__)
+    hotAPI.reload("data-v-602b591a", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],20:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],22:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1350,7 +1479,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/#/entry/1"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1359,10 +1488,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5ffa09e2", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-5ffa09e2", __vue__options__)
+    hotAPI.reload("data-v-5ffa09e2", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],21:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],23:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1432,7 +1561,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('4')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productwerkzeuge EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/#/entry/2"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('4')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1441,10 +1570,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-2428e968", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-2428e968", __vue__options__)
+    hotAPI.reload("data-v-2428e968", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],22:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],24:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1514,7 +1643,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Producthilfe EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/#/entry/3"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1523,10 +1652,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7dc3ac30", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-7dc3ac30", __vue__options__)
+    hotAPI.reload("data-v-7dc3ac30", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],23:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],25:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("h1.fonttest {\n    position: absolute;\n    width: 27vw;\n    line-height: 48px;\n    padding: 20px;\n    box-sizing: border-box;\n    color: #fff;\n    margin-top: 1vw;\n    overflow-y: scroll;\n    overflow-x: auto;\n    word-wrap: break-word;\n    word-break: break-word;\n    height: 200px;\n    font-size: 36px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n@media only screen and (orientation: portrait) {\n    h1.fonttest {\n        position: absolute;\n        width: 42vw;\n        line-height: 48px;\n        padding: 20px;\n        box-sizing: border-box;\n        color: #fff;\n        margin-top: 1vw;\n        height: 200px;\n        font-size: 36px;\n    }\n}")
 ;(function(){
 'use strict';
 
@@ -1596,19 +1726,20 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Styleguide")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Styleguide EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Styleguide")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Styleguide EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},slot:"right"},[(this.$store.state.lang)?_c('h1',{staticClass:"fonttest",attrs:{"contenteditable":"true"}},[_vm._v("Bearbeite mich und spiele mit der Schrift.")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',{staticClass:"fonttest",attrs:{"contenteditable":"true"}},[_vm._v("Change this text and play with the font.")]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":"../../src/img/fontsbg.png","alt":"Fonts"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('6')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a6c97142", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-a6c97142", __vue__options__)
+    hotAPI.reload("data-v-a6c97142", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],24:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30,"vueify/lib/insert-css":32}],26:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1640,6 +1771,10 @@ var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
 
 var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
 
+var _PersonaSlider = require('./interactiveComps/PersonaSlider.vue');
+
+var _PersonaSlider2 = _interopRequireDefault(_PersonaSlider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -1663,7 +1798,8 @@ exports.default = {
         Pagination: _pagination2.default,
         Modal: _modal2.default,
         TutVideo: _tutorialVideo2.default,
-        LangSwitch: _langswitch2.default
+        LangSwitch: _langswitch2.default,
+        PersonaSlider: _PersonaSlider2.default
     },
     methods: {
         checkClick: function checkClick() {
@@ -1678,7 +1814,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.persona === 'sad')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona Sad")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona Sad EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.persona === 'normal')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona Normal")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona Normal EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.persona === 'happy')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona Happy")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona Happy EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('PersonaSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1687,10 +1823,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-202b5c2e", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-202b5c2e", __vue__options__)
+    hotAPI.reload("data-v-202b5c2e", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],25:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/PersonaSlider.vue":6,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],27:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -1722,6 +1858,10 @@ var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
 
 var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
 
+var _UserstorySlider = require('./interactiveComps/UserstorySlider.vue');
+
+var _UserstorySlider2 = _interopRequireDefault(_UserstorySlider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -1745,7 +1885,8 @@ exports.default = {
         Pagination: _pagination2.default,
         Modal: _modal2.default,
         TutVideo: _tutorialVideo2.default,
-        LangSwitch: _langswitch2.default
+        LangSwitch: _langswitch2.default,
+        UserstorySlider: _UserstorySlider2.default
     },
     methods: {
         checkClick: function checkClick() {
@@ -1760,7 +1901,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.userstory === '7')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 7")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 7 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '10')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 10")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 10 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '14')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 14")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 14 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '18')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 18")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 18 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '20')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 20")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 20 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '23')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory 23")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory 23 EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('UserstorySlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1769,10 +1910,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-bc472770", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-bc472770", __vue__options__)
+    hotAPI.reload("data-v-bc472770", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":8,"vue":29,"vue-hot-reload-api":28}],26:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/UserstorySlider.vue":7,"./interactiveComps/tutorialVideo.vue":10,"vue":31,"vue-hot-reload-api":30}],28:[function(require,module,exports){
 'use strict';
 
 var _page_0_intro = require('./components/page_0_intro.vue');
@@ -1866,11 +2007,24 @@ Vue.use(Vuex);
 var store = new Vuex.Store({
     state: {
         name: 'Interactive Documentation',
-        lang: true // true = de
+        lang: true, // true = de
+        persona: 'normal',
+        userstory: '7',
+        specs: 'front'
+
     },
     mutations: {
         changeLanguage: function changeLanguage(state, newName) {
             state.lang = !state.lang;
+        },
+        changeSliderState: function changeSliderState(state, newState) {
+            if (newState.name === 'persona') {
+                state.persona = newState.sliderState;
+            } else if (newState.name === 'userstory') {
+                state.userstory = newState.sliderState;
+            } else if (newState.name === 'specs') {
+                state.specs = newState.sliderState;
+            }
         }
     }
 });
@@ -1904,7 +2058,7 @@ var vm = new Vue({
 
 // };
 
-},{"./components/page_0_intro.vue":9,"./components/page_10_Kostenanalyse.vue":10,"./components/page_11_Marke.vue":11,"./components/page_12_Systemdiagramm.vue":12,"./components/page_13_ERM.vue":13,"./components/page_14_PrototypAufbau.vue":14,"./components/page_15_PrototypFunktion.vue":15,"./components/page_16_Kontakt.vue":16,"./components/page_1_Cover.vue":17,"./components/page_2_Specs.vue":18,"./components/page_3_ProductSphaeren.vue":19,"./components/page_4_ProductSplitter.vue":20,"./components/page_5_ProductWerkzeuge.vue":21,"./components/page_6_ProductHilfe.vue":22,"./components/page_7_Styleguide.vue":23,"./components/page_8_Persona.vue":24,"./components/page_9_Userstory.vue":25}],27:[function(require,module,exports){
+},{"./components/page_0_intro.vue":11,"./components/page_10_Kostenanalyse.vue":12,"./components/page_11_Marke.vue":13,"./components/page_12_Systemdiagramm.vue":14,"./components/page_13_ERM.vue":15,"./components/page_14_PrototypAufbau.vue":16,"./components/page_15_PrototypFunktion.vue":17,"./components/page_16_Kontakt.vue":18,"./components/page_1_Cover.vue":19,"./components/page_2_Specs.vue":20,"./components/page_3_ProductSphaeren.vue":21,"./components/page_4_ProductSplitter.vue":22,"./components/page_5_ProductWerkzeuge.vue":23,"./components/page_6_ProductHilfe.vue":24,"./components/page_7_Styleguide.vue":25,"./components/page_8_Persona.vue":26,"./components/page_9_Userstory.vue":27}],29:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -2090,7 +2244,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],28:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -2320,7 +2474,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],29:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -10247,7 +10401,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":27}],30:[function(require,module,exports){
+},{"_process":29}],32:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -10272,4 +10426,4 @@ exports.insert = function (css) {
   }
 }
 
-},{}]},{},[26]);
+},{}]},{},[28]);

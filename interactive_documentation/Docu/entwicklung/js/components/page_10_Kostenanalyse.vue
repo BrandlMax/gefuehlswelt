@@ -19,16 +19,17 @@
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+            <div class="iFrameSlot" slot="right" style="cursor: pointer;">
+                <div id="scrollarea" class="klickzone"  @click="showModal = true"></div>
+                <iframe id="scrolltarget" src="http://localhost:3000/src/iFrame/projektcalc">
+                </iframe>
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
-        <Modal v-if="showModal" @close="showModal = false" modalType="video">
-            <!-- <img src="../../src/img/mel.png" alt="textImage"> -->
-            <source src="../../src/vids/trailer_test.mp4" type="video/mp4">
+        <Modal v-if="showModal" @close="showModal = false" modalType="excel" iframelink="http://localhost:3000/src/iFrame/projektcalc">
+            
         </Modal>
 
         <div class="arrow aleft" @click="changePage('9')">
@@ -68,7 +69,6 @@ export default {
       // Refresh Local Storage
       localStorage.clear();
 
-
   },
   created () {
 
@@ -95,7 +95,14 @@ export default {
 </script>
 
 <style>
-
+.klickzone {
+    height: 45.8vw;
+    cursor: zoom-in;
+    position: absolute;
+    width: 33vw;
+    margin-left: -0.6vw;
+    margin-top: -1vw;
+}
 
 </style>
 

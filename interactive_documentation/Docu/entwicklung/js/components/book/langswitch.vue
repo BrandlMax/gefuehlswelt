@@ -41,6 +41,7 @@ export default {
 
 #langswitch {
     position: absolute;
+    z-index: 30000;
     top: 20px;
     right: 20px;
     opacity: 0.2;

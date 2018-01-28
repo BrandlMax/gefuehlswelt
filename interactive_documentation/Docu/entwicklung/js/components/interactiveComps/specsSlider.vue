@@ -83,7 +83,11 @@ export default {
       }
   },
   mounted() {
-
+        var newState = {
+              name: 'specs',
+              sliderState: this.curProduct
+        }
+        this.$store.commit('changeSliderState', newState)
   },
   created () {
   },
@@ -95,6 +99,12 @@ export default {
   methods:{
       switchProduct(n){
           this.curProduct = n;
+
+          var newState = {
+              name: 'specs',
+              sliderState: n
+          }
+          this.$store.commit('changeSliderState',newState)
       }
   }
 }

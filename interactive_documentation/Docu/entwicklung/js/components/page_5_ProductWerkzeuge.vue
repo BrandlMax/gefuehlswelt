@@ -23,8 +23,9 @@
             <div class="iFrameSlot" slot="right">
                 <TutVideo :tut="'test'"></TutVideo>
 
-                <iframe src="http://localhost:3000/src/iFrame/prototyp/">
+                <iframe src="http://localhost:3000/src/iFrame/prototyp/#/entry/2">
                 </iframe>
+                
             </div>           
         </BookContent>
 

@@ -114,10 +114,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-80e975a0", __vue__options__)
   } else {
-    hotAPI.reload("data-v-80e975a0", __vue__options__)
+    hotAPI.rerender("data-v-80e975a0", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],2:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],2:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-5fec128a] {\n    position: absolute;\n    z-index: 2000;\n    background: rgb(39, 201, 166);\n    clip-path: url(#form);\n}")
 ;(function(){
 'use strict';
@@ -152,10 +152,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-5fec128a", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5fec128a", __vue__options__)
+    hotAPI.rerender("data-v-5fec128a", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],3:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],3:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".layer[data-v-93c2fc9a] {\n    position: absolute;\n    z-index: 2000;\n    background: rgba(255, 255, 255, 0.5);\n    ;\n}\n\n.ms-editor canvas.ms-rendering-canvas[data-v-93c2fc9a],\n.ms-editor svg[data-v-93c2fc9a] {\n    z-index: 10;\n    pointer-events: none;\n    background: none;\n}")
 ;(function(){
 'use strict';
@@ -183,6 +183,34 @@ var _uglypen2 = _interopRequireDefault(_uglypen);
 var _pattern = require('../werzeuge/pattern.vue');
 
 var _pattern2 = _interopRequireDefault(_pattern);
+
+var _circles = require('../werzeuge/circles.vue');
+
+var _circles2 = _interopRequireDefault(_circles);
+
+var _Sketch = require('../werzeuge/Sketch.vue');
+
+var _Sketch2 = _interopRequireDefault(_Sketch);
+
+var _rainbrush = require('../werzeuge/rainbrush.vue');
+
+var _rainbrush2 = _interopRequireDefault(_rainbrush);
+
+var _rose = require('../werzeuge/rose.vue');
+
+var _rose2 = _interopRequireDefault(_rose);
+
+var _colors = require('../werzeuge/colors.vue');
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _fade = require('../werzeuge/fade.vue');
+
+var _fade2 = _interopRequireDefault(_fade);
+
+var _spin = require('../werzeuge/spin.vue');
+
+var _spin2 = _interopRequireDefault(_spin);
 
 var _inspire = require('../werzeuge/inspire.vue');
 
@@ -257,7 +285,14 @@ exports.default = {
         TextTool: _texttool2.default,
         UglyPen: _uglypen2.default,
         Inspire: _inspire2.default,
-        PatternTool: _pattern2.default
+        PatternTool: _pattern2.default,
+        Circles: _circles2.default,
+        Sketch: _Sketch2.default,
+        RainBrush: _rainbrush2.default,
+        Rose: _rose2.default,
+        Colors: _colors2.default,
+        Fade: _fade2.default,
+        Spin: _spin2.default
     },
     methods: {
         currentTool: function currentTool() {
@@ -289,9 +324,9 @@ exports.default = {
 
         recogTool: function recogTool(gestik) {
             switch (gestik) {
-                case 'mandala':
+                case 'orange':
                     return true;
-                case 'doodle':
+                case 'white':
                     return true;
                 case 'text':
                     return true;
@@ -300,6 +335,20 @@ exports.default = {
                 case 'inspire':
                     return true;
                 case 'pattern':
+                    return true;
+                case 'circles':
+                    return true;
+                case 'rose':
+                    return true;
+                case 'rain':
+                    return true;
+                case 'colors':
+                    return true;
+                case 'fade':
+                    return true;
+                case 'spin':
+                    return true;
+                case 'sketch':
                     return true;
                 default:
                     return false;
@@ -342,7 +391,7 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
             id: _vm.layerData.id, 
             height:_vm.layerData.height,
             width:_vm.layerData.width
-        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'mandala')?_c('meinWerkzeug',{staticClass:"maskedlayer",style:({ 
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'orange')?_c('meinWerkzeug',{staticClass:"maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')', 
             top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
             height: _vm.layerData.height+'px', 
@@ -351,7 +400,7 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
             id: _vm.layerData.id, 
             height:_vm.layerData.height,
             width:_vm.layerData.width
-        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'doodle')?_c('meinAnderesWerkzeug',{staticClass:"maskedlayer",style:({ 
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'white')?_c('meinAnderesWerkzeug',{staticClass:"maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')', 
             top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
             height: _vm.layerData.height+'px', 
@@ -361,6 +410,69 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
             height:_vm.layerData.height,
             width:_vm.layerData.width
         }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'inspire')?_c('Inspire',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'circles')?_c('Circles',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'sketch')?_c('Sketch',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'rain')?_c('RainBrush',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'rose')?_c('Rose',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'colors')?_c('Colors',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'fade')?_c('Fade',{staticClass:"maskedlayer",style:({ 
+            clipPath: 'url(#path_' + _vm.layerData.id +')', 
+            top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
+            height: _vm.layerData.height+'px', 
+            width: _vm.layerData.width+'px'
+        }),attrs:{"stouch-action":"none","toolData":{
+            id: _vm.layerData.id, 
+            height:_vm.layerData.height,
+            width:_vm.layerData.width
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'spin')?_c('Spin',{staticClass:"maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')', 
             top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
             height: _vm.layerData.height+'px', 
@@ -385,10 +497,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-93c2fc9a", __vue__options__)
   } else {
-    hotAPI.reload("data-v-93c2fc9a", __vue__options__)
+    hotAPI.rerender("data-v-93c2fc9a", __vue__options__)
   }
 })()}
-},{"../werzeuge/beispiel.vue":7,"../werzeuge/beispiel2.vue":8,"../werzeuge/inspire.vue":10,"../werzeuge/pattern.vue":11,"../werzeuge/texttool.vue":12,"../werzeuge/uglypen.vue":13,"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],4:[function(require,module,exports){
+},{"../werzeuge/Sketch.vue":7,"../werzeuge/beispiel.vue":8,"../werzeuge/beispiel2.vue":9,"../werzeuge/circles.vue":10,"../werzeuge/colors.vue":11,"../werzeuge/fade.vue":12,"../werzeuge/inspire.vue":14,"../werzeuge/pattern.vue":15,"../werzeuge/rainbrush.vue":16,"../werzeuge/rose.vue":17,"../werzeuge/spin.vue":18,"../werzeuge/texttool.vue":19,"../werzeuge/uglypen.vue":20,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],4:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("svg[data-v-7e3b8e5d] {\n    position: absolute;\n    z-index: -1000;\n    background: rgba(0, 0, 0, 0);\n}")
 ;(function(){
 'use strict';
@@ -441,11 +553,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-7e3b8e5d", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7e3b8e5d", __vue__options__)
+    hotAPI.rerender("data-v-7e3b8e5d", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-0e2d0256] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n\n#cmdCanvas[data-v-0e2d0256] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],5:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-0e2d0256] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n}\n\n#cmdCanvas[data-v-0e2d0256] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}\n.PageTitle[data-v-0e2d0256] {\n    position: absolute;\n    z-index: 10000;\n    opacity: 0.3;\n    font-family: 'selimaregular', cursive;\n    font-size: 22px;\n    margin-left: 20px;\n    margin-top: 15px;\n}\n.paperstyle[data-v-0e2d0256]{\n    position: fixed;\n    height: 100vh;\n    width: 100vw;\n    background: url(src/png/paper.jpg);\n    z-index: 20000;\n    top: 0;\n    left: 0;\n    background-attachment: fixed;\n    background-size: cover;\n    mix-blend-mode: multiply;\n    pointer-events: none;\n    opacity: 0.6;\n}")
 ;(function(){
 'use strict';
 
@@ -543,15 +655,17 @@ exports.default = {
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
-            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var paths = document.getElementById('MODEL-viewTransform').getElementsByTagName('path');
             var pathsList = Array.prototype.slice.call(paths);
             var SVGPath;
 
             pathsList.forEach(function (element, index) {
-                if (element.id.charAt(0) === "d") {
-                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+                console.log('Charset', element.id.charAt(6));
+                if (element.id.charAt(6) === "d") {
+                    console.log('TEST?!');
+                    SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
-                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+                    var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
                     editorElement.editor.clear();
 
@@ -694,7 +808,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n    Entry "+_vm._s(_vm.$route.params.id)+"\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((_vm.giveToolsofEntry()),function(layer,index){return (layer.show)?_c('myScriptLayer',{key:index,attrs:{"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w, show: layer.show}}}):_vm._e()})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{staticClass:"paperstyle"}),_vm._v(" "),_c('div',{staticClass:"PageTitle"},[_vm._v("Gedankensplitter "+_vm._s(_vm.$route.params.id))]),_vm._v(" "),_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}}),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('Layer',{attrs:{"layerData":{height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy, show: _vm.showSVGlayer}}}),_vm._v(" "),_vm._l((_vm.giveToolsofEntry()),function(layer,index){return (layer.show)?_c('myScriptLayer',{key:index,attrs:{"layerData":{id: layer.id, index: index, x: layer.x, y:layer.y, height: layer.h, width: layer.w, show: layer.show}}}):_vm._e()})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-0e2d0256"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -705,11 +819,11 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-0e2d0256", __vue__options__)
   } else {
-    hotAPI.reload("data-v-0e2d0256", __vue__options__)
+    hotAPI.rerender("data-v-0e2d0256", __vue__options__)
   }
 })()}
-},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":9,"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}")
+},{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],6:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}\n.PageTitle[data-v-a7549234] {\n    position: absolute;\n    z-index: 10000;\n    opacity: 0.3;\n    font-family: 'selimaregular', cursive;\n    font-size: 22px;\n    margin-left: 20px;\n    margin-top: 15px;\n}\n.paperstyle[data-v-a7549234]{\n    position: fixed;\n    height: 100vh;\n    width: 100vw;\n    background: url(src/png/paper.jpg);\n    z-index: 20000;\n    top: 0;\n    left: 0;\n    background-attachment: fixed;\n    background-size: cover;\n    mix-blend-mode: multiply;\n    pointer-events: none;\n    opacity: 0.6;\n}")
 ;(function(){
 'use strict';
 
@@ -800,15 +914,16 @@ exports.default = {
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
-            var paths = document.getElementById('viewTransform').getElementsByTagName('path');
+            var paths = document.getElementById('MODEL-viewTransform').getElementsByTagName('path');
             var pathsList = Array.prototype.slice.call(paths);
             var SVGPath;
 
             pathsList.forEach(function (element, index) {
-                if (element.id.charAt(0) === "d") {
-                    SVGPath = document.getElementById('viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
+                if (element.id.charAt(6) === "d") {
+                    console.log('Charset', element.id.charAt(6));
+                    SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
-                    var posInfo = document.getElementById('viewTransform').getBoundingClientRect();
+                    var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
                     console.log('PosInfo', posInfo);
                     console.log('SVG Path', SVGPath);
@@ -931,7 +1046,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}},[_vm._v("\n  journals\n  ")]),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"displayFrame"}},[_c('div',{staticClass:"paperstyle"}),_vm._v(" "),_c('div',{staticClass:"PageTitle"},[_vm._v("Gedankenspähren")]),_vm._v(" "),_c('div',{attrs:{"id":"mainCanvas","touch-action":"none"}}),_vm._v(" "),_c('div',{attrs:{"id":"cmdCanvas","touch-action":"none"}},[_vm._v("\n  cmd\n  ")]),_vm._v(" "),_c('Help',{attrs:{"toolData":{x: 500, y: 500}}}),_vm._v(" "),(_vm.showSVGlayer)?_c('SVGLayer',{attrs:{"SVGdata":{id: _vm.SVGid, path: _vm.SVGpath, height: _vm.SVGheight, width: _vm.SVGwidth, x: _vm.SVGx ,y: _vm.SVGy}}}):_vm._e(),_vm._v(" "),_vm._l((this.$store.state.journals),function(journal,index){return _c('Journal',{key:index,attrs:{"if":journal.show,"journalData":{id: journal.id, index: index, x: journal.x, y:journal.y, height: journal.h, width: journal.w, background: journal.bg}}})})],2)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-a7549234"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -945,7 +1060,180 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-a7549234", __vue__options__)
   }
 })()}
-},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":9,"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],7:[function(require,module,exports){
+},{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],7:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-692b8585] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+
+        var meinWerkzeug = new p5(function (p5) {
+            var points = [];
+
+            var dx, dy, d;
+            var isDrawing = false;
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                p5.background(255);
+
+
+                for (var i = 0; i < _this.saveData.length; i++) {
+
+                    var curPointX = _this.saveData[i].x;
+                    var curPointY = _this.saveData[i].y;
+
+                    p5.stroke('rgba(0, 0, 0, 0.5)');
+
+                    p5.strokeCap(p5.ROUND);
+
+                    p5.strokeJoin(p5.ROUND);
+
+                    p5.noFill();
+                    p5.strokeWeight(1);
+                    p5.beginShape();
+                    p5.vertex(curPointX, curPointY);
+                    p5.vertex(curPointX, curPointY);
+                    p5.endShape();
+
+                    for (var j = 0; j < _this.saveData.length; j++) {
+
+                        dx = _this.saveData[j].x - curPointX;
+                        dy = _this.saveData[j].y - curPointY;
+                        d = dx * dx + dy * dy;
+
+                        if (d < 1000) {
+                            p5.noFill();
+                            p5.beginShape();
+                            p5.stroke('rgba(0, 0, 0, 0.3)');
+                            p5.vertex(curPointX + dx * 0.2, curPointY + dy * 0.2);
+                            p5.vertex(_this.saveData[j].x - dx * 0.2, _this.saveData[j].y - dy * 0.2);
+                            p5.endShape();
+                        }
+                    }
+                }
+            };
+
+            p5.draw = function () {
+
+                if (isDrawing) {
+                    p5.stroke('rgba(0, 0, 0, 0.5)');
+
+                    p5.strokeCap(p5.ROUND);
+
+                    p5.strokeJoin(p5.ROUND);
+
+                    points.push({
+                        x: p5.mouseX,
+                        y: p5.mouseY
+                    });
+
+                    p5.noFill();
+                    p5.strokeWeight(1);
+                    p5.beginShape();
+                    p5.vertex(p5.pmouseX, p5.pmouseY);
+                    p5.vertex(p5.mouseX, p5.mouseY);
+                    p5.endShape();
+
+                    for (var i = 0; i < points.length; i++) {
+                        points[i].cx = p5.mouseX;
+                        points[i].cy = p5.mouseY;
+                        dx = points[i].x - points[i].cx;
+                        dy = points[i].y - points[i].cy;
+                        d = dx * dx + dy * dy;
+
+                        if (d < 1000) {
+                            p5.noFill();
+                            p5.beginShape();
+                            p5.stroke('rgba(0, 0, 0, 0.3)');
+                            p5.vertex(points[i].cx + dx * 0.2, points[i].cy + dy * 0.2);
+                            p5.vertex(points[i].x - dx * 0.2, points[i].y - dy * 0.2);
+                            p5.endShape();
+                        }
+                    }
+                }
+            };
+
+            el.onmousedown = function (e) {
+                isDrawing = true;
+            };
+
+            el.onmousemove = function (e) {};
+
+            el.onmouseup = function () {
+                isDrawing = false;
+                _this.saveData = points;
+                _this.saveToVuex();
+            };
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-692b8585"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-692b8585", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-692b8585", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],8:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-505d90f4] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1031,10 +1319,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-505d90f4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-505d90f4", __vue__options__)
+    hotAPI.rerender("data-v-505d90f4", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],8:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],9:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-226d629c] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1124,10 +1412,485 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-226d629c", __vue__options__)
   } else {
-    hotAPI.reload("data-v-226d629c", __vue__options__)
+    hotAPI.rerender("data-v-226d629c", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],9:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-c3af6c8c] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var circles = [];
+        var numberOfCircles;
+
+        var toolData = this.toolData;
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+
+        var meinWerkzeug = new p5(function (p5) {
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                for (var i = 0; i < _this.saveData.length; i++) {
+                    circles.push(new Circle(_this.saveData[i].x, _this.saveData[i].y, _this.saveData[i].size, _this.saveData[i].r, _this.saveData[i].g, _this.saveData[i].b));
+                }
+            };
+
+            p5.draw = function () {
+
+                for (var i = 0; i < circles.length; i++) {
+                    circles[i].display();
+                }
+            };
+
+            var isDrawing = false;
+            el.onmousedown = function (e) {
+                isDrawing = true;
+                circles.push(new Circle(p5.mouseX, p5.mouseY));
+                _this.saveData = circles;
+            };
+
+            el.onmousemove = function (e) {
+                if (isDrawing) {
+                    circles.push(new Circle(p5.mouseX, p5.mouseY));
+                    _this.saveData = circles;
+                }
+            };
+
+            el.onmouseup = function () {
+                isDrawing = false;
+                _this.saveData = circles;
+                _this.saveToVuex();
+            };
+
+            function Circle(x, y, s, r, b, g) {
+                this.x = x;
+                this.y = y;
+                this.size;
+
+                if (r) {
+                    this.size = s;
+                    this.r = r;
+                    this.g = g;
+                    this.b = b;
+                } else {
+                    this.size = getRandomInt(10, 50);
+                    this.r = 135;
+                    this.g = getRandomInt(200, 270);
+                    this.b = 250;
+                }
+
+                this.display = function () {
+                    p5.noStroke();
+                    p5.fill(p5.color(this.r, this.g, this.b));
+                    p5.ellipse(this.x, this.y, this.size, this.size);
+                };
+            }
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-c3af6c8c"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c3af6c8c", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-c3af6c8c", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],11:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-309dcdae] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+
+        var meinWerkzeug = new p5(function (p5) {
+
+            var isDrawing = false;
+
+            var angle = 0;
+            var phaseScale = 0;
+            var phaseColor = 0;
+            var sizeRatio = 0;
+            var sizeRatioOffset = sizeRatio * 1.9;
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                for (var i = 0; i < _this.saveData.length; i++) {
+                    p5.push();
+                    p5.translate(_this.saveData[i].x, _this.saveData[i].y);
+                    p5.rotate(_this.saveData[i].angle);
+                    p5.scale(sizeRatio * p5.sin(_this.saveData[i].phaseScale) + 3.5);
+
+                    p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                    p5.strokeWeight(0.1);
+                    p5.stroke(255, 255, 255, 130);
+
+                    p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                    var c = p5.color(_this.saveData[i].phaseColor, 100, 100, 0.05);
+                    p5.fill(c);
+                    p5.ellipse(-5, -5, 50, 50);
+                    p5.pop();
+                }
+            };
+
+            p5.draw = function () {
+                angle %= p5.TWO_PI;
+                angle += 0.20;
+
+                phaseScale %= p5.TWO_PI;
+                phaseScale += 0.1;
+
+                phaseColor %= 360;
+                phaseColor += 0.6;
+            };
+
+            var isDrawing = false;
+
+            el.onmousedown = function (e) {
+                isDrawing = true;
+
+                p5.push();
+                p5.translate(p5.mouseX, p5.mouseY);
+                p5.rotate(angle);
+                p5.scale(sizeRatio * p5.sin(phaseScale) + 3.5);
+
+                p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                p5.strokeWeight(0.1);
+                p5.stroke(255, 255, 255, 130);
+
+                p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                var c = p5.color(phaseColor, 100, 100, 0.05);
+                p5.fill(c);
+                p5.ellipse(-5, -5, 50, 50);
+                p5.pop();
+
+                _this.saveData.push({
+                    x: p5.mouseX,
+                    y: p5.mouseY,
+                    angle: angle,
+                    phaseScale: phaseScale,
+                    phaseColor: phaseColor
+                });
+            };
+
+            el.onmousemove = function (e) {
+                if (isDrawing) {
+
+                    p5.push();
+                    p5.translate(p5.mouseX, p5.mouseY);
+                    p5.rotate(angle);
+                    p5.scale(sizeRatio * p5.sin(phaseScale) + 3.5);
+
+                    p5.colorMode(p5.RGB, 255, 255, 255, 1);
+                    p5.strokeWeight(0.1);
+                    p5.stroke(255, 255, 255, 130);
+
+                    p5.colorMode(p5.HSB, 360, 100, 100, 1);
+                    var c = p5.color(phaseColor, 100, 100, 0.05);
+                    p5.fill(c);
+                    p5.ellipse(-5, -5, 50, 50);
+                    p5.pop();
+
+                    _this.saveData.push({
+                        x: p5.mouseX,
+                        y: p5.mouseY,
+                        angle: angle,
+                        phaseScale: phaseScale,
+                        phaseColor: phaseColor
+                    });
+                }
+            };
+
+            el.onmouseup = function () {
+                isDrawing = false;
+                _this.saveToVuex();
+            };
+
+            function Circle(x, y, s, r, b, g) {
+                this.x = x;
+                this.y = y;
+                this.size;
+
+                if (r) {
+                    this.size = s;
+                    this.r = r;
+                    this.g = g;
+                    this.b = b;
+                } else {
+                    this.size = getRandomInt(10, 50);
+                    this.r = 135;
+                    this.g = getRandomInt(200, 270);
+                    this.b = 250;
+                }
+
+                this.display = function () {
+                    p5.noStroke();
+                    p5.fill(p5.color(this.r, this.g, this.b));
+                    p5.ellipse(this.x, this.y, this.size, this.size);
+                };
+            }
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-309dcdae"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-309dcdae", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-309dcdae", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],12:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-93a2bf16] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+
+        var meinWerkzeug = new p5(function (p5) {
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                for (var i = 0; i < _this.saveData.length; i++) {
+                    circles.push(new Circle(_this.saveData[i].x, _this.saveData[i].y, _this.saveData[i].size, _this.saveData[i].r, _this.saveData[i].g, _this.saveData[i].b));
+                }
+            };
+
+            p5.draw = function () {
+
+                for (var i = 0; i < circles.length; i++) {
+                    circles[i].display();
+                }
+            };
+
+            var isDrawing = false;
+            el.onmousedown = function (e) {
+                isDrawing = true;
+                circles.push(new Circle(p5.mouseX, p5.mouseY));
+                _this.saveData = circles;
+            };
+
+            el.onmousemove = function (e) {
+                if (isDrawing) {
+                    circles.push(new Circle(p5.mouseX, p5.mouseY));
+                    _this.saveData = circles;
+                }
+            };
+
+            el.onmouseup = function () {
+                isDrawing = false;
+                _this.saveData = circles;
+                _this.saveToVuex();
+            };
+
+            function Circle(x, y, s, r, b, g) {
+                this.x = x;
+                this.y = y;
+                this.size;
+
+                if (r) {
+                    this.size = s;
+                    this.r = r;
+                    this.g = g;
+                    this.b = b;
+                } else {
+                    this.size = getRandomInt(10, 50);
+                    this.r = 135;
+                    this.g = getRandomInt(200, 270);
+                    this.b = 250;
+                }
+
+                this.display = function () {
+                    p5.noStroke();
+                    p5.fill(p5.color(this.r, this.g, this.b));
+                    p5.ellipse(this.x, this.y, this.size, this.size);
+                };
+            }
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-93a2bf16"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-93a2bf16", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-93a2bf16", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],13:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".kleinerhelfer[data-v-67cbaeba] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-67cbaeba]{\n    fill: #1820d2;\n    background: #fff;\n}\nvideo[data-v-67cbaeba]{\n    height: 100%;\n    width: 100%;\n}")
 ;(function(){
 'use strict';
@@ -1185,10 +1948,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-67cbaeba", __vue__options__)
   } else {
-    hotAPI.reload("data-v-67cbaeba", __vue__options__)
+    hotAPI.rerender("data-v-67cbaeba", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],10:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],14:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-325e6b71] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.inspire[data-v-325e6b71]{\n\n}")
 ;(function(){
 'use strict';
@@ -1260,10 +2023,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-325e6b71", __vue__options__)
   } else {
-    hotAPI.reload("data-v-325e6b71", __vue__options__)
+    hotAPI.rerender("data-v-325e6b71", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],11:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],15:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-3d939927] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1324,7 +2087,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(../src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(../prototyp/src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-3d939927"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -1335,10 +2098,473 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-3d939927", __vue__options__)
   } else {
-    hotAPI.reload("data-v-3d939927", __vue__options__)
+    hotAPI.rerender("data-v-3d939927", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],12:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],16:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-0ee316fd] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+        var toolData = this.toolData;
+
+
+        var meinWerkzeug = new p5(function (p5) {
+
+            var brush;
+            p5.preload = function () {
+                brush = p5.loadImage('../prototyp/src/png/brush2.png');
+            };
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                p5.background(255);
+
+                if (_this.saveData[0]) {
+                    for (var i = 0; i < _this.saveData.length; i++) {
+                        p5.image(brush, _this.saveData[i].x, _this.saveData[i].y, 20, 20);
+                    }
+                }
+            };
+
+            var isDrawing, lastPoint;
+
+            function distanceBetween(point1, point2) {
+                return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+            }
+
+            function angleBetween(point1, point2) {
+                return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+            }
+
+            p5.draw = function () {
+                p5.strokeCap(p5.ROUND);
+
+                p5.strokeJoin(p5.ROUND);
+
+                if (p5.mouseIsPressed) {
+                    isDrawing = true;
+
+                    lastPoint = {
+                        x: p5.pmouseX,
+                        y: p5.pmouseY
+                    };
+
+                    var currentPoint = {
+                        x: p5.mouseX,
+                        y: p5.mouseY
+                    };
+
+                    var dist = distanceBetween(lastPoint, currentPoint);
+
+                    var angle = angleBetween(lastPoint, currentPoint);
+
+                    for (var i = 0; i < dist; i++) {
+                        var x = lastPoint.x + Math.sin(angle) * i - 25;
+                        var y = lastPoint.y + Math.cos(angle) * i - 25;
+                        p5.image(brush, x, y, 20, 20);
+                        _this.saveData.push({ x: x, y: y });
+                    }
+                    lastPoint = currentPoint;
+                }
+            };
+
+            el.onmouseup = function (e) {
+                _this.saveToVuex();
+            };
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            console.log('SaveToVuex', this.saveData);
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-0ee316fd"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0ee316fd", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-0ee316fd", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],17:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-da26ac70] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+
+
+        var meinWerkzeug = new p5(function (p5) {
+            var d;
+
+            var n;
+
+            var k;
+            var isDrawing = true;
+
+            if (_this.saveData.d) {
+                d = _this.saveData.d;
+                n = _this.saveData.n;
+                k = _this.saveData.k;
+                isDrawing = false;
+            }
+
+            var el = document.getElementById('sketch_' + _this.toolData.id);
+
+            p5.setup = function () {
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+                p5.background(255);
+            };
+
+            el.onmousedown = function (e) {
+                isDrawing = !isDrawing;
+                _this.saveData = {
+                    d: d,
+                    n: n,
+                    k: k
+                };
+                _this.saveToVuex();
+            };
+
+            p5.draw = function () {
+                p5.translate(toolData.width / 2, toolData.height / 2);
+
+                var s = 1.3;
+
+                p5.beginShape();
+                p5.stroke(0);
+                p5.strokeWeight(2);
+                p5.strokeCap(p5.ROUND);
+                p5.smooth();
+
+                for (var a = 0; a < p5.TWO_PI * d; a += 0.02) {
+                    var r = 200 * p5.cos(k * a) * s;
+                    var x = r * p5.cos(a) * s;
+                    var y = r * p5.sin(a) * s;
+                    p5.vertex(x, y);
+                }
+
+                p5.endShape(p5.CLOSE);
+            };
+
+            el.onmousemove = function (e) {
+                if (isDrawing) {
+                    if (p5.mouseX === 0 && p5.mouseX || toolData.width / 9 * 1) {
+                        d = 1;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 1 && p5.mouseX < toolData.width / 9 * 2) {
+                        d = 2;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 2 && p5.mouseX < toolData.width / 9 * 3) {
+                        d = 3;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 3 && p5.mouseX < toolData.width / 9 * 4) {
+                        d = 4;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 4 && p5.mouseX < toolData.width / 9 * 5) {
+                        d = 5;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 5 && p5.mouseX < toolData.width / 9 * 6) {
+                        d = 6;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 6 && p5.mouseX < toolData.width / 9 * 7) {
+                        d = 7;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 7 && p5.mouseX < toolData.width / 9 * 8) {
+                        d = 8;
+                    }
+                    if (p5.mouseX >= toolData.width / 9 * 8 && p5.mouseX <= toolData.width) {
+                        d = 9;
+                    }
+
+                    if (p5.mouseY === 0 && p5.mouseY || toolData.height / 7 * 1) {
+                        n = 1;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 1 && p5.mouseY < toolData.height / 7 * 2) {
+                        n = 2;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 2 && p5.mouseY < toolData.height / 7 * 3) {
+                        n = 3;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 3 && p5.mouseY < toolData.height / 7 * 4) {
+                        n = 4;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 4 && p5.mouseY < toolData.height / 7 * 5) {
+                        n = 5;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 5 && p5.mouseY < toolData.height / 7 * 6) {
+                        n = 6;
+                    }
+                    if (p5.mouseY >= toolData.height / 7 * 6 && p5.mouseY <= toolData.height) {
+                        n = 7;
+                    }
+
+                    k = n / d;
+                }
+
+                return false;
+            };
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            console.log('SaveToVuex', this.saveData);
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-da26ac70"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-da26ac70", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-da26ac70", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],18:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-1f226f3b] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n    background: #fff;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: ['toolData'],
+    data: function data() {
+        return {
+            saveData: []
+        };
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        this.loadData();
+
+        var toolData = this.toolData;
+        var el = document.getElementById('sketch_' + this.toolData.id);
+
+
+        var meinWerkzeug = new p5(function (p5) {
+
+            var isDrawing = false;
+
+            var windowW = window.innerWidth;
+            var windowH = window.innerHeight;
+            var centerW = windowW / 0.2;
+            var centerH = windowH / 0.2;
+            var circle = void 0;
+            var circles = [];
+            var shortSide = void 0;
+
+            p5.setup = function () {
+                shortSide = p5.min(toolData.width, toolData.height);
+
+                var canvas = p5.createCanvas(toolData.width, toolData.height);
+                canvas.parent('sketch_' + toolData.id);
+                canvas.style('clip-path', 'url(#path_' + toolData.id + ')');
+
+                for (var i = 0; i < _this.saveData.length; i++) {}
+            };
+
+            p5.draw = function () {};
+
+            var isDrawing = false;
+
+            el.onmousedown = function (e) {
+                isDrawing = true;
+
+                _this.saveData.push({});
+            };
+
+            el.onmousemove = function (e) {
+                if (isDrawing) {
+
+                    _this.saveData.push({});
+                }
+            };
+
+            el.onmouseup = function () {
+                isDrawing = false;
+                _this.saveToVuex();
+            };
+
+            function Circle(x, y, s, r, b, g) {
+                this.x = x;
+                this.y = y;
+                this.size;
+
+                if (r) {
+                    this.size = s;
+                    this.r = r;
+                    this.g = g;
+                    this.b = b;
+                } else {
+                    this.size = getRandomInt(10, 50);
+                    this.r = 135;
+                    this.g = getRandomInt(200, 270);
+                    this.b = 250;
+                }
+
+                this.display = function () {
+                    p5.noStroke();
+                    p5.fill(p5.color(this.r, this.g, this.b));
+                    p5.ellipse(this.x, this.y, this.size, this.size);
+                };
+            }
+        });
+    },
+
+    methods: {
+        loadData: function loadData() {
+            var _this2 = this;
+
+            this.$store.state.layers.forEach(function (l) {
+                if (l.id === _this2.toolData.id) {
+                    _this2.saveData = l.tool.tooldata;
+                };
+            });
+        },
+        saveToData: function saveToData(x, y) {
+            this.saveData.push({
+                x: x,
+                y: y
+            });
+        },
+        saveToVuex: function saveToVuex() {
+            var newSaveData = {
+                type: "refresh",
+                id: this.toolData.id,
+                data: this.saveData
+            };
+            this.$store.commit('updateToolSaveData', newSaveData);
+        }
+
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch",style:({ height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-1f226f3b"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1f226f3b", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-1f226f3b", __vue__options__)
+  }
+})()}
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],19:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-34db753e] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n.texttool[data-v-34db753e]{\n    fill: #1820d2;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1429,10 +2655,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-34db753e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-34db753e", __vue__options__)
+    hotAPI.rerender("data-v-34db753e", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],13:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],20:[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".sketch[data-v-74bbb1b1] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    z-index: 1000;\n}\n\n.uglypen[data-v-74bbb1b1] {\n    fill: #1820d2;\n    background: #fff;\n}")
 ;(function(){
 'use strict';
@@ -1576,10 +2802,10 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-74bbb1b1", __vue__options__)
   } else {
-    hotAPI.reload("data-v-74bbb1b1", __vue__options__)
+    hotAPI.rerender("data-v-74bbb1b1", __vue__options__)
   }
 })()}
-},{"vue":19,"vue-hot-reload-api":18,"vueify/lib/insert-css":20}],14:[function(require,module,exports){
+},{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],21:[function(require,module,exports){
 'use strict';
 
 var _vuexPersist = require('vuex-persist');
@@ -1744,7 +2970,7 @@ var vm = new Vue({
     store: store
 }).$mount('#app');
 
-},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":15,"vuex-persist":21}],15:[function(require,module,exports){
+},{"./components/pages/entry.vue":5,"./components/pages/overview.vue":6,"./plugins/vuex-undo-redo.js":22,"vuex-persist":28}],22:[function(require,module,exports){
 'use strict';
 
 var EMPTY_STATE = 'emptyState';
@@ -1804,7 +3030,7 @@ module.exports = {
     }
 };
 
-},{}],16:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 (function (global){
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -4015,7 +5241,7 @@ function stubFalse() {
 module.exports = merge;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],17:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -4201,7 +5427,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],18:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -4431,7 +5657,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],19:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -12358,7 +13584,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":17}],20:[function(require,module,exports){
+},{"_process":24}],27:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -12383,7 +13609,7 @@ exports.insert = function (css) {
   }
 }
 
-},{}],21:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -12624,4 +13850,4 @@ exports.MockStorage = MockStorage;
 exports['default'] = VuexPersistence;
 
 
-},{"lodash.merge":16}]},{},[14]);
+},{"lodash.merge":23}]},{},[21]);

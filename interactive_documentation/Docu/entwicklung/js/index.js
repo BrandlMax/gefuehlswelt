@@ -56,10 +56,23 @@ const store = new Vuex.Store({
     state: {
         name: 'Interactive Documentation',
         lang: true, // true = de
+        persona: 'normal',
+        userstory: '7',
+        specs: 'front',
+
     },
     mutations: {
         changeLanguage: (state, newName) => {
             state.lang = !state.lang  
+        },
+        changeSliderState: (state, newState) => {
+            if(newState.name === 'persona'){
+                state.persona = newState.sliderState
+            }else if(newState.name === 'userstory'){
+                state.userstory = newState.sliderState
+            } else if(newState.name === 'specs'){
+                state.specs = newState.sliderState
+            }  
         },
     },
 })

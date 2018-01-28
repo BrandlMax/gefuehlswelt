@@ -19,16 +19,15 @@
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+            <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
+                <img src="../../src/img/prism.png" alt="Brand Identity Prism">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
-        <Modal v-if="showModal" @close="showModal = false" modalType="video">
-            <!-- <img src="../../src/img/mel.png" alt="textImage"> -->
-            <source src="../../src/vids/trailer_test.mp4" type="video/mp4">
+        <Modal v-if="showModal" @close="showModal = false" modalType="image">
+            <img src="../../src/img/prism_full.png" alt="Brand Identity Prism">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('10')">

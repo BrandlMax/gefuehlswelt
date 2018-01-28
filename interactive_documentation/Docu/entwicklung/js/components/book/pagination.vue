@@ -116,6 +116,10 @@ export default {
     transition: all 0.5s ease;
 }
 
+span.tooltiptext {
+    pointer-events: none;
+}
+
 
 </style>
 

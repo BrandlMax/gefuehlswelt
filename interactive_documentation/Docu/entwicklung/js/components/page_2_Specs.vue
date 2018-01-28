@@ -7,14 +7,43 @@
         </transition>
 
         <BookContent>
-            <div slot="left">
+            <!-- front -->
+            <div v-if="this.$store.state.specs === 'front'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Specs</h1>
+                <h1 v-if="this.$store.state.lang">Specs Front</h1>
                 <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Specs EN</h1>
+                <h1 v-if="!this.$store.state.lang">Specs Front EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- inside -->
+            <div v-if="this.$store.state.specs === 'inside'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Specs Inside</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Specs Inside EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- back -->
+            <div v-if="this.$store.state.specs === 'back'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Specs Back</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Specs Back EN</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>

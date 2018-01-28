@@ -6,21 +6,94 @@
         </transition>
 
         <BookContent>
-            <div slot="left">
+
+            <!-- 7 -->
+            <div v-if="this.$store.state.userstory === '7'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory</h1>
+                <h1 v-if="this.$store.state.lang">Userstory 7</h1>
                 <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory EN</h1>
+                <h1 v-if="!this.$store.state.lang">Userstory 7 EN</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+            <!-- 10 -->
+            <div v-if="this.$store.state.userstory === '10'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Userstory 10</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Userstory 10 EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- 14 -->
+            <div v-if="this.$store.state.userstory === '14'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Userstory 14</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Userstory 14 EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- 18 -->
+            <div v-if="this.$store.state.userstory === '18'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Userstory 18</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Userstory 18 EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- 20 -->
+            <div v-if="this.$store.state.userstory === '20'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Userstory 20</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Userstory 20 EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+            <!-- 23 -->
+            <div v-if="this.$store.state.userstory === '23'" slot="left">
+                <!-- Deutsch -->
+                <h1 v-if="this.$store.state.lang">Userstory 23</h1>
+                <p v-if="this.$store.state.lang">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+                <!-- Englisch -->
+                <h1 v-if="!this.$store.state.lang">Userstory 23 EN</h1>
+                <p v-if="!this.$store.state.lang">
+                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+
+            <div class="iFrameSlot" slot="right">
+                <UserstorySlider></UserstorySlider>
             </div>           
         </BookContent>
 
@@ -50,6 +123,7 @@ import Modal from './book/modal.vue';
 import LangSwitch from './book/langswitch.vue';
 // interComps
 import TutVideo from './interactiveComps/tutorialVideo.vue';
+import UserstorySlider from './interactiveComps/UserstorySlider.vue';
 
 
 // Search
@@ -81,7 +155,8 @@ export default {
       Pagination,
       Modal,
       TutVideo,
-      LangSwitch
+      LangSwitch,
+      UserstorySlider
   },
   methods:{
     checkClick(){

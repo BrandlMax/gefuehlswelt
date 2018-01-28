@@ -19,17 +19,19 @@
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+            <div class="iFrameSlot" slot="right" style="cursor: pointer;">
+                <h1 v-if="this.$store.state.lang" class="fonttest" contenteditable="true">Bearbeite mich und spiele mit der Schrift.</h1>
+                <h1 v-if="!this.$store.state.lang" class="fonttest" contenteditable="true">Change this text and play with the font.</h1>
+                <img src="../../src/img/fontsbg.png" alt="Fonts">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
-        <Modal v-if="showModal" @close="showModal = false" modalType="video">
-            <!-- <img src="../../src/img/mel.png" alt="textImage"> -->
+        <!-- <Modal v-if="showModal" @close="showModal = false" modalType="image">
+            <img src="../../src/img/mel.png" alt="textImage">
             <source src="../../src/vids/trailer_test.mp4" type="video/mp4">
-        </Modal>
+        </Modal> -->
 
         <div class="arrow aleft" @click="changePage('6')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
@@ -96,6 +98,38 @@ export default {
 
 <style>
 
+h1.fonttest {
+    position: absolute;
+    width: 27vw;
+    line-height: 48px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    margin-top: 1vw;
+    overflow-y: scroll;
+    overflow-x: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+    height: 200px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (orientation: portrait) {
+    h1.fonttest {
+        position: absolute;
+        width: 42vw;
+        line-height: 48px;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff;
+        margin-top: 1vw;
+        height: 200px;
+        font-size: 36px;
+    }
+}
 
 </style>
 

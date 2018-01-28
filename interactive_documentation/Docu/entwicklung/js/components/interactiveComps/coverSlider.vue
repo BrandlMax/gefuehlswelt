@@ -11,18 +11,26 @@
             <img src="../../../src/img/cover_1.png" alt="cover">
         </div>  
 
-        <div class="cover_switch" @click="switchProduct(0)">
+        <div class="cover_switch" @click="switchProduct(2)">
             <img src="../../../src/img/cover_2.png" alt="cover">
         </div>  
 
-        <div class="cover_switch" @click="switchProduct(1)">
+        <div class="cover_switch" @click="switchProduct(3)">
             <img src="../../../src/img/cover_3.png" alt="cover">
+        </div>
+
+        <div class="cover_switch" @click="switchProduct(4)">
+            <img src="../../../src/img/cover_4.png" alt="cover">
+        </div>
+
+        <div class="cover_switch" @click="switchProduct(0)">
+            <img src="../../../src/img/cover_0.png" alt="cover">
         </div>
 
         <div class="cover_switch fill" @click="addExtra()">
             <div id="addCover">+</div>
             <div id="result"></div>
-            <input multiple="false" type="file" id="coverUploader">
+            <input multiple="false" type="file" accept=".png,.jpg" id="coverUploader">
         </div>
     </div>   
 </div>
@@ -35,7 +43,7 @@ export default {
   props: [],
   data(){
       return{
-        curProduct: 'product_0',
+        curProduct: 'product_1',
         extraProd: false
       }
   },
@@ -72,8 +80,10 @@ export default {
   methods:{
       switchProduct(n){
           this.curProduct = 'product_'+n;
+          this.extraProd = false;
       },
       addExtra(){
+          this.curProduct = 'product_0';
           this.extraProd = true;
       }
   }
@@ -118,23 +128,27 @@ export default {
 
     .dropoverlay{
         position: absolute;
-        width: 27.8vw;
-        height: 44.56vw;
+        width: 27.6vw;
+        height: 44.19vw;
         background: rgba(255, 0, 0, 0);
         right: 6.45vw;
         border-radius: 0.2vw 1vw 1vw 0.2vw;
+        margin-top: 0.24vw;
     }
 
     #dropcover{
-        background-image: url('');
+        background-image: none;
         background-size: cover;
         background-position: center;
+        mix-blend-mode: screen;
+        opacity: 0.98;
     }
 
     img.rubberband {
-        width: 1.74vw;
+        width: 1.73vw;
         position: absolute;
         right: 3.4vw;
+        mix-blend-mode: unset;
     }
 
     #addCover {
