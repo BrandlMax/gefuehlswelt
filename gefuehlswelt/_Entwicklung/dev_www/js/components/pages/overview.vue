@@ -323,4 +323,7 @@
         pointer-events: none;
         opacity: 0.6;
     }
+    .error-msg {
+    opacity: 0;
+}
 </style>

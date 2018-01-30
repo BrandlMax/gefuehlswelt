@@ -34,7 +34,7 @@ const routes = [
     {path: '/12', name:'12', component: page_12_Systemdiagramm, title:'Systemdiagramm', color: 'red'},
     {path: '/13', name:'13', component: page_13_ERM, title:'ERM', color: 'red'},
     {path: '/14', name:'14', component: page_14_PrototypAufbau, title:'Prototyp Aufbau', color: 'red'},
-    {path: '/15', name:'15', component: page_15_PrototypFunktion, title:'Prototyp Funktion', color: 'red'},
+    // {path: '/15', name:'15', component: page_15_PrototypFunktion, title:'Prototyp Funktion', color: 'red'},
     {path: '/16', name:'16', component: page_16_Kontakt, title:'Kontakt', color: 'turkis'}
 ]
 

@@ -44,7 +44,7 @@ const store = new Vuex.Store({
         layers: [],
         JournalCount: 0,
         journals: [],
-        curAccessPoint: 2,
+        curAccessPoint: 1,
         access: [{
                 name: 'kontakt@brandl-maximilian.de',
                 applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',

@@ -8,9 +8,10 @@
         <BookContent>
             <div slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Prototyp Aufbau</h1>
+                <h1 v-if="this.$store.state.lang">Prototyp</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Der Prototyp ist mit VueJS gebaut, einem Javascript framework das es uns ermöglichte schnell Ergebnisse zu erhalten. Darauf aufbauend nutzen wir die Vue-Plugins „vuex“ und „vue-router“.  
+Für die Handschrift- und Formenerkennung diente uns die MyScript API. Die Maskierungen der Werkzeuge und Gedankensphären wurden mit SVG-Masks erzeugt.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Prototyp Aufbau EN</h1>
@@ -20,21 +21,21 @@
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/systemskizzeproto.png" alt="Systemskizze Prototyp">
+                <img src="../../src/img/Aufbau.png" alt="Systemskizze Prototyp">
             </div>            
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/systemskizzeproto_full.png" alt="Systemskizze Prototyp">
+            <img src="../../src/img/Aufbau_full.png" alt="Systemskizze Prototyp">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('13')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
-        <div class="arrow aright" @click="changePage('15')">
+        <div class="arrow aright" @click="changePage('16')">
             <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>

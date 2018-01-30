@@ -11,14 +11,14 @@
                 <h1 v-if="this.$store.state.lang">Kontakt</h1>
                 <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                    <a class="btn" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download Feinkonzept (pdf)</a>
                 </p>
+                <a class="btn" v-if="this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download Feinkonzept (pdf)</a>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Kontakt EN</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                    <a class="btn" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download detailed concept (pdf)</a>
                 </p>
+                <a class="btn" v-if="!this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download detailed concept (pdf)</a>
             </div>
 
             <div class="iFrameSlot" slot="right">
@@ -32,7 +32,7 @@
             <img src="../../src/img/team_full.png" alt="Team Gefühlswelt">
         </Modal>
 
-        <div class="arrow aleft" @click="changePage('15')">
+        <div class="arrow aleft" @click="changePage('14')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
@@ -95,9 +95,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-p a.btn {
+a.btn {
     display: block;
     background: #75cab1;
     border-radius: 360px;
