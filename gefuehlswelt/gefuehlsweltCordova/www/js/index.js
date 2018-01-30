@@ -599,6 +599,13 @@ exports.default = {
     mounted: function mounted() {
         var _this = this;
 
+        window.onerror = function (e) {
+            console.log(e);
+            if (e.detail.message === "Unexpected error") {
+                location.reload();
+            }
+        };
+
         localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
 
         console.log('Current Page', this.pageID);
@@ -608,6 +615,8 @@ exports.default = {
         MyScript.register(editorElement, {
             recognitionParams: {
                 type: 'DIAGRAM',
+                protocol: 'WEBSOCKET',
+                apiVersion: 'V4',
                 server: this.$store.state.access[this.$store.state.curAccessPoint]
             }
         });
@@ -651,7 +660,7 @@ exports.default = {
         });
 
         editorElement.addEventListener('click', function (e) {
-
+            console.log('Editor Clicked');
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
@@ -666,8 +675,6 @@ exports.default = {
                     SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
                     var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
-
-                    editorElement.editor.clear();
 
                     _this.SVGpath = SVGPath;
                     _this.SVGheight = posInfo.height;
@@ -690,7 +697,7 @@ exports.default = {
                             tooldata: []
                         }
                     });
-                    editorElement.editor.clear();
+
                     cmdeditorElement.editor.clear();
                 } else {}
             });
@@ -720,6 +727,11 @@ exports.default = {
                 _this.undo();
             } else if (e.keyCode === 39) {
                 _this.redo();
+            } else if (e.keyCode === 88) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
+            } else if (e.keyCode === 82) {
+                location.reload();
             }
         });
     },
@@ -819,7 +831,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-9570dcf4", __vue__options__)
   } else {
-    hotAPI.reload("data-v-9570dcf4", __vue__options__)
+    hotAPI.rerender("data-v-9570dcf4", __vue__options__)
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],6:[function(require,module,exports){
@@ -868,6 +880,8 @@ exports.default = {
         MyScript.register(editorElement, {
             recognitionParams: {
                 type: 'DIAGRAM',
+                protocol: 'WEBSOCKET',
+                apiVersion: 'V4',
                 server: this.$store.state.access[this.$store.state.curAccessPoint]
             }
         });
@@ -927,7 +941,6 @@ exports.default = {
 
                     console.log('PosInfo', posInfo);
                     console.log('SVG Path', SVGPath);
-                    editorElement.editor.clear();
 
                     _this.SVGpath = SVGPath;
                     _this.SVGheight = posInfo.height;
@@ -948,7 +961,6 @@ exports.default = {
                         show: true
                     });
 
-                    editorElement.editor.clear();
                     cmdeditorElement.editor.clear();
                 } else {}
             });
@@ -1775,7 +1787,7 @@ exports.default = {
         var _this = this;
 
         this.loadData();
-
+        var circles = [];
         var toolData = this.toolData;
         var el = document.getElementById('sketch_' + this.toolData.id);
 
@@ -1887,7 +1899,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-595a6a34", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-595a6a34", __vue__options__)
+    hotAPI.reload("data-v-595a6a34", __vue__options__)
   }
 })()}
 },{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],13:[function(require,module,exports){

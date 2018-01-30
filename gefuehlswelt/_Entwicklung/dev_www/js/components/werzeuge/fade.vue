@@ -18,7 +18,7 @@
         mounted() {
             // Load Data from Server
             this.loadData();
-
+            var circles = [];
             var toolData = this.toolData;
             var el = document.getElementById('sketch_' + this.toolData.id);
             //--------- p5 Code Here --------------

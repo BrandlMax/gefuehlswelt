@@ -51,6 +51,15 @@
             }
         },
         mounted() {
+
+            window.onerror = function(e) {
+                console.log(e);
+                if(e.detail.message === "Unexpected error"){
+                    location.reload();
+                }
+            }
+
+            // Clean Timer
                 
             // UNDO REDO WITH PERSIST FIX
             localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
@@ -63,6 +72,8 @@
             MyScript.register(editorElement, {
                 recognitionParams: {
                     type: 'DIAGRAM',
+                    protocol: 'WEBSOCKET',
+                    apiVersion: 'V4',
                     server: this.$store.state.access[this.$store.state.curAccessPoint]
                 }
             });
@@ -115,7 +126,7 @@
 
 
             editorElement.addEventListener('click', (e) => {
-
+                console.log('Editor Clicked')
                 var new_e = new e.constructor(e.type, e);
                 cmdeditorElement.dispatchEvent(new_e);
 
@@ -136,7 +147,7 @@
 
                         // console.log('PosInfo', posInfo);
                         // console.log('SVG Path', SVGPath);
-                        editorElement.editor.clear();
+                        // editorElement.editor.clear();
 
                         // Update SVG File
                         this.SVGpath = SVGPath;
@@ -162,7 +173,7 @@
                                 tooldata: []
                             }
                         });
-                        editorElement.editor.clear();
+                        //editorElement.editor.clear();
                         cmdeditorElement.editor.clear();
                     } else {
 
@@ -193,6 +204,7 @@
                     cmdeditorElement.editor.clear();
                     editorElement.editor.clear();
                 }
+
             });
 
             // Undo and Redo
@@ -202,7 +214,14 @@
                     this.undo();
                 } else if (e.keyCode === 39) {
                     this.redo();
+                } else if (e.keyCode === 88) {
+                    cmdeditorElement.editor.clear();
+                    editorElement.editor.clear();
+                } else if (e.keyCode === 82) {
+                     location.reload();
                 }
+
+               
             });
 
 

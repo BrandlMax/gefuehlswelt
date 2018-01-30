@@ -21,7 +21,7 @@
             </div>
 
             <div class="iFrameSlot" slot="right">
-                <TutVideo :tut="'test'"></TutVideo>
+                <TutVideo :tut="'02'"></TutVideo>
 
                 <iframe src="http://localhost:3000/src/iFrame/prototyp/#/entry/2">
                 </iframe>

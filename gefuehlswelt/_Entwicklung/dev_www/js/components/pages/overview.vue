@@ -65,6 +65,8 @@
             MyScript.register(editorElement, {
                 recognitionParams: {
                     type: 'DIAGRAM',
+                    protocol: 'WEBSOCKET',
+                    apiVersion: 'V4',
                     server: this.$store.state.access[this.$store.state.curAccessPoint]
                 }
             });
@@ -139,7 +141,7 @@
 
                         console.log('PosInfo', posInfo);
                         console.log('SVG Path', SVGPath);
-                        editorElement.editor.clear();
+                        //editorElement.editor.clear();
 
                         // Update SVG File
                         this.SVGpath = SVGPath;
@@ -162,7 +164,7 @@
                             show: true
                         });
 
-                        editorElement.editor.clear();
+                        //editorElement.editor.clear();
                         cmdeditorElement.editor.clear();
 
                     } else {
