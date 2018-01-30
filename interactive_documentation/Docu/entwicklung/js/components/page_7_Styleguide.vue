@@ -114,7 +114,7 @@ h1.fonttest {
     font-size: 36px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 @media only screen and (orientation: portrait) {

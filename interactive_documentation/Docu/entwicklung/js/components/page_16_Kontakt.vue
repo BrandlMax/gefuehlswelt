@@ -11,11 +11,13 @@
                 <h1 v-if="this.$store.state.lang">Kontakt</h1>
                 <p v-if="this.$store.state.lang">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    <a class="btn" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download Feinkonzept (pdf)</a>
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Kontakt EN</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    <a class="btn" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download detailed concept (pdf)</a>
                 </p>
             </div>
 
@@ -95,6 +97,15 @@ export default {
 
 <style>
 
+p a.btn {
+    display: block;
+    background: #75cab1;
+    border-radius: 360px;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    width: fit-content;
+    margin-top: 23px;
+}
 
 </style>
 

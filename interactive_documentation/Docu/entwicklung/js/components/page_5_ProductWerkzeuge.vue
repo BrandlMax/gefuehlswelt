@@ -36,7 +36,7 @@
             <!-- <source src="../../src/vids/trailer_test.mp4" type="video/mp4"> -->
         </Modal>
 
-        <div class="arrow aleft" @click="changePage('4')">
+        <div class="arrow aleft" @click="changePage('3')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 

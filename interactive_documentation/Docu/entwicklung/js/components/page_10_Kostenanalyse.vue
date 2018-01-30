@@ -19,10 +19,8 @@
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: pointer;">
-                <div id="scrollarea" class="klickzone"  @click="showModal = true"></div>
-                <iframe id="scrolltarget" src="http://localhost:3000/src/iFrame/projektcalc">
-                </iframe>
+            <div class="iFrameSlot" slot="right" style="cursor: zoom-in;"  @click="showModal = true">
+                <img src="../../src/img/Chart.png" alt="Chart">
             </div>           
         </BookContent>
 

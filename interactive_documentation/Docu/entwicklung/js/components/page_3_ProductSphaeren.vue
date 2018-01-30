@@ -39,7 +39,7 @@
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
-        <div class="arrow aright" @click="changePage('4')">
+        <div class="arrow aright" @click="changePage('5')">
             <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
         </div>
 

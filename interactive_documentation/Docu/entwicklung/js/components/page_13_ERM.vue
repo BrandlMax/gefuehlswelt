@@ -10,25 +10,26 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">ERM</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">ERM EN</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/ERM.png" alt="ERM">
+                <img v-if="this.$store.state.lang" src="../../src/img/ERM.png" alt="ERM">
+                <img v-if="!this.$store.state.lang" src="../../src/img/ERM_en.png" alt="ERM">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/ERM_full.png" alt="ERM">
+            <img v-if="this.$store.state.lang" src="../../src/img/ERM_full.png" alt="ERM">
+            <img v-if="!this.$store.state.lang" src="../../src/img/ERM_en_full.png" alt="ERM">
         </Modal>
+
 
         <div class="arrow aleft" @click="changePage('12')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
