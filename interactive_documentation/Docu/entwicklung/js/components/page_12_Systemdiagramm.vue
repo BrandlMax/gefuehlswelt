@@ -10,12 +10,12 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Systemdiagramm</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Das Systemdiagramm dient zur Übersicht des Modells von Gefühlswelt.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Systemdiagramm EN</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    The system diagram illustrates the model of Gefühlswelt.
                 </p>
             </div>
 

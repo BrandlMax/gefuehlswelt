@@ -10,42 +10,76 @@
             <!-- front -->
             <div v-if="this.$store.state.specs === 'front'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Specs Front</h1>
+                <h1 v-if="this.$store.state.lang">Technische Details: Vorderseite</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Folgende Technologien werden in Gefühlswelt auf der Vorderseite eingesetzt:
+<br /><br />
+Die Vorderseite wird mittels eines Gummibands stabilisiert.
+
+Das Haptische Feedback des Produkts soll angenehm und sinnlich sein. Das Cover soll gestaltbar und austauschbar sein. Die Individualität des Nutzers soll sich dadurch an der Oberfläche von Gefühlswelt widerspiegeln.
+
+Für das berührungssensible Display auf der Innenseite gibt es noch einen druckempfindlichen Stylus.  
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Specs Front EN</h1>
+                <h1 v-if="!this.$store.state.lang">Technical details: Front</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+The following technologies are used at the front side of Gefühlswelt:
+<br /><br />
+The case cover is fastened with an elastic band.
+
+The haptic feedback of the cover is an important component of Gefühlswelt. Which is why the cover is also changeable and free to be customised by the user. That way the individuality of the user is also reflected on the surface of Gefühlswelt.
+
+The pressure-sensitive Stylus is supposed to be used on the touch-sensitive display.
                 </p>
             </div>
 
             <!-- inside -->
             <div v-if="this.$store.state.specs === 'inside'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Specs Inside</h1>
+                <h1 v-if="this.$store.state.lang">Technische Details: Innenseite</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Folgende Technologien werden im Inneren von Gefühlswelt eingesetzt:
+<br /><br />
+Eine Kamera, ein Mikrofon und Lautsprecher. 
+
+Der LCD Multi-Touch Display ermöglicht dem Nutzer auch mit seinem Finger mit Gefühlswelt zu interagieren.
+
+Alle Nutzerdaten sowie die Datenbank werden auf einer herausnehmbare SD-Karte verschlüsselt gespeichert. Gefühlswelt hat 2 SD-Kartenslots, damit der Nutzer jederzeit seinen Speicher auf eine größere SD-Karte transferieren kann.
+
+Da hier auf eine Internetverbindung verzichtet wird, um Datensicherheit zu gewährleisten, setzen wir Bluetooth ein.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Specs Inside EN</h1>
+                <h1 v-if="!this.$store.state.lang">Technical details: Inside</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+The following technologies are on the inside of Gefühlswelt:
+<br /><br />
+A camera, mikrofon and speakers.
+
+The LCD Multi-Touch Display enables the user to interact with Gefühlswelt via touch.
+
+The database and all user data are encrypted and saved onto the removable SD cards. Gefühlswelt has 2 SD card slots so the user can transfer his or her data onto a bigger SD card at any time.
+
+We have opted to use Bluetooth rather than an internet connection, because data security is very important for our product.
                 </p>
             </div>
 
             <!-- back -->
             <div v-if="this.$store.state.specs === 'back'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Specs Back</h1>
+                <h1 v-if="this.$store.state.lang">Technische Details: Rückseite</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Folgende Technologien befinden sich auf der Rückseite von Gefühlswelt:
+<br /><br />
+Einen Fingerabdrucksensor, um den Nutzer zu authentifizieren.
+Eine weitere Kamera, um Bilder aufzunehmen oder QR-Codes zu scannen.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Specs Back EN</h1>
+                <h1 v-if="!this.$store.state.lang">Technical details: Back</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+The following technologies are used on the back side of Gefühlswelt:
+<br /><br />
+A fingerprint sensor is used in order to authenticate the user.
+Another camera to take pictures with or scan QR codes.
                 </p>
             </div>
 

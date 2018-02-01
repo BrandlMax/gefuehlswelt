@@ -9,14 +9,14 @@
         <BookContent>
             <div slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Producthilfe Demo</h1>
+                <h1 v-if="this.$store.state.lang">Hilfe</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                Wenn der Nutzer nicht weiter weiß, kann er oder sie das Wort Hilfe schreiben. Dadurch soll Gefühlswelt eine anleitende Animation im Hintergrund abspielen. Dies geschieht durch einen Kreis, welcher die Stiftspitze simuliert und so dem Nutzer die Bewegungsabläufe bzw. Muster vorführt, die er dann nachmachen kann.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Producthilfe EN</h1>
+                <h1 v-if="!this.$store.state.lang">Help</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                If the user needs help, he or she can write “help”. This prompts Gefühlswelt to play a tutorial animation in the background. We’ve chosen to animate a dot that simulates the pen, in order to encourage the user to imitate the animated sequence.
                 </p>
             </div>
 
@@ -35,7 +35,7 @@
             <!-- <source src="../../src/vids/trailer_test.mp4" type="video/mp4"> -->
         </Modal>
 
-        <div class="arrow aleft" @click="changePage('5')">
+        <div class="arrow aleft" @click="changePage('6a')">
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 

@@ -33,14 +33,26 @@
 
         <div v-if="'inside' == curProduct" class="tooltip pd_touch productDetails">
             <div class="pd_detail">+</div>
-            <span v-if="this.$store.state.lang" class="tooltiptext">Multitouch Display</span>
-            <span v-if="!this.$store.state.lang" class="tooltiptext">Multitouch Display</span>
+            <span v-if="this.$store.state.lang" class="tooltiptext">LCD Multi-Touch Display</span>
+            <span v-if="!this.$store.state.lang" class="tooltiptext">LCD Multi-Touch Display</span>
         </div>
 
         <div v-if="'inside' == curProduct" class="tooltip pd_mic productDetails">
             <div class="pd_detail">+</div>
             <span v-if="this.$store.state.lang" class="tooltiptext">Mikrofon</span>
             <span v-if="!this.$store.state.lang" class="tooltiptext">Microphone</span>
+        </div>
+
+        <div v-if="'inside' == curProduct" class="tooltip pd_laut productDetails">
+            <div class="pd_detail">+</div>
+            <span v-if="this.$store.state.lang" class="tooltiptext">Lautsprecher</span>
+            <span v-if="!this.$store.state.lang" class="tooltiptext">Speakers</span>
+        </div>
+
+        <div v-if="'inside' == curProduct" class="tooltip pd_sd productDetails">
+            <div class="pd_detail">+</div>
+            <span v-if="this.$store.state.lang" class="tooltiptext">2 SD-Kartenslots</span>
+            <span v-if="!this.$store.state.lang" class="tooltiptext">2 SD card slots</span>
         </div>
 
         <!-- BACK -->
@@ -243,6 +255,16 @@ export default {
 .pd_fingerprint {
     margin-top: 20.7vw;
     right: 23.55vw;
+}
+
+.pd_laut {
+    margin-top: 38vw;
+    right: 28vw;
+}
+
+.pd_sd {
+    margin-top: 38vw;
+    right: 12vw;
 }
 
 @media only screen and (orientation: portrait) {

@@ -11,12 +11,12 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Cover</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Die austauschbaren Covers helfen dem Nutzer dabei, eine Form der Erinnerung an seine persönliche Geschichte beizubehalten. Diese sollen immer wieder neu gestaltet werden können. Der Nutzer hat dabei die Möglichkeit diese selbst anzulegen und auszudrucken, einfach selbst eines zu basteln oder sich eines in unserem Cover Store zu kaufen.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Cover EN</h1>
+                <h1 v-if="!this.$store.state.lang">Cover</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    The exchangeable covers allow the user to create a personal history. He or she can design them whichever way they like. Be it by making a digital image and printing it, crafting it themselves or buying one through our online store.
                 </p>
             </div>
 

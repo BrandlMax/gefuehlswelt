@@ -14,9 +14,9 @@ Der Prototyp ist mit VueJS gebaut, einem Javascript framework das es uns ermögl
 Für die Handschrift- und Formenerkennung diente uns die MyScript API. Die Maskierungen der Werkzeuge und Gedankensphären wurden mit SVG-Masks erzeugt.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Prototyp Aufbau EN</h1>
+                <h1 v-if="!this.$store.state.lang">Prototype</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+The prototype is build with VueJS, a JavaScript framework that yields quick results. The Vue plugins “vuex” and “vue-router” are also used. The MyScript API is used for the handwriting and shape recognition. The masking of different layers for tools and Gedankensphären was achieved through SVG masks.
                 </p>
             </div>
 

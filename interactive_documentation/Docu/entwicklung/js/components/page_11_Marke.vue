@@ -13,21 +13,26 @@
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Marke EN</h1>
+                <h1 v-if="!this.$store.state.lang">Brand</h1>
                 <p v-if="!this.$store.state.lang">
                     Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                 </p>
             </div>
 
-            <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/prism.png" alt="Brand Identity Prism">
+            <div v-if="this.$store.state.lang" class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
+                <img src="../../src/img/prism_de.png" alt="Brand Identity Prism">
+            </div>
+
+            <div v-if="!this.$store.state.lang" class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
+                <img src="../../src/img/prism_en.png" alt="Brand Identity Prism">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/prism_full.png" alt="Brand Identity Prism">
+            <img v-if="this.$store.state.lang" src="../../src/img/prism_de_full.png" alt="Brand Identity Prism">
+            <img v-if="!this.$store.state.lang" src="../../src/img/prism_en_full.png" alt="Brand Identity Prism">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('10')">

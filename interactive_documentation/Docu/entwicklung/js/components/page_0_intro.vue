@@ -8,14 +8,19 @@
         <BookContent>
             <div slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Intro</h1>
+                <h1 v-if="this.$store.state.lang">Gefühlswelt</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Für schreibfreudige Menschen, die Klarheit im Kopf schaffen wollen, ist Gefühlswelt ein Lifestyle Produkt, welches ihre Gedanken und Gefühle unterbringt, Datensicherheit bietet, mit dem sie schnell und einfach anhand von Werkzeugen ihre Innenwelt individuell manifestieren können.
+                    <br /><br />
+                    Im Gegensatz zum analogen Journal, bietet Gefühlswelt die Möglichkeit durch verschiedene digitale und generative Eingabemethoden einen Ort an dem unendlich oft experementiert werden kann.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Intro EN</h1>
+                <h1 v-if="!this.$store.state.lang">Gefühlswelt</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Gefühlswelt is a lifestyle product for people with a love for writing, who want to find some clarity of mind. It’s a place for their thoughts and feelings. 
+It’s a great tool to manifest your inner world quickly and easily.
+<br /><br />
+As opposed to conventional journals, Gefühlswelt offers you a wide variety of digital input and generative tools. It’s a great space to experiment as often as you like without any qualms about making mistakes.
                 </p>
             </div>
 

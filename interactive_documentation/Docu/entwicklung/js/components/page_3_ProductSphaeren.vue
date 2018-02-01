@@ -9,14 +9,23 @@
         <BookContent>
             <div slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Productsphäre Demo</h1>
+                <h1 v-if="this.$store.state.lang">Gedankensphären</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Jede Gedankensphäre repräsentiert ein eigenes Journal, das durch eine frei gezeichnete Form vom Nutzer bestimmt wird.
+<br /><br />
+Einzelne Einträge werden als Gedankensplitter benannt, diese werden auch vom Nutzer als eine Fläche gezeichnet.
+Die Anzahl an Gedankensplittern beeinflusst die Gestaltung der inneren Fläche der Gedankensphäre.
+<br /><br />
+Es kann eine unendliche Anzahl an Gedankensphären und Gedankensplittern angelegt werden. Damit entsteht mit der Zeit eine sehr individuelle Formlandschaft, die den Journalfortschritt des Nutzers wiedergibt.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Productsphäre EN</h1>
+                <h1 v-if="!this.$store.state.lang">Gedankensphären</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Every Gedankensphäre represents a journal. The user decides what he or she wants that shape to look like by drawing it.
+<br /><br />
+Single entries in the journal are called Gedankensplitter. The user can draw these within the Gedankensphäre. The more entries are created, the fuller the Gedankensphäre gets.
+<br /><br />
+You can create an unlimited amount of Gedankensphären and Gedankensplitter. And with time, the user will have created a very personal landscape that marks the progress of his or her journal journey.
                 </p>
             </div>
 

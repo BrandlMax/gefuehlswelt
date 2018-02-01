@@ -19,11 +19,11 @@
 
     <div class="specControls">
         <div v-if="this.$store.state.lang" :class="['pd_switch firstswitch', { pd_active : 'sad' === curProduct }]" @click="switchProduct('sad')">Schlechter Tag</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : 'normal' === curProduct }]" @click="switchProduct('normal')">Melanie</div>
+        <!-- <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : 'normal' === curProduct }]" @click="switchProduct('normal')">Melanie</div> -->
         <div v-if="this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : 'happy' === curProduct }]" @click="switchProduct('happy')">Guter Tag</div>
         
         <div v-if="!this.$store.state.lang" :class="['pd_switch firstswitch', { pd_active : 'sad' === curProduct }]" @click="switchProduct('sad')">Bad day</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : 'normal' === curProduct }]" @click="switchProduct('normal')">Melanie</div>
+        <!-- <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : 'normal' === curProduct }]" @click="switchProduct('normal')">Melanie</div> -->
         <div v-if="!this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : 'happy' === curProduct }]" @click="switchProduct('happy')">Good day</div>
     </div>   
 </div>
@@ -36,7 +36,7 @@ export default {
   props: [],
   data(){
       return{
-        curProduct: 'normal',
+        curProduct: 'sad',
         extraProd: false,
       }
   },

@@ -10,10 +10,12 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">ERM</h1>
                 <p v-if="this.$store.state.lang">
+                    Die ERM (Entity–Relationship Model) Skizze, dient zur Übersicht über die nötigen Entitäten und deren Beziehung für unsere zukünftige Datenbank von Gefühlswelt.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">ERM EN</h1>
                 <p v-if="!this.$store.state.lang">
+                    The ERM (Entity–Relationship Model) sketch serves as an overview of all needed entities and their relationships for the future database of Gefühlswelt.
                 </p>
             </div>
 

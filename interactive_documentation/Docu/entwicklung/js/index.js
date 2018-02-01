@@ -6,6 +6,7 @@ import page_3_ProductSphaeren from './components/page_3_ProductSphaeren.vue';
 import page_4_ProductSplitter from './components/page_4_ProductSplitter.vue';
 import page_5_ProductWerkzeuge from './components/page_5_ProductWerkzeuge.vue';
 import page_6_ProductHilfe from './components/page_6_ProductHilfe.vue';
+import page_6_ProductInspire from './components/page_6_ProductInspire.vue';
 import page_7_Styleguide from './components/page_7_Styleguide.vue';
 import page_8_Userstory from './components/page_8_Userstory.vue';
 import page_9_Persona from './components/page_9_Persona.vue';
@@ -25,7 +26,8 @@ const routes = [
     {path: '/3', name:'3', component: page_3_ProductSphaeren, title:'Sphären', color: 'turkis'},
     // {path: '/4', name:'4', component: page_4_ProductSplitter, title:'Splitter', color: 'turkis'},
     {path: '/5', name:'5', component: page_5_ProductWerkzeuge, title:'Tools', color: 'turkis'},
-    {path: '/6', name:'6', component: page_6_ProductHilfe, title:'Hilfe', color: 'turkis'},
+    {path: '/6a', name:'6a', component: page_6_ProductInspire, title:'Inspire', color: 'turkis'},
+    {path: '/6b', name:'6b', component: page_6_ProductHilfe, title:'Hilfe', color: 'turkis'},
     {path: '/7', name:'7', component: page_7_Styleguide, title:'Styleguide', color: 'rose'},
     {path: '/8', name:'8', component: page_8_Userstory, title:'Userstory', color: 'rose'},
     {path: '/9', name:'9', component: page_9_Persona, title:'Persona', color: 'rose'},

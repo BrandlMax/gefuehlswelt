@@ -3,35 +3,35 @@
     <div class="productShow">
         
 
-        <img v-if="'7' == curProduct" src="../../../src/img/mel_sad.png">
+        <img v-if="'7' == curProduct" src="../../../src/img/Userstory.png">
 
-        <img v-if="'10' == curProduct" src="../../../src/img/mel_normal.png">
+        <img v-if="'10' == curProduct" src="../../../src/img/Userstory2.png">
 
-        <img v-if="'14' == curProduct" src="../../../src/img/mel_happy.png">
+        <img v-if="'14' == curProduct" src="../../../src/img/Userstory3.png">
 
-        <img v-if="'18' == curProduct" src="../../../src/img/mel_sad.png">
+        <img v-if="'18' == curProduct" src="../../../src/img/Userstory4.png">
 
-        <img v-if="'20' == curProduct" src="../../../src/img/mel_normal.png">
+        <img v-if="'20' == curProduct" src="../../../src/img/Userstory5.png">
 
-        <img v-if="'23' == curProduct" src="../../../src/img/mel_happy.png">
+        <img v-if="'23' == curProduct" src="../../../src/img/Userstory6.png">
 
 
     </div>
 
     <div class="specControls">
         <div v-if="this.$store.state.lang" :class="['pd_switch firstswitch', { pd_active : '7' === curProduct }]" @click="switchProduct('7')">7:00</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '10' === curProduct }]" @click="switchProduct('10')">10:00</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '14' === curProduct }]" @click="switchProduct('14')">14:00</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '18' === curProduct }]" @click="switchProduct('18')">18:00</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '20' === curProduct }]" @click="switchProduct('20')">20:00</div>
-        <div v-if="this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : '23' === curProduct }]" @click="switchProduct('23')">23:00</div>
+        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '10' === curProduct }]" @click="switchProduct('10')">9:30</div>
+        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '14' === curProduct }]" @click="switchProduct('14')">10:00</div>
+        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '18' === curProduct }]" @click="switchProduct('18')">12:00</div>
+        <div v-if="this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '20' === curProduct }]" @click="switchProduct('20')">18:00</div>
+        <div v-if="this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : '23' === curProduct }]" @click="switchProduct('23')">22:30</div>
         
         <div v-if="!this.$store.state.lang" :class="['pd_switch firstswitch', { pd_active : '7' === curProduct }]" @click="switchProduct('7')">7:00</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '10' === curProduct }]" @click="switchProduct('10')">10:00</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '14' === curProduct }]" @click="switchProduct('14')">14:00</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '18' === curProduct }]" @click="switchProduct('18')">18:00</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '20' === curProduct }]" @click="switchProduct('20')">20:00</div>
-        <div v-if="!this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : '23' === curProduct }]" @click="switchProduct('23')">23:00</div>
+        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '10' === curProduct }]" @click="switchProduct('10')">9:30</div>
+        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '14' === curProduct }]" @click="switchProduct('14')">10:00</div>
+        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '18' === curProduct }]" @click="switchProduct('18')">12:00</div>
+        <div v-if="!this.$store.state.lang" :class="['pd_switch middleswitch', { pd_active : '20' === curProduct }]" @click="switchProduct('20')">18:00</div>
+        <div v-if="!this.$store.state.lang" :class="['pd_switch lastswitch', { pd_active : '23' === curProduct }]" @click="switchProduct('23')">22:30</div>
     </div>   
 </div>
 </template>

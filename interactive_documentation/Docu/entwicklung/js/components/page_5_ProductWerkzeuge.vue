@@ -9,14 +9,14 @@
         <BookContent>
             <div slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Productwerkzeuge Demo</h1>
+                <h1 v-if="this.$store.state.lang">Werkzeuge</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Productwerkzeuge EN</h1>
+                <h1 v-if="!this.$store.state.lang">Tools</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings.
                 </p>
             </div>
 
@@ -40,7 +40,7 @@
             <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
-        <div class="arrow aright" @click="changePage('6')">
+        <div class="arrow aright" @click="changePage('6a')">
             <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
         </div>
 

@@ -7,87 +7,88 @@
 
         <BookContent>
 
+
             <!-- 7 -->
             <div v-if="this.$store.state.userstory === '7'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 7</h1>
+                <h1 v-if="this.$store.state.lang">Userstory: Melanie</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                   Melanie ist 20 Jahre alt und wohnt bei ihren Eltern. Jeden Morgen, um 7 Uhr, steht sie auf, um sich auf ihren Tag in der Uni vorzubereiten.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 7 EN</h1>
+                <h1 v-if="!this.$store.state.lang">Userstory: Melanie</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                Melanie is 20 years old and lives with her parents. She gets up every morning at 7 am to get ready for her day at uni.
                 </p>
             </div>
 
             <!-- 10 -->
             <div v-if="this.$store.state.userstory === '10'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 10</h1>
+                <h1 v-if="this.$store.state.lang">Weg zur Universität</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                Sie fährt 20 Minuten mit dem Bus zur Uni und schaut gerne aus dem Fenster raus, während sie tagträumt.    
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 10 EN</h1>
+                <h1 v-if="!this.$store.state.lang">Way to university</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                She commutes 20 minutes by bus and always looks out the window while daydreaming.
                 </p>
             </div>
 
             <!-- 14 -->
             <div v-if="this.$store.state.userstory === '14'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 14</h1>
+                <h1 v-if="this.$store.state.lang">Universität</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                Die Vorlesungen interessieren sie, sie studiert gerne Japanologie. Eines Tages erhofft sie sich Schriftstellerin zu werden.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 14 EN</h1>
+                <h1 v-if="!this.$store.state.lang">University</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                She’s happy to be studying Japanology and loves attending the lectures. She hopes to become a famous novelist one day.
                 </p>
             </div>
 
             <!-- 18 -->
             <div v-if="this.$store.state.userstory === '18'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 18</h1>
+                <h1 v-if="this.$store.state.lang">Zwischenfall</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Im Vorbeigehen bemerkt sie wie abfällig ein anderes Mädchen auf ihre Schuhe schaut. Sie kehrt ihre Gedanken nach innen und fragt sich, ob sie zu altmodisch ist.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 18 EN</h1>
+                <h1 v-if="!this.$store.state.lang">Incident</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                While walking down the halls, she notices a snide look at her shoes from another student. She gets a bit self-conscious and starts wondering whether her wardrobe is too old-fashioned.  
                 </p>
             </div>
 
             <!-- 20 -->
             <div v-if="this.$store.state.userstory === '20'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 20</h1>
+                <h1 v-if="this.$store.state.lang">Zuhause</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Am Nachmittag schaut sie sich noch gerne eine Folge ihrer Lieblingsserie an.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 20 EN</h1>
+                <h1 v-if="!this.$store.state.lang">At home</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                After the uni lectures, she gets home and watches an episode of her favourite TV show.
                 </p>
             </div>
 
             <!-- 23 -->
             <div v-if="this.$store.state.userstory === '23'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Userstory 23</h1>
+                <h1 v-if="this.$store.state.lang">Schlafenszeit</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Kurz vor dem Schlafengehen nimmt sie sich die Zeit, um ihre Gefühle zu verarbeiten. Sie schreibt über ihren Tag, ihren Kummer und ihre Ziele, die sich nicht aus den Augen verlieren möchte.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Userstory 23 EN</h1>
+                <h1 v-if="!this.$store.state.lang">Bedtime</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Before going to bed, she takes time to unwind by writing in a journal. She writes about her feelings during the day, her heartaches and goals that she doesn’t want to let out of sight.
                 </p>
             </div>
 

@@ -10,17 +10,18 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Kostenanalyse</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Um Gefühlswelt auch unter realistischen Bedingungen auf dem Markt testen zu können, kalkulieren wir welche monetären Mittel für die Entstehung von Gefühlswelt gebraucht werden würden.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Kostenanalyse EN</h1>
+                <h1 v-if="!this.$store.state.lang">Cost Analysis</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    A cost analysis has been made in order to calculate the costs of Gefühlswelt and test whether it would be a viable business idea.
                 </p>
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;"  @click="showModal = true">
-                <img src="../../src/img/Chart.png" alt="Chart">
+                <img v-if="this.$store.state.lang" src="../../src/img/Chart_de.png" alt="Chart">
+                <img v-if="!this.$store.state.lang" src="../../src/img/Chart.png" alt="Chart">
             </div>           
         </BookContent>
 

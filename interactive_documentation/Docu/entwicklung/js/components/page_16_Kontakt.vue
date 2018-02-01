@@ -10,15 +10,35 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Kontakt</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Alessa Klinger 
+                    <br />
+                    <a href="mailto:alessa-klinger@hotmail.de">alessa-klinger@hotmail.de</a>
+                    <br /><br />
+                    Janett Herdt
+                    <br /> 
+                    <a href="mailto:janett.herdt@gmail.com">janett.herdt@gmail.com</a>
+                    <br /><br />
+                    Maximilian Brandl 
+                    <br />
+                    <a href="mailto:hi@brandl-maximilian.de">hi@brandl-maximilian.de</a>
                 </p>
                 <a class="btn" v-if="this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download Feinkonzept (pdf)</a>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Kontakt EN</h1>
+                <h1 v-if="!this.$store.state.lang">Contact</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Alessa Klinger 
+                    <br />
+                    <a href="mailto:alessa-klinger@hotmail.de">alessa-klinger@hotmail.de</a>
+                    <br /><br />
+                    Janett Herdt
+                    <br /> 
+                    <a href="mailto:janett.herdt@gmail.com">janett.herdt@gmail.com</a>
+                    <br /><br />
+                    Maximilian Brandl 
+                    <br />
+                    <a href="mailto:hi@brandl-maximilian.de">hi@brandl-maximilian.de</a>
                 </p>
-                <a class="btn" v-if="!this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download detailed concept (pdf)</a>
+                <a class="btn" v-if="!this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download concept - german (pdf)</a>
             </div>
 
             <div class="iFrameSlot" slot="right">

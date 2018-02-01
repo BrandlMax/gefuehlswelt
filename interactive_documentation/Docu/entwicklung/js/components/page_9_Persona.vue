@@ -9,14 +9,15 @@
             <!-- sad -->
             <div v-if="this.$store.state.persona === 'sad'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Persona Sad</h1>
+                <h1 v-if="this.$store.state.lang">An schlechten Tagen</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Findet sie ihre Handschrift hässlich und hat Selbstzweifel.
+Sie findet auch keine Inspiration und fängt erst gar nicht an zu schreiben. Sie ist melancholisch und fühlt sich ihren Gefühlen ausgeliefert. Es fällt ihr schwer, ihre Einträge zu gestalten.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Persona Sad EN</h1>
+                <h1 v-if="!this.$store.state.lang">On bad days</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+She can’t stand her own handwriting and suffers from a lot of self-doubt. She feels like she doesn’t have any inspiration, that her day was dull, so she doesn’t write anything at all. She’s full of melancholy and doesn’t know how to cope with her feelings. She finds it hard to care about making beautiful entries.
                 </p>
             </div>
 
@@ -38,14 +39,15 @@
             <!-- Happy-->
             <div v-if="this.$store.state.persona === 'happy'" slot="left">
                 <!-- Deutsch -->
-                <h1 v-if="this.$store.state.lang">Persona Happy</h1>
+                <h1 v-if="this.$store.state.lang">An guten Tagen</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Nimmt sich Melanie Zeit für sich selbst.
+                    Sie wirft gerne einen Rückblick auf ihre Vergangenheit, um zu wie sie sich als Mensch entwickelt hat. Sie manifestiert ihre Innenwelt und zeichnet in ihre Einträge. Sie nimmt sich die Zeit, um neue Blätter für kommende Einträge liebevoll vorzubereiten.
                 </p>
                 <!-- Englisch -->
-                <h1 v-if="!this.$store.state.lang">Persona Happy EN</h1>
+                <h1 v-if="!this.$store.state.lang">On good days</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+Melanie takes time for herself. She takes a look at old journal entries to reminisce about her past and see how much she’s grown as a person. She manifests her inner world and draws a lot in her entries. She takes the time to carefully prepare the next pages in which she’ll be writing.
                 </p>
             </div>
 
