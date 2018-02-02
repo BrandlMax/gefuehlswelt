@@ -150,6 +150,22 @@
                         this.SVGx = posInfo.x;
                         this.SVGy = posInfo.y;
 
+                        var Colors = [
+                            'FE7452',
+                            'F1BD53',
+                            '7BCBB4',
+                            '6EB5C9',
+                            'DD4E0C',
+                            'BADCCC',
+                            'C197B3',
+                            '588589',
+                            'EAA2A2',
+                            '9AA979'
+                        ]
+
+                        function getRandomInt(max) {
+                            return Math.floor(Math.random() * Math.floor(max));
+                        }
                         // Add Layer
                         this.$store.commit('addJournal', {
                             id: this.$store.state.JournalCount,
@@ -160,7 +176,7 @@
                             w: posInfo.width,
                             h: posInfo.height,
                             svgPath: SVGPath,
-                            bg: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                            bg: '#' + Colors[getRandomInt(Colors.length)],
                             show: true
                         });
 
@@ -207,8 +223,16 @@
                     this.undo();
                 } else if (e.keyCode === 39) {
                     this.redo();
+                }else if (e.keyCode === 88) {
+                    cmdeditorElement.editor.clear();
+                    editorElement.editor.clear();
+                } else if (e.keyCode === 82) {
+                     location.reload();
                 }
             });
+
+            // Resize
+            window.onresize = () => { location.reload(); };
 
         },
         created() {

@@ -220,9 +220,10 @@
                 } else if (e.keyCode === 82) {
                      location.reload();
                 }
-
-               
             });
+
+            // Resize
+            window.onresize = () => { location.reload(); };
 
 
         },

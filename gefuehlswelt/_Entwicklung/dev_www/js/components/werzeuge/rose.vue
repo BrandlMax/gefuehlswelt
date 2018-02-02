@@ -37,6 +37,22 @@
                 // Number of petals
                 var k;
                 var isDrawing = true;
+                var isPainting = false;
+
+                var paint = [1,2,3];
+
+                var Colors = [
+                    'FE7452',
+                    'F1BD53',
+                    '7BCBB4',
+                    '6EB5C9',
+                    'DD4E0C',
+                    'BADCCC',
+                    'C197B3',
+                    '588589',
+                    'EAA2A2',
+                    '9AA979'
+                ]
 
                 if (this.saveData.d) {
                     d = this.saveData.d;
@@ -58,8 +74,20 @@
                 };
 
 
+                el.ondblclick = () =>{
+                    isPainting = true;
+                    isDrawing = false;
+                    console.log('Double');
+                }
+
                 el.onmousedown = (e) => {
-                    isDrawing = !isDrawing;
+
+                    if(isPainting){
+                        isDrawing = false;
+                    }else{
+                        isDrawing = !isDrawing;
+                    }
+                    
                     this.saveData = {
                         d: d,
                         n: n,
@@ -69,14 +97,24 @@
                 }
 
                 p5.draw = () => {
+                    
+
+
                     // Put the drawing in the middle
                     p5.translate(toolData.width / 2, toolData.height / 2);
+
+ 
 
                     // Scaling of the rose
                     var s = 1.3;
 
                     p5.beginShape();
-                    p5.stroke(0);
+                    if(isDrawing){
+                        p5.stroke(200);
+                    }else{
+                        p5.stroke(0);
+                    }
+                    
                     p5.strokeWeight(2);
                     p5.strokeCap(p5.ROUND);
                     p5.smooth();
@@ -90,7 +128,7 @@
                     }
 
                     p5.endShape(p5.CLOSE);
-
+                    
                 };
 
                 el.onmousemove = (e) => {
@@ -149,6 +187,10 @@
                         }
 
                         k = n / d;
+
+                    }
+
+                    if(isPainting){
 
                     }
                     // Prevent default

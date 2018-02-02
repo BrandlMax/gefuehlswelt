@@ -152,7 +152,7 @@
 
         <Rose class="maskedlayer"
             stouch-action="none"
-            v-if="Tool === 'rose'"
+            v-if="Tool === 'mandala'"
             :toolData="{
                 id: layerData.id, 
                 height:layerData.height,
@@ -382,7 +382,7 @@
                         return true;
                     case 'circles':
                         return true;
-                    case 'rose':
+                    case 'mandala':
                         return true;
                     case 'rain':
                         return true;
