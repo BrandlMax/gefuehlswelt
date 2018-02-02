@@ -3,17 +3,17 @@
     <div class="productShow">
         
 
-        <img v-if="'7' == curProduct" src="../../../src/img/Userstory.png">
+        <img v-if="'7' == curProduct" src="./src/img/Userstory.png">
 
-        <img v-if="'10' == curProduct" src="../../../src/img/Userstory2.png">
+        <img v-if="'10' == curProduct" src="./src/img/Userstory2.png">
 
-        <img v-if="'14' == curProduct" src="../../../src/img/Userstory3.png">
+        <img v-if="'14' == curProduct" src="./src/img/Userstory3.png">
 
-        <img v-if="'18' == curProduct" src="../../../src/img/Userstory4.png">
+        <img v-if="'18' == curProduct" src="./src/img/Userstory4.png">
 
-        <img v-if="'20' == curProduct" src="../../../src/img/Userstory5.png">
+        <img v-if="'20' == curProduct" src="./src/img/Userstory5.png">
 
-        <img v-if="'23' == curProduct" src="../../../src/img/Userstory6.png">
+        <img v-if="'23' == curProduct" src="./src/img/Userstory6.png">
 
 
     </div>

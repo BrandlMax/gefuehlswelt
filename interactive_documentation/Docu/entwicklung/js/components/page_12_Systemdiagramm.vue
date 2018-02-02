@@ -20,22 +20,24 @@
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/systemskizze.png" alt="Systemskizze">
+                <img v-if="this.$store.state.lang" src="./src/img/sys_de.png" alt="Systemskizze">
+                <img v-if="!this.$store.state.lang" src="./src/img/sys_en.png" alt="Systemskizze">
             </div>            
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/systemskizze_full.png" alt="Systemskizze">
+            <img v-if="this.$store.state.lang" src="./src/img/sys_de_full.png" alt="Systemskizze">
+            <img v-if="!this.$store.state.lang" src="./src/img/sys_en_full.png" alt="Systemskizze">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('11')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('13')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

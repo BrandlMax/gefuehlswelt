@@ -25,7 +25,7 @@ As opposed to conventional journals, Gefühlswelt offers you a wide variety of d
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: pointer;" @click="showModal = true">
-                <img src="../../src/img/trailer_placeholder.png" alt="Trailer">
+                <img src="./src/img/Trailer_Placeholder.png" alt="Trailer">
             </div>           
         </BookContent>
 
@@ -33,7 +33,8 @@ As opposed to conventional journals, Gefühlswelt offers you a wide variety of d
 
         <Modal v-if="showModal" @close="showModal = false" modalType="video">
             <!-- <img src="../../src/img/mel.png" alt="textImage"> -->
-            <source src="../../src/vids/Trailer.mp4" type="video/mp4">
+            <source v-if="this.$store.state.lang" src="./src/vids/Trailer_de.mp4" type="video/mp4">
+            <source v-if="!this.$store.state.lang" src="./src/vids/Trailer_en.mp4" type="video/mp4">
         </Modal>
 
         <!-- <div class="arrow aleft" @click="changePage('2')">
@@ -41,7 +42,7 @@ As opposed to conventional journals, Gefühlswelt offers you a wide variety of d
         </div> -->
 
         <div class="arrow aright" @click="changePage('1')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

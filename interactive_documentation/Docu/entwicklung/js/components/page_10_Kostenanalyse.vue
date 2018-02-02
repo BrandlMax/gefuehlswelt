@@ -20,23 +20,23 @@
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;"  @click="showModal = true">
-                <img v-if="this.$store.state.lang" src="../../src/img/Chart_de.png" alt="Chart">
-                <img v-if="!this.$store.state.lang" src="../../src/img/Chart.png" alt="Chart">
+                <img v-if="this.$store.state.lang" src="./src/img/Chart_de.png" alt="Chart">
+                <img v-if="!this.$store.state.lang" src="./src/img/Chart.png" alt="Chart">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
-        <Modal v-if="showModal" @close="showModal = false" modalType="excel" iframelink="http://localhost:3000/src/iFrame/projektcalc">
+        <Modal v-if="showModal" @close="showModal = false" modalType="excel" iframelink="./src/iFrame/projektcalc/index.html">
             
         </Modal>
 
         <div class="arrow aleft" @click="changePage('9')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('11')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

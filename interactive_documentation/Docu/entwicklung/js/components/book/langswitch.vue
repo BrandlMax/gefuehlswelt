@@ -71,7 +71,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-    background: url(../src/img/EN.png);
+    background: url(./src/img/EN.png);
     background-size: cover;
   -webkit-transition: .4s;
   transition: .4s;
@@ -90,7 +90,7 @@ export default {
 }
 
 input:checked + .slider {
-    background: url(../src/img/DE.png);
+    background: url(./src/img/DE.png);
     background-size: cover;
 }
 

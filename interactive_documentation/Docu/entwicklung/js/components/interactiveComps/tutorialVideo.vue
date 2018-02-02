@@ -10,7 +10,7 @@
             </transition>
 
             <video id="tutVideo" autoplay="false">
-                <source :src="'../../../src/vids/tut_'+ tut +'.mp4'" type="video/mp4">
+                <source :src="'./src/vids/tut_'+ tut +'.mp4'" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 

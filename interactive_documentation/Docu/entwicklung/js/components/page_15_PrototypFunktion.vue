@@ -20,22 +20,22 @@
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/systemskizzeproto.png" alt="Prototyp Funktionen">
+                <img src="./src/img/systemskizzeproto.png" alt="Prototyp Funktionen">
             </div>            
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/systemskizzeproto_full.png" alt="Prototyp Funktionen">
+            <img src="./src/img/systemskizzeproto_full.png" alt="Prototyp Funktionen">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('14')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('16')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

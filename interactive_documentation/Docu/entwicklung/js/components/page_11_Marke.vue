@@ -10,21 +10,21 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Marke</h1>
                 <p v-if="this.$store.state.lang">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    Das Markenprisma diente uns als Ansatz zur Beschreibung unserer Markenidentität, welche uns eine grobe Richtung für Kommunikation und Gestaltung gab.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Brand</h1>
                 <p v-if="!this.$store.state.lang">
-                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    The brand Identity Prism serves as an overview for the values that our company and brand is going to be associated with. It’s a guideline how Gefühlswelt is going to market itself to its users.
                 </p>
             </div>
 
             <div v-if="this.$store.state.lang" class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/prism_de.png" alt="Brand Identity Prism">
+                <img src="./src/img/prism_de.png" alt="Brand Identity Prism">
             </div>
 
             <div v-if="!this.$store.state.lang" class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/prism_en.png" alt="Brand Identity Prism">
+                <img src="./src/img/prism_en.png" alt="Brand Identity Prism">
             </div>           
         </BookContent>
 
@@ -36,11 +36,11 @@
         </Modal>
 
         <div class="arrow aleft" @click="changePage('10')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('12')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

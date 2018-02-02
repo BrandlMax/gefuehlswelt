@@ -36,7 +36,7 @@
             <div class="iFrameSlot" slot="right" style="cursor: pointer;">
                 <h1 v-if="this.$store.state.lang" class="fonttest" contenteditable="true">Bearbeite mich und spiele mit der Schrift.</h1>
                 <h1 v-if="!this.$store.state.lang" class="fonttest" contenteditable="true">Change this text and play with the font.</h1>
-                <img src="../../src/img/fontsbg.png" alt="Fonts">
+                <img src="./src/img/fontsbg.png" alt="Fonts">
             </div>           
         </BookContent>
 
@@ -48,11 +48,11 @@
         </Modal> -->
 
         <div class="arrow aleft" @click="changePage('6b')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('8')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

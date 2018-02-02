@@ -2,29 +2,29 @@
 <div class="chapter">
     <div class="coverPreview">
         <div id="dropcover" class="dropoverlay" v-if="extraProd">
-            <img class="rubberband" src="../../../src/img/band.png" alt="band">
+            <img class="rubberband" src="./src/img/band.png" alt="band">
         </div>
-        <img :src="'../../../src/img/' + curProduct + '.png'" alt="cover">
+        <img :src="'./src/img/' + curProduct + '.png'" alt="cover">
     </div>
     <div class="color_switches">
         <div class="cover_switch" @click="switchProduct(1)">
-            <img src="../../../src/img/cover_1.png" alt="cover">
+            <img src="./src/img/cover_1.png" alt="cover">
         </div>  
 
         <div class="cover_switch" @click="switchProduct(2)">
-            <img src="../../../src/img/cover_2.png" alt="cover">
+            <img src="./src/img/cover_2.png" alt="cover">
         </div>  
 
         <div class="cover_switch" @click="switchProduct(3)">
-            <img src="../../../src/img/cover_3.png" alt="cover">
+            <img src="./src/img/cover_3.png" alt="cover">
         </div>
 
         <div class="cover_switch" @click="switchProduct(4)">
-            <img src="../../../src/img/cover_4.png" alt="cover">
+            <img src="./src/img/cover_4.png" alt="cover">
         </div>
 
         <div class="cover_switch" @click="switchProduct(0)">
-            <img src="../../../src/img/cover_0.png" alt="cover">
+            <img src="./src/img/cover_0.png" alt="cover">
         </div>
 
         <div class="cover_switch fill" @click="addExtra()">

@@ -3,7 +3,7 @@
     <div class="productShow">
         
         <!-- FRONT -->
-        <img v-if="'front' == curProduct" src="../../../src/img/front.png">
+        <img v-if="'front' == curProduct" src="./src/img/front.png">
         <div v-if="'front' == curProduct" class="tooltip pd_rubber productDetails">
             <div class="pd_detail">+</div>
             <span v-if="this.$store.state.lang" class="tooltiptext">Gummiband</span>
@@ -24,7 +24,7 @@
 
 
         <!-- INSIDE -->
-        <img v-if="'inside' == curProduct" src="../../../src/img/inside.png">
+        <img v-if="'inside' == curProduct" src="./src/img/inside.png">
         <div v-if="'inside' == curProduct" class="tooltip pd_frontcam productDetails">
             <div class="pd_detail">+</div>
             <span v-if="this.$store.state.lang" class="tooltiptext">Kamera</span>
@@ -56,7 +56,7 @@
         </div>
 
         <!-- BACK -->
-        <img v-if="'back' == curProduct" src="../../../src/img/back.png">
+        <img v-if="'back' == curProduct" src="./src/img/back.png">
         <div v-if="'back' == curProduct" class="tooltip pd_fingerprint productDetails">
             <div class="pd_detail">+</div>
             <span v-if="this.$store.state.lang" class="tooltiptext">Fingerabdruck Sensor</span>

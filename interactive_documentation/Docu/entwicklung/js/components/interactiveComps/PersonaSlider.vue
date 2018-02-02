@@ -3,16 +3,16 @@
     <div class="productShow">
         
         <!-- Happy -->
-        <img v-if="'sad' == curProduct" src="../../../src/img/mel_sad.png">
+        <img v-if="'sad' == curProduct" src="./src/img/mel_sad.png">
 
 
 
         <!-- INSIDE -->
-        <img v-if="'normal' == curProduct" src="../../../src/img/mel_normal.png">
+        <img v-if="'normal' == curProduct" src="./src/img/mel_normal.png">
 
 
         <!-- BACK -->
-        <img v-if="'happy' == curProduct" src="../../../src/img/mel_happy.png">
+        <img v-if="'happy' == curProduct" src="./src/img/mel_happy.png">
 
 
     </div>

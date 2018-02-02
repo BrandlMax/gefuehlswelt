@@ -4,7 +4,7 @@
         <div class="modal-wrapper">
             <div class="modal-container">
                 <div @click="$emit('close')" id="modal_closeBtn">
-                    <img src="../../../src/img/Close.png" alt="close">
+                    <img src="./src/img/Close.png" alt="close">
                 </div>
 
                 <div v-if="modalType === 'video'" class="modal_video">

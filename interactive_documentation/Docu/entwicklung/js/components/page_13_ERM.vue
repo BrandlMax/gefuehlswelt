@@ -20,25 +20,25 @@
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img v-if="this.$store.state.lang" src="../../src/img/ERM.png" alt="ERM">
-                <img v-if="!this.$store.state.lang" src="../../src/img/ERM_en.png" alt="ERM">
+                <img v-if="this.$store.state.lang" src="./src/img/ERM.png" alt="ERM">
+                <img v-if="!this.$store.state.lang" src="./src/img/ERM_en.png" alt="ERM">
             </div>           
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img v-if="this.$store.state.lang" src="../../src/img/ERM_full.png" alt="ERM">
-            <img v-if="!this.$store.state.lang" src="../../src/img/ERM_en_full.png" alt="ERM">
+            <img v-if="this.$store.state.lang" src="./src/img/ERM_full.png" alt="ERM">
+            <img v-if="!this.$store.state.lang" src="./src/img/ERM_en_full.png" alt="ERM">
         </Modal>
 
 
         <div class="arrow aleft" @click="changePage('12')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('14')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

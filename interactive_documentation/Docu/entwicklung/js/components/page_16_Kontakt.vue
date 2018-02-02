@@ -42,18 +42,18 @@
             </div>
 
             <div class="iFrameSlot" slot="right">
-                <img src="../../src/img/team.png" alt="Team Gefühlswelt">
+                <img src="./src/img/team.png" alt="Team Gefühlswelt">
             </div>            
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/team_full.png" alt="Team Gefühlswelt">
+            <img src="./src/img/team_full.png" alt="Team Gefühlswelt">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('14')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <!-- <div class="arrow aright" @click="changePage('1')">

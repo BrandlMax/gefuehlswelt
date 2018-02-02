@@ -2,7 +2,7 @@
 <div id="pagination">
 
     <div v-for="(point, index) in this.$router.options.routes" :key="index" :class="['dot tooltip', {active: checkActive(point.name)}]" @click="changePage(point.name)">
-        <img :src="'../../src/img/dot_'+ point.color+'.png'">
+        <img :src="'./src/img/dot_'+ point.color+'.png'">
         <span class="tooltiptext">{{point.title}}</span>
     </div>
 

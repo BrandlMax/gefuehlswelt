@@ -9,7 +9,7 @@ import source from "vinyl-source-stream";
 import vueify from "vueify";
 import browserSync from "browser-sync";
 
-var exportpath = "./www";
+var exportpath = "../Electron/public";
 
 // Erster Aufruf
 gulp.task("default", () =>{

@@ -21,22 +21,22 @@ The prototype is build with VueJS, a JavaScript framework that yields quick resu
             </div>
 
             <div class="iFrameSlot" slot="right" style="cursor: zoom-in;" @click="showModal = true">
-                <img src="../../src/img/Aufbau.png" alt="Systemskizze Prototyp">
+                <img src="./src/img/Aufbau.png" alt="Systemskizze Prototyp">
             </div>            
         </BookContent>
 
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/Aufbau_full.png" alt="Systemskizze Prototyp">
+            <img src="./src/img/Aufbau_full.png" alt="Systemskizze Prototyp">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('13')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('16')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
     </div>
 </template>

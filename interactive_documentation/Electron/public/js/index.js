@@ -1,5 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#bookbg[data-v-8671d820] {\n    position: absolute;\n    width: 83vw;\n}")
 ;(function(){
 "use strict";
 
@@ -22,21 +21,19 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"bookbg"}},[_c('img',{attrs:{"src":"../../src/img/Book.png"}})])}]
-__vue__options__._scopeId = "data-v-8671d820"
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"bookbg"}},[_c('img',{attrs:{"src":"./src/img/Book.png"}})])}]
+__vue__options__._scopeId = "data-v-5ea9af81"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
-  module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8671d820", __vue__options__)
+    hotAPI.createRecord("data-v-5ea9af81", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8671d820", __vue__options__)
+    hotAPI.rerender("data-v-5ea9af81", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],2:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#bookcontent[data-v-6d32c6de] {\n    position: absolute;\n    width: 83vw;\n    display: flex;\n    justify-content: space-around;\n    height: 45vw;\n}\n\n.side[data-v-6d32c6de]{\n\n    width: 34.4vw;\n}\n\n.left[data-v-6d32c6de]{\n    /* background: #ffc043; */\n    margin-top: -1vw;\n    padding: 3vw;\n    box-sizing: border-box;\n    padding-left: 4vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.right[data-v-6d32c6de]{\n    /* background: #43ffc7; */\n    margin-right: 1vw;\n    margin-top: -1vw;\n    box-sizing: border-box;\n}\n\n.textArea[data-v-6d32c6de] {\n\n}\n\n.left p[data-v-6d32c6de]{\n    opacity: 0.45;\n    color: #000000;\n    line-height: 2.5vw;\n    font-size: 1.3vw;\n}\n\niframe[data-v-6d32c6de]{\n    height: 100%;\n    width: 100%;\n}\n.iFrameSlot[data-v-6d32c6de]{\n    height: 100%;\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n}")
+},{"vue":32,"vue-hot-reload-api":31}],2:[function(require,module,exports){
 ;(function(){
 "use strict";
 
@@ -60,20 +57,63 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"bookcontent"}},[_c('div',{staticClass:"side left"},[_c('div',{staticClass:"textArea"},[_vm._t("left")],2)]),_vm._v(" "),_c('div',{staticClass:"side right"},[_vm._t("right")],2)])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-6d32c6de"
+__vue__options__._scopeId = "data-v-1f27bded"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1f27bded", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-1f27bded", __vue__options__)
+  }
+})()}
+},{"vue":32,"vue-hot-reload-api":31}],3:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */\n\n#langswitch[data-v-454da496] {\n    position: absolute;\n    z-index: 30000;\n    top: 20px;\n    right: 20px;\n    opacity: 0.2;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n#langswitch[data-v-454da496]:hover {\n    opacity: 1.0;\n    -webkit-transition: .4s;\n    transition: .4s;\n}\n\n.switch[data-v-454da496] {\n  position: relative;\n  display: inline-block;\n    width: 40px;\n    height: 23px;\n}\n\n.switch input[data-v-454da496] {display:none;}\n\n.slider[data-v-454da496] {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n    background: url(./src/img/EN.png);\n    background-size: cover;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider[data-v-454da496]:before {\n  position: absolute;\n  content: \"\";\n    height: 18px;\n    width: 18px;\n    left: 3px;\n    bottom: 2px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked + .slider[data-v-454da496] {\n    background: url(./src/img/DE.png);\n    background-size: cover;\n}\n\ninput:focus + .slider[data-v-454da496] {\n  box-shadow: 0 0 1px #2196F3;\n}\n\ninput:checked + .slider[data-v-454da496]:before {\n  -webkit-transform: translateX(16px);\n  -ms-transform: translateX(16px);\n  transform: translateX(16px);\n}\n\n/* Rounded sliders */\n.slider.round[data-v-454da496] {\n  border-radius: 34px;\n}\n\n.slider.round[data-v-454da496]:before {\n  border-radius: 50%;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            checked: this.$store.state.lang
+        };
+    },
+    mounted: function mounted() {},
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {},
+    methods: {
+        changeLanguage: function changeLanguage() {
+            var lang;
+            this.$store.commit('changeLanguage', lang);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"langswitch"}},[_c('label',{staticClass:"switch"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.checked),expression:"checked"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.checked)?_vm._i(_vm.checked,null)>-1:(_vm.checked)},on:{"change":[function($event){var $$a=_vm.checked,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.checked=$$a.concat([$$v]))}else{$$i>-1&&(_vm.checked=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.checked=$$c}},function($event){_vm.changeLanguage()}]}}),_vm._v(" "),_c('span',{staticClass:"slider round"})])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-454da496"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6d32c6de", __vue__options__)
+    hotAPI.createRecord("data-v-454da496", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6d32c6de", __vue__options__)
+    hotAPI.rerender("data-v-454da496", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],3:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#modal_closeBtn[data-v-03fabbca] {\n    width: 4vw;\n    position: absolute;\n    right: 4vw;\n    cursor: pointer;\n    z-index: 9998;\n    margin-top: -1vw;\n}\n\n.modal-mask[data-v-03fabbca] {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .8);\n    display: table;\n    transition: opacity .3s ease;\n}\n\n.modal-wrapper[data-v-03fabbca] {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.modal-container[data-v-03fabbca] {\n    width: 90vw;\n    margin: 0px auto;\n    padding: 20px 20px;\n    background-color: #fff;\n    border-radius: 2px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);\n    transition: all .3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n\n.modal-default-button[data-v-03fabbca] {\n    float: right;\n}\n\n\n/* Video */\n.modal_video[data-v-03fabbca] {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal_video video[data-v-03fabbca] {\n    width: 100%;\n}\n\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n\n.modal-enter[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-leave-active[data-v-03fabbca] {\n    opacity: 0;\n}\n\n.modal-enter .modal-container[data-v-03fabbca],\n.modal-leave-active .modal-container[data-v-03fabbca] {\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n}")
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],4:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#modal_closeBtn[data-v-2c85d06a] {\n    width: 4vw;\n    position: absolute;\n    right: 4vw;\n    cursor: pointer;\n    z-index: 9998;\n    margin-top: -1vw;\n}\n\n.modal-mask[data-v-2c85d06a] {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, .8);\n    display: table;\n    transition: opacity .3s ease;\n    cursor: zoom-out;\n}\n\n.modal-wrapper[data-v-2c85d06a] {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.modal-container[data-v-2c85d06a] {\n    width: 90vw;\n    margin: 0px auto;\n    padding: 20px 20px;\n    /* background-color: #fff; */\n    border-radius: 2px;\n    /* box-shadow: 0 2px 8px rgba(0, 0, 0, .33); */\n    transition: all .3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n\n.modal-default-button[data-v-2c85d06a] {\n    float: right;\n}\n\n\n/* Video */\n.modal_video[data-v-2c85d06a] {\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.modal_video video[data-v-2c85d06a] {\n    width: 100%;\n}\n\n\n.modal_excel iframe[data-v-2c85d06a] {\n    height: 50vw;\n}\n\n\n/*\n * The following styles are auto-applied to elements with\n * transition=\"modal\" when their visibility is toggled\n * by Vue.js.\n *\n * You can easily play with the modal transition by editing\n * these styles.\n */\n\n.modal-enter[data-v-2c85d06a] {\n    opacity: 0;\n}\n\n.modal-leave-active[data-v-2c85d06a] {\n    opacity: 0;\n}\n\n.modal-enter .modal-container[data-v-2c85d06a],\n.modal-leave-active .modal-container[data-v-2c85d06a] {\n    -webkit-transform: scale(1.1);\n    transform: scale(1.1);\n}")
 ;(function(){
 'use strict';
 
@@ -81,7 +121,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  props: ['modalType', 'autoPush'],
+  props: ['modalType', 'iframelink', 'autoPush'],
   data: function data() {
     return {};
   },
@@ -95,22 +135,22 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"modal"}},[_c('div',{staticClass:"modal-mask",on:{"click":function($event){_vm.$emit('close')}}},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal-container"},[_c('div',{attrs:{"id":"modal_closeBtn"},on:{"click":function($event){_vm.$emit('close')}}},[_c('img',{attrs:{"src":"../../../src/img/Close.png","alt":"close"}})]),_vm._v(" "),(_vm.modalType === 'video')?_c('div',{staticClass:"modal_video"},[_c('video',{attrs:{"controls":"true","autoplay":"true"}},[_vm._t("default"),_vm._v("\n                    Your browser does not support the video tag.\n                ")],2)]):_vm._e(),_vm._v(" "),(_vm.modalType === 'image')?_c('div',{staticClass:"modal_image"},[_vm._t("default")],2):_vm._e(),_vm._v(" "),(_vm.modalType === 'excel')?_c('div',{staticClass:"modal_excel"},[_c('h1',[_vm._v("Excel")])]):_vm._e()])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"modal"}},[_c('div',{staticClass:"modal-mask",on:{"click":function($event){_vm.$emit('close')}}},[_c('div',{staticClass:"modal-wrapper"},[_c('div',{staticClass:"modal-container"},[_c('div',{attrs:{"id":"modal_closeBtn"},on:{"click":function($event){_vm.$emit('close')}}},[_c('img',{attrs:{"src":"./src/img/Close.png","alt":"close"}})]),_vm._v(" "),(_vm.modalType === 'video')?_c('div',{staticClass:"modal_video"},[_c('video',{attrs:{"controls":"true","autoplay":"true"}},[_vm._t("default"),_vm._v("\n                    Your browser does not support the video tag.\n                ")],2)]):_vm._e(),_vm._v(" "),(_vm.modalType === 'image')?_c('div',{staticClass:"modal_image"},[_vm._t("default")],2):_vm._e(),_vm._v(" "),(_vm.modalType === 'excel')?_c('div',{staticClass:"modal_excel"},[_c('iframe',{attrs:{"src":_vm.iframelink}})]):_vm._e()])])])])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-03fabbca"
+__vue__options__._scopeId = "data-v-2c85d06a"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-03fabbca", __vue__options__)
+    hotAPI.createRecord("data-v-2c85d06a", __vue__options__)
   } else {
-    hotAPI.reload("data-v-03fabbca", __vue__options__)
+    hotAPI.rerender("data-v-2c85d06a", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],4:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#pagination[data-v-ac27c0c8] {\n    position: absolute;\n    bottom: 0;\n    display: flex;\n}\n\n.dot[data-v-ac27c0c8] {\n    width: 3vh;\n    padding-bottom: 0.5vw;\n    padding-right: 1vh;\n    padding-left: 1vh;\n    cursor: pointer;\n    opacity: 0.2;\n    transition: all 0.5s ease;\n}\n\n.dot[data-v-ac27c0c8]:hover{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n.dot.active[data-v-ac27c0c8]{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Tooltip container */\n.tooltip[data-v-ac27c0c8] {\n    position: relative;\n    display: inline-block;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-ac27c0c8] {\n    opacity: 0;\n    width: 120px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -60px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n}\n\n.tooltip .tooltiptext[data-v-ac27c0c8]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-ac27c0c8] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}")
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],5:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#pagination[data-v-1b048aad] {\n    position: absolute;\n    bottom: 0;\n    display: flex;\n}\n\n.dot[data-v-1b048aad] {\n    width: 3vh;\n    max-width: 23px;\n    padding-bottom: 0.5vw;\n    padding-right: 1vh;\n    padding-left: 1vh;\n    cursor: pointer;\n    opacity: 0.2;\n    transition: all 0.5s ease;\n}\n\n.dot[data-v-1b048aad]:hover{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n.dot.active[data-v-1b048aad]{\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Tooltip container */\n.tooltip[data-v-1b048aad] {\n    position: relative;\n    display: inline-block;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-1b048aad] {\n    opacity: 0;\n    width: 120px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -70px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-1b048aad]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-1b048aad] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\nspan.tooltiptext[data-v-1b048aad] {\n    pointer-events: none;\n}")
 ;(function(){
 'use strict';
 
@@ -145,22 +185,135 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"pagination"}},_vm._l((this.$router.options.routes),function(point,index){return _c('div',{key:index,class:['dot tooltip', {active: _vm.checkActive(point.name)}],on:{"click":function($event){_vm.changePage(point.name)}}},[_c('img',{attrs:{"src":'../../src/img/dot_'+ point.color+'.png'}}),_vm._v(" "),_c('span',{staticClass:"tooltiptext"},[_vm._v(_vm._s(point.title)+" "+_vm._s(index))])])}))}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"pagination"}},_vm._l((this.$router.options.routes),function(point,index){return _c('div',{key:index,class:['dot tooltip', {active: _vm.checkActive(point.name)}],on:{"click":function($event){_vm.changePage(point.name)}}},[_c('img',{attrs:{"src":'./src/img/dot_'+ point.color+'.png'}}),_vm._v(" "),_c('span',{staticClass:"tooltiptext"},[_vm._v(_vm._s(point.title))])])}))}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-ac27c0c8"
+__vue__options__._scopeId = "data-v-1b048aad"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-ac27c0c8", __vue__options__)
+    hotAPI.createRecord("data-v-1b048aad", __vue__options__)
   } else {
-    hotAPI.reload("data-v-ac27c0c8", __vue__options__)
+    hotAPI.rerender("data-v-1b048aad", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],5:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".coverPreview[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    left: 70px;\n    width: 70vw;\n}\n\n.color_switches[data-v-76b38f7f]{\n    position: absolute;\n    top: 0;\n    margin-left: 10vw;\n    cursor: pointer;\n}\n\n.cover_switch[data-v-76b38f7f] {\n    overflow: hidden;\n    height: 5vw;\n    width: 5vw;\n    border-radius: 102vw;\n    margin-bottom: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.cover_switch img[data-v-76b38f7f] {\n    width: 180%;\n}\n\n.cover_switch.fill[data-v-76b38f7f] {\n    background: #66bbb1;\n    font-size: 30px;\n    color: #fff;\n}\n\n.dropoverlay[data-v-76b38f7f]{\n    position: absolute;\n    width: 27.8vw;\n    height: 44.56vw;\n    background: rgba(255, 0, 0, 0);\n    right: 6.45vw;\n    border-radius: 0.2vw 1vw 1vw 0.2vw;\n}\n\n#dropcover[data-v-76b38f7f]{\n    background-image: url('');\n    background-size: cover;\n    background-position: center;\n}\n\nimg.rubberband[data-v-76b38f7f] {\n    width: 1.74vw;\n    position: absolute;\n    right: 3.4vw;\n}\n\n#addCover[data-v-76b38f7f] {\n    position: absolute;\n    /* pointer-events: none; */\n    width: 5vw;\n    height: 5vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\ninput#coverUploader[data-v-76b38f7f] {\n    height: 10vw;\n    cursor: pointer;\n}")
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],6:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-4769ee23] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-4769ee23] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-4769ee23]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-4769ee23] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-4769ee23] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-4769ee23] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-4769ee23] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-4769ee23]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-4769ee23]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-4769ee23]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-4769ee23] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-4769ee23] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-4769ee23] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-4769ee23] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-4769ee23] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-4769ee23] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-4769ee23] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-4769ee23] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-4769ee23] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-4769ee23] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-4769ee23] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-4769ee23] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-4769ee23] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-4769ee23] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-4769ee23] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-4769ee23] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-4769ee23] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-4769ee23] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: [],
+  data: function data() {
+    return {
+      curProduct: 'sad',
+      extraProd: false
+    };
+  },
+  mounted: function mounted() {
+    var newState = {
+      name: 'persona',
+      sliderState: this.curProduct
+    };
+    this.$store.commit('changeSliderState', newState);
+  },
+  created: function created() {},
+  destroyed: function destroyed() {},
+  components: {},
+  methods: {
+    switchProduct: function switchProduct(n) {
+      this.curProduct = n;
+
+      var newState = {
+        name: 'persona',
+        sliderState: n
+      };
+      this.$store.commit('changeSliderState', newState);
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"productShow"},[('sad' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/mel_sad.png"}}):_vm._e(),_vm._v(" "),('normal' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/mel_normal.png"}}):_vm._e(),_vm._v(" "),('happy' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/mel_happy.png"}}):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"specControls"},[(this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'sad' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('sad')}}},[_vm._v("Schlechter Tag")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'happy' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('happy')}}},[_vm._v("Guter Tag")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'sad' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('sad')}}},[_vm._v("Bad day")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'happy' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('happy')}}},[_vm._v("Good day")]):_vm._e()])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-4769ee23"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4769ee23", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-4769ee23", __vue__options__)
+  }
+})()}
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],7:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-521d54fe] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-521d54fe] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-521d54fe]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-521d54fe] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-521d54fe] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-521d54fe] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-521d54fe] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-521d54fe]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-521d54fe]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-521d54fe]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-521d54fe] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-521d54fe] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-521d54fe] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-521d54fe] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-521d54fe] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-521d54fe] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-521d54fe] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-521d54fe] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-521d54fe] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-521d54fe] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-521d54fe] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-521d54fe] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-521d54fe] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-521d54fe] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-521d54fe] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-521d54fe] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-521d54fe] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-521d54fe] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  props: [],
+  data: function data() {
+    return {
+      curProduct: '7',
+      extraProd: false
+    };
+  },
+  mounted: function mounted() {
+
+    var newState = {
+      name: 'userstory',
+      sliderState: this.curProduct
+    };
+    this.$store.commit('changeSliderState', newState);
+  },
+  created: function created() {},
+  destroyed: function destroyed() {},
+  components: {},
+  methods: {
+    switchProduct: function switchProduct(n) {
+      this.curProduct = n;
+
+      var newState = {
+        name: 'userstory',
+        sliderState: n
+      };
+      this.$store.commit('changeSliderState', newState);
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"productShow"},[('7' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory.png"}}):_vm._e(),_vm._v(" "),('10' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory2.png"}}):_vm._e(),_vm._v(" "),('14' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory3.png"}}):_vm._e(),_vm._v(" "),('18' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory4.png"}}):_vm._e(),_vm._v(" "),('20' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory5.png"}}):_vm._e(),_vm._v(" "),('23' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/Userstory6.png"}}):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"specControls"},[(this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : '7' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('7')}}},[_vm._v("7:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '10' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('10')}}},[_vm._v("9:30")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '14' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('14')}}},[_vm._v("10:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '18' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('18')}}},[_vm._v("12:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '20' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('20')}}},[_vm._v("18:00")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : '23' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('23')}}},[_vm._v("22:30")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : '7' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('7')}}},[_vm._v("7:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '10' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('10')}}},[_vm._v("9:30")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '14' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('14')}}},[_vm._v("10:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '18' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('18')}}},[_vm._v("12:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : '20' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('20')}}},[_vm._v("18:00")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : '23' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('23')}}},[_vm._v("22:30")]):_vm._e()])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-521d54fe"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-521d54fe", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-521d54fe", __vue__options__)
+  }
+})()}
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],8:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".coverPreview[data-v-3f9b680e]{\n    position: absolute;\n    top: 0;\n    left: 70px;\n    width: 70vw;\n}\n\n.color_switches[data-v-3f9b680e]{\n    position: absolute;\n    top: 0;\n    margin-left: 10vw;\n    cursor: pointer;\n}\n\n.cover_switch[data-v-3f9b680e] {\n    overflow: hidden;\n    height: 5vw;\n    width: 5vw;\n    border-radius: 102vw;\n    margin-bottom: 20px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.cover_switch img[data-v-3f9b680e] {\n    width: 180%;\n}\n\n.cover_switch.fill[data-v-3f9b680e] {\n    background: #66bbb1;\n    font-size: 30px;\n    color: #fff;\n}\n\n.dropoverlay[data-v-3f9b680e]{\n    position: absolute;\n    width: 27.6vw;\n    height: 44.19vw;\n    background: rgba(255, 0, 0, 0);\n    right: 6.45vw;\n    border-radius: 0.2vw 1vw 1vw 0.2vw;\n    margin-top: 0.24vw;\n}\n\n#dropcover[data-v-3f9b680e]{\n    background-image: none;\n    background-size: cover;\n    background-position: center;\n    mix-blend-mode: screen;\n    opacity: 0.98;\n}\n\nimg.rubberband[data-v-3f9b680e] {\n    width: 1.73vw;\n    position: absolute;\n    right: 3.4vw;\n    mix-blend-mode: unset;\n}\n\n#addCover[data-v-3f9b680e] {\n    position: absolute;\n    /* pointer-events: none; */\n    width: 5vw;\n    height: 5vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\ninput#coverUploader[data-v-3f9b680e] {\n    height: 10vw;\n    cursor: pointer;\n}\n\n@media only screen and (orientation: portrait) {\n    .coverPreview[data-v-3f9b680e]{\n        position: relative;\n        top: 0;\n        left: 0;\n        width: 100%;\n        margin-bottom: 4vw;\n    }\n    .color_switches[data-v-3f9b680e]{\n        position: relative;\n        margin-left: 15vw;\n        cursor: pointer;\n        margin-top: -43vw;\n        margin-bottom: 7vw;\n    }\n    .dropoverlay[data-v-3f9b680e] {\n        position: absolute;\n        width: 23.8vw;\n        height: 38.24vw;\n        background: rgba(255, 0, 0, 0);\n        right: 5.45vw;\n        border-radius: 0.2vw 1vw 1vw 0.2vw;\n    }\n    img.rubberband[data-v-3f9b680e] {\n        width: 1.5vw;\n        position: absolute;\n        right: 2.9vw;\n    }\n}")
 ;(function(){
 'use strict';
 
@@ -171,7 +324,7 @@ exports.default = {
     props: [],
     data: function data() {
         return {
-            curProduct: 'product_0',
+            curProduct: 'product_1',
             extraProd: false
         };
     },
@@ -200,8 +353,10 @@ exports.default = {
     methods: {
         switchProduct: function switchProduct(n) {
             this.curProduct = 'product_' + n;
+            this.extraProd = false;
         },
         addExtra: function addExtra() {
+            this.curProduct = 'product_0';
             this.extraProd = true;
         }
     }
@@ -210,22 +365,78 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"coverPreview"},[(_vm.extraProd)?_c('div',{staticClass:"dropoverlay",attrs:{"id":"dropcover"}},[_c('img',{staticClass:"rubberband",attrs:{"src":"../../../src/img/band.png","alt":"band"}})]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":'../../../src/img/' + _vm.curProduct + '.png',"alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"color_switches"},[_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_1.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(0)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_2.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"../../../src/img/cover_3.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch fill",on:{"click":function($event){_vm.addExtra()}}},[_c('div',{attrs:{"id":"addCover"}},[_vm._v("+")]),_vm._v(" "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('input',{attrs:{"multiple":"false","type":"file","id":"coverUploader"}})])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"coverPreview"},[(_vm.extraProd)?_c('div',{staticClass:"dropoverlay",attrs:{"id":"dropcover"}},[_c('img',{staticClass:"rubberband",attrs:{"src":"./src/img/band.png","alt":"band"}})]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":'./src/img/' + _vm.curProduct + '.png',"alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"color_switches"},[_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(1)}}},[_c('img',{attrs:{"src":"./src/img/cover_1.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(2)}}},[_c('img',{attrs:{"src":"./src/img/cover_2.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(3)}}},[_c('img',{attrs:{"src":"./src/img/cover_3.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(4)}}},[_c('img',{attrs:{"src":"./src/img/cover_4.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch",on:{"click":function($event){_vm.switchProduct(0)}}},[_c('img',{attrs:{"src":"./src/img/cover_0.png","alt":"cover"}})]),_vm._v(" "),_c('div',{staticClass:"cover_switch fill",on:{"click":function($event){_vm.addExtra()}}},[_c('div',{attrs:{"id":"addCover"}},[_vm._v("+")]),_vm._v(" "),_c('div',{attrs:{"id":"result"}}),_vm._v(" "),_c('input',{attrs:{"multiple":"false","type":"file","accept":".png,.jpg","id":"coverUploader"}})])])])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-76b38f7f"
+__vue__options__._scopeId = "data-v-3f9b680e"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-76b38f7f", __vue__options__)
+    hotAPI.createRecord("data-v-3f9b680e", __vue__options__)
   } else {
-    hotAPI.reload("data-v-76b38f7f", __vue__options__)
+    hotAPI.rerender("data-v-3f9b680e", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-7887d584]{\n    width: 100%;\n    border: 3px solid rgba(255, 255, 255, 0);\n}\n\n.tutvideo[data-v-7887d584] {\n    width: 34.4vw;\n    position: absolute;\n}\n\n#startBtn[data-v-7887d584]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 46vw;\n    border: 3px solid rgba(255, 255, 255, 0);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-7887d584]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 1vw;\n}\n\n.triangleBg[data-v-7887d584]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-7887d584], .fade-leave-active[data-v-7887d584] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-7887d584], .fade-leave-to[data-v-7887d584] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],9:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Tooltip container */\n.tooltip[data-v-6dfdcf2f] {\n    display: inline-block;\n    position: absolute;\n    top: 0;\n}\n\n/* Tooltip text */\n.tooltip .tooltiptext[data-v-6dfdcf2f] {\n    opacity: 0;\n    width: 160px;\n    bottom: 100%;\n    left: 50%; \n    margin-left: -66px; \n    background-color: rgba(0, 0, 0, 0.5);\n    color: #fff;\n    text-align: center;\n    padding: 5px 0;\n    border-radius: 6px;\n \n    position: absolute;\n    z-index: 1;\n\n    margin-bottom: 10px;\n    transition: all 0.5s ease;\n    line-height: 22px;\n    padding: 10px;\n}\n\n.tooltip .tooltiptext[data-v-6dfdcf2f]::after {\n    content: \" \";\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    margin-left: -5px;\n    border-width: 5px;\n    border-style: solid;\n    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;\n}\n\n.tooltip:hover .tooltiptext[data-v-6dfdcf2f] {\n    opacity: 1;\n    transition: all 0.5s ease;\n}\n\n/* Spec Controls */\n\n.chapter[data-v-6dfdcf2f] {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n}\n\n.specControls[data-v-6dfdcf2f] {\n    position: absolute;\n    background: #e0e0e000;\n    display: flex;\n    border-radius: 310px;\n    border: 3px solid #66bbb1;\n    margin-top: 23vw;\n    color: #66bbb1;\n}\n\n.pd_switch[data-v-6dfdcf2f] {\n    padding: 5px 20px 5px 20px;\n    cursor: pointer;\n}\n\n.firstswitch.pd_active[data-v-6dfdcf2f]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 300px 0px 0px 300px;\n}\n.middleswitch.pd_active[data-v-6dfdcf2f]{\n    background: #66bbb1;\n    color: #fff;\n}\n.lastswitch.pd_active[data-v-6dfdcf2f]{\n    background: #66bbb1;\n    color: #fff;\n    border-radius: 0px 300px 300px 0px;\n}\n\n/* Details */\n.pd_detail[data-v-6dfdcf2f] {\n    border: 5px solid #fff;\n    height: 35px;\n    width: 35px;\n    border-radius: 100px;\n    position: absolute;\n    background: rgba(255, 255, 255, 0.3);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    font-size: 16px;\n    cursor: pointer;\n}\n\n.pd_rubber[data-v-6dfdcf2f] {\n    top: 6vw;\n    right: 16.7vw;\n}\n\n.pd_stylus[data-v-6dfdcf2f] {\n    margin-top: 30vw;\n    right: 10.1vw;\n}\n.pd_cover[data-v-6dfdcf2f] {\n    margin-top: 21vw;\n    right: 26vw;\n}\n.pd_mic[data-v-6dfdcf2f] {\n    margin-top: 37vw;\n    right: 20vw;\n}\n.pd_touch[data-v-6dfdcf2f] {\n    margin-top: 19vw;\n    right: 21vw;\n}\n.pd_frontcam[data-v-6dfdcf2f] {\n    margin-top: 3.1vw;\n    right: 20.8vw;\n}\n.pd_backcam[data-v-6dfdcf2f] {\n    margin-top: 3.8vw;\n    right: 23.4vw;\n}\n.pd_fingerprint[data-v-6dfdcf2f] {\n    margin-top: 20.7vw;\n    right: 23.55vw;\n}\n\n.pd_laut[data-v-6dfdcf2f] {\n    margin-top: 38vw;\n    right: 28vw;\n}\n\n.pd_sd[data-v-6dfdcf2f] {\n    margin-top: 38vw;\n    right: 12vw;\n}\n\n@media only screen and (orientation: portrait) {\n    .specControls[data-v-6dfdcf2f] {\n        margin-top: 40vw;\n    }\n\n.pd_rubber[data-v-6dfdcf2f] {\n    top: 16vw;\n    right: 42.2vw;\n}\n\n.pd_stylus[data-v-6dfdcf2f] {\n    margin-top: 56vw;\n    right: 30.4vw;\n}\n.pd_cover[data-v-6dfdcf2f] {\n    margin-top: 33vw;\n    right: 58vw;\n}\n.pd_mic[data-v-6dfdcf2f] {\n    margin-top: 66vw;\n    right: 49vw;\n}\n.pd_touch[data-v-6dfdcf2f] {\n    margin-top: 34vw;\n    right: 49vw;\n}\n.pd_frontcam[data-v-6dfdcf2f] {\n    margin-top: 7.0vw;\n    right: 49.1vw;\n}\n.pd_backcam[data-v-6dfdcf2f] {\n    margin-top: 8vw;\n    right: 53.7vw;\n}\n.pd_fingerprint[data-v-6dfdcf2f] {\n    margin-top: 37.4vw;\n    right: 53.9vw;\n}\n\n\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            curProduct: 'front',
+            extraProd: false
+        };
+    },
+    mounted: function mounted() {
+        var newState = {
+            name: 'specs',
+            sliderState: this.curProduct
+        };
+        this.$store.commit('changeSliderState', newState);
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {},
+    methods: {
+        switchProduct: function switchProduct(n) {
+            this.curProduct = n;
+
+            var newState = {
+                name: 'specs',
+                sliderState: n
+            };
+            this.$store.commit('changeSliderState', newState);
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chapter"},[_c('div',{staticClass:"productShow"},[('front' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/front.png"}}):_vm._e(),_vm._v(" "),('front' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_rubber productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Gummiband")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Rubberband")]):_vm._e()]):_vm._e(),_vm._v(" "),('front' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_stylus productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Druckempfindlicher Stylus")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Pressure-Sensitive Stylus")]):_vm._e()]):_vm._e(),_vm._v(" "),('front' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_cover productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Austauschbares Cover")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Changeable Cover")]):_vm._e()]):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/inside.png"}}):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_frontcam productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Kamera")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Camera")]):_vm._e()]):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_touch productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("LCD Multi-Touch Display")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("LCD Multi-Touch Display")]):_vm._e()]):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_mic productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Mikrofon")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Microphone")]):_vm._e()]):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_laut productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Lautsprecher")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Speakers")]):_vm._e()]):_vm._e(),_vm._v(" "),('inside' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_sd productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("2 SD-Kartenslots")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("2 SD card slots")]):_vm._e()]):_vm._e(),_vm._v(" "),('back' == _vm.curProduct)?_c('img',{attrs:{"src":"./src/img/back.png"}}):_vm._e(),_vm._v(" "),('back' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_fingerprint productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Fingerabdruck Sensor")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Fingerprint Sensor")]):_vm._e()]):_vm._e(),_vm._v(" "),('back' == _vm.curProduct)?_c('div',{staticClass:"tooltip pd_backcam productDetails"},[_c('div',{staticClass:"pd_detail"},[_vm._v("+")]),_vm._v(" "),(this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Kamera")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('span',{staticClass:"tooltiptext"},[_vm._v("Camera")]):_vm._e()]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"specControls"},[(this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'front' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('front')}}},[_vm._v("Vorderseite")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : 'inside' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('inside')}}},[_vm._v("Innen")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'back' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('back')}}},[_vm._v("Rückseite")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch firstswitch', { pd_active : 'front' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('front')}}},[_vm._v("Front")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch middleswitch', { pd_active : 'inside' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('inside')}}},[_vm._v("Inside")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{class:['pd_switch lastswitch', { pd_active : 'back' === _vm.curProduct }],on:{"click":function($event){_vm.switchProduct('back')}}},[_vm._v("Back")]):_vm._e()])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-6dfdcf2f"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6dfdcf2f", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-6dfdcf2f", __vue__options__)
+  }
+})()}
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-b248735a]{\n    width: 100%;\n}\n\n.tutvideo[data-v-b248735a] {\n    width: 34.4vw;\n    position: absolute;\n    margin-top: 0.26vw;\n}\n\n#startBtn[data-v-b248735a]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 45.8vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-b248735a]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 13px;\n}\n\n.triangleBg[data-v-b248735a]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-b248735a], .fade-leave-active[data-v-b248735a] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-b248735a], .fade-leave-to[data-v-b248735a] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
 ;(function(){
 'use strict';
 
@@ -265,22 +476,21 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"fade"}},[(_vm.showVideo)?_c('div',{staticClass:"tutvideo"},[_c('transition',{attrs:{"name":"fade"}},[(_vm.startBtn)?_c('div',{attrs:{"id":"startBtn"},on:{"click":function($event){_vm.startVideo()}}},[_c('div',{staticClass:"triangle"}),_vm._v(" "),_c('div',{staticClass:"triangleBg"})]):_vm._e()]),_vm._v(" "),_c('video',{attrs:{"id":"tutVideo","autoplay":"false"}},[_c('source',{attrs:{"src":'../../../src/vids/tut_'+ _vm.tut +'.mp4',"type":"video/mp4"}}),_vm._v("\n            Your browser does not support the video tag.\n        ")])],1):_vm._e()])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"fade"}},[(_vm.showVideo)?_c('div',{staticClass:"tutvideo"},[_c('transition',{attrs:{"name":"fade"}},[(_vm.startBtn)?_c('div',{attrs:{"id":"startBtn"},on:{"click":function($event){_vm.startVideo()}}},[_c('div',{staticClass:"triangle"}),_vm._v(" "),_c('div',{staticClass:"triangleBg"})]):_vm._e()]),_vm._v(" "),_c('video',{attrs:{"id":"tutVideo","autoplay":"false"}},[_c('source',{attrs:{"src":'./src/vids/tut_'+ _vm.tut +'.mp4',"type":"video/mp4"}}),_vm._v("\n            Your browser does not support the video tag.\n        ")])],1):_vm._e()])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-7887d584"
+__vue__options__._scopeId = "data-v-b248735a"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7887d584", __vue__options__)
+    hotAPI.createRecord("data-v-b248735a", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7887d584", __vue__options__)
+    hotAPI.rerender("data-v-b248735a", __vue__options__)
   }
 })()}
-},{"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],7:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Global Style */\n\nbody{\n    font-family: 'importedLato', Arial, sans-serif;\n    font-size: 16px;\n    line-height: 32px;\n    color: #333333;\n    background: #F3F2EE;\n\n    margin: 0;\n    padding: 0;\n}\n\nh1, h2, h3, h4, h5{\n    font-family: 'selimaregular', cursive;\n    color: #333333;\n    font-weight: normal;\n}\n\nh1{\n    font-size: 4vw;\n}\n\nh2{\n    font-size: 3vw;\n}\n\nimg{\n    width: 100%;\n}\n\na {\n    text-decoration: none;\n    color: #6EB5C9;\n    opacity: 1;\n}\n\na:hover{\n    opacity: 0.5;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.docu{\n    box-sizing: border-box;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    height: 100vh;\n    width: 100vw;\n}\n\n.arrow {\n    position: absolute;\n    z-index: 9000;\n    opacity: 0.5;\n    cursor: pointer;\n    transition: all 0.5s ease\n}\n\n.arrow:hover{\n    opacity: 1.0;\n}\n\n.arrow.left {\n    left: 0;\n    width: 10vw;\n    margin-left: 20px;\n}\n\n.arrow.right {\n    right: 0;\n    width: 10vw;\n    margin-right: 20px;\n}")
+},{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],11:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -303,6 +513,93 @@ var _pagination2 = _interopRequireDefault(_pagination);
 var _modal = require('./book/modal.vue');
 
 var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: true
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Gefühlswelt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                    Für schreibfreudige Menschen, die Klarheit im Kopf schaffen wollen, ist Gefühlswelt ein Lifestyle Produkt, welches ihre Gedanken und Gefühle unterbringt, Datensicherheit bietet, mit dem sie schnell und einfach anhand von Werkzeugen ihre Innenwelt individuell manifestieren können.\n                    "),_c('br'),_c('br'),_vm._v("\n                    Im Gegensatz zum analogen Journal, bietet Gefühlswelt die Möglichkeit durch verschiedene digitale und generative Eingabemethoden einen Ort an dem unendlich oft experementiert werden kann.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Gefühlswelt")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                    Gefühlswelt is a lifestyle product for people with a love for writing, who want to find some clarity of mind. It’s a place for their thoughts and feelings. \nIt’s a great tool to manifest your inner world quickly and easily.\n"),_c('br'),_c('br'),_vm._v("\nAs opposed to conventional journals, Gefühlswelt offers you a wide variety of digital input and generative tools. It’s a great space to experiment as often as you like without any qualms about making mistakes.\n                ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/Trailer_Placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('source',{attrs:{"src":"./src/vids/Trailer_de.mp4","type":"video/mp4"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('source',{attrs:{"src":"./src/vids/Trailer_en.mp4","type":"video/mp4"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3df662e0", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-3df662e0", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],12:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".klickzone {\n    height: 45.8vw;\n    cursor: zoom-in;\n    position: absolute;\n    width: 33vw;\n    margin-left: -0.6vw;\n    margin-top: -1vw;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
 
 var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
 
@@ -330,7 +627,8 @@ exports.default = {
         BookContent: _bookcontent2.default,
         Pagination: _pagination2.default,
         Modal: _modal2.default,
-        TutVideo: _tutorialVideo2.default
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
     },
     methods: {
         checkClick: function checkClick() {
@@ -345,7 +643,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('h1',[_vm._v("Intro")]),_vm._v(" "),_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")])]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"../../src/img/trailer_placeholder.png","alt":"Trailer"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"../../src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow right",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kostenanalyse")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Um Gefühlswelt auch unter realistischen Bedingungen auf dem Markt testen zu können, kalkulieren wir welche monetären Mittel für die Entstehung von Gefühlswelt gebraucht werden würden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Cost Analysis")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                A cost analysis has been made in order to calculate the costs of Gefühlswelt and test whether it would be a viable business idea.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/Chart_de.png","alt":"Chart"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/Chart.png","alt":"Chart"}}):_vm._e()])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"excel","iframelink":"./src/iFrame/projektcalc/index.html"},on:{"close":function($event){_vm.showModal = false}}}):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -353,13 +651,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4693f801", __vue__options__)
+    hotAPI.createRecord("data-v-1289d1e2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-4693f801", __vue__options__)
+    hotAPI.rerender("data-v-1289d1e2", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],8:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Global Style */\n\nbody{\n    font-family: 'importedLato', Arial, sans-serif;\n    font-size: 16px;\n    line-height: 32px;\n    color: #333333;\n    background: #F3F2EE;\n\n    margin: 0;\n    padding: 0;\n}\n\nh1, h2, h3, h4, h5{\n    font-family: 'selimaregular', cursive;\n    color: #333333;\n    font-weight: normal;\n}\n\nh1{\n    font-size: 4vw;\n}\n\nh2{\n    font-size: 3vw;\n}\n\nimg{\n    width: 100%;\n}\n\na {\n    text-decoration: none;\n    color: #6EB5C9;\n    opacity: 1;\n}\n\na:hover{\n    opacity: 0.5;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.docu{\n    box-sizing: border-box;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    height: 100vh;\n    width: 100vw;\n}\n\n.arrow {\n    position: absolute;\n    z-index: 9000;\n    opacity: 0.5;\n    cursor: pointer;\n    transition: all 0.5s ease\n}\n\n.arrow:hover{\n    opacity: 1.0;\n}\n\n.arrow.left {\n    left: 0;\n    width: 10vw;\n    margin-left: 20px;\n}\n\n.arrow.right {\n    right: 0;\n    width: 10vw;\n    margin-right: 20px;\n}")
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],13:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -382,6 +679,505 @@ var _pagination2 = _interopRequireDefault(_pagination);
 var _modal = require('./book/modal.vue');
 
 var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Das Markenprisma diente uns als Ansatz zur Beschreibung unserer Markenidentität, welche uns eine grobe Richtung für Kommunikation und Gestaltung gab.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Brand")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The brand Identity Prism serves as an overview for the values that our company and brand is going to be associated with. It’s a guideline how Gefühlswelt is going to market itself to its users.\n            ")]):_vm._e()]),_vm._v(" "),(this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_de.png","alt":"Brand Identity Prism"}})]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_en.png","alt":"Brand Identity Prism"}})]):_vm._e()]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('img',{attrs:{"src":"../../src/img/prism_de_full.png","alt":"Brand Identity Prism"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"../../src/img/prism_en_full.png","alt":"Brand Identity Prism"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-24da70d6", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-24da70d6", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],14:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Das Systemdiagramm dient zur Übersicht des Modells von Gefühlswelt.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Systemdiagramm EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The system diagram illustrates the model of Gefühlswelt.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/sys_de.png","alt":"Systemskizze"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/sys_en.png","alt":"Systemskizze"}}):_vm._e()])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/sys_de_full.png","alt":"Systemskizze"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/sys_en_full.png","alt":"Systemskizze"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('11')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-358f895a", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-358f895a", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],15:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("ERM")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Die ERM (Entity–Relationship Model) Skizze, dient zur Übersicht über die nötigen Entitäten und deren Beziehung für unsere zukünftige Datenbank von Gefühlswelt.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("ERM EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The ERM (Entity–Relationship Model) sketch serves as an overview of all needed entities and their relationships for the future database of Gefühlswelt.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/ERM.png","alt":"ERM"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/ERM_en.png","alt":"ERM"}}):_vm._e()])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/ERM_full.png","alt":"ERM"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/ERM_en_full.png","alt":"ERM"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4013b680", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-4013b680", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],16:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nDer Prototyp ist mit VueJS gebaut, einem Javascript framework das es uns ermöglichte schnell Ergebnisse zu erhalten. Darauf aufbauend nutzen wir die Vue-Plugins „vuex“ und „vue-router“.  \nFür die Handschrift- und Formenerkennung diente uns die MyScript API. Die Maskierungen der Werkzeuge und Gedankensphären wurden mit SVG-Masks erzeugt.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototype")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nThe prototype is build with VueJS, a JavaScript framework that yields quick results. The Vue plugins “vuex” and “vue-router” are also used. The MyScript API is used for the handwriting and shape recognition. The masking of different layers for tools and Gedankensphären was achieved through SVG masks.\n                ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/Aufbau.png","alt":"Systemskizze Prototyp"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/Aufbau_full.png","alt":"Systemskizze Prototyp"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('13')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('16')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-45bba8d4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-45bba8d4", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],17:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Prototyp Funktion EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/systemskizzeproto.png","alt":"Prototyp Funktionen"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/systemskizzeproto_full.png","alt":"Prototyp Funktionen"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('16')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4c3cdd71", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-4c3cdd71", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],18:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("a.btn[data-v-1ce6dfc3] {\n    display: block;\n    background: #75cab1;\n    border-radius: 360px;\n    color: #fff;\n    padding: 10px 30px 10px 30px;\n    width: fit-content;\n    margin-top: 23px;\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download Feinkonzept (pdf)")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Contact")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download concept - german (pdf)")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('img',{attrs:{"src":"./src/img/team.png","alt":"Team Gefühlswelt"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/team_full.png","alt":"Team Gefühlswelt"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-1ce6dfc3"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1ce6dfc3", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-1ce6dfc3", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],19:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
 
 var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
 
@@ -414,7 +1210,8 @@ exports.default = {
         Pagination: _pagination2.default,
         Modal: _modal2.default,
         TutVideo: _tutorialVideo2.default,
-        CoverSlider: _coverSlider2.default
+        CoverSlider: _coverSlider2.default,
+        LangSwitch: _langswitch2.default
     },
     methods: {
         checkClick: function checkClick() {
@@ -429,21 +1226,19 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('h1',[_vm._v("Cover")]),_vm._v(" "),_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")])]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('CoverSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow left",on:{"click":function($event){_vm.changePage('0')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow right",on:{"click":function($event){_vm.changePage('2')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Cover")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Die austauschbaren Covers helfen dem Nutzer dabei, eine Form der Erinnerung an seine persönliche Geschichte beizubehalten. Diese sollen immer wieder neu gestaltet werden können. Der Nutzer hat dabei die Möglichkeit diese selbst anzulegen und auszudrucken, einfach selbst eines zu basteln oder sich eines in unserem Cover Store zu kaufen.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Cover")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The exchangeable covers allow the user to create a personal history. He or she can design them whichever way they like. Be it by making a digital image and printing it, crafting it themselves or buying one through our online store.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('CoverSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('0')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('2')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
-  module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-76a9c6ac", __vue__options__)
+    hotAPI.createRecord("data-v-2f69f0fc", __vue__options__)
   } else {
-    hotAPI.reload("data-v-76a9c6ac", __vue__options__)
+    hotAPI.rerender("data-v-2f69f0fc", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/coverSlider.vue":5,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],9:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* Global Style */\n\nbody{\n    font-family: 'importedLato', Arial, sans-serif;\n    font-size: 16px;\n    line-height: 32px;\n    color: #333333;\n    background: #F3F2EE;\n\n    margin: 0;\n    padding: 0;\n}\n\nh1, h2, h3, h4, h5{\n    font-family: 'selimaregular', cursive;\n    color: #333333;\n    font-weight: normal;\n}\n\nh1{\n    font-size: 4vw;\n}\n\nh2{\n    font-size: 3vw;\n}\n\nimg{\n    width: 100%;\n}\n\na {\n    text-decoration: none;\n    color: #6EB5C9;\n    opacity: 1;\n}\n\na:hover{\n    opacity: 0.5;\n    -webkit-transition: all 1s;\n    transition: all 1s;\n}\n\n.docu{\n    box-sizing: border-box;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    height: 100vh;\n    width: 100vw;\n}\n\n.arrow {\n    position: absolute;\n    z-index: 9000;\n    opacity: 0.5;\n    cursor: pointer;\n    transition: all 0.5s ease\n}\n\n.arrow:hover{\n    opacity: 1.0;\n}\n\n.arrow.left {\n    left: 0;\n    width: 10vw;\n    margin-left: 20px;\n}\n\n.arrow.right {\n    right: 0;\n    width: 10vw;\n    margin-right: 20px;\n}")
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":8,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],20:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -466,6 +1261,102 @@ var _pagination2 = _interopRequireDefault(_pagination);
 var _modal = require('./book/modal.vue');
 
 var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+var _coverSlider = require('./interactiveComps/coverSlider.vue');
+
+var _coverSlider2 = _interopRequireDefault(_coverSlider);
+
+var _specsSlider = require('./interactiveComps/specsSlider.vue');
+
+var _specsSlider2 = _interopRequireDefault(_specsSlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        CoverSlider: _coverSlider2.default,
+        LangSwitch: _langswitch2.default,
+        SpecsSlider: _specsSlider2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.specs === 'front')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Technische Details: Vorderseite")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nFolgende Technologien werden in Gefühlswelt auf der Vorderseite eingesetzt:\n"),_c('br'),_c('br'),_vm._v("\nDie Vorderseite wird mittels eines Gummibands stabilisiert.\n\nDas Haptische Feedback des Produkts soll angenehm und sinnlich sein. Das Cover soll gestaltbar und austauschbar sein. Die Individualität des Nutzers soll sich dadurch an der Oberfläche von Gefühlswelt widerspiegeln.\n\nFür das berührungssensible Display auf der Innenseite gibt es noch einen druckempfindlichen Stylus.  \n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Technical details: Front")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nThe following technologies are used at the front side of Gefühlswelt:\n"),_c('br'),_c('br'),_vm._v("\nThe case cover is fastened with an elastic band.\n\nThe haptic feedback of the cover is an important component of Gefühlswelt. Which is why the cover is also changeable and free to be customised by the user. That way the individuality of the user is also reflected on the surface of Gefühlswelt.\n\nThe pressure-sensitive Stylus is supposed to be used on the touch-sensitive display.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.specs === 'inside')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Technische Details: Innenseite")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nFolgende Technologien werden im Inneren von Gefühlswelt eingesetzt:\n"),_c('br'),_c('br'),_vm._v("\nEine Kamera, ein Mikrofon und Lautsprecher. \n\nDer LCD Multi-Touch Display ermöglicht dem Nutzer auch mit seinem Finger mit Gefühlswelt zu interagieren.\n\nAlle Nutzerdaten sowie die Datenbank werden auf einer herausnehmbare SD-Karte verschlüsselt gespeichert. Gefühlswelt hat 2 SD-Kartenslots, damit der Nutzer jederzeit seinen Speicher auf eine größere SD-Karte transferieren kann.\n\nDa hier auf eine Internetverbindung verzichtet wird, um Datensicherheit zu gewährleisten, setzen wir Bluetooth ein.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Technical details: Inside")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nThe following technologies are on the inside of Gefühlswelt:\n"),_c('br'),_c('br'),_vm._v("\nA camera, mikrofon and speakers.\n\nThe LCD Multi-Touch Display enables the user to interact with Gefühlswelt via touch.\n\nThe database and all user data are encrypted and saved onto the removable SD cards. Gefühlswelt has 2 SD card slots so the user can transfer his or her data onto a bigger SD card at any time.\n\nWe have opted to use Bluetooth rather than an internet connection, because data security is very important for our product.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.specs === 'back')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Technische Details: Rückseite")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nFolgende Technologien befinden sich auf der Rückseite von Gefühlswelt:\n"),_c('br'),_c('br'),_vm._v("\nEinen Fingerabdrucksensor, um den Nutzer zu authentifizieren.\nEine weitere Kamera, um Bilder aufzunehmen oder QR-Codes zu scannen.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Technical details: Back")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nThe following technologies are used on the back side of Gefühlswelt:\n"),_c('br'),_c('br'),_vm._v("\nA fingerprint sensor is used in order to authenticate the user.\nAnother camera to take pictures with or scan QR codes.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('SpecsSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2c5d90c4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-2c5d90c4", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/coverSlider.vue":8,"./interactiveComps/specsSlider.vue":9,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],21:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
 
 var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
 
@@ -493,7 +1384,8 @@ exports.default = {
         BookContent: _bookcontent2.default,
         Pagination: _pagination2.default,
         Modal: _modal2.default,
-        TutVideo: _tutorialVideo2.default
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
     },
     methods: {
         checkClick: function checkClick() {
@@ -508,7 +1400,418 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('h1',[_vm._v("Product Demo")]),_vm._v(" "),_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")])]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"http://localhost:3000/src/iFrame/prototyp/"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"../../src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow left",on:{"click":function($event){_vm.changePage('1')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow right",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"../../src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Gedankensphären")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nJede Gedankensphäre repräsentiert ein eigenes Journal, das durch eine frei gezeichnete Form vom Nutzer bestimmt wird.\n"),_c('br'),_c('br'),_vm._v("\nEinzelne Einträge werden als Gedankensplitter benannt, diese werden auch vom Nutzer als eine Fläche gezeichnet.\nDie Anzahl an Gedankensplittern beeinflusst die Gestaltung der inneren Fläche der Gedankensphäre.\n"),_c('br'),_c('br'),_vm._v("\nEs kann eine unendliche Anzahl an Gedankensphären und Gedankensplittern angelegt werden. Damit entsteht mit der Zeit eine sehr individuelle Formlandschaft, die den Journalfortschritt des Nutzers wiedergibt.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Gedankensphären")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nEvery Gedankensphäre represents a journal. The user decides what he or she wants that shape to look like by drawing it.\n"),_c('br'),_c('br'),_vm._v("\nSingle entries in the journal are called Gedankensplitter. The user can draw these within the Gedankensphäre. The more entries are created, the fuller the Gedankensphäre gets.\n"),_c('br'),_c('br'),_vm._v("\nYou can create an unlimited amount of Gedankensphären and Gedankensplitter. And with time, the user will have created a very personal landscape that marks the progress of his or her journal journey.\n                ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'01'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('2')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-77878342", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-77878342", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],22:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter Demo")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Productsplitter EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'test'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/1"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-77a02ade", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-77a02ade", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],23:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Werkzeuge")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Tools")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'02'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/2"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6a')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7031b379", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-7031b379", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],24:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Hilfe")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n            Wenn der Nutzer nicht weiter weiß, kann er oder sie das Wort Hilfe schreiben. Dadurch soll Gefühlswelt eine anleitende Animation im Hintergrund abspielen. Dies geschieht durch einen Kreis, welcher die Stiftspitze simuliert und so dem Nutzer die Bewegungsabläufe bzw. Muster vorführt, die er dann nachmachen kann.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Help")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            If the user needs help, he or she can write “help”. This prompts Gefühlswelt to play a tutorial animation in the background. We’ve chosen to animate a dot that simulates the pen, in order to encourage the user to imitate the animated sequence.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[(this.$store.state.lang)?_c('TutVideo',{attrs:{"tut":'04_de'}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('TutVideo',{attrs:{"tut":'04_en'}}):_vm._e(),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/3"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('6a')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f0c3b27e", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-f0c3b27e", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],25:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: true,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n               Wenn nötig, bietet Gefühlswelt dem Nutzer Inspiration an. Der Nutzer kann ‘Inspire’ in eine frei gezeichnete Form schreiben und erhält Vorschläge von Gefühlswelt. Dadurch kann der Nutzer von Gefühlswelt geleitet, als auch inspiriert werden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt also provides inspiration, if needed. By writing the word “inspire”, the user triggers Gefühlswelt to assist with suggestions. That way the user will never run out of ideas.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'03'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/4"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6b')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-537dc75e", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-537dc75e", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],26:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("h1.fonttest {\n    position: absolute;\n    width: 27vw;\n    line-height: 48px;\n    padding: 20px;\n    box-sizing: border-box;\n    color: #fff;\n    margin-top: 1vw;\n    overflow-y: scroll;\n    overflow-x: auto;\n    word-wrap: break-word;\n    word-break: break-word;\n    height: 200px;\n    font-size: 36px;\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n}\n\n@media only screen and (orientation: portrait) {\n    h1.fonttest {\n        position: absolute;\n        width: 42vw;\n        line-height: 48px;\n        padding: 20px;\n        box-sizing: border-box;\n        color: #fff;\n        margin-top: 1vw;\n        height: 200px;\n        font-size: 36px;\n    }\n}")
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Typografie")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Die verwendeten Schriften sind "),_c('a',{attrs:{"href":"https://fonts.google.com/specimen/Lato?selection.family=Lato","target":"_blank"}},[_vm._v("Lato")]),_vm._v(" und "),_c('a',{attrs:{"href":"https://www.fontsquirrel.com/fonts/selima","target":"_blank"}},[_vm._v("Selima")]),_vm._v(".\n                "),_c('br'),_vm._v(" "),_c('br'),_vm._v("\n                Der Text ist linksbündig ausgerichetet. Die Zeilenlänge ist auf den Bildschirm optimiert, mit nicht mehr als 40 Zeichen pro Zeile. Die Linienhöhe ist 32 Pixel, Fontgröße ist 16 pt mit einer Opacity von 45%.\n                Die Headlines betragen 50 Pixel und haben eine Linienhöhe von 50 Pixel.\n                "),_c('br'),_vm._v(" "),_c('br'),_vm._v("\n                Lato wird für den Fließtext verwendet, da das dynamische Formprinzip der Schrift, linear und ohne Serifen, für einen leichten Lesefluss sorgt. Die offene Gestaltung ermöglicht auch eine gute Lesbarkeit bei kleinerer Schriftgröße.\n                "),_c('br'),_vm._v("\n                Selima wird für unser Produktlogo, als auch Überschriften eingesetzt. Die dekorative Schreibschrift mit Pinsel-Duktus spiegelt den DIY-Vibe unserer Marke wieder. Außerdem spiegelt es den Charakter unseres Interaktionsdesigns wieder, da sich unser Produkt stark auf die Handschrift im Interface fokussiert.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Typography")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                This documentation is written in "),_c('a',{attrs:{"href":"https://fonts.google.com/specimen/Lato?selection.family=Lato","target":"_blank"}},[_vm._v("Lato")]),_vm._v(" and "),_c('a',{attrs:{"href":"https://www.fontsquirrel.com/fonts/selima","target":"_blank"}},[_vm._v("Selima")]),_vm._v(".\n                "),_c('br'),_vm._v(" "),_c('br'),_vm._v("\n                The text is aligned along the left margin. The line length is optimised for reading at a monitor screen, which is why there’s no more than 40 characters per line. The line height for the running text is 32 pixels, the font size is 16 pt and it has an an opacity of 45%.\n                The headlines are 50 pixels big and have a line height of 50 pixels as well.\n                "),_c('br'),_vm._v(" "),_c('br'),_vm._v("\n                Lato has been chosen for the running text because of its dynamic formal principle, linear and sanserif, which ensures an easy flow of reading. Furthermore, the open design of the letters enables good legibility even with a smaller font size.\n                "),_c('br'),_vm._v("\n                Selima is used as the logo for our product (Gefühlswelt), as well as any headline. The decorative writing style fits the DIY vibe of the product and transports our brand values. Additionally, it resonates with our interaction design within Gefühlswelt, which heavily focuses on handwriting within the user interface.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"pointer"},attrs:{"slot":"right"},slot:"right"},[(this.$store.state.lang)?_c('h1',{staticClass:"fonttest",attrs:{"contenteditable":"true"}},[_vm._v("Bearbeite mich und spiele mit der Schrift.")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',{staticClass:"fonttest",attrs:{"contenteditable":"true"}},[_vm._v("Change this text and play with the font.")]):_vm._e(),_vm._v(" "),_c('img',{attrs:{"src":"./src/img/fontsbg.png","alt":"Fonts"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('6b')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -516,31 +1819,269 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18e92a12", __vue__options__)
+    hotAPI.createRecord("data-v-39453230", __vue__options__)
   } else {
-    hotAPI.reload("data-v-18e92a12", __vue__options__)
+    hotAPI.rerender("data-v-39453230", __vue__options__)
   }
 })()}
-},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/modal.vue":3,"./book/pagination.vue":4,"./interactiveComps/tutorialVideo.vue":6,"vue":13,"vue-hot-reload-api":12,"vueify/lib/insert-css":14}],10:[function(require,module,exports){
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],27:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+var _UserstorySlider = require('./interactiveComps/UserstorySlider.vue');
+
+var _UserstorySlider2 = _interopRequireDefault(_UserstorySlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default,
+        UserstorySlider: _UserstorySlider2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.userstory === '7')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Userstory: Melanie")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n               Melanie ist 20 Jahre alt und wohnt bei ihren Eltern. Jeden Morgen, um 7 Uhr, steht sie auf, um sich auf ihren Tag in der Uni vorzubereiten.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Userstory: Melanie")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            Melanie is 20 years old and lives with her parents. She gets up every morning at 7 am to get ready for her day at uni.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '10')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Weg zur Universität")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n            Sie fährt 20 Minuten mit dem Bus zur Uni und schaut gerne aus dem Fenster raus, während sie tagträumt.    \n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Way to university")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            She commutes 20 minutes by bus and always looks out the window while daydreaming.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '14')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Universität")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n            Die Vorlesungen interessieren sie, sie studiert gerne Japanologie. Eines Tages erhofft sie sich Schriftstellerin zu werden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("University")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            She’s happy to be studying Japanology and loves attending the lectures. She hopes to become a famous novelist one day.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '18')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Zwischenfall")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Im Vorbeigehen bemerkt sie wie abfällig ein anderes Mädchen auf ihre Schuhe schaut. Sie kehrt ihre Gedanken nach innen und fragt sich, ob sie zu altmodisch ist.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Incident")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            While walking down the halls, she notices a snide look at her shoes from another student. She gets a bit self-conscious and starts wondering whether her wardrobe is too old-fashioned.  \n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '20')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Zuhause")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Am Nachmittag schaut sie sich noch gerne eine Folge ihrer Lieblingsserie an.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("At home")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n            After the uni lectures, she gets home and watches an episode of her favourite TV show.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.userstory === '23')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Schlafenszeit")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Kurz vor dem Schlafengehen nimmt sie sich die Zeit, um ihre Gefühle zu verarbeiten. Sie schreibt über ihren Tag, ihren Kummer und ihre Ziele, die sich nicht aus den Augen verlieren möchte.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Bedtime")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Before going to bed, she takes time to unwind by writing in a journal. She writes about her feelings during the day, her heartaches and goals that she doesn’t want to let out of sight.\n            ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('UserstorySlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"./src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('7')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('9')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0c140dd4", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-0c140dd4", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/UserstorySlider.vue":7,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],28:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _bookbg = require('./book/bookbg.vue');
+
+var _bookbg2 = _interopRequireDefault(_bookbg);
+
+var _bookcontent = require('./book/bookcontent.vue');
+
+var _bookcontent2 = _interopRequireDefault(_bookcontent);
+
+var _pagination = require('./book/pagination.vue');
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
+var _modal = require('./book/modal.vue');
+
+var _modal2 = _interopRequireDefault(_modal);
+
+var _langswitch = require('./book/langswitch.vue');
+
+var _langswitch2 = _interopRequireDefault(_langswitch);
+
+var _tutorialVideo = require('./interactiveComps/tutorialVideo.vue');
+
+var _tutorialVideo2 = _interopRequireDefault(_tutorialVideo);
+
+var _PersonaSlider = require('./interactiveComps/PersonaSlider.vue');
+
+var _PersonaSlider2 = _interopRequireDefault(_PersonaSlider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+    props: [],
+    data: function data() {
+        return {
+            bookBG: false,
+            showModal: false
+        };
+    },
+    mounted: function mounted() {
+        console.log('Docu');
+
+        localStorage.clear();
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {
+        BookBG: _bookbg2.default,
+        BookContent: _bookcontent2.default,
+        Pagination: _pagination2.default,
+        Modal: _modal2.default,
+        TutVideo: _tutorialVideo2.default,
+        LangSwitch: _langswitch2.default,
+        PersonaSlider: _PersonaSlider2.default
+    },
+    methods: {
+        checkClick: function checkClick() {
+            console.log('click');
+        },
+        changePage: function changePage(id) {
+            this.$router.push({ name: id });
+        }
+    }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[(this.$store.state.persona === 'sad')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("An schlechten Tagen")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\nFindet sie ihre Handschrift hässlich und hat Selbstzweifel.\nSie findet auch keine Inspiration und fängt erst gar nicht an zu schreiben. Sie ist melancholisch und fühlt sich ihren Gefühlen ausgeliefert. Es fällt ihr schwer, ihre Einträge zu gestalten.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("On bad days")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nShe can’t stand her own handwriting and suffers from a lot of self-doubt. She feels like she doesn’t have any inspiration, that her day was dull, so she doesn’t write anything at all. She’s full of melancholy and doesn’t know how to cope with her feelings. She finds it hard to care about making beautiful entries.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.persona === 'normal')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Persona Normal")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Persona Normal EN")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                    Englisch Lorem ipsum dolor sit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),(this.$store.state.persona === 'happy')?_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("An guten Tagen")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                    Nimmt sich Melanie Zeit für sich selbst.\n                    Sie wirft gerne einen Rückblick auf ihre Vergangenheit, um zu wie sie sich als Mensch entwickelt hat. Sie manifestiert ihre Innenwelt und zeichnet in ihre Einträge. Sie nimmt sich die Zeit, um neue Blätter für kommende Einträge liebevoll vorzubereiten.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("On good days")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\nMelanie takes time for herself. She takes a look at old journal entries to reminisce about her past and see how much she’s grown as a person. She manifests her inner world and draws a lot in her entries. She takes the time to carefully prepare the next pages in which she’ll be writing.\n                ")]):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('PersonaSlider')],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"video"},on:{"close":function($event){_vm.showModal = false}}},[_c('source',{attrs:{"src":"./src/vids/trailer_test.mp4","type":"video/mp4"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('8')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-bffa718e", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-bffa718e", __vue__options__)
+  }
+})()}
+},{"./book/bookbg.vue":1,"./book/bookcontent.vue":2,"./book/langswitch.vue":3,"./book/modal.vue":4,"./book/pagination.vue":5,"./interactiveComps/PersonaSlider.vue":6,"./interactiveComps/tutorialVideo.vue":10,"vue":32,"vue-hot-reload-api":31}],29:[function(require,module,exports){
 'use strict';
 
 var _page_0_intro = require('./components/page_0_intro.vue');
 
 var _page_0_intro2 = _interopRequireDefault(_page_0_intro);
 
-var _page_1_test = require('./components/page_1_test.vue');
+var _page_1_Cover = require('./components/page_1_Cover.vue');
 
-var _page_1_test2 = _interopRequireDefault(_page_1_test);
+var _page_1_Cover2 = _interopRequireDefault(_page_1_Cover);
 
-var _page_2_test = require('./components/page_2_test2.vue');
+var _page_2_Specs = require('./components/page_2_Specs.vue');
 
-var _page_2_test2 = _interopRequireDefault(_page_2_test);
+var _page_2_Specs2 = _interopRequireDefault(_page_2_Specs);
+
+var _page_3_ProductSphaeren = require('./components/page_3_ProductSphaeren.vue');
+
+var _page_3_ProductSphaeren2 = _interopRequireDefault(_page_3_ProductSphaeren);
+
+var _page_4_ProductSplitter = require('./components/page_4_ProductSplitter.vue');
+
+var _page_4_ProductSplitter2 = _interopRequireDefault(_page_4_ProductSplitter);
+
+var _page_5_ProductWerkzeuge = require('./components/page_5_ProductWerkzeuge.vue');
+
+var _page_5_ProductWerkzeuge2 = _interopRequireDefault(_page_5_ProductWerkzeuge);
+
+var _page_6_ProductHilfe = require('./components/page_6_ProductHilfe.vue');
+
+var _page_6_ProductHilfe2 = _interopRequireDefault(_page_6_ProductHilfe);
+
+var _page_6_ProductInspire = require('./components/page_6_ProductInspire.vue');
+
+var _page_6_ProductInspire2 = _interopRequireDefault(_page_6_ProductInspire);
+
+var _page_7_Styleguide = require('./components/page_7_Styleguide.vue');
+
+var _page_7_Styleguide2 = _interopRequireDefault(_page_7_Styleguide);
+
+var _page_8_Userstory = require('./components/page_8_Userstory.vue');
+
+var _page_8_Userstory2 = _interopRequireDefault(_page_8_Userstory);
+
+var _page_9_Persona = require('./components/page_9_Persona.vue');
+
+var _page_9_Persona2 = _interopRequireDefault(_page_9_Persona);
+
+var _page_10_Kostenanalyse = require('./components/page_10_Kostenanalyse.vue');
+
+var _page_10_Kostenanalyse2 = _interopRequireDefault(_page_10_Kostenanalyse);
+
+var _page_11_Marke = require('./components/page_11_Marke.vue');
+
+var _page_11_Marke2 = _interopRequireDefault(_page_11_Marke);
+
+var _page_12_Systemdiagramm = require('./components/page_12_Systemdiagramm.vue');
+
+var _page_12_Systemdiagramm2 = _interopRequireDefault(_page_12_Systemdiagramm);
+
+var _page_13_ERM = require('./components/page_13_ERM.vue');
+
+var _page_13_ERM2 = _interopRequireDefault(_page_13_ERM);
+
+var _page_14_PrototypAufbau = require('./components/page_14_PrototypAufbau.vue');
+
+var _page_14_PrototypAufbau2 = _interopRequireDefault(_page_14_PrototypAufbau);
+
+var _page_15_PrototypFunktion = require('./components/page_15_PrototypFunktion.vue');
+
+var _page_15_PrototypFunktion2 = _interopRequireDefault(_page_15_PrototypFunktion);
+
+var _page_16_Kontakt = require('./components/page_16_Kontakt.vue');
+
+var _page_16_Kontakt2 = _interopRequireDefault(_page_16_Kontakt);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // PATHS
-var routes = [{ path: '/', name: '0', component: _page_0_intro2.default, title: 'intro', color: 'turkis' }, { path: '/1', name: '1', component: _page_1_test2.default, title: 'second', color: 'turkis' }, { path: '/2', name: '2', component: _page_2_test2.default, title: 'third', color: 'red' }]; // Import Werkzeuge.
-
+// Import Werkzeuge.
+var routes = [{ path: '/', name: '0', component: _page_0_intro2.default, title: 'intro', color: 'turkis' }, { path: '/1', name: '1', component: _page_1_Cover2.default, title: 'Covers', color: 'turkis' }, { path: '/2', name: '2', component: _page_2_Specs2.default, title: 'Specs', color: 'turkis' }, { path: '/3', name: '3', component: _page_3_ProductSphaeren2.default, title: 'Sphären', color: 'turkis' },
+// {path: '/4', name:'4', component: page_4_ProductSplitter, title:'Splitter', color: 'turkis'},
+{ path: '/5', name: '5', component: _page_5_ProductWerkzeuge2.default, title: 'Tools', color: 'turkis' }, { path: '/6a', name: '6a', component: _page_6_ProductInspire2.default, title: 'Inspire', color: 'turkis' }, { path: '/6b', name: '6b', component: _page_6_ProductHilfe2.default, title: 'Hilfe', color: 'turkis' }, { path: '/7', name: '7', component: _page_7_Styleguide2.default, title: 'Styleguide', color: 'rose' }, { path: '/8', name: '8', component: _page_8_Userstory2.default, title: 'Userstory', color: 'rose' }, { path: '/9', name: '9', component: _page_9_Persona2.default, title: 'Persona', color: 'rose' }, { path: '/10', name: '10', component: _page_10_Kostenanalyse2.default, title: 'Kostenanalyse', color: 'orange' }, { path: '/11', name: '11', component: _page_11_Marke2.default, title: 'Marke', color: 'orange' }, { path: '/12', name: '12', component: _page_12_Systemdiagramm2.default, title: 'Systemdiagramm', color: 'red' }, { path: '/13', name: '13', component: _page_13_ERM2.default, title: 'ERM', color: 'red' }, { path: '/14', name: '14', component: _page_14_PrototypAufbau2.default, title: 'Prototyp Aufbau', color: 'red' },
+// {path: '/15', name:'15', component: page_15_PrototypFunktion, title:'Prototyp Funktion', color: 'red'},
+{ path: '/16', name: '16', component: _page_16_Kontakt2.default, title: 'Kontakt', color: 'turkis' }];
 
 var router = new VueRouter({
     scrollBehavior: function scrollBehavior(to, from, savedPosition) {
@@ -558,11 +2099,25 @@ Vue.use(Vuex);
 
 var store = new Vuex.Store({
     state: {
-        name: 'Interactive Documentation'
+        name: 'Interactive Documentation',
+        lang: true, // true = de
+        persona: 'normal',
+        userstory: '7',
+        specs: 'front'
+
     },
     mutations: {
-        changeName: function changeName(state, newName) {
-            state.name = newName;
+        changeLanguage: function changeLanguage(state, newName) {
+            state.lang = !state.lang;
+        },
+        changeSliderState: function changeSliderState(state, newState) {
+            if (newState.name === 'persona') {
+                state.persona = newState.sliderState;
+            } else if (newState.name === 'userstory') {
+                state.userstory = newState.sliderState;
+            } else if (newState.name === 'specs') {
+                state.specs = newState.sliderState;
+            }
         }
     }
 });
@@ -573,7 +2128,30 @@ var vm = new Vue({
     store: store
 }).$mount('#app');
 
-},{"./components/page_0_intro.vue":7,"./components/page_1_test.vue":8,"./components/page_2_test2.vue":9}],11:[function(require,module,exports){
+// DEBUGGIN'
+// window.onresize = function(){
+//     function gcd (a, b) {
+//         return (b == 0) ? a : gcd (b, a%b);
+//     }
+
+//     var w = window.innerHeight;
+//     var h = window.innerWidth;
+//     var r = gcd (w, h);
+
+//     console.log('Window Ratio Data', [{
+//         dimensions: w + ' x ' + h,
+//         GCD: r,
+//         Aspect: w/r + ":" +  h/r
+//     }])
+//     console.log('Kennzahl1', w/h);
+//     // WENN KENNZAHL 2 größer als 2 dann Passt das Buch nicht mehr hinein
+//     console.log('Kennzahl2', h/w);
+//     console.log('Kennzahl3', w-h);
+//     console.log('Kennzahl4', h-w);
+
+// };
+
+},{"./components/page_0_intro.vue":11,"./components/page_10_Kostenanalyse.vue":12,"./components/page_11_Marke.vue":13,"./components/page_12_Systemdiagramm.vue":14,"./components/page_13_ERM.vue":15,"./components/page_14_PrototypAufbau.vue":16,"./components/page_15_PrototypFunktion.vue":17,"./components/page_16_Kontakt.vue":18,"./components/page_1_Cover.vue":19,"./components/page_2_Specs.vue":20,"./components/page_3_ProductSphaeren.vue":21,"./components/page_4_ProductSplitter.vue":22,"./components/page_5_ProductWerkzeuge.vue":23,"./components/page_6_ProductHilfe.vue":24,"./components/page_6_ProductInspire.vue":25,"./components/page_7_Styleguide.vue":26,"./components/page_8_Userstory.vue":27,"./components/page_9_Persona.vue":28}],30:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -759,7 +2337,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],12:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -989,7 +2567,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],13:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.5.13
@@ -8916,7 +10494,7 @@ Vue$3.nextTick(function () {
 module.exports = Vue$3;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":11}],14:[function(require,module,exports){
+},{"_process":30}],33:[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -8941,4 +10519,4 @@ exports.insert = function (css) {
   }
 }
 
-},{}]},{},[10]);
+},{}]},{},[29]);

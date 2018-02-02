@@ -1,6 +1,6 @@
 <template>
 <div id="bookbg">
-  <img src="../../src/img/Book.png">
+  <img src="./src/img/Book.png">
 </div>
 </template>
 

@@ -23,7 +23,7 @@
             <div class="iFrameSlot" slot="right">
                 <TutVideo :tut="'02'"></TutVideo>
 
-                <iframe src="http://localhost:3000/src/iFrame/prototyp/#/entry/2">
+                <iframe src="./src/iFrame/prototyp/index.html#/entry/2">
                 </iframe>
                 
             </div>           
@@ -32,16 +32,16 @@
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img src="../../src/img/mel.png" alt="textImage">
+            <img src="./src/img/mel.png" alt="textImage">
             <!-- <source src="../../src/vids/trailer_test.mp4" type="video/mp4"> -->
         </Modal>
 
         <div class="arrow aleft" @click="changePage('3')">
-            <img src="../../src/img/ArrowLeft.png" alt="vorherige Seite">
+            <img src="./src/img/ArrowLeft.png" alt="vorherige Seite">
         </div>
 
         <div class="arrow aright" @click="changePage('6a')">
-            <img src="../../src/img/ArrowRight.png" alt="nächste Seite">
+            <img src="./src/img/ArrowRight.png" alt="nächste Seite">
         </div>
 
     </div>
