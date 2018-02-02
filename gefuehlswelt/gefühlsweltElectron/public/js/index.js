@@ -529,6 +529,7 @@ exports.default = {
             return str;
         },
         generateTranslate: function generateTranslate(w, h) {
+            console.log('Generate Translate', [w, h]);
             var str = "translate(" + -1 * w + "," + -1 * h + ")";
             return str;
         },
@@ -598,6 +599,13 @@ exports.default = {
     },
     mounted: function mounted() {
         var _this = this;
+
+        var ELECTRON = false;
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            ELECTRON = true;
+        }
 
         window.onerror = function (e) {
             console.log(e);
@@ -675,6 +683,11 @@ exports.default = {
                     SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
                     var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
+
+                    if (ELECTRON) {
+                        posInfo.x = posInfo.left;
+                        posInfo.y = posInfo.top;
+                    }
 
                     _this.SVGpath = SVGPath;
                     _this.SVGheight = posInfo.height;
@@ -875,6 +888,13 @@ exports.default = {
     mounted: function mounted() {
         var _this = this;
 
+        var ELECTRON = false;
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            ELECTRON = true;
+        }
+
         var PageID = 0;
 
         localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
@@ -947,6 +967,10 @@ exports.default = {
 
                     var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
+                    if (ELECTRON) {
+                        posInfo.x = posInfo.left;
+                        posInfo.y = posInfo.top;
+                    }
                     console.log('PosInfo', posInfo);
                     console.log('SVG Path', SVGPath);
 
@@ -2118,7 +2142,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(../src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(./src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-3d939927"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -2161,7 +2185,7 @@ exports.default = {
 
             var brush;
             p5.preload = function () {
-                brush = p5.loadImage('../src/png/brush2.png');
+                brush = p5.loadImage('./src/png/brush2.png');
             };
 
             p5.setup = function () {

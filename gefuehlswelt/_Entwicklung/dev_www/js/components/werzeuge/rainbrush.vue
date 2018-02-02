@@ -39,7 +39,7 @@
 
                 var brush;
                 p5.preload = () => {
-                    brush = p5.loadImage('../src/png/brush2.png');
+                    brush = p5.loadImage('./src/png/brush2.png');
                 }
 
                 p5.setup = () => {

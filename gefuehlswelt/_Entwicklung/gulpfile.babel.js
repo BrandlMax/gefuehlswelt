@@ -20,7 +20,7 @@ gulp.task("default", () =>{
 // TASKS
 
 gulp.task("clean", () => {
-    return gulp.src('../gefuehlsweltCordova/www')
+    return gulp.src('../gefühlsweltElectron/public')
     .pipe(clean({force: true}));
 })
 
@@ -28,7 +28,7 @@ gulp.task("clean", () => {
 gulp.task('browser-sync',['index','javascript', 'libs', 'css' ,'src'], function() {
     browserSync.init({
         server: {
-            baseDir: "../gefuehlsweltCordova/www"
+            baseDir: "../gefühlsweltElectron/public"
         }
     });
 });
@@ -45,28 +45,28 @@ gulp.task("javascript", () =>{
     .transform("babelify")
     .bundle()
     .pipe(source("index.js"))
-    .pipe(gulp.dest("../gefuehlsweltCordova/www/js"));
+    .pipe(gulp.dest("../gefühlsweltElectron/public/js"));
 })
 
 gulp.task("css", () =>{
     return gulp.src('dev_www/css/*.css')
-    .pipe(gulp.dest('../gefuehlsweltCordova/www/css'));
+    .pipe(gulp.dest('../gefühlsweltElectron/public/css'));
 })
 
 gulp.task("libs", () =>{
     return gulp.src('dev_www/js/libs/**')
-    .pipe(gulp.dest('../gefuehlsweltCordova/www/js/libs'));
+    .pipe(gulp.dest('../gefühlsweltElectron/public/js/libs'));
 })
 
 
 gulp.task("src", () =>{
     return gulp.src('dev_www/src/**')
-    .pipe(gulp.dest('../gefuehlsweltCordova/www/src'));
+    .pipe(gulp.dest('../gefühlsweltElectron/public/src'));
 })
 
 gulp.task("index", () =>{
     return gulp.src('dev_www/index.html')
-    .pipe(gulp.dest('../gefuehlsweltCordova/www/'));
+    .pipe(gulp.dest('../gefühlsweltElectron/public/'));
 })
 
 

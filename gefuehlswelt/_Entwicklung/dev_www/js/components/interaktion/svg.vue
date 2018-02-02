@@ -71,6 +71,7 @@
                 return str
             },
             generateTranslate: function(w, h) {
+                console.log('Generate Translate', [w, h])
                 var str = "translate(" + (-1 * w) + "," + (-1 * h) + ")";
                 return str
             },

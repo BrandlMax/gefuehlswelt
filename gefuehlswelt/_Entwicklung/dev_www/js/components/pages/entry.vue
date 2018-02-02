@@ -52,6 +52,14 @@
         },
         mounted() {
 
+            // ELECTRON FIX
+            var ELECTRON = false;
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.indexOf(' electron/') > -1) {
+                console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+                ELECTRON = true;
+            }
+
             window.onerror = function(e) {
                 console.log(e);
                 if(e.detail.message === "Unexpected error"){
@@ -145,6 +153,10 @@
                         // Positions Info
                         var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
+                        if(ELECTRON){
+                            posInfo.x = posInfo.left;
+                            posInfo.y = posInfo.top;
+                        }
                         // console.log('PosInfo', posInfo);
                         // console.log('SVG Path', SVGPath);
                         // editorElement.editor.clear();

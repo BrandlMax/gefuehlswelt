@@ -1,5 +1,5 @@
 <template>
-        <div :width="toolData.width" :height="toolData.height" :style="{ clipPath: 'url(#path_' + toolData.id +')', height: toolData.height+'px', width: toolData.width+'px', backgroundImage:'url(../src/png/patterns/' + patterns[randomPattern] +')'}" :id="'sketch_'+toolData.id" class="sketch pattern"></div>
+        <div :width="toolData.width" :height="toolData.height" :style="{ clipPath: 'url(#path_' + toolData.id +')', height: toolData.height+'px', width: toolData.width+'px', backgroundImage:'url(./src/png/patterns/' + patterns[randomPattern] +')'}" :id="'sketch_'+toolData.id" class="sketch pattern"></div>
 </template>
 
 <script>
