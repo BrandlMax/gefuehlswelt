@@ -73,6 +73,10 @@ exports.default = {
                     return true;
                 case 'V':
                     return true;
+                case 'r':
+                    return true;
+                case 'n':
+                    return true;
                 default:
                     return false;
             }
@@ -256,7 +260,7 @@ exports.default = {
                 };
                 _this.$store.commit('updateLayerTool', newLayerData);
                 _this.currentTool();
-            } else if (event.detail.exports['text/plain'].toLowerCase().includes("x")) {
+            } else if (event.detail.exports['text/plain'].toLowerCase().includes("xx")) {
                 editorElement.editor.clear();
             }
 
@@ -497,7 +501,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-93c2fc9a", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-93c2fc9a", __vue__options__)
+    hotAPI.reload("data-v-93c2fc9a", __vue__options__)
   }
 })()}
 },{"../werzeuge/Sketch.vue":7,"../werzeuge/beispiel.vue":8,"../werzeuge/beispiel2.vue":9,"../werzeuge/circles.vue":10,"../werzeuge/colors.vue":11,"../werzeuge/fade.vue":12,"../werzeuge/inspire.vue":14,"../werzeuge/pattern.vue":15,"../werzeuge/rainbrush.vue":16,"../werzeuge/rose.vue":17,"../werzeuge/spin.vue":18,"../werzeuge/texttool.vue":19,"../werzeuge/uglypen.vue":20,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],4:[function(require,module,exports){
@@ -1119,7 +1123,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a7549234", __vue__options__)
   } else {
-    hotAPI.reload("data-v-a7549234", __vue__options__)
+    hotAPI.rerender("data-v-a7549234", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],7:[function(require,module,exports){

@@ -96,6 +96,10 @@
                         return true;
                     case 'V':
                         return true;
+                    case 'r':
+                        return true;
+                    case 'n':
+                        return true;
                     default:
                         return false;
                 }               

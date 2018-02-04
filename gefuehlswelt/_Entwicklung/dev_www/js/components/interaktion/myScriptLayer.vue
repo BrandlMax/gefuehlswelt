@@ -292,7 +292,7 @@
                     }
                     this.$store.commit('updateLayerTool', newLayerData);
                     this.currentTool();
-                }else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                }else if(event.detail.exports['text/plain'].toLowerCase().includes("xx")){
                     editorElement.editor.clear();
                 }
 
