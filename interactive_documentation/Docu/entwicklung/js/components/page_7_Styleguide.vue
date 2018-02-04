@@ -122,6 +122,7 @@ h1.fonttest {
     margin-top: 1vw;
     overflow-y: scroll;
     overflow-x: auto;
+    overflow: -moz-scrollbars-none;
     word-wrap: break-word;
     word-break: break-word;
     height: 200px;

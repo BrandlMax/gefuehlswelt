@@ -52,8 +52,8 @@ const store = new Vuex.Store({
             },
             {
                 name: 'hi@brandl-maximilian.de',
-                applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-                hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
+                applicationKey: 'accc721b-c36a-4e67-95ef-4321e8801b85',
+                hmacKey: '97576da5-bb78-48d4-9c26-b494b272a951'
             },
             {
                 name: 'Other',

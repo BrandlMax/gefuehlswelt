@@ -179,11 +179,11 @@ export default {
 
 .specControls {
     position: absolute;
-    background: #e0e0e000;
+    background: #f3f2ee;
     display: flex;
     border-radius: 310px;
     border: 3px solid #66bbb1;
-    margin-top: 23vw;
+    margin-top: 22vw;
     color: #66bbb1;
 }
 

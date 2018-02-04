@@ -1119,7 +1119,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a7549234", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-a7549234", __vue__options__)
+    hotAPI.reload("data-v-a7549234", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],7:[function(require,module,exports){
@@ -2011,7 +2011,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-67cbaeba", __vue__options__)
   } else {
-    hotAPI.reload("data-v-67cbaeba", __vue__options__)
+    hotAPI.rerender("data-v-67cbaeba", __vue__options__)
   }
 })()}
 },{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],14:[function(require,module,exports){
@@ -2966,8 +2966,8 @@ var store = new Vuex.Store({
             hmacKey: '061d41b0-2693-40fe-a59e-a5a69db5433b'
         }, {
             name: 'hi@brandl-maximilian.de',
-            applicationKey: '0f0fb25e-f945-4fb3-b05f-54e9aac8c474',
-            hmacKey: '26b54967-4381-4fa8-98e7-437a409f16e7'
+            applicationKey: 'accc721b-c36a-4e67-95ef-4321e8801b85',
+            hmacKey: '97576da5-bb78-48d4-9c26-b494b272a951'
         }, {
             name: 'Other',
             applicationKey: '22bb89b2-fd1a-41c1-88f4-267b2246326b',
