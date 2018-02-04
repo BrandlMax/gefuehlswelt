@@ -11,12 +11,14 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Inspiration</h1>
                 <p v-if="this.$store.state.lang">
-                   Wenn nötig, bietet Gefühlswelt dem Nutzer Inspiration an. Der Nutzer kann ‘Inspire’ in eine frei gezeichnete Form schreiben und erhält Vorschläge von Gefühlswelt. Dadurch kann der Nutzer von Gefühlswelt geleitet, als auch inspiriert werden.
+                Wenn nötig, bietet Gefühlswelt dem Nutzer Inspiration an. Der Nutzer kann ‘Inspire’ in eine frei gezeichnete Form schreiben und erhält Vorschläge von Gefühlswelt. Dadurch kann der Nutzer von Gefühlswelt geleitet, als auch inspiriert werden.
+Wenn dem Nutzer ein Vorschlag gefällt kann er diesen durch zeichnen eines Häkchens bestätigen. Sollte der Vorschlag nicht gefallen, kann der Nutzer diesen durch ein Durchstreichen verwerfen.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Inspiration</h1>
                 <p v-if="!this.$store.state.lang">
-                    Gefühlswelt also provides inspiration, if needed. By writing the word “inspire”, the user triggers Gefühlswelt to assist with suggestions. That way the user will never run out of ideas.
+                Gefühlswelt also provides inspiration, if needed. By writing the word “inspire”, the user triggers Gefühlswelt to assist with suggestions. That way the user will never run out of ideas.
+Should the user like the suggestion, he or she can select it by drawing a tick mark. In case it’s not to their liking, he or she can strike though it or cross it out.
                 </p>
             </div>
 

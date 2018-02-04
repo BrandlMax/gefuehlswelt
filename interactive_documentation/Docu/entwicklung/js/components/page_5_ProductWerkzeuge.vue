@@ -11,12 +11,12 @@
                 <!-- Deutsch -->
                 <h1 v-if="this.$store.state.lang">Werkzeuge</h1>
                 <p v-if="this.$store.state.lang">
-                    Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden.
+                    Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden. Probiere doch mal das Werkzeug „<span class="rotate">Sketch, Mandala, Ugly, Easy, Colors, Rain, Circles, Orange, White, Text, Pattern</span>“.
                 </p>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Tools</h1>
                 <p v-if="!this.$store.state.lang">
-                    Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings.
+                    Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings. Let's try „<span class="rotate">Sketch, Mandala, Ugly, Easy, Colors, Rain, Circles, Orange, White, Text, Pattern</span>“.
                 </p>
             </div>
 
@@ -65,7 +65,7 @@ export default {
   data(){
       return{
           bookBG: true,
-          showModal: false
+          showModal: false,
       }
   },
   mounted() {
@@ -73,6 +73,12 @@ export default {
 
       // Refresh Local Storage
       localStorage.clear();
+
+      $(".rotate").textrotator({
+        animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+        speed: 2000 // How many milliseconds until the next word show.
+    });
 
 
   },

@@ -1,7 +1,8 @@
 <template>
     <div v-if="this.$store.state.help" class="kleinerhelfer">
         <video id="helpvideo" :width="toolData.width" :height="toolData.height">
-            <source src="../../../src/mp4/Help.mp4" type="video/mp4">
+            <source v-if="!this.ELECTRON" src="./src/mp4/Help.mp4" type="video/mp4">
+            <source v-if="this.ELECTRON" src="./src/iframe/prototyp/src/mp4/Help.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -16,6 +17,7 @@
         data() {
             return {
                 saveData: '',
+                ELECTRON: false
             }
         },
         mounted() {

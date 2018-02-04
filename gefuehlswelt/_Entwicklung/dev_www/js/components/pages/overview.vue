@@ -60,7 +60,13 @@
                 console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
                 ELECTRON = true;
             }
-             
+            
+            window.onerror = function(e) {
+                console.log(e);
+                if(e.detail.message === "Unexpected error"){
+                    location.reload();
+                }
+            }
                        
             var PageID = 0;
 

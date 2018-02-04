@@ -35,27 +35,49 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 })()}
 },{"vue":32,"vue-hot-reload-api":31}],2:[function(require,module,exports){
 ;(function(){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = {
-  props: [],
-  data: function data() {
-    return {};
-  },
-  mounted: function mounted() {},
-  created: function created() {},
-  destroyed: function destroyed() {},
-  components: {},
-  methods: {}
+    props: [],
+    data: function data() {
+        return {};
+    },
+    mounted: function mounted() {
+        var _this = this;
+
+        var elem = document.getElementById('leftSide');
+
+        if (this.isOverflown(elem)) {
+            elem.className = elem.className + ' overflowScroll';
+        }
+
+        window.onresize = function () {
+            console.log('resize');
+            if (_this.isOverflown(elem)) {
+                elem.className = elem.className + ' overflowScroll';
+            } else {
+                elem.className = 'side left';
+            }
+        };
+    },
+    created: function created() {},
+    destroyed: function destroyed() {},
+    components: {},
+    methods: {
+        isOverflown: function isOverflown(element) {
+
+            return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+        }
+    }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"bookcontent"}},[_c('div',{staticClass:"side left"},[_c('div',{staticClass:"textArea"},[_vm._t("left")],2)]),_vm._v(" "),_c('div',{staticClass:"side right"},[_vm._t("right")],2)])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"bookcontent"}},[_c('div',{staticClass:"side left",attrs:{"id":"leftSide"}},[_c('div',{staticClass:"textArea"},[_vm._t("left")],2)]),_vm._v(" "),_c('div',{staticClass:"side right"},[_vm._t("right")],2)])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-1f27bded"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -436,7 +458,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":32,"vue-hot-reload-api":31,"vueify/lib/insert-css":33}],10:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-b248735a]{\n    width: 100%;\n}\n\n.tutvideo[data-v-b248735a] {\n    width: 34.4vw;\n    position: absolute;\n    margin-top: 0.26vw;\n}\n\n#startBtn[data-v-b248735a]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 45.8vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-b248735a]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 13px;\n}\n\n.triangleBg[data-v-b248735a]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-b248735a], .fade-leave-active[data-v-b248735a] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-b248735a], .fade-leave-to[data-v-b248735a] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("video[data-v-b248735a]{\n    width: 100%;\n}\n\n.tutvideo[data-v-b248735a] {\n    width: 34.4vw;\n    position: absolute;\n    /* margin-top: 0.26vw; */\n    height: 45.8vw;\n}\n\n#startBtn[data-v-b248735a]{\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    width: 100%;\n    height: 45.8vw;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 2vw;\n    cursor: pointer;\n    z-index: 9999;\n}\n\n.triangle[data-v-b248735a]{\n    box-sizing: border-box;\n    width: 40px;\n    height: 50px;\n    border-width: 25px 0px 25px 40px;\n    border-style: solid;\n    border-color: transparent transparent transparent #ffffff;\n    margin-left: 13px;\n}\n\n.triangleBg[data-v-b248735a]{\n    box-sizing: border-box;\n    height: 70px;\n    width: 70px;\n    position: absolute;\n    border: 2px solid #fff;\n    border-radius: 160px;\n}\n\n.fade-enter-active[data-v-b248735a], .fade-leave-active[data-v-b248735a] {\n  transition: opacity .5s;\n}\n.fade-enter[data-v-b248735a], .fade-leave-to[data-v-b248735a] /* .fade-leave-active below version 2.1.8 */ {\n  opacity: 0;\n}")
 ;(function(){
 'use strict';
 
@@ -726,7 +748,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Das Markenprisma diente uns als Ansatz zur Beschreibung unserer Markenidentität, welche uns eine grobe Richtung für Kommunikation und Gestaltung gab.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Brand")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The brand Identity Prism serves as an overview for the values that our company and brand is going to be associated with. It’s a guideline how Gefühlswelt is going to market itself to its users.\n            ")]):_vm._e()]),_vm._v(" "),(this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_de.png","alt":"Brand Identity Prism"}})]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_en.png","alt":"Brand Identity Prism"}})]):_vm._e()]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('img',{attrs:{"src":"../../src/img/prism_de_full.png","alt":"Brand Identity Prism"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"../../src/img/prism_en_full.png","alt":"Brand Identity Prism"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Marke")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Das Markenprisma diente uns als Ansatz zur Beschreibung unserer Markenidentität, welche uns eine grobe Richtung für Kommunikation und Gestaltung gab.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Brand")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                The brand Identity Prism serves as an overview for the values that our company and brand is going to be associated with. It’s a guideline how Gefühlswelt is going to market itself to its users.\n            ")]):_vm._e()]),_vm._v(" "),(this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_de.png","alt":"Brand Identity Prism"}})]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('div',{staticClass:"iFrameSlot",staticStyle:{"cursor":"zoom-in"},attrs:{"slot":"right"},on:{"click":function($event){_vm.showModal = true}},slot:"right"},[_c('img',{attrs:{"src":"./src/img/prism_en.png","alt":"Brand Identity Prism"}})]):_vm._e()]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[(this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/prism_de_full.png","alt":"Brand Identity Prism"}}):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('img',{attrs:{"src":"./src/img/prism_en_full.png","alt":"Brand Identity Prism"}}):_vm._e()]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('10')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('12')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1106,13 +1128,20 @@ exports.default = {
     data: function data() {
         return {
             bookBG: false,
-            showModal: false
+            showModal: false,
+            ELECTRON: false
         };
     },
     mounted: function mounted() {
         console.log('Docu');
 
         localStorage.clear();
+
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            this.ELECTRON = true;
+        }
     },
     created: function created() {},
     destroyed: function destroyed() {},
@@ -1137,7 +1166,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download Feinkonzept (pdf)")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Contact")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download concept - german (pdf)")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('img',{attrs:{"src":"./src/img/team.png","alt":"Team Gefühlswelt"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/team_full.png","alt":"Team Gefühlswelt"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Kontakt")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(this.$store.state.lang && this.ELECTRON)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf"}},[_vm._v("Download Feinkonzept (pdf)")]):_vm._e(),_vm._v(" "),(this.$store.state.lang && !this.ELECTRON)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download Feinkonzept (pdf)")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Contact")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Alessa Klinger \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:alessa-klinger@hotmail.de"}},[_vm._v("alessa-klinger@hotmail.de")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Janett Herdt\n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:janett.herdt@gmail.com"}},[_vm._v("janett.herdt@gmail.com")]),_vm._v(" "),_c('br'),_c('br'),_vm._v("\n                Maximilian Brandl \n                "),_c('br'),_vm._v(" "),_c('a',{attrs:{"href":"mailto:hi@brandl-maximilian.de"}},[_vm._v("hi@brandl-maximilian.de")])]):_vm._e(),_vm._v(" "),(!this.$store.state.lang && this.ELECTRON)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf"}},[_vm._v("Download concept - german (pdf)")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang && !this.ELECTRON)?_c('a',{staticClass:"btn",attrs:{"href":"http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf","target":"_blank"}},[_vm._v("Download concept - german (pdf)")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('img',{attrs:{"src":"./src/img/team.png","alt":"Team Gefühlswelt"}})])]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/team_full.png","alt":"Team Gefühlswelt"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('14')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-1ce6dfc3"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -1540,6 +1569,11 @@ exports.default = {
         console.log('Docu');
 
         localStorage.clear();
+
+        $(".rotate").textrotator({
+            animation: "dissolve",
+            separator: ",",
+            speed: 2000 });
     },
     created: function created() {},
     destroyed: function destroyed() {},
@@ -1564,7 +1598,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Werkzeuge")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Tools")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'02'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/2"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6a')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Werkzeuge")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Durch die generativen Werkzeuge, möchten wir dem Nutzer die Möglichkeit gegeben, auch ohne Erfahrung im Zeichnen beeindruckende Einträge anzulegen. Durch diese soll die Gestaltung des Eintrages leicht und dennoch ästhetisch ansprechend gemacht werden. Probiere doch mal das Werkzeug „"),_c('span',{staticClass:"rotate"},[_vm._v("Sketch, Mandala, Ugly, Easy, Colors, Rain, Circles, Orange, White, Text, Pattern")]),_vm._v("“.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Tools")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt helps the user to create stunning entries, even if they’re not a master at drawing, by offering generative tools. These tools make it easy for the user to create aesthetically pleasing designs and drawings. Let's try „"),_c('span',{staticClass:"rotate"},[_vm._v("Sketch, Mandala, Ugly, Easy, Colors, Rain, Circles, Orange, White, Text, Pattern")]),_vm._v("“.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'02'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/2"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('3')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6a')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -1728,7 +1762,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n               Wenn nötig, bietet Gefühlswelt dem Nutzer Inspiration an. Der Nutzer kann ‘Inspire’ in eine frei gezeichnete Form schreiben und erhält Vorschläge von Gefühlswelt. Dadurch kann der Nutzer von Gefühlswelt geleitet, als auch inspiriert werden.\n            ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt also provides inspiration, if needed. By writing the word “inspire”, the user triggers Gefühlswelt to assist with suggestions. That way the user will never run out of ideas.\n            ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'03'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/4"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6b')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"docu"},[_c('LangSwitch'),_vm._v(" "),_c('transition',{attrs:{"name":"fade"}},[(_vm.bookBG)?_c('BookBG'):_vm._e()],1),_vm._v(" "),_c('BookContent',[_c('div',{attrs:{"slot":"left"},slot:"left"},[(this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(this.$store.state.lang)?_c('p',[_vm._v("\n                Wenn nötig, bietet Gefühlswelt dem Nutzer Inspiration an. Der Nutzer kann ‘Inspire’ in eine frei gezeichnete Form schreiben und erhält Vorschläge von Gefühlswelt. Dadurch kann der Nutzer von Gefühlswelt geleitet, als auch inspiriert werden.\nWenn dem Nutzer ein Vorschlag gefällt kann er diesen durch zeichnen eines Häkchens bestätigen. Sollte der Vorschlag nicht gefallen, kann der Nutzer diesen durch ein Durchstreichen verwerfen.\n                ")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('h1',[_vm._v("Inspiration")]):_vm._e(),_vm._v(" "),(!this.$store.state.lang)?_c('p',[_vm._v("\n                Gefühlswelt also provides inspiration, if needed. By writing the word “inspire”, the user triggers Gefühlswelt to assist with suggestions. That way the user will never run out of ideas.\nShould the user like the suggestion, he or she can select it by drawing a tick mark. In case it’s not to their liking, he or she can strike though it or cross it out.\n                ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"iFrameSlot",attrs:{"slot":"right"},slot:"right"},[_c('TutVideo',{attrs:{"tut":'03'}}),_vm._v(" "),_c('iframe',{attrs:{"src":"./src/iFrame/prototyp/index.html#/entry/4"}})],1)]),_vm._v(" "),_c('Pagination'),_vm._v(" "),(_vm.showModal)?_c('Modal',{attrs:{"modalType":"image"},on:{"close":function($event){_vm.showModal = false}}},[_c('img',{attrs:{"src":"./src/img/mel.png","alt":"textImage"}})]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"arrow aleft",on:{"click":function($event){_vm.changePage('5')}}},[_c('img',{attrs:{"src":"./src/img/ArrowLeft.png","alt":"vorherige Seite"}})]),_vm._v(" "),_c('div',{staticClass:"arrow aright",on:{"click":function($event){_vm.changePage('6b')}}},[_c('img',{attrs:{"src":"./src/img/ArrowRight.png","alt":"nächste Seite"}})])],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)

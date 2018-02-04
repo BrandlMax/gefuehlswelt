@@ -69,7 +69,8 @@ video{
 .tutvideo {
     width: 34.4vw;
     position: absolute;
-    margin-top: 0.26vw;
+    /* margin-top: 0.26vw; */
+    height: 45.8vw;
 }
 
 #startBtn{

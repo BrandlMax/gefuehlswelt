@@ -338,7 +338,7 @@ exports.default = {
                     return true;
                 case 'circles':
                     return true;
-                case 'rose':
+                case 'mandala':
                     return true;
                 case 'rain':
                     return true;
@@ -445,7 +445,7 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
             id: _vm.layerData.id, 
             height:_vm.layerData.height,
             width:_vm.layerData.width
-        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'rose')?_c('Rose',{staticClass:"maskedlayer",style:({ 
+        }}}):_vm._e(),_vm._v(" "),(_vm.Tool === 'mandala')?_c('Rose',{staticClass:"maskedlayer",style:({ 
             clipPath: 'url(#path_' + _vm.layerData.id +')', 
             top:_vm.layerData.y+'px', left:_vm.layerData.x+'px', 
             height: _vm.layerData.height+'px', 
@@ -529,6 +529,7 @@ exports.default = {
             return str;
         },
         generateTranslate: function generateTranslate(w, h) {
+            console.log('Generate Translate', [w, h]);
             var str = "translate(" + -1 * w + "," + -1 * h + ")";
             return str;
         },
@@ -599,6 +600,20 @@ exports.default = {
     mounted: function mounted() {
         var _this = this;
 
+        var ELECTRON = false;
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            ELECTRON = true;
+        }
+
+        window.onerror = function (e) {
+            console.log(e);
+            if (e.detail.message === "Unexpected error") {
+                location.reload();
+            }
+        };
+
         localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
 
         console.log('Current Page', this.pageID);
@@ -608,6 +623,8 @@ exports.default = {
         MyScript.register(editorElement, {
             recognitionParams: {
                 type: 'DIAGRAM',
+                protocol: 'WEBSOCKET',
+                apiVersion: 'V4',
                 server: this.$store.state.access[this.$store.state.curAccessPoint]
             }
         });
@@ -651,7 +668,7 @@ exports.default = {
         });
 
         editorElement.addEventListener('click', function (e) {
-
+            console.log('Editor Clicked');
             var new_e = new e.constructor(e.type, e);
             cmdeditorElement.dispatchEvent(new_e);
 
@@ -667,7 +684,10 @@ exports.default = {
 
                     var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
-                    editorElement.editor.clear();
+                    if (ELECTRON) {
+                        posInfo.x = posInfo.left;
+                        posInfo.y = posInfo.top;
+                    }
 
                     _this.SVGpath = SVGPath;
                     _this.SVGheight = posInfo.height;
@@ -690,7 +710,7 @@ exports.default = {
                             tooldata: []
                         }
                     });
-                    editorElement.editor.clear();
+
                     cmdeditorElement.editor.clear();
                 } else {}
             });
@@ -720,8 +740,17 @@ exports.default = {
                 _this.undo();
             } else if (e.keyCode === 39) {
                 _this.redo();
+            } else if (e.keyCode === 88) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
+            } else if (e.keyCode === 82) {
+                location.reload();
             }
         });
+
+        window.onresize = function () {
+            location.reload();
+        };
     },
     created: function created() {},
     destroyed: function destroyed() {},
@@ -823,7 +852,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: #F5F4F0;\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n}\n\n#cmdCanvas[data-v-a7549234] {\n    height: 100vh;\n    width: 100vw;\n    background: rgb(0, 255, 136);\n    position: fixed;\n    top: 0;\n    left: 0;\n    display: -webkit-box;\n    touch-action: none;\n    z-index: 0;\n}\n.PageTitle[data-v-a7549234] {\n    position: absolute;\n    z-index: 10000;\n    opacity: 0.3;\n    font-family: 'selimaregular', cursive;\n    font-size: 22px;\n    margin-left: 20px;\n    margin-top: 15px;\n}\n.paperstyle[data-v-a7549234]{\n    position: fixed;\n    height: 100vh;\n    width: 100vw;\n    background: url(src/png/paper.jpg);\n    z-index: 20000;\n    top: 0;\n    left: 0;\n    background-attachment: fixed;\n    background-size: cover;\n    mix-blend-mode: multiply;\n    pointer-events: none;\n    opacity: 0.6;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("#mainCanvas[data-v-a7549234] {\n        height: 100vh;\n        width: 100vw;\n        background: #F5F4F0;\n        position: fixed;\n        top: 0;\n        left: 0;\n        display: -webkit-box;\n        touch-action: none;\n    }\n\n    #cmdCanvas[data-v-a7549234] {\n        height: 100vh;\n        width: 100vw;\n        background: rgb(0, 255, 136);\n        position: fixed;\n        top: 0;\n        left: 0;\n        display: -webkit-box;\n        touch-action: none;\n        z-index: 0;\n    }\n    .PageTitle[data-v-a7549234] {\n        position: absolute;\n        z-index: 10000;\n        opacity: 0.3;\n        font-family: 'selimaregular', cursive;\n        font-size: 22px;\n        margin-left: 20px;\n        margin-top: 15px;\n    }\n    .paperstyle[data-v-a7549234]{\n        position: fixed;\n        height: 100vh;\n        width: 100vw;\n        background: url(src/png/paper.jpg);\n        z-index: 20000;\n        top: 0;\n        left: 0;\n        background-attachment: fixed;\n        background-size: cover;\n        mix-blend-mode: multiply;\n        pointer-events: none;\n        opacity: 0.6;\n    }\n    .error-msg[data-v-a7549234] {\n    opacity: 0;\n}")
 ;(function(){
 'use strict';
 
@@ -859,6 +888,20 @@ exports.default = {
     mounted: function mounted() {
         var _this = this;
 
+        var ELECTRON = false;
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            ELECTRON = true;
+        }
+
+        window.onerror = function (e) {
+            console.log(e);
+            if (e.detail.message === "Unexpected error") {
+                location.reload();
+            }
+        };
+
         var PageID = 0;
 
         localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
@@ -868,6 +911,8 @@ exports.default = {
         MyScript.register(editorElement, {
             recognitionParams: {
                 type: 'DIAGRAM',
+                protocol: 'WEBSOCKET',
+                apiVersion: 'V4',
                 server: this.$store.state.access[this.$store.state.curAccessPoint]
             }
         });
@@ -920,20 +965,29 @@ exports.default = {
 
             pathsList.forEach(function (element, index) {
                 if (element.id.charAt(6) === "d") {
+                    var getRandomInt = function getRandomInt(max) {
+                        return Math.floor(Math.random() * Math.floor(max));
+                    };
+
                     console.log('Charset', element.id.charAt(6));
                     SVGPath = document.getElementById('MODEL-viewTransform').getElementsByTagName('path')[index].attributes.d.nodeValue;
 
                     var posInfo = document.getElementById('MODEL-viewTransform').getBoundingClientRect();
 
+                    if (ELECTRON) {
+                        posInfo.x = posInfo.left;
+                        posInfo.y = posInfo.top;
+                    }
                     console.log('PosInfo', posInfo);
                     console.log('SVG Path', SVGPath);
-                    editorElement.editor.clear();
 
                     _this.SVGpath = SVGPath;
                     _this.SVGheight = posInfo.height;
                     _this.SVGwidth = posInfo.width;
                     _this.SVGx = posInfo.x;
                     _this.SVGy = posInfo.y;
+
+                    var Colors = ['FE7452', 'F1BD53', '7BCBB4', '6EB5C9', 'DD4E0C', 'BADCCC', 'C197B3', '588589', 'EAA2A2', '9AA979'];
 
                     _this.$store.commit('addJournal', {
                         id: _this.$store.state.JournalCount,
@@ -944,11 +998,10 @@ exports.default = {
                         w: posInfo.width,
                         h: posInfo.height,
                         svgPath: SVGPath,
-                        bg: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                        bg: '#' + Colors[getRandomInt(Colors.length)],
                         show: true
                     });
 
-                    editorElement.editor.clear();
                     cmdeditorElement.editor.clear();
                 } else {}
             });
@@ -978,8 +1031,17 @@ exports.default = {
                 _this.undo();
             } else if (e.keyCode === 39) {
                 _this.redo();
+            } else if (e.keyCode === 88) {
+                cmdeditorElement.editor.clear();
+                editorElement.editor.clear();
+            } else if (e.keyCode === 82) {
+                location.reload();
             }
         });
+
+        window.onresize = function () {
+            location.reload();
+        };
     },
     created: function created() {},
     destroyed: function destroyed() {},
@@ -1057,7 +1119,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a7549234", __vue__options__)
   } else {
-    hotAPI.reload("data-v-a7549234", __vue__options__)
+    hotAPI.rerender("data-v-a7549234", __vue__options__)
   }
 })()}
 },{"../interaktion/journal.vue":1,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],7:[function(require,module,exports){
@@ -1775,7 +1837,7 @@ exports.default = {
         var _this = this;
 
         this.loadData();
-
+        var circles = [];
         var toolData = this.toolData;
         var el = document.getElementById('sketch_' + this.toolData.id);
 
@@ -1902,7 +1964,8 @@ exports.default = {
     props: ['toolData'],
     data: function data() {
         return {
-            saveData: ''
+            saveData: '',
+            ELECTRON: false
         };
     },
     mounted: function mounted() {
@@ -1937,7 +2000,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (this.$store.state.help)?_c('div',{staticClass:"kleinerhelfer"},[_c('video',{attrs:{"id":"helpvideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Help.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])]):_vm._e()}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (this.$store.state.help)?_c('div',{staticClass:"kleinerhelfer"},[_c('video',{attrs:{"id":"helpvideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[(!this.ELECTRON)?_c('source',{attrs:{"src":"./src/mp4/Help.mp4","type":"video/mp4"}}):_vm._e(),_vm._v(" "),(this.ELECTRON)?_c('source',{attrs:{"src":"./src/iframe/prototyp/src/mp4/Help.mp4","type":"video/mp4"}}):_vm._e(),_vm._v("\n        Your browser does not support the video tag.\n    ")])]):_vm._e()}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-67cbaeba"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -1948,7 +2011,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-67cbaeba", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-67cbaeba", __vue__options__)
+    hotAPI.reload("data-v-67cbaeba", __vue__options__)
   }
 })()}
 },{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],14:[function(require,module,exports){
@@ -1963,12 +2026,18 @@ exports.default = {
     props: ['toolData'],
     data: function data() {
         return {
-            saveData: ''
+            saveData: '',
+            ELECTRON: false
         };
     },
     mounted: function mounted() {
         var _this = this;
 
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            this.ELECTRON = true;
+        }
         var video = document.getElementById('inspirevideo');
         video.play();
 
@@ -2012,7 +2081,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch inspire",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', 
-    height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}},[_c('video',{attrs:{"id":"inspirevideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Inspire.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])])}
+    height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}},[_c('video',{attrs:{"id":"inspirevideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[(!this.ELECTRON)?_c('source',{attrs:{"src":"./src/mp4/Inspire.mp4","type":"video/mp4"}}):_vm._e(),_vm._v(" "),(this.ELECTRON)?_c('source',{attrs:{"src":"./src/iframe/prototyp/src/mp4/Inspire.mp4","type":"video/mp4"}}):_vm._e(),_vm._v("\n        Your browser does not support the video tag.\n    ")])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-325e6b71"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -2087,7 +2156,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(../prototyp/src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch pattern",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', height: _vm.toolData.height+'px', width: _vm.toolData.width+'px', backgroundImage:'url(./src/png/patterns/' + _vm.patterns[_vm.randomPattern] +')'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}})}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-3d939927"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -2130,7 +2199,7 @@ exports.default = {
 
             var brush;
             p5.preload = function () {
-                brush = p5.loadImage('../prototyp/src/png/brush2.png');
+                brush = p5.loadImage('./src/png/brush2.png');
             };
 
             p5.setup = function () {
@@ -2271,6 +2340,11 @@ exports.default = {
 
             var k;
             var isDrawing = true;
+            var isPainting = false;
+
+            var paint = [1, 2, 3];
+
+            var Colors = ['FE7452', 'F1BD53', '7BCBB4', '6EB5C9', 'DD4E0C', 'BADCCC', 'C197B3', '588589', 'EAA2A2', '9AA979'];
 
             if (_this.saveData.d) {
                 d = _this.saveData.d;
@@ -2288,8 +2362,20 @@ exports.default = {
                 p5.background(255);
             };
 
+            el.ondblclick = function () {
+                isPainting = true;
+                isDrawing = false;
+                console.log('Double');
+            };
+
             el.onmousedown = function (e) {
-                isDrawing = !isDrawing;
+
+                if (isPainting) {
+                    isDrawing = false;
+                } else {
+                    isDrawing = !isDrawing;
+                }
+
                 _this.saveData = {
                     d: d,
                     n: n,
@@ -2304,7 +2390,12 @@ exports.default = {
                 var s = 1.3;
 
                 p5.beginShape();
-                p5.stroke(0);
+                if (isDrawing) {
+                    p5.stroke(200);
+                } else {
+                    p5.stroke(0);
+                }
+
                 p5.strokeWeight(2);
                 p5.strokeCap(p5.ROUND);
                 p5.smooth();
@@ -2373,6 +2464,8 @@ exports.default = {
 
                     k = n / d;
                 }
+
+                if (isPainting) {}
 
                 return false;
             };
@@ -2866,7 +2959,7 @@ var store = new Vuex.Store({
         layers: [],
         JournalCount: 0,
         journals: [],
-        curAccessPoint: 2,
+        curAccessPoint: 1,
         access: [{
             name: 'kontakt@brandl-maximilian.de',
             applicationKey: '4285008c-661a-4ba1-964f-170b3808428c',

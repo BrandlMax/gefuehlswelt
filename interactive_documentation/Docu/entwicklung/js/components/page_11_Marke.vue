@@ -31,8 +31,8 @@
         <Pagination></Pagination>
 
         <Modal v-if="showModal" @close="showModal = false" modalType="image">
-            <img v-if="this.$store.state.lang" src="../../src/img/prism_de_full.png" alt="Brand Identity Prism">
-            <img v-if="!this.$store.state.lang" src="../../src/img/prism_en_full.png" alt="Brand Identity Prism">
+            <img v-if="this.$store.state.lang" src="./src/img/prism_de_full.png" alt="Brand Identity Prism">
+            <img v-if="!this.$store.state.lang" src="./src/img/prism_en_full.png" alt="Brand Identity Prism">
         </Modal>
 
         <div class="arrow aleft" @click="changePage('10')">

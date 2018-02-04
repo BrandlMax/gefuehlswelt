@@ -848,7 +848,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-0e2d0256", __vue__options__)
   } else {
-    hotAPI.reload("data-v-0e2d0256", __vue__options__)
+    hotAPI.rerender("data-v-0e2d0256", __vue__options__)
   }
 })()}
 },{"../interaktion/layer.vue":2,"../interaktion/myScriptLayer.vue":3,"../interaktion/svg.vue":4,"../werzeuge/help.vue":13,"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],6:[function(require,module,exports){
@@ -894,6 +894,13 @@ exports.default = {
             console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
             ELECTRON = true;
         }
+
+        window.onerror = function (e) {
+            console.log(e);
+            if (e.detail.message === "Unexpected error") {
+                location.reload();
+            }
+        };
 
         var PageID = 0;
 
@@ -1957,7 +1964,8 @@ exports.default = {
     props: ['toolData'],
     data: function data() {
         return {
-            saveData: ''
+            saveData: '',
+            ELECTRON: false
         };
     },
     mounted: function mounted() {
@@ -1992,7 +2000,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (this.$store.state.help)?_c('div',{staticClass:"kleinerhelfer"},[_c('video',{attrs:{"id":"helpvideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Help.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])]):_vm._e()}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (this.$store.state.help)?_c('div',{staticClass:"kleinerhelfer"},[_c('video',{attrs:{"id":"helpvideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[(!this.ELECTRON)?_c('source',{attrs:{"src":"./src/mp4/Help.mp4","type":"video/mp4"}}):_vm._e(),_vm._v(" "),(this.ELECTRON)?_c('source',{attrs:{"src":"./src/iframe/prototyp/src/mp4/Help.mp4","type":"video/mp4"}}):_vm._e(),_vm._v("\n        Your browser does not support the video tag.\n    ")])]):_vm._e()}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-67cbaeba"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -2003,7 +2011,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-67cbaeba", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-67cbaeba", __vue__options__)
+    hotAPI.reload("data-v-67cbaeba", __vue__options__)
   }
 })()}
 },{"vue":26,"vue-hot-reload-api":25,"vueify/lib/insert-css":27}],14:[function(require,module,exports){
@@ -2018,12 +2026,18 @@ exports.default = {
     props: ['toolData'],
     data: function data() {
         return {
-            saveData: ''
+            saveData: '',
+            ELECTRON: false
         };
     },
     mounted: function mounted() {
         var _this = this;
 
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.indexOf(' electron/') > -1) {
+            console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+            this.ELECTRON = true;
+        }
         var video = document.getElementById('inspirevideo');
         video.play();
 
@@ -2067,7 +2081,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sketch inspire",style:({ clipPath: 'url(#path_' + _vm.toolData.id +')', 
-    height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}},[_c('video',{attrs:{"id":"inspirevideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[_c('source',{attrs:{"src":"../../../src/mp4/Inspire.mp4","type":"video/mp4"}}),_vm._v("\n        Your browser does not support the video tag.\n    ")])])}
+    height: _vm.toolData.height+'px', width: _vm.toolData.width+'px'}),attrs:{"width":_vm.toolData.width,"height":_vm.toolData.height,"id":'sketch_'+_vm.toolData.id}},[_c('video',{attrs:{"id":"inspirevideo","width":_vm.toolData.width,"height":_vm.toolData.height}},[(!this.ELECTRON)?_c('source',{attrs:{"src":"./src/mp4/Inspire.mp4","type":"video/mp4"}}):_vm._e(),_vm._v(" "),(this.ELECTRON)?_c('source',{attrs:{"src":"./src/iframe/prototyp/src/mp4/Inspire.mp4","type":"video/mp4"}}):_vm._e(),_vm._v("\n        Your browser does not support the video tag.\n    ")])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-325e6b71"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")

@@ -1,5 +1,5 @@
 {
-  "name": "gefuehlswelt",
+  "name": "electron-quick-start",
   "version": "1.0.0",
   "description": "documentation",
   "main": "main.js",
@@ -24,14 +24,14 @@
   },
   "build": {
     "appId": "com.brandlmax.gefuehlsweltdocu",
-    "productName":"Gefühlswelt Docu",
+    "productName": "Gefühlswelt Docu",
     "mac": {
       "category": "public.app-category.lifestyle"
     },
     "win": {
       "target": "portable"
     },
-    "linux":{
+    "linux": {
       "target": "AppImage"
     }
   }

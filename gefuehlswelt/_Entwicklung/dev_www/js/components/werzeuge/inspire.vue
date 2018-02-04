@@ -6,7 +6,8 @@
             :id="'sketch_'+toolData.id" class="sketch inspire">
         
             <video id="inspirevideo" :width="toolData.width" :height="toolData.height">
-                <source src="../../../src/mp4/Inspire.mp4" type="video/mp4">
+                <source v-if="!this.ELECTRON" src="./src/mp4/Inspire.mp4" type="video/mp4">
+                <source v-if="this.ELECTRON" src="./src/iframe/prototyp/src/mp4/Inspire.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             
@@ -22,9 +23,17 @@
         data() {
             return {
                 saveData: '',
+                ELECTRON: false
             }
         },
         mounted() {
+
+            // ELECTRON FIX
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.indexOf(' electron/') > -1) {
+                console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+                this.ELECTRON = true;
+            }
             var video = document.getElementById('inspirevideo')
             video.play();
 

@@ -22,7 +22,8 @@
                     <br />
                     <a href="mailto:hi@brandl-maximilian.de">hi@brandl-maximilian.de</a>
                 </p>
-                <a class="btn" v-if="this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download Feinkonzept (pdf)</a>
+                <a class="btn" v-if="this.$store.state.lang && this.ELECTRON" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download Feinkonzept (pdf)</a>
+                <a class="btn" v-if="this.$store.state.lang && !this.ELECTRON" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download Feinkonzept (pdf)</a>
                 <!-- Englisch -->
                 <h1 v-if="!this.$store.state.lang">Contact</h1>
                 <p v-if="!this.$store.state.lang">
@@ -38,7 +39,8 @@
                     <br />
                     <a href="mailto:hi@brandl-maximilian.de">hi@brandl-maximilian.de</a>
                 </p>
-                <a class="btn" v-if="!this.$store.state.lang" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download concept - german (pdf)</a>
+                <a class="btn" v-if="!this.$store.state.lang && this.ELECTRON" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf">Download concept - german (pdf)</a>
+                <a class="btn" v-if="!this.$store.state.lang && !this.ELECTRON" href="http://brandl-maximilian.de/h_da/p3/P3_Feinkonzeptdokumentation.pdf" target="_blank">Download concept - german (pdf)</a>
             </div>
 
             <div class="iFrameSlot" slot="right">
@@ -81,6 +83,7 @@ export default {
       return{
           bookBG: false,
           showModal: false,
+          ELECTRON: false
       }
   },
   mounted() {
@@ -88,6 +91,13 @@ export default {
 
       // Refresh Local Storage
       localStorage.clear();
+
+            // ELECTRON FIX
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.indexOf(' electron/') > -1) {
+                console.log('IN EEELLLLEEEECTROOOOON!!!!!!!!', userAgent);
+                this.ELECTRON = true;
+            }
 
 
   },
