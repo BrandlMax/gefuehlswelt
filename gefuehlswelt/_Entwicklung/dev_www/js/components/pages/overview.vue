@@ -12,7 +12,6 @@
 
   <Help :toolData="{x: 500, y: 500}"></Help>
 
-
   <SVGLayer 
     v-if="showSVGlayer" 
     v-bind:SVGdata="{id: SVGid, path: SVGpath, height: SVGheight, width: SVGwidth, x: SVGx ,y: SVGy}">
@@ -45,12 +44,18 @@
                 SVGwidth: 282.973388671875,
                 SVGx: 736.0255126953125,
                 SVGy: 202.65835571289062,
-                showSVGlayer: true
+                showSVGlayer: true,
                 // FirstLoad
+                myTimer: null
                 
             }
         },
         mounted() {
+
+                        
+                        
+            // JOURNAL EDITOR 
+            var editorElement = document.getElementById('mainCanvas');
 
 
             // ELECTRON FIX
@@ -61,11 +66,28 @@
                 ELECTRON = true;
             }
             
-            window.onerror = function(e) {
+            window.onerror = (e) => {
                 console.log(e);
                 if(e.detail.message === "Unexpected error"){
-                    location.reload();
+                    console.log('canClear?-Error', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
+
+                    // location.reload();
+
+                    // editorElement.editor.clear();
+                    // cmdeditorElement.editor.clear();
+
+                    // MyScript.register(editorElement, {
+                    //     recognitionParams: {
+                    //         type: 'DIAGRAM',
+                    //         protocol: 'WEBSOCKET',
+                    //         apiVersion: 'V4',
+                    //         server: this.$store.state.access[this.$store.state.curAccessPoint]
+                    //     }
+                    // });
+                    // console.log('MyScript ReRegistered');
+
                 }
+
             }
                        
             var PageID = 0;
@@ -74,14 +96,11 @@
             localStorage.setItem("urEmptyState", localStorage.getItem("vuex"));
             // CREATE EDITOR
 
-            // JOURNAL EDITOR 
-            var editorElement = document.getElementById('mainCanvas');
-
             // API Register
             MyScript.register(editorElement, {
                 recognitionParams: {
                     type: 'DIAGRAM',
-                    protocol: 'WEBSOCKET',
+                    // protocol: 'WEBSOCKET',
                     apiVersion: 'V4',
                     server: this.$store.state.access[this.$store.state.curAccessPoint]
                 }
@@ -199,8 +218,10 @@
                             bg: '#' + Colors[getRandomInt(Colors.length)],
                             show: true
                         });
-
-                        //editorElement.editor.clear();
+                        
+                        console.log('canClear- AddJournal?', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
+                        // BAD!?
+                        // editorElement.editor.clear();
                         cmdeditorElement.editor.clear();
 
                     } else {
@@ -214,6 +235,7 @@
             // Rechtsklick um Canvas zu leeren
             editorElement.addEventListener('contextmenu', (ev) => {
                 // ev.preventDefault();
+                console.log('canClear - ContextMenu?', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
                 editorElement.editor.clear();
                 cmdeditorElement.editor.clear();
                 return false;
@@ -227,12 +249,28 @@
 
                 // Erkenne Command Request
                 if (this.recogCmd(event.detail.exports['text/plain'].toLowerCase())) {
+                    console.log('canClear - recogCmd?', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
                     cmdeditorElement.editor.clear();
                     editorElement.editor.clear();
                 } else if(event.detail.exports['text/plain'].toLowerCase().includes("x")){
+                    console.log('canClear - recogCmdX?', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
                     cmdeditorElement.editor.clear();
                     editorElement.editor.clear();
+                }else{
+
+                    if(event.detail.exports['text/plain'].toLowerCase() != ""){
+                        
+                        console.log('Timer Set ', this.myTimer)
+                        window.clearTimeout(this.myTimer);
+                        this.myTimer = setTimeout(function(){
+                            console.log('canClear-Timer?', [editorElement.editor.canClear, cmdeditorElement.editor.canClear])
+                            editorElement.editor.clear();
+                            cmdeditorElement.editor.clear();
+                        }, 5000);
+
+                    }
                 }
+
             });
 
 
@@ -248,6 +286,8 @@
                     editorElement.editor.clear();
                 } else if (e.keyCode === 82) {
                      location.reload();
+                }else if(e.keyCode === 81){
+                    editorElement.editor.clear();
                 }
             });
 

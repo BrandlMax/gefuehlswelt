@@ -255,7 +255,8 @@
         props: ['layerData'],
         data() {
             return {
-                Tool: 'NoTool' // Aktuelles Werkzeug
+                Tool: 'NoTool', // Aktuelles Werkzeug
+                myTimer: null
             }
         },
         mounted() {
@@ -283,7 +284,7 @@
 
                 // Erkenne Werkzeug Request
                 if (this.recogTool(event.detail.exports['text/plain'].toLowerCase())) {
-
+                     window.clearTimeout(this.myTimer);
                     console.log('Neues Tool erkannt', event.detail.exports['text/plain'].toLowerCase())
 
                     var newLayerData = {
@@ -293,7 +294,18 @@
                     this.$store.commit('updateLayerTool', newLayerData);
                     this.currentTool();
                 }else if(event.detail.exports['text/plain'].toLowerCase().includes("xx")){
+                    window.clearTimeout(this.myTimer);
                     editorElement.editor.clear();
+                }else{
+                    if(event.detail.exports['text/plain'].toLowerCase() != ""){
+                        
+                        console.log('Timer Set ', this.myTimer)
+                        window.clearTimeout(this.myTimer);
+                        this.myTimer = setTimeout(function(){
+                            editorElement.editor.clear();
+                        }, 5000);
+
+                    }
                 }
 
                 // Delete
